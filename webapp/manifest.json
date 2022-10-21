@@ -99,6 +99,13 @@
           "target": [
             "TargetLandingView"
           ]
+        },
+        {
+          "name": "GenericTilesView",
+          "pattern": ":?query:",
+          "target": [
+            "GenericTilesView"
+          ]
         }
       ],
       "targets": {
@@ -108,6 +115,13 @@
           "clearControlAggregation": false,
           "viewId": "LandingView",
           "viewName": "LandingView"
+        },
+        "GenericTilesView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "GenericTilesView",
+          "viewName": "GenericTilesView"
         }
       }
     },

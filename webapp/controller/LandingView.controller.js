@@ -1,12 +1,13 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
+    "./BaseController",
     "sap/ui/model/json/JSONModel",
-    "com/spm/suppilerportal/utils/dataUtil"
+    "com/spm/suppilerportal/utils/dataUtil",
+    "sap/ui/core/UIComponent"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, JSONModel, dataUtil) {
+    function (Controller, JSONModel, dataUtil, UIComponent) {
         "use strict";
 
         return Controller.extend("com.spm.suppilerportal.controller.LandingView", {
@@ -24,9 +25,13 @@ sap.ui.define([
                     sName = oModel.getProperty("/sUserName");
                 if (sName !== undefined && sName !== null) {
                     oModel.setProperty("/bPasswordVi", true);
+                    this.getRouter().navTo("GenericTilesView");
                 } else {
                     sap.m.MessageBox.error("Please enter a valid user name");
                 }
-            }
+            },
+            getRouter: function () {
+                return UIComponent.getRouterFor(this);
+            },
         });
     });

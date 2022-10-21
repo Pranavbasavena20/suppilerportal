@@ -1,0 +1,5 @@
+<mvc:View controllerName="com.spm.suppilerportal.controller.GenericTilesView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:f="sap.f" xmlns="sap.m">
+    <Page id="page" class="backgroundclass" showHeader="false" title="{i18n>title}">
+        <content />
+    </Page>
+</mvc:View>

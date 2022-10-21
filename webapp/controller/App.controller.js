@@ -1,14 +1,13 @@
 sap.ui.define(
-    [
-        "sap/ui/core/mvc/Controller"
-    ],
-    function(BaseController) {
-      "use strict";
-  
-      return BaseController.extend("com.spm.suppilerportal.controller.App", {
-        onInit() {
-        }
-      });
-    }
-  );
-  
+  [
+    "./BaseController",
+  ],
+  function (BaseController) {
+    "use strict";
+
+    return BaseController.extend("com.spm.suppilerportal.controller.App", {
+      onInit() {
+      }
+    });
+  }
+);

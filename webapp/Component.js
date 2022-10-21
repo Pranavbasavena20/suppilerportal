@@ -3,10 +3,10 @@
  */
 
 sap.ui.define([
-        "sap/ui/core/UIComponent",
-        "sap/ui/Device",
-        "com/spm/suppilerportal/model/models"
-    ],
+    "sap/ui/core/UIComponent",
+    "sap/ui/Device",
+    "com/spm/suppilerportal/model/models"
+],
     function (UIComponent, Device, models) {
         "use strict";
 
@@ -23,13 +23,13 @@ sap.ui.define([
             init: function () {
                 // call the base component's init function
                 UIComponent.prototype.init.apply(this, arguments);
-
                 // enable routing
                 this.getRouter().initialize();
-
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
-            }
+            },
+
+
         });
     }
 );
