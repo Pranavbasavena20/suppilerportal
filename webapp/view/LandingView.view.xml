@@ -1,7 +1,7 @@
-<mvc:View controllerName="com.spm.suppilerportal.controller.LandingView"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+<mvc:View controllerName="com.spm.suppilerportal.controller.LandingView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <content>
+            <Text text="hi" />
+        </content>
     </Page>
 </mvc:View>
