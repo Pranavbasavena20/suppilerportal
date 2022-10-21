@@ -1,5 +1,5 @@
 <mvc:View controllerName="com.spm.suppilerportal.controller.LandingView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:f="sap.f" xmlns="sap.m">
-    <Page id="page"  showHeader="false" title="{i18n>title}">
+    <Page id="page" class="backgroundclass"  showHeader="false" title="{i18n>title}">
         <content>
           <FlexBox justifyContent="End">
                 <HBox width="30%" justifyContent="SpaceBetween" class="paddingClass">
