@@ -23,7 +23,7 @@ sap.ui.define([
                 var oModel = this.getView().getModel("oLanding"),
                     sName = oModel.getProperty("/sUserName");
                 if (sName !== undefined && sName !== null) {
-                    oModel.setProperty("/sPassword", true);
+                    oModel.setProperty("/bPasswordVi", true);
                 } else {
                     sap.m.MessageBox.error("Please enter a valid user name");
                 }
