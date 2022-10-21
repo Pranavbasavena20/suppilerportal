@@ -1,7 +1,7 @@
 <mvc:View controllerName="com.spm.suppilerportal.controller.LandingView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:f="sap.f" xmlns="sap.m">
-    <Page id="page" class="backgroundclass"  showHeader="false" title="{i18n>title}">
+    <Page id="page" class="backgroundclass" showHeader="false" title="{i18n>title}">
         <content>
-          <FlexBox justifyContent="End">
+            <FlexBox justifyContent="End">
                 <HBox width="30%" justifyContent="SpaceBetween" class="paddingClass">
                     <RadioButton text="Retailer Login" />
                     <RadioButton text="Vendor Login" />
@@ -20,13 +20,13 @@
                     </HBox>
                 </VBox>
             </FlexBox>
-             <FlexBox justifyContent="End" visible="{oLanding>/bPasswordVi}">
+            <FlexBox justifyContent="End" visible="{oLanding>/bPasswordVi}">
                 <VBox width="30%" height="50%" class="paddingClass marginClass" justifyContent="Center" backgroundDesign="Solid">
                     <HBox justifyContent="Center" class="sapUiSmallMargin">
                         <f:Avatar src="sap-icon://person-placeholder" displayShape="Circle" displaySize="XL" />
                     </HBox>
                     <Label design="Bold" text=" Welcome {oLanding>/sUserName}" class="sapUiSmallMargin" />
-                    <Input value="{oLanding>/sPassword}" placeholder="Enter Password" />
+                    <Input type="Password" value="{oLanding>/sPassword}" placeholder="Enter Password" />
                     <Button type="Emphasized" text="Submit" press="onfnpressnext" width="100%" />
                     <HBox justifyContent="Center">
                         <Link class="sapUiTinyMarginBegin sapUiTinyMarginTop" text="Forgot Password" />
