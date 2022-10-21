@@ -1,7 +1,25 @@
-<mvc:View controllerName="com.spm.suppilerportal.controller.LandingView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+<mvc:View controllerName="com.spm.suppilerportal.controller.LandingView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:f="sap.f" xmlns="sap.m">
+    <Page id="page"  showHeader="false" title="{i18n>title}">
         <content>
-            <Text text="hi" />
+          <FlexBox justifyContent="End">
+                <HBox width="30%" justifyContent="SpaceBetween" class="paddingClass">
+                    <RadioButton text="Keels Login" />
+                    <RadioButton text="Vendor Login" />
+                </HBox>
+            </FlexBox>
+            <FlexBox justifyContent="End">
+                <VBox width="30%" height="50%" class="paddingClass marginClass" justifyContent="Center" backgroundDesign="Solid">
+                    <HBox justifyContent="Center" class="sapUiSmallMargin">
+                        <f:Avatar src="sap-icon://person-placeholder" displayShape="Circle" displaySize="XL" />
+                    </HBox>
+                    <Input placeholder="Enter your userid/emailID" />
+                    <Button type="Emphasized" text="Next" width="100%" />
+                    <HBox justifyContent="Center">
+                        <Text class="sapUiTinyMarginTop" text="New User ? Please" />
+                        <Link class="sapUiTinyMarginBegin sapUiTinyMarginTop" text="Signup" />
+                    </HBox>
+                </VBox>
+            </FlexBox>
         </content>
     </Page>
 </mvc:View>

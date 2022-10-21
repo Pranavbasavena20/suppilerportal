@@ -1,1 +1,16 @@
-/* Enter your custom styles here */
+/* Enter your custom styles here *//* Enter your custom styles here */
+.marginClass{
+    margin-top:10%;
+    margin-left:35%;
+    border-radius: 44px;
+
+}
+.paddingClass{
+    padding: 2%;
+}
+.backgroundclass{
+    background-image: url(image/background.jpg);
+    background-size: cover;
+    border-radius: 5rem;
+    margin: 1rem;
+}
