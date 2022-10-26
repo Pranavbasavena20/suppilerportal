@@ -1,16 +1,74 @@
-/* Enter your custom styles here *//* Enter your custom styles here */
-.marginClass{
+/* Enter your custom styles here */
+/* Enter your custom styles here */
+.marginClass {
     border-radius: 44px;
-   
+
 
 }
-.paddingClass{
-    padding: 2%;
-    margin-right:2%
+.whiteText {
+    color: white;
+    margin-left: 73px;
 }
-.backgroundclass{
-    background-image: url(image/background.jpg);
-    background-size: cover;
+.paddingClass {
+    padding: 2%;
+    margin-right: 2%
+}
+
+.backgroundclass {
+    background-size: cover !important;
+    background: url(image/background.jpg) no-repeat;
     border-radius: 5rem;
     margin: 1rem;
 }
+
+.backgroundshadow {
+    background: white;
+}
+ .blackTheme {
+    border-radius: 15px;
+    height: 100%;
+    width: 94%;
+    /* background-size: cover !important;
+    background: url(image/background.jpg) no-repeat; */
+    background-color: rgb(41, 40, 40);
+    box-shadow: 9px -13px #758ca470;
+    margin: 2rem;
+    padding: 2rem;
+
+}
+.searchField .sapMSFF {
+    background: #0000008f;
+    border-radius: 2.25rem;
+}
+
+.overflow{
+    overflow: scroll;
+    width: 62rem;
+    flex-wrap: wrap;
+}
+.labelRed {
+
+    border-radius: 8px;
+    position: relative;
+    background-color: #cccccc;
+    display: block;
+    height: 74px;
+    width: 95px;
+    margin-top: 1rem;
+    margin-left: 4rem;
+    /* background: url(http://i.imgur.com/evpC48G.png); */
+    background-size: contain;
+    text-decoration: none;
+}
+
+.labelRed1 {
+    position: absolute;
+    left: 143px;
+    top: 6px;
+    color: #fff;
+    z-index: 33;
+    background-color: red;
+    border-radius: 15px;
+    padding: 4px;
+
+}  
