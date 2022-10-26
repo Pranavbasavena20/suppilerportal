@@ -16,7 +16,7 @@
                     <Button type="Emphasized" text="Next" press="onfnpressnext" width="100%" />
                     <HBox justifyContent="Center">
                         <Text class="sapUiTinyMarginTop" text="New User ? Please" />
-                        <Link class="sapUiTinyMarginBegin sapUiTinyMarginTop" text="Signup" />
+                        <Link press="onSignUp" class="sapUiTinyMarginBegin sapUiTinyMarginTop" text="Signup" />
                     </HBox>
                 </VBox>
             </FlexBox>
