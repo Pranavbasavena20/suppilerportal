@@ -44,7 +44,6 @@
     }
   },
   "sap.ui5": {
-    "flexEnabled": true,
     "dependencies": {
       "minUI5Version": "1.102.1",
       "libs": {
@@ -102,7 +101,7 @@
         },
         {
           "name": "GenericTilesView",
-          "pattern": ":?query:",
+          "pattern": "GenericTilesView",
           "target": [
             "GenericTilesView"
           ]

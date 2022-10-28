@@ -16,7 +16,8 @@ sap.ui.define([
                 var oModel = dataUtil.createJsonModel()
 
                 oModel.setData({
-                    "bPasswordVi": false
+                    "bPasswordVi": false,
+                    "sLogoImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/logo.jpeg")
                 });
                 this.getView().setModel(oModel, "oLanding");
 
@@ -50,6 +51,15 @@ sap.ui.define([
                     that._oSignUp.open();
 
                 }.bind(that));
+            },
+            onfnpresssubmit: function () {
+                var oModel = this.getView().getModel("oLanding"),
+                    sPassword = oModel.getProperty("/sPassword");
+                if (sPassword !== undefined && sPassword !== null) {
+                    this.getRouter().navTo("GenericTilesView");
+                } else {
+                    sap.m.MessageBox.error("Please enter a valid password");
+                }
             }
         });
     });
