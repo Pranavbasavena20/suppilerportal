@@ -3,7 +3,7 @@
         <content>
             <VBox class="blackTheme">
                 <FlexBox width="100%" justifyContent="Center">
-                    <SearchField class="sapUiSmallMargin searchField"  width="20rem" />
+                    <SearchField class="sapUiSmallMargin searchField" width="20rem" />
                 </FlexBox>
                 <HBox alignItems="Center">
                     <HBox class="overflow" items="{genericTileModel>/oTileData}">

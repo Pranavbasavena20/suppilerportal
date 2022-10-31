@@ -5,10 +5,79 @@
 
 
 }
-.whiteText {
+
+.sapMITBSelected.sapMITBFilterPositive .sapMITBContentArrow::after {
+    background: mediumpurple;
+}
+
+.sapMITBSelected.sapMITBFilterPositive .sapMITBContentArrow::before {
+    background: mediumpurple;
+}
+
+.sapMITBSepIcon {
+    font-size: 1.6rem;
+    height: 2.75rem;
+    line-height: 2.75rem;
+    padding: 0 0.25rem;
+    color: mediumpurple;
+}
+
+.sapMITBHorizontal.sapMITBFilter+.sapMITBSep {
+    margin-top: 0.125rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.sapMITBFilterPositive {
+    color: mediumpurple;
+    border-color: mediumpurple;
+}
+
+.sapMITBSelected .sapMITBFilterPositive {
+    background: mediumpurple;
+    color: #fff;
+}
+
+.sapMITBText {
+
+    font-size: large !important;
+    color: mediumpurple !important;
+    margin-top: -6px !important;
+
+}
+
+.btnclass .sapMBtnInner.sapMBtnText {
+    padding-left: 0.4375rem;
+    padding-right: 0.4375rem;
+    background-color: mediumpurple;
     color: white;
+}
+
+.dilgtilte .sapMTitle {
+    color: mediumpurple !important;
+    font-weight: bolder;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.dilgtilte .sapUiFormTitle {
+    height: 2rem;
+    color: mediumpurple !important;
+    font-weight: bolder;
+}
+
+.wlcmTxt {
+    font-weight: bolder;
+    text-align: CENTER;
+    font-size: x-large;
+    color: mediumpurple;
+}
+
+.whiteText {
+    color: black;
     margin-left: 73px;
 }
+
 .paddingClass {
     padding: 2%;
     margin-right: 2%
@@ -24,28 +93,30 @@
 .backgroundshadow {
     background: white;
 }
- .blackTheme {
-    border-radius: 15px;
+
+.blackTheme {
+    /*border-radius: 15px;*/
     height: 100%;
     width: 94%;
     /* background-size: cover !important;
     background: url(image/background.jpg) no-repeat; */
-    background-color: rgb(41, 40, 40);
-    box-shadow: 9px -13px #758ca470;
-    margin: 2rem;
-    padding: 2rem;
+    background-color: #29282800;
+    /*box-shadow: 9px -13px #758ca470;*/
+
 
 }
+
 .searchField .sapMSFF {
-    background: #0000008f;
+    background: #00000021;
     border-radius: 2.25rem;
 }
 
-.overflow{
-    overflow: scroll;
-    width: 62rem;
+.overflow {
+    overflow: hidden;
+
     flex-wrap: wrap;
 }
+
 .labelRed {
 
     border-radius: 8px;
@@ -71,4 +142,6 @@
     border-radius: 15px;
     padding: 4px;
 
-}  
+}
+
+/* Enter your custom styles here */
