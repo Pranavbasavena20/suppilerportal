@@ -105,6 +105,13 @@
           "target": [
             "GenericTilesView"
           ]
+        },
+        {
+          "name": "VendorSignup",
+          "pattern": "VendorSignup",
+          "target": [
+            "VendorSignup"
+          ]
         }
       ],
       "targets": {
@@ -121,6 +128,13 @@
           "clearControlAggregation": false,
           "viewId": "GenericTilesView",
           "viewName": "GenericTilesView"
+        },
+        "VendorSignup": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "VendorSignup",
+          "viewName": "VendorSignup"
         }
       }
     },

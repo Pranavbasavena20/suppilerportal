@@ -11,7 +11,7 @@ sap.ui.define([
     function (Controller, JSONModel, dataUtil, UIComponent, Fragment) {
         "use strict";
 
-        return Controller.extend("com.spm.suppilerportal.controller.LandingView", {
+        return Controller.extend("com.spm.suppilerportal.controller.VendorSignup", {
             onInit: function () {
                 var oModel = dataUtil.createJsonModel();
 
@@ -38,22 +38,23 @@ sap.ui.define([
                 return sap.ui.core.UIComponent.getRouterFor(this);
             },
             onSignUp: function (oEvent) {
-                var that = this;
-                if (!that._oSignUp) {
-                    that._SignUpDialog = Fragment.load({
-                        id: that.createId("fSignUpDialog"),
-                        name: "com.spm.suppilerportal.fragments.VendorSignup",
-                        controller: that
-                    }).then(function (oDialog) {
-                        that._oSignUp = oDialog;
-                        that.getView().addDependent(that._oSignUp);
-                        that.getView().getModel("oLanding").setProperty("/sSubmit", false);
-                    });
-                }
-                that._SignUpDialog.then(function (oDialog) {
-                    that._oSignUp.open();
+                // var that = this;
+                // if (!that._oSignUp) {
+                //     that._SignUpDialog = Fragment.load({
+                //         id: that.createId("fSignUpDialog"),
+                //         name: "com.spm.suppilerportal.fragments.VendorSignup",
+                //         controller: that
+                //     }).then(function (oDialog) {
+                //         that._oSignUp = oDialog;
+                //         that.getView().addDependent(that._oSignUp);
+                //         that.getView().getModel("oLanding").setProperty("/sSubmit", false);
+                //     });
+                // }
+                // that._SignUpDialog.then(function (oDialog) {
+                //     that._oSignUp.open();
 
-                }.bind(that));
+                // }.bind(that));
+                this.getRouter().navTo("VendorSignup");
             },
             onfnpresssubmit: function () {
                 var oModel = this.getView().getModel("oLanding"),

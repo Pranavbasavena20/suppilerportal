@@ -78,6 +78,16 @@
     margin-left: 73px;
 }
 
+.pageBgColorWhite {
+    background-color: white !important;
+}
+
+.sapMInputBaseInner {
+    background: white !important;
+    border: none;
+    border-bottom: 1px solid purple !important;
+}
+
 .paddingClass {
     padding: 2%;
     margin-right: 2%
