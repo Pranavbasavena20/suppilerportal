@@ -134,7 +134,8 @@
           "transition": "slide",
           "clearControlAggregation": false,
           "viewId": "VendorSignup",
-          "viewName": "VendorSignup"
+          "viewName": "VendorSignup",
+          "title": "New Vendor Registration Form"
         }
       }
     },
