@@ -7,10 +7,10 @@
                 <!-- DynamicPage Header -->
                 <f:content>
                     <Wizard id="ShoppingCartWizard" class="sapUiResponsivePadding--header sapUiResponsivePadding--content" complete="completedHandler" height="auto" enableBranching="true">
-                        <WizardStep id="ContentsStep" nextStep="PaymentTypeStep">
+                        <WizardStep id="ContentsStep" nextStep="PaymentTypeStep" title="Basic Information">
                             <form:SimpleForm layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12" columnsL="1" columnsXL="1" editable="true" adjustLabelSpan="false" singleContainerFullSize="false">
                                 <form:content>
-                                    <core:Title class="dilgtilte" text="Basic Information" />
+                                    <!-- <core:Title class="dilgtilte" text="Basic Information" /> -->
                                     <VBox>
                                         <Label text="Title" required="true" />
                                         <ComboBox width="100%" />
@@ -60,10 +60,10 @@
                                 </form:content>
                             </form:SimpleForm>
                         </WizardStep>
-                        <WizardStep id="PaymentTypeStep">
+                        <WizardStep id="PaymentTypeStep" title="Business Contact Information">
                             <form:SimpleForm layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12" columnsL="1" columnsXL="1" editable="true" adjustLabelSpan="false" singleContainerFullSize="false">
                                 <form:content>
-                                    <core:Title class="dilgtilte" text="Business Contact Information" />
+                                    <!-- <core:Title class="dilgtilte" text="Business Contact Information" /> -->
                                     <VBox>
                                         <Label text="House Number" required="true" />
                                         <Input />
