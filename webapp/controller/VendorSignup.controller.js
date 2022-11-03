@@ -23,6 +23,57 @@ sap.ui.define([
                 });
 
                 this.getView().setModel(oModel, "oLanding");
+                var oModel = new sap.ui.model.json.JSONModel({
+                    "Designation": "",
+                    "Name": "",
+                    "LandPhoneNo": "",
+                    "MobileNo": "",
+                    "Email": "",
+                    "aContact": [],
+                    "sStep1": true,
+                    "sStep2": false,
+                    "sStep3": false
+                });
+                this.getView().setModel(oModel, "genericTileModel");
+
+            },
+            onfnnextpress2: function () {
+                var oModel = this.getView().getModel("genericTileModel");
+                oModel.setProperty("/sStep1", false);
+                oModel.setProperty("/sStep3", false);
+                oModel.setProperty("/sStep2", true);
+                this.getView().byId("idMP").getContent()[1].addStyleClass("classPurpledot");
+
+            },
+            onfnnextpress3: function () {
+                var oModel = this.getView().getModel("genericTileModel");
+                oModel.setProperty("/sStep1", false);
+                oModel.setProperty("/sStep3", true);
+                oModel.setProperty("/sStep2", true);
+                this.onPressAddContact();
+
+            },
+            onPressAddContact: function (oEvent) {
+                var oData = this.getView().getModel("genericTileModel"),
+                    aContact = oData.getProperty("/aContact");
+                if (aContact === undefined || aContact === null) {
+                    aContact = [];
+                }
+                var oObject = {
+                    "Designation": oData.getProperty("/Designation"),
+                    "Name": oData.getProperty("/Name"),
+                    "LandPhoneNo": oData.getProperty("/LandPhoneNo"),
+                    "MobileNo": oData.getProperty("/MobileNo"),
+                    "Email": oData.getProperty("/Designation")
+                };
+                aContact.push(oObject);
+                oData.setProperty("/Designation", "");
+                oData.setProperty("/Name", "");
+                oData.setProperty("/LandPhoneNo", "");
+                oData.setProperty("/MobileNo", "");
+                oData.setProperty("/Designation", "");
+
+                this.getView().getModel("genericTileModel").setProperty("/aContact", aContact);
 
             },
             getResourceBundle: function () {

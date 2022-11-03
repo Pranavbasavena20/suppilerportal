@@ -84,8 +84,23 @@
 
 .sapMInputBaseInner {
     background: white !important;
+    border: 1px solid gray !important;
+    border-radius: 5px !important;
     border: none;
-    border-bottom: 1px solid purple !important;
+    font-style: normal;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    font-size: .875rem;
+    font-family: "72", "72full", Arial, Helvetica, sans-serif;
+    color: #32363a;
+    line-height: normal;
+    padding: 0 0.625rem;
+    height: 100%;
+    box-sizing: border-box;
+    min-width: 2.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: inherit;
 }
 
 .paddingClass {
@@ -152,6 +167,70 @@
     border-radius: 15px;
     padding: 4px;
 
+}
+
+.BackgroundColor {
+    background-color: white !important;
+}
+
+/*.myButtonStyle:hover {*/
+
+/*    background-color: red !important;*/
+
+/*}*/
+.sapSuiteUiCommonsMicroProcessFlowItemSeparatorWrapper {
+    position: relative;
+    width: 20rem !important;
+}
+
+.sapMTableTH {
+    background: #841dbd;
+    border-bottom: 1px solid #e5e5e5;
+    vertical-align: middle;
+}
+
+.sapUiTableHeaderDataCell .sapMText,
+.sapMColumnHeader .sapMText {
+    font-weight: normal;
+    font-size: .875rem;
+    color: white;
+}
+
+
+
+.sapMVBox {
+    flex-direction: column;
+    padding: 4px;
+}
+
+.button1,
+.button1.sapMBtnInner,
+.button1.sapMBtnBase,
+.button1 .sapMBtnHoverable {
+    background: #841dbd !important;
+    border: #841dbd !important;
+    border-radius: 11px;
+}
+
+.classPurpledot .sapSuiteUiCommonsMicroProcessFlowItem {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #841dbd !important;
+    color: #841dbd !important;
+    background-color: #841dbd !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sapMBtnContent {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top;
+    line-height: 2.375rem;
+    color: white !important;
 }
 
 /* Enter your custom styles here */

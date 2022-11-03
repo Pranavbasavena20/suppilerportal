@@ -1,262 +1,147 @@
-<mvc:View controllerName="com.spm.suppilerportal.controller.VendorSignup" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.f" xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout" height="100%">
-    <NavContainer id="navContainer">
-        <pages>
-            <f:DynamicPage id="dynamicPage" toggleHeaderOnTitleClick="{/titleClickable}" stickySubheaderProvider="ShoppingCartWizard" class="sapUiNoContentPadding" showFooter="true">
-                <!-- DynamicPage Title -->
-
-                <!-- DynamicPage Header -->
-                <f:content>
-                    <Wizard id="ShoppingCartWizard" class="sapUiResponsivePadding--header sapUiResponsivePadding--content" complete="completedHandler" height="auto" enableBranching="true">
-                        <WizardStep id="ContentsStep" nextStep="PaymentTypeStep" title="Basic Information">
-                            <form:SimpleForm layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12" columnsL="1" columnsXL="1" editable="true" adjustLabelSpan="false" singleContainerFullSize="false">
+<mvc:View controllerName="com.spm.suppilerportal.controller.VendorSignup" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page showHeader="false" id="page" class="BackgroundColor" title="{i18n>title}" backgroundDesign="List">
+                    <content>
+                        <FlexBox class="sapUiLargeMarginTop" justifyContent="Center">
+                            <micro:MicroProcessFlow id="idMP">
+                                <micro:content>
+                                    <micro:MicroProcessFlowItem class="classPurpledot" />
+                                    <micro:MicroProcessFlowItem />
+                                </micro:content>
+                            </micro:MicroProcessFlow>
+                        </FlexBox>
+                        <FlexBox class="sapUiMediumMarginTop" visible="{genericTileModel>/sStep1}" justifyContent="Center" alignContent="Center">
+                            <form:SimpleForm title="Basic Information" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="1" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
                                 <form:content>
-                                    <!-- <core:Title class="dilgtilte" text="Basic Information" /> -->
                                     <VBox>
-                                        <Label text="Title" required="true" />
-                                        <ComboBox width="100%" />
+                                        <Label text="Title" design="Bold" />
+                                        <Input value="{oLanding>/sUserName}" />
                                         <layoutData>
                                             <layout:GridData span="XL6 L6 M6 S12" />
                                         </layoutData>
                                     </VBox>
                                     <VBox>
-                                        <Label text="Company / Vendor Name" required="true" />
-                                        <Input />
+                                        <Label text="Company Name" design="Bold" />
+                                        <Input type="Password" value="{oLanding>/sPassword}" />
+                                        <layoutData>
+                                            <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                                        </layoutData>
+                                    </VBox>
+                                    <VBox>
+                                        <Label text="Nature of Business" design="Bold" />
+                                        <Input type="Password" value="{oLanding>/sPassword}" />
+                                        <layoutData>
+                                            <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                                        </layoutData>
+                                    </VBox>
+                                    <VBox>
+                                        <Label text="Nature of product" design="Bold" />
+                                        <Input type="Password" value="{oLanding>/sPassword}" />
+                                        <layoutData>
+                                            <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                                        </layoutData>
+                                    </VBox>
+                                    <VBox>
+                                        <Button text="Proceed to Step 2" press="onfnnextpress2" width="100%" class="button1" />
                                         <layoutData>
                                             <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
-                                        </layoutData>
-                                    </VBox>
-                                    <VBox>
-                                        <Label text="Nature of Business" required="true" />
-                                        <ComboBox width="100%" />
-                                        <layoutData>
-                                            <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
-                                        </layoutData>
-                                    </VBox>
-                                    <VBox>
-                                        <Label text="Nature of Products" required="true" />
-                                        <Input />
-                                        <layoutData>
-                                            <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
-                                        </layoutData>
-                                    </VBox>
-                                    <VBox>
-                                        <Label text="Company / Vendor Name" required="true" />
-                                        <Input />
-                                        <layoutData>
-                                            <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
-                                        </layoutData>
-                                    </VBox>
-                                    <VBox>
-                                        <Label text="Department" required="true" />
-                                        <ComboBox width="100%" />
-                                    </VBox>
-                                    <VBox>
-                                        <Label text="Sub-Department" required="true" />
-                                        <ComboBox width="100%" />
-                                        <layoutData>
-                                            <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
                                         </layoutData>
                                     </VBox>
                                 </form:content>
                             </form:SimpleForm>
-                        </WizardStep>
-                        <WizardStep id="PaymentTypeStep" title="Business Contact Information">
-                            <form:SimpleForm layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12" columnsL="1" columnsXL="1" editable="true" adjustLabelSpan="false" singleContainerFullSize="false">
+                        </FlexBox>
+                        <FlexBox class="sapUiMediumMarginTop" visible="{genericTileModel>/sStep2}" justifyContent="Center" alignContent="Center">
+                            <form:SimpleForm title="Basic Contact Information" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="1" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
                                 <form:content>
-                                    <!-- <core:Title class="dilgtilte" text="Business Contact Information" /> -->
                                     <VBox>
-                                        <Label text="House Number" required="true" />
-                                        <Input />
-                                    </VBox>
-                                    <VBox>
-                                        <Label text="Street" required="true" />
-                                        <Input />
-                                        <layoutData>
-                                            <layout:GridData span="XL6 L6 M6 S12" />
-                                        </layoutData>
-                                    </VBox>
-                                    <VBox>
-                                        <Label text="City" required="true" />
-                                        <Input />
+                                        <Label text="Designation" design="Bold" />
+                                        <Input value="{genericTileModel>/Designation}" />
                                         <layoutData>
                                             <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
                                         </layoutData>
                                     </VBox>
                                     <VBox>
-                                        <Label text="Postal Code" required="true" />
-                                        <Input />
-                                        <layoutData>
-                                            <layout:GridData span="XL6 L6 M6 S12" />
-                                        </layoutData>
-                                    </VBox>
-                                    <VBox>
-                                        <Label text="District" required="true" />
-                                        <Input />
+                                        <Label text="Name" design="Bold" />
+                                        <Input value="{genericTileModel>/Name}" />
                                         <layoutData>
                                             <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
                                         </layoutData>
                                     </VBox>
                                     <VBox>
-                                        <Label text="PO Box No." required="true" />
-                                        <Input width="100%" />
-                                        <layoutData>
-                                            <layout:GridData span="XL6 L6 M6 S12" />
-                                        </layoutData>
-                                    </VBox>
-                                    <VBox>
-                                        <Label text="Country" required="true" />
-                                        <ComboBox width="100%" />
+                                        <Label text="Land Phone No" design="Bold" />
+                                        <Input type="Number" value="{genericTileModel>/LandPhoneNo}" />
                                         <layoutData>
                                             <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
                                         </layoutData>
                                     </VBox>
                                     <VBox>
-                                        <Label text="Region" required="true" />
-                                        <ComboBox width="100%" />
-                                        <layoutData>
-                                            <layout:GridData span="XL6 L6 M6 S12" />
-                                        </layoutData>
-                                    </VBox>
-                                    <VBox>
-                                        <Label text="Primary Contact Name" required="true" />
-                                        <Input width="100%" />
+                                        <Label text="Mobile No" design="Bold" />
+                                        <Input type="Number" value="{genericTileModel>/MobileNo}" />
                                         <layoutData>
                                             <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
                                         </layoutData>
                                     </VBox>
                                     <VBox>
-                                        <Label text="Email" required="true" />
-                                        <Input width="100%" />
+                                        <Label text="Email" design="Bold" />
+                                        <Input type="Email" value="{genericTileModel>/Email}" />
+                                        <layoutData>
+                                            <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                                        </layoutData>
+                                    </VBox>
+                                    <VBox>
+                                        <Button text="Add Contact" press="onfnnextpress3" width="100%" class="button1" />
                                         <layoutData>
                                             <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
                                         </layoutData>
                                     </VBox>
-                                    <VBox>
-                                        <Label text="Mobile Number" required="true" />
-                                        <Input width="100%" />
-                                        <layoutData>
-                                            <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
-                                        </layoutData>
-                                    </VBox>
-                                    <VBox>
-                                        <Label text="Remarks" required="true" />
-                                        <TextArea width="100%" />
-                                        <layoutData>
-                                            <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
-                                        </layoutData>
-                                    </VBox>
                                 </form:content>
                             </form:SimpleForm>
-                        </WizardStep>
-                    </Wizard>
-                </f:content>
-                <!-- DynamicPage Footer -->
-                <f:footer>
-                    <OverflowToolbar>
-                        <ToolbarSpacer />
-                        <Button type="Emphasized" text="SUBMIT" />
-                        <Button type="Transparent" text="CANCEL" />
-                    </OverflowToolbar>
-                </f:footer>
-            </f:DynamicPage>
-            <Page id="wizardBranchingReviewPage" showHeader="false">
-                <content>
-                    <form:SimpleForm title="1. List of products" minWidth="1024" editable="false" layout="ResponsiveGridLayout">
-                        <List items="{/ProductCollection}">
-                            <StandardListItem title="{Name}" type="Active" description="{Description}" icon="{ProductPicUrl}" info="{Price} {CurrencyCode}" iconDensityAware="false" iconInset="false" />
-                        </List>
-                        <ObjectHeader title="Total" number="{/ProductsTotalPrice}" numberUnit="EUR">
-                            <attributes>
-                                <ObjectAttribute press="handleNavBackToList" active="true" text="Edit" />
-                            </attributes>
-                        </ObjectHeader>
-                    </form:SimpleForm>
-                    <form:SimpleForm title="2. Payment type" minWidth="1024" editable="false" layout="ResponsiveGridLayout">
-                        <form:content>
-                            <Label text="Chosen payment type" />
-                            <Text text="{/selectedPayment}" />
-                            <Link press="handleNavBackToPaymentType" text="Edit" />
-                        </form:content>
-                    </form:SimpleForm>
-
-                    <form:SimpleForm visible="{= ${/selectedPayment}==='Credit Card' ? true : false}" title="3. Credit Card payment" minWidth="1024" editable="false" layout="ResponsiveGridLayout">
-                        <form:content>
-                            <Label text="Name on card" />
-                            <Text text="{/CreditCard/Name}" />
-                            <Label text="Card number" />
-                            <Text text="{/CardNumber}" />
-                            <Label text="Security code" />
-                            <Text text="{/CreditCard/SecurityCode}" />
-                            <Label text="Expiration date" />
-                            <Text text="{/CreditCard/Expire}" />
-                            <Link press="handleNavBackToCreditCard" text="Edit" />
-                        </form:content>
-                    </form:SimpleForm>
-
-                    <form:SimpleForm visible="{= ${/selectedPayment}==='Bank Transfer' ? true : false}" title="3. Bank Transfer" minWidth="1024" editable="false" layout="ResponsiveGridLayout">
-                        <form:content>
-                            <layout:Grid defaultSpan="L6 M6 S10" hSpacing="2">
-                                <Label text="Beneficiary Name" design="Bold" />
-                                <Label text="Singapore Hardware e-Commerce LTD" />
-                                <Label text="Beneficiary Bank" design="Bold" />
-                                <Label text="CITY BANK, SINGAPORE BRANCH" />
-                                <Label text="Beneficiary Account Number" design="Bold" />
-                                <Label text="06110702027218" />
-                                <Label text="Bank Phone Number" design="Bold" />
-                                <Label text="+65-6224-2622" />
-                                <Label text="Bank Email Address" design="Bold" />
-                                <Label text="customerservice@citybank.com" />
-                            </layout:Grid>
-                        </form:content>
-                    </form:SimpleForm>
-
-                    <form:SimpleForm visible="{= ${/selectedPayment}==='Cash on Delivery' ? true : false}" title="3. Cash on delivery" minWidth="1024" editable="false" layout="ResponsiveGridLayout">
-                        <form:content>
-                            <Label text="First Name" />
-                            <Text text="{/CashOnDelivery/FirstName}" />
-                            <Label text="Last Name" />
-                            <Text text="{/CashOnDelivery/LastName}" />
-                            <Label text="Phone number" />
-                            <Text text="{/CashOnDelivery/Phone Number}" />
-                            <Label text="Email address" />
-                            <Text text="{/CashOnDelivery/Email}" />
-                            <Link press="handleNavBackToCashOnDelivery" text="Edit" />
-                        </form:content>
-                    </form:SimpleForm>
-
-                    <form:SimpleForm title="4. Billing Address" minWidth="1024" editable="false" layout="ResponsiveGridLayout">
-                        <form:content>
-                            <Label text="Address" />
-                            <Text text="{/BillingAddress/Address}" />
-                            <Label text="City" />
-                            <Text text="{/BillingAddress/City}" />
-                            <Label text="Zip Code" />
-                            <Text text="{/BillingAddress/ZipCode}" />
-                            <Label text="Country" />
-                            <Text text="{/BillingAddress/Country}" />
-                            <Label text="Note" />
-                            <Text text="{/BillingAddress/Note}" />
-                            <Link press="handleNavBackToBillingAddress" text="Edit" />
-                        </form:content>
-                    </form:SimpleForm>
-
-                    <form:SimpleForm title="5. Delivery type" minWidth="1024" editable="false" layout="ResponsiveGridLayout">
-                        <form:content>
-                            <Label text="Chosen delivery type" />
-                            <Text text="{/selectedDeliveryMethod}" />
-                            <Link press="handleNavBackToDeliveryType" text="Edit" />
-                        </form:content>
-                    </form:SimpleForm>
-                </content>
-                <footer>
-                    <Bar>
-                        <contentRight>
-                            <Button text="Submit" press="handleWizardSubmit" />
-                            <Button text="Cancel" press="handleWizardCancel" />
-                        </contentRight>
-                    </Bar>
-                </footer>
-            </Page>
-        </pages>
-    </NavContainer>
+                        </FlexBox>
+                        <FlexBox width="100%" visible="{genericTileModel>/sStep3}" justifyContent="Center" alignItems="Center">
+                            <Table width="90%" class="sapUiLargeMargin" id="idProductsTable" backgroundDesign="Solid" inset="false" mode="MultiSelect" items="{genericTileModel>/aContact}">
+                                <columns>
+                                    <Column width="10em">
+                                        <Text text="Designation" />
+                                    </Column>
+                                    <Column minScreenWidth="Tablet" demandPopin="true">
+                                        <Text text="Name" />
+                                    </Column>
+                                    <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                                        <Text text="Land Mobile No" />
+                                    </Column>
+                                    <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                                        <Text text="Mobile" />
+                                    </Column>
+                                    <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                                        <Text text="Email" />
+                                    </Column>
+                                    <Column hAlign="End">
+                                        <Text text="" />
+                                    </Column>
+                                    <Column hAlign="End">
+                                        <Text text="" />
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem vAlign="Middle">
+                                        <cells>
+                                            <Text text="{genericTileModel>Designation}" />
+                                            <Text text="{genericTileModel>Name}" />
+                                            <Text text="{genericTileModel>LandPhoneNo}" />
+                                            <Text text="{genericTileModel>MobileNo}" />
+                                            <Text text="{genericTileModel>Email}" />
+                                            <Button text="Edit" width="6rem" class="button1" />
+                                            <Button text="Delete" width="6rem" class="button1" />
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </FlexBox>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>
