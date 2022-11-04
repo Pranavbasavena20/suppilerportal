@@ -208,7 +208,7 @@
 /*}*/
 .sapSuiteUiCommonsMicroProcessFlowItemSeparatorWrapper {
     position: relative;
-    width: 30rem !important;
+    width: 20rem !important;
 }
 
 .sapMTableTH {
@@ -272,6 +272,12 @@
     color: white !important;
 }
 
+.sapMInputBase:not(.sapMInputBaseReadonly) .sapMInputBaseIconContainer .sapMInputBaseIcon {
+    width: 2.25rem;
+    height: 2.31rem;
+    border-radius: 0.25rem;
+}
+
 .sapMInputBaseIcon {
     width: 2.25rem;
     min-width: 2rem;
@@ -279,8 +285,7 @@
     line-height: 2.25rem;
     cursor: pointer;
     background: white;
-    border-color: gray;
-    border-style: solid;
+    border: 1px solid gray;
     border-radius: 0.25rem;
     -webkit-user-select: none;
     -moz-user-select: none;

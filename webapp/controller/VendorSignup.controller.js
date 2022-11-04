@@ -35,8 +35,16 @@ sap.ui.define([
                     "sStep3": false
                 });
                 this.getView().setModel(oModel, "genericTileModel");
-                var item = new sap.suite.ui.commons.MicroProcessFlowItem();
-                this.getView().byId("idMP").addContent(item);
+                // var item = new sap.suite.ui.commons.MicroProcessFlowItem();
+                // this.getView().byId("idMP").addContent(item);
+
+            },
+            onfnnextpress1: function () {
+                var oModel = this.getView().getModel("genericTileModel");
+                oModel.setProperty("/sStep1", true);
+                oModel.setProperty("/sStep3", false);
+                oModel.setProperty("/sStep2", false);
+
 
             },
             onfnnextpress2: function () {
@@ -45,15 +53,18 @@ sap.ui.define([
                 oModel.setProperty("/sStep3", false);
                 oModel.setProperty("/sStep2", true);
                 this.getView().byId("idMP").getContent()[2].addStyleClass("classPurpledot");
-                this.getView().byId("idMP").getContent()[1].addStyleClass("classPurpledot2");  
+                this.getView().byId("idMP").getContent()[1].addStyleClass("classPurpledot2");
 
             },
             onfnnextpress3: function () {
                 var oModel = this.getView().getModel("genericTileModel");
                 oModel.setProperty("/sStep1", false);
                 oModel.setProperty("/sStep3", true);
-                oModel.setProperty("/sStep2", true);
-                this.onPressAddContact();
+                oModel.setProperty("/sStep2", false);
+                // this.onPressAddContact();
+                this.getView().byId("idMP").getContent()[2].addStyleClass("classPurpledot2");
+                this.getView().byId("idMP").getContent()[3].addStyleClass("classPurpledot");
+
 
             },
             onPressAddContact: function (oEvent) {

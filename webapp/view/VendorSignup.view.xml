@@ -8,7 +8,9 @@
                             <micro:MicroProcessFlow id="idMP">
                                 <micro:content>
                                     <micro:MicroProcessFlowItem class="classPurpledot1" />
-                                    <micro:MicroProcessFlowItem class="classPurpledot" />
+                                    <micro:MicroProcessFlowItem class="classPurpledot" press="onfnnextpress1" />
+                                    <micro:MicroProcessFlowItem class="classPurpledot" press="onfnnextpress2" />
+                                    <micro:MicroProcessFlowItem class="classPurpledot" press="onfnnextpress3" />
                                 </micro:content>
                             </micro:MicroProcessFlow>
                         </FlexBox>
@@ -127,6 +129,18 @@
                                             <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                                         </layoutData>
                                     </VBox>
+                                    <VBox>
+                                        <Button text="Proceed to Step 3" press="onfnnextpress3" width="100%" class="button1" />
+                                        <layoutData>
+                                            <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
+                                        </layoutData>
+                                    </VBox>
+                                </form:content>
+                            </form:SimpleForm>
+                        </FlexBox>
+                        <FlexBox class="sapUiMediumMarginTop" visible="{genericTileModel>/sStep3}" justifyContent="Center" alignContent="Center">
+                            <form:SimpleForm width="45rem" title="Contact Information" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
+                                <form:content>
                                     <Title text="Contact" level="H4" titleStyle="H4" />
                                     <VBox>
                                         <Label text="Primary Contact Name" design="Bold" />
@@ -151,7 +165,7 @@
                                     </VBox>
 
                                     <VBox>
-                                        <Button text="Submit Registration" press="onfnnextpress3" width="100%" class="button1" />
+                                        <Button text="Submit Registration" press="onfnnextpress4" width="100%" class="button1" />
                                         <layoutData>
                                             <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
                                         </layoutData>
@@ -159,7 +173,8 @@
                                 </form:content>
                             </form:SimpleForm>
                         </FlexBox>
-                        <FlexBox width="100%" visible="{genericTileModel>/sStep3}" justifyContent="Center" alignItems="Center">
+
+                        <!-- <FlexBox width="100%" visible="{genericTileModel>/sStep3}" justifyContent="Center" alignItems="Center">
                             <Table width="90%" class="sapUiLargeMargin" id="idProductsTable" backgroundDesign="Solid" inset="false" mode="MultiSelect" items="{genericTileModel>/aContact}">
                                 <columns>
                                     <Column width="10em">
@@ -198,7 +213,7 @@
                                     </ColumnListItem>
                                 </items>
                             </Table>
-                        </FlexBox>
+                        </FlexBox> -->
                     </content>
                 </Page>
             </pages>
