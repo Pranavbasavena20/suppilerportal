@@ -13,6 +13,7 @@
 .sapMITBSelected.sapMITBFilterPositive .sapMITBContentArrow::before {
     background: mediumpurple;
 }
+
 .classPurpledot1 .sapSuiteUiCommonsMicroProcessFlowItemSeparator {
     height: 2px !important;
     background-color: #841dbd !important;
@@ -20,6 +21,7 @@
     margin-right: 3px;
     flex-grow: 1;
 }
+
 .classPurpledot2 .sapSuiteUiCommonsMicroProcessFlowItemSeparator {
     height: 2px !important;
     background-color: #841dbd !important;
@@ -27,6 +29,7 @@
     margin-right: 3px;
     flex-grow: 1;
 }
+
 .classPurpledot1 .sapSuiteUiCommonsMicroProcessFlowItem {
     width: 18px;
     height: 18px;
@@ -38,6 +41,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .sapMITBSepIcon {
     font-size: 1.6rem;
     height: 2.75rem;
@@ -255,6 +259,20 @@
     vertical-align: top;
     line-height: 2.375rem;
     color: white !important;
+}
+
+.sapMInputBaseIcon {
+    width: 2.25rem;
+    min-width: 2rem;
+    height: 100%;
+    line-height: 2.25rem;
+    cursor: pointer;
+    background: white;
+    border: gray;
+    border-radius: 0.25rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 /* Enter your custom styles here */
