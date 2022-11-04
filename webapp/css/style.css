@@ -13,7 +13,14 @@
 .sapMITBSelected.sapMITBFilterPositive .sapMITBContentArrow::before {
     background: mediumpurple;
 }
-.sapSuiteUiCommonsMicroProcessFlowItemSeparator {
+.classPurpledot1 .sapSuiteUiCommonsMicroProcessFlowItemSeparator {
+    height: 2px !important;
+    background-color: #841dbd !important;
+    margin-left: 3px;
+    margin-right: 3px;
+    flex-grow: 1;
+}
+.classPurpledot2 .sapSuiteUiCommonsMicroProcessFlowItemSeparator {
     height: 2px !important;
     background-color: #841dbd !important;
     margin-left: 3px;
@@ -197,7 +204,7 @@
 /*}*/
 .sapSuiteUiCommonsMicroProcessFlowItemSeparatorWrapper {
     position: relative;
-    width: 52rem !important;
+    width: 30rem !important;
 }
 
 .sapMTableTH {

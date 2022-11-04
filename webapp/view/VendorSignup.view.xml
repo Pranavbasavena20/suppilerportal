@@ -8,7 +8,7 @@
                             <micro:MicroProcessFlow id="idMP">
                                 <micro:content>
                                     <micro:MicroProcessFlowItem class="classPurpledot1" />
-                                    <micro:MicroProcessFlowItem />
+                                    <micro:MicroProcessFlowItem class="classPurpledot"/>
                                 </micro:content>
                             </micro:MicroProcessFlow>
                         </FlexBox>

@@ -35,6 +35,8 @@ sap.ui.define([
                     "sStep3": false
                 });
                 this.getView().setModel(oModel, "genericTileModel");
+                var item = new sap.suite.ui.commons.MicroProcessFlowItem();
+                this.getView().byId("idMP").addContent(item);
 
             },
             onfnnextpress2: function () {
@@ -42,7 +44,8 @@ sap.ui.define([
                 oModel.setProperty("/sStep1", false);
                 oModel.setProperty("/sStep3", false);
                 oModel.setProperty("/sStep2", true);
-                this.getView().byId("idMP").getContent()[1].addStyleClass("classPurpledot");
+                this.getView().byId("idMP").getContent()[2].addStyleClass("classPurpledot");
+                this.getView().byId("idMP").getContent()[1].addStyleClass("classPurpledot2");  
 
             },
             onfnnextpress3: function () {
