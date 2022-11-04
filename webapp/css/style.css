@@ -252,6 +252,17 @@
     justify-content: center;
 }
 
+.sapMInputBase {
+    height: 2.5rem;
+    background: transparent;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    outline: none;
+    box-sizing: border-box;
+    line-height: 0;
+}
+
 .sapMBtnContent {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -268,7 +279,8 @@
     line-height: 2.25rem;
     cursor: pointer;
     background: white;
-    border: gray;
+    border-color: gray;
+    border-style: solid;
     border-radius: 0.25rem;
     -webkit-user-select: none;
     -moz-user-select: none;
