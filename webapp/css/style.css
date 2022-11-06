@@ -206,9 +206,14 @@
 /*    background-color: red !important;*/
 
 /*}*/
-.sapSuiteUiCommonsMicroProcessFlowItemSeparatorWrapper {
+.vendorCss .sapSuiteUiCommonsMicroProcessFlowItemSeparatorWrapper {
     position: relative;
     width: 20rem !important;
+}
+
+.suplierCss .sapSuiteUiCommonsMicroProcessFlowItemSeparatorWrapper {
+    position: relative;
+    width: 5rem !important;
 }
 
 .sapMTableTH {

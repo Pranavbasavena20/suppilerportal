@@ -52,7 +52,7 @@
                             <Link press="onSignUp" class="sapUiTinyMarginBegin sapUiTinyMarginTop" text="Signup" />
                         </HBox>
                         <HBox justifyContent="Center">
-                            <Link class="sapUiTinyMarginBegin sapUiTinyMarginTop" text="Forgot Password" />
+                            <Link class="sapUiTinyMarginBegin sapUiTinyMarginTop" press="onfnForgotPassword" text="Forgot Password" />
                         </HBox>
                     </VBox>
                 </VBox>

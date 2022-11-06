@@ -7,10 +7,10 @@
                         <FlexBox class="sapUiLargeMarginTop" justifyContent="Center">
                             <micro:MicroProcessFlow id="idMP">
                                 <micro:content>
-                                    <micro:MicroProcessFlowItem class="classPurpledot1" />
-                                    <micro:MicroProcessFlowItem class="classPurpledot" press="onfnnextpress1" />
-                                    <micro:MicroProcessFlowItem class="classPurpledot" press="onfnnextpress2" />
-                                    <micro:MicroProcessFlowItem class="classPurpledot" press="onfnnextpress3" />
+                                    <micro:MicroProcessFlowItem class="vendorCss classPurpledot1" />
+                                    <micro:MicroProcessFlowItem class="vendorCss classPurpledot" press="onfnnextpress1" />
+                                    <micro:MicroProcessFlowItem class="vendorCss" press="onfnnextpress2" />
+                                    <micro:MicroProcessFlowItem class="vendorCss" press="onfnnextpress3" />
                                 </micro:content>
                             </micro:MicroProcessFlow>
                         </FlexBox>
@@ -19,42 +19,45 @@
                                 <form:content>
                                     <VBox>
                                         <Label text="Title" design="Bold" />
-                                        <ComboBox width="100%" value="{oLanding>/sUserName}" />
+                                        <ComboBox width="100%" />
                                         <layoutData>
                                             <layout:GridData span="XL12 L12 M12 S12" />
                                         </layoutData>
                                     </VBox>
                                     <VBox>
                                         <Label text="Company/Vendor Name" design="Bold" />
-                                        <Input value="{oLanding>/sPassword}" />
+                                        <Input />
                                         <layoutData>
                                             <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                                         </layoutData>
                                     </VBox>
                                     <VBox>
                                         <Label text="Nature of business" design="Bold" />
-                                        <Input value="{oLanding>/sPassword}" />
+                                        <ComboBox width="100%" />
+
                                         <layoutData>
                                             <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                                         </layoutData>
                                     </VBox>
                                     <VBox>
                                         <Label text="Nature of products" design="Bold" />
-                                        <Input value="{oLanding>/sPassword}" />
+                                        <Input />
                                         <layoutData>
                                             <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                                         </layoutData>
                                     </VBox>
                                     <VBox>
                                         <Label text="Department" design="Bold" />
-                                        <Input value="{oLanding>/sPassword}" />
+                                        <ComboBox width="100%" />
+
                                         <layoutData>
                                             <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                                         </layoutData>
                                     </VBox>
                                     <VBox>
                                         <Label text="Sub-department" design="Bold" />
-                                        <Input value="{oLanding>/sPassword}" />
+                                        <ComboBox width="100%" />
+
                                         <layoutData>
                                             <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                                         </layoutData>
@@ -70,9 +73,9 @@
                             </form:SimpleForm>
                         </FlexBox>
                         <FlexBox class="sapUiMediumMarginTop" visible="{genericTileModel>/sStep2}" justifyContent="Center" alignContent="Center">
-                            <form:SimpleForm width="45rem" title="Contact Information" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
+                            <form:SimpleForm width="45rem" title="Address" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
                                 <form:content>
-                                    <Title text="Address" level="H4" titleStyle="H4" />
+                                    <!-- <Title text="Address" level="H4" titleStyle="H4" /> -->
                                     <VBox>
                                         <Label text="House No" design="Bold" />
                                         <Input value="{genericTileModel>/Designation}" />
@@ -141,7 +144,7 @@
                         <FlexBox class="sapUiMediumMarginTop" visible="{genericTileModel>/sStep3}" justifyContent="Center" alignContent="Center">
                             <form:SimpleForm width="45rem" title="Contact Information" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
                                 <form:content>
-                                    <Title text="Contact" level="H4" titleStyle="H4" />
+                                    <!-- <Title text="Contact" level="H4" titleStyle="H4" /> -->
                                     <VBox>
                                         <Label text="Primary Contact Name" design="Bold" />
                                         <Input width="100%" value="{genericTileModel>/Email}" />

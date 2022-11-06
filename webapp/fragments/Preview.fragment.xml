@@ -1,0 +1,175 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form">
+    <Dialog class="dilgtilte" title="Preview" contentWidth="100%" horizontalScrolling="false" draggable="false" busy="{objectView>/busy}" busyIndicatorDelay="0" afterClose="onAfterCloseForm">
+        <content>
+            <Panel expandable="true" expanded="true" width="auto" class="sapUiResponsiveMargin">
+                <headerToolbar>
+                    <OverflowToolbar style="Clear">
+                        <Title text="Basic Information" />
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://edit" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content>
+                    <VBox>
+                        <Label text="Title" design="Bold" />
+                        <!-- <Text text="titleeeee" width="100%" /> -->
+                        <layoutData>
+                            <layout:GridData span="XL12 L12 M12 S12" />
+                        </layoutData>
+                    </VBox>
+                    <VBox>
+                        <Label text="Company/Vendor Name 1" design="Bold" />
+                        <!-- <Text text="Vendor Name1" width="100%" /> -->
+
+                        <layoutData>
+                            <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                        </layoutData>
+                    </VBox>
+                    <VBox>
+                        <Label text="Company/Vendor Name 2" design="Bold" />
+                        <!-- <Text text="Vendor Name 2" width="100%" /> -->
+                        <layoutData>
+                            <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                        </layoutData>
+                    </VBox>
+                    <VBox>
+                        <Label text="Legal/Business Entry" design="Bold" />
+                        <!-- <Text text="Business" width="100%" /> -->
+                        <layoutData>
+                            <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                        </layoutData>
+                    </VBox>
+
+                    <VBox>
+                        <Label text="Nature of business" design="Bold" />
+                        <!-- <ComboBox width="100%" /> -->
+
+                        <layoutData>
+                            <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                        </layoutData>
+                    </VBox>
+                    <VBox>
+                        <Label text="Business Registration No" design="Bold" />
+                        <!-- <Input /> -->
+                        <layoutData>
+                            <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                        </layoutData>
+                    </VBox>
+                    <VBox>
+                        <Label text="VAT Registration No" design="Bold" />
+                        <!-- <Input /> -->
+                        <layoutData>
+                            <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                        </layoutData>
+                    </VBox>
+                </content>
+            </Panel>
+            <Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
+                <headerToolbar>
+                    <OverflowToolbar style="Clear">
+                        <Title text="Department/Product Info" />
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://edit" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content />
+            </Panel>
+            <Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
+                <headerToolbar>
+                    <OverflowToolbar style="Clear">
+                        <Title text="Address" />
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://edit" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content />
+            </Panel>
+            <Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
+                <headerToolbar>
+                    <OverflowToolbar style="Clear">
+                        <Title text="Contact List" />
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://edit" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content />
+            </Panel>
+            <Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
+                <headerToolbar>
+                    <OverflowToolbar style="Clear">
+                        <Title text="Accounting Information" />
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://edit" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content />
+            </Panel>
+            <Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
+                <headerToolbar>
+                    <OverflowToolbar style="Clear">
+                        <Title text="Payment Information" />
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://edit" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content />
+            </Panel>
+            <Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
+                <headerToolbar>
+                    <OverflowToolbar style="Clear">
+                        <Title text="Payment Information" />
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://edit" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content />
+            </Panel>
+            <Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
+                <headerToolbar>
+                    <OverflowToolbar style="Clear">
+                        <Title text="Withholding Tax Accounting" />
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://edit" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content />
+            </Panel>
+
+            <Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
+                <headerToolbar>
+                    <OverflowToolbar style="Clear">
+                        <Title text="Other Information" />
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://edit" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content />
+            </Panel>
+            <Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
+                <headerToolbar>
+                    <OverflowToolbar style="Clear">
+                        <Title text="Statutory Documents" />
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://edit" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content />
+            </Panel>
+            <Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
+                <headerToolbar>
+                    <OverflowToolbar style="Clear">
+                        <Title text=" Review Log" />
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://edit" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content />
+            </Panel>
+        </content>
+
+        <buttons>
+            <Button class="button1" text="Submit" press="onClickSubmit" />
+            <Button text="Cancel" class="button1" press="onCancelForm" />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

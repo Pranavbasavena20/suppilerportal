@@ -37,6 +37,9 @@ sap.ui.define([
             getRouter: function () {
                 return sap.ui.core.UIComponent.getRouterFor(this);
             },
+            onfnForgotPassword: function (oEvent) {
+                this.getRouter().navTo("SupplierSignup");
+            },
             onSignUp: function (oEvent) {
                 // var that = this;
                 // if (!that._oSignUp) {
