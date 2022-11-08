@@ -62,6 +62,7 @@ sap.ui.define([
                         break;
                     case "Vendor Master":
                         this.getRouter().navTo("FlexibleColumnLayout");
+                        break;
                     default:
                         break;
                 }

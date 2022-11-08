@@ -14,7 +14,6 @@ sap.ui.define([
         return Controller.extend("com.spm.suppilerportal.controller.FlexibleColumnLayout", {
             onInit: function () {
                 var oModel = dataUtil.createJsonModel();
-
                 oModel.setData({
                     layout: "OneColumn",
                     previousLayout: "",
@@ -25,7 +24,7 @@ sap.ui.define([
                     }
                 });
 
-                this.getView().setModel(oModel, "oFiexibleLayout");
+                this.getOwnerComponent().setModel(oModel, "oFiexibleLayout");
 
             }
 

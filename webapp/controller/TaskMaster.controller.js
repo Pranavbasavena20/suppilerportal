@@ -24,55 +24,9 @@ sap.ui.define([
                 this.getView().setModel(oModel, "oLanding");
 
             },
-            onClickNext: function () {
-                this.getView().getModel("oLanding").setProperty("/sNext", false);
-                this.getView().getModel("oLanding").setProperty("/sSubmit", true);
-                this.getView().byId("idIconTabBar").setSelectedKey("Contact");
-            },
-            onClickSubmit: function () {
-                this.getView().getModel("oLanding").setProperty("/sNext", true);
-                this.getView().getModel("oLanding").setProperty("/sSubmit", false);
-                this.onCancelForm();
-            },
-            getRouter: function () {
-                return sap.ui.core.UIComponent.getRouterFor(this);
-            },
-            onfnForgotPassword: function (oEvent) {
-                //this.getRouter().navTo("SupplierSignup");
-            },
-            onSignUp: function (oEvent) {
-                // var that = this;
-                // if (!that._oSignUp) {
-                //     that._SignUpDialog = Fragment.load({
-                //         id: that.createId("fSignUpDialog"),
-                //         name: "com.spm.suppilerportal.fragments.VendorSignup",
-                //         controller: that
-                //     }).then(function (oDialog) {
-                //         that._oSignUp = oDialog;
-                //         that.getView().addDependent(that._oSignUp);
-                //         that.getView().getModel("oLanding").setProperty("/sSubmit", false);
-                //     });
-                // }
-                // that._SignUpDialog.then(function (oDialog) {
-                //     that._oSignUp.open();
-
-                // }.bind(that));
-                this.getRouter().navTo("VendorSignup");
-            },
-            onfnpresssubmit: function () {
-                var oModel = this.getView().getModel("oLanding"),
-                    sName = oModel.getProperty("/sUserName"),
-                    sPassword = oModel.getProperty("/sPassword");
-                if (sName !== undefined && sName !== null && sPassword !== undefined && sPassword !== null) {
-                    this.getRouter().navTo("GenericTilesView");
-                    // this.getOwnerComponent().getRouter().navTo("GenericTilesView");
-
-                } else {
-                    sap.m.MessageBox.error("Please enter a valid user name/password");
-                }
-            },
-            onCancelForm: function () {
-                this._oSignUp.close();
+            onPress: function (oEvent) {
+                this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/layout", "TwoColumnsBeginExpanded");
+                this.getOwnerComponent().getRouter().navTo("TaskDetail", { TaskType: "1" });
             }
         });
     });
