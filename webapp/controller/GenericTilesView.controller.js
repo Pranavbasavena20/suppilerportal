@@ -61,7 +61,7 @@ sap.ui.define([
                         this.getRouter().navTo("SupplierSignup");
                         break;
                     case "Vendor Master":
-                        this.getRouter().navTo("TaskMaster");
+                        this.getRouter().navTo("FlexibleColumnLayout");
                     default:
                         break;
                 }

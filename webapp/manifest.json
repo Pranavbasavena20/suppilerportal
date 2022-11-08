@@ -121,6 +121,13 @@
           ]
         },
         {
+          "pattern": "FlexibleColumnLayout",
+          "name": "FlexibleColumnLayout",
+          "target": [
+            "FlexibleColumnLayout"
+          ]
+        },
+        {
           "pattern": "TaskMaster",
           "name": "TaskMaster",
           "target": [
@@ -171,13 +178,20 @@
           "viewName": "SupplierSignup",
           "title": "New Vendor Registration Form"
         },
+        "FlexibleColumnLayout": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewId": "flexibleColumnLayout",
+          "viewName": "FlexibleColumnLayout"
+        },
         "TaskMaster": {
           "viewName": "TaskMaster",
-          "controlId": "fcl",
+          "controlId": "Master",
           "controlAggregation": "beginColumnPages"
         },
         "TaskDetail": {
           "viewName": "TaskDetail",
+          "controlId": "Detail",
           "controlAggregation": "midColumnPages"
         }
       }
