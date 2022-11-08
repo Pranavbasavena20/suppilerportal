@@ -11,7 +11,7 @@ sap.ui.define([
     function (Controller, JSONModel, dataUtil, UIComponent, Fragment) {
         "use strict";
 
-        return Controller.extend("com.spm.suppilerportal.controller.LandingView", {
+        return Controller.extend("com.spm.suppilerportal.controller.TaskMaster", {
             onInit: function () {
                 var oModel = dataUtil.createJsonModel();
 

@@ -10,7 +10,7 @@
                         <items>
                             <VBox class="sapUiSmallMargin">
                                 <Label visible="{=${genericTileModel>count} !== '0'}" text="{genericTileModel>count}" class="labelRed1" />
-                                <Image class="labelRed" src="{genericTileModel>imageUrl}" press="on" />
+                                <Image class="labelRed" src="{genericTileModel>imageUrl}" press="onImageClick" />
                                 <Text textAlign="Center" width="70px" wrapping="true" text="{genericTileModel>titleText}" class="sapUiSmallMarginTop whiteText" />
                             </VBox>
                         </items>

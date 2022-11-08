@@ -1,0 +1,5 @@
+<mvc:View controllerName="com.spm.suppilerportal.controller.TaskMaster" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form">
+    <Page id="page" backgroundDesign="List" showHeader="false" title="{i18n>title}">
+        <content />
+    </Page>
+</mvc:View>

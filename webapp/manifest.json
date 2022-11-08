@@ -83,7 +83,7 @@
     },
     "routing": {
       "config": {
-        "routerClass": "sap.m.routing.Router",
+        "routerClass": "sap.f.routing.Router",
         "viewType": "XML",
         "async": true,
         "viewPath": "com.spm.suppilerportal.view",
@@ -119,6 +119,25 @@
           "target": [
             "SupplierSignup"
           ]
+        },
+        {
+          "pattern": "TaskMaster",
+          "name": "TaskMaster",
+          "target": [
+            "TaskMaster",
+            "TaskDetail"
+          ],
+          "layout": "TwoColumnsMidExpanded",
+          "controlId": "fcl"
+        },
+        {
+          "pattern": "TaskDetail/{TaskType}",
+          "name": "TaskDetail",
+          "target": [
+            "TaskMaster",
+            "TaskDetail"
+          ],
+          "layout": "TwoColumnsMidExpanded"
         }
       ],
       "targets": {
@@ -151,6 +170,15 @@
           "viewId": "SupplierSignup",
           "viewName": "SupplierSignup",
           "title": "New Vendor Registration Form"
+        },
+        "TaskMaster": {
+          "viewName": "TaskMaster",
+          "controlId": "fcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "TaskDetail": {
+          "viewName": "TaskDetail",
+          "controlAggregation": "midColumnPages"
         }
       }
     },

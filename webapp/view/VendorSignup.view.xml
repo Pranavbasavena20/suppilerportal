@@ -176,47 +176,6 @@
                                 </form:content>
                             </form:SimpleForm>
                         </FlexBox>
-
-                        <!-- <FlexBox width="100%" visible="{genericTileModel>/sStep3}" justifyContent="Center" alignItems="Center">
-                            <Table width="90%" class="sapUiLargeMargin" id="idProductsTable" backgroundDesign="Solid" inset="false" mode="MultiSelect" items="{genericTileModel>/aContact}">
-                                <columns>
-                                    <Column width="10em">
-                                        <Text text="Designation" />
-                                    </Column>
-                                    <Column minScreenWidth="Tablet" demandPopin="true">
-                                        <Text text="Name" />
-                                    </Column>
-                                    <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
-                                        <Text text="Land Mobile No" />
-                                    </Column>
-                                    <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
-                                        <Text text="Mobile" />
-                                    </Column>
-                                    <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
-                                        <Text text="Email" />
-                                    </Column>
-                                    <Column hAlign="End">
-                                        <Text text="" />
-                                    </Column>
-                                    <Column hAlign="End">
-                                        <Text text="" />
-                                    </Column>
-                                </columns>
-                                <items>
-                                    <ColumnListItem vAlign="Middle">
-                                        <cells>
-                                            <Text text="{genericTileModel>Designation}" />
-                                            <Text text="{genericTileModel>Name}" />
-                                            <Text text="{genericTileModel>LandPhoneNo}" />
-                                            <Text text="{genericTileModel>MobileNo}" />
-                                            <Text text="{genericTileModel>Email}" />
-                                            <Button text="Edit" width="6rem" class="button1" />
-                                            <Button text="Delete" width="6rem" class="button1" />
-                                        </cells>
-                                    </ColumnListItem>
-                                </items>
-                            </Table>
-                        </FlexBox> -->
                     </content>
                 </Page>
             </pages>
