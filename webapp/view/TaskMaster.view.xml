@@ -1,23 +1,40 @@
 <mvc:View controllerName="com.spm.suppilerportal.controller.TaskMaster" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form">
     <Page id="page" backgroundDesign="List" showHeader="false" title="{i18n>title}">
         <content>
-            <!-- <List items="{/ProductCollection}" headerText="Products">
-                <ObjectListItem title="{Name}" type="Active" press="onListItemPress" number="{
-				parts:[{path:'Price'},{path:'CurrencyCode'}],
-				type: 'sap.ui.model.type.Currency',
-				formatOptions: {showMeasure: false}
-			}" numberUnit="{CurrencyCode}">
-                    <firstStatus>
-                        <ObjectStatus text="{Status}" state="{
-						path: 'Status',
-						formatter: 'sap.m.sample.ObjectListItem.Formatter.status'
-					}" />
-                    </firstStatus>
-                    <ObjectAttribute text="{WeightMeasure} {WeightUnit}" />
-                    <ObjectAttribute text="{Width} x {Depth} x {Height} {DimUnit}" />
-                </ObjectListItem>
-            </List> -->
-            <Button text="Press" press="onPress" />
+            <Table id="idMaster" inset="false">
+                <columns>
+                    <Column width="12em">
+                        <Text text="Code" />
+                    </Column>
+                    <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Text text="Name" />
+                    </Column>
+                    <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Text text="Department" />
+                    </Column>
+                    <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Text text="Primary Contact" />
+                    </Column>
+                    <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Text text="Email" />
+                    </Column>
+                    <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Text text="Phone" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem vAlign="Middle" press="onPress" type="Active">
+                        <cells>
+                            <Text text="0001" />
+                            <Text text="Unilever" />
+                            <Text text="Household" />
+                            <Text text="John" />
+                            <Text text="John@gmail.com" />
+                            <Text text="123456" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
         </content>
     </Page>
 </mvc:View>

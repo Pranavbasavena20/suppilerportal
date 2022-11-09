@@ -297,4 +297,19 @@
     user-select: none;
 }
 
+.sapUiSizeCompact .sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMSB.sapMSBTransparent .sapMBtnContent,
+.sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMSB.sapMSBTransparent .sapMBtnContent,
+.sapUiSizeCompact .sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnInner .sapMBtnContent,
+.sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnInner .sapMBtnContent,
+.sapUiSizeCompact .sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMSB.sapMSBTransparent .sapMBtnIcon,
+.sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMSB.sapMSBTransparent .sapMBtnIcon,
+.sapUiSizeCompact .sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnInner .sapMBtnIcon,
+.sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnInner .sapMBtnIcon {
+    color: #556b82 !important;
+    font-family: "72", "72full", Arial, Helvetica, sans-serif;
+    font-size: 0.875rem;
+    height: 2.5rem;
+    line-height: 2.75rem;
+}
+
 /* Enter your custom styles here */

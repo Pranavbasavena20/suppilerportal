@@ -25,7 +25,7 @@ sap.ui.define([
 
             },
             onPress: function (oEvent) {
-                this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/layout", "TwoColumnsBeginExpanded");
+                this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/layout", "TwoColumnsMidExpanded");
                 this.getOwnerComponent().getRouter().navTo("TaskDetail", { TaskType: "1" });
             }
         });

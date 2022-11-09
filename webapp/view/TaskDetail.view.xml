@@ -1,66 +1,92 @@
-<mvc:View controllerName="com.spm.suppilerportal.controller.TaskDetail" xmlns="sap.uxap" xmlns:mvc="sap.ui.core.mvc" xmlns:m="sap.m" xmlns:f="sap.f" xmlns:form="sap.ui.layout.form">
+<mvc:View controllerName="com.spm.suppilerportal.controller.TaskDetail" xmlns:layout="sap.ui.layout" xmlns="sap.uxap" xmlns:mvc="sap.ui.core.mvc" xmlns:m="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.f" xmlns:form="sap.ui.layout.form">
     <ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="true" alwaysShowContentHeader="false" preserveHeaderStateOnScroll="false" headerContentPinnable="true" isChildPage="true" upperCaseAnchorBar="false">
         <headerTitle>
             <ObjectPageDynamicHeaderTitle>
                 <expandedHeading>
                     <m:Title text="{products>Name}" wrapping="true" class="sapUiSmallMarginEnd" />
                 </expandedHeading>
-
-                <snappedHeading>
-                    <m:FlexBox wrap="Wrap" fitContainer="true" alignItems="Center">
-                        <m:FlexBox wrap="NoWrap" fitContainer="true" alignItems="Center" class="sapUiTinyMarginEnd">
-                            <f:Avatar src="../../../../../../../{products>ProductPicUrl}" displaySize="S" displayShape="Square" />
-                            <m:Title text="{products>Name}" wrapping="true" class="sapUiTinyMarginEnd" />
-                        </m:FlexBox>
-                    </m:FlexBox>
-                </snappedHeading>
-
                 <navigationActions>
                     <m:OverflowToolbarButton type="Transparent" icon="sap-icon://full-screen" press="handleFullScreen" id="enterFullScreenBtn" tooltip="Enter Full Screen Mode" visible="{= ${/actionButtonsInfo/midColumn/fullScreen} !== null }" />
                     <m:OverflowToolbarButton type="Transparent" icon="sap-icon://exit-full-screen" press="handleExitFullScreen" id="exitFullScreenBtn" tooltip="Exit Full Screen Mode" visible="{= ${/actionButtonsInfo/midColumn/exitFullScreen} !== null }" />
                     <m:OverflowToolbarButton type="Transparent" icon="sap-icon://decline" press="handleClose" tooltip="Close middle column" visible="{= ${/actionButtonsInfo/midColumn/closeColumn} !== null }" />
                 </navigationActions>
-
-                <actions>
-                    <m:Button text="Edit" type="Emphasized" press="toggleAreaPriority" />
-                    <m:Button text="Delete" type="Transparent" />
-                    <m:Button text="Copy" type="Transparent" />
-                    <m:Button text="Toggle Footer" type="Transparent" press="onToggleFooter" />
-                    <m:Button icon="sap-icon://action" type="Transparent" />
-                </actions>
             </ObjectPageDynamicHeaderTitle>
         </headerTitle>
-
-        <headerContent>
-            <m:FlexBox wrap="Wrap" fitContainer="true" alignItems="Stretch">
-                <f:Avatar src="../../../../../../../{products>ProductPicUrl}" displaySize="L" displayShape="Square" class="sapUiTinyMarginEnd" />
-                <m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
-                    <m:Label text="Main Category" />
-                    <m:Text text="{products>MainCategory}" />
-                </m:VBox>
-                <m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
-                    <m:Label text="Subcategory" />
-                    <m:Text text="{products>Category}" />
-                </m:VBox>
-                <m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
-                    <m:Label text="Price" />
-                    <m:ObjectNumber number="{products>CurrencyCode} {products>Price}" emphasized="false" />
-                </m:VBox>
-            </m:FlexBox>
-        </headerContent>
-
         <sections>
-            <ObjectPageSection title="General Information">
+            <ObjectPageSection title="Basic Information">
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <layout:Grid hSpacing="1" defaultSpan="XL6 L6 M8 S12">
+                                <m:VBox>
+                                    <m:Label text="Title" />
+                                    <m:Text text="{products>ProductId}" />
+                                    <m:layoutData>
+                                        <layout:GridData span="XL6 L6 M12 S12" linebreak="true" />
+                                    </m:layoutData>
+                                </m:VBox>
+                                <m:VBox>
+                                    <m:Label text="Company/Vendor Name 1" />
+                                    <m:Text text="{products>Description}" />
+                                    <m:layoutData>
+                                        <layout:GridData span="XL6 L6 M12 S12" linebreak="false" />
+                                    </m:layoutData>
+                                </m:VBox>
+                                <m:VBox>
+                                    <m:Label text="Company/Vendor Name 2" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:layoutData>
+                                        <layout:GridData span="XL6 L6 M12 S12" linebreak="true" />
+                                    </m:layoutData>
+                                </m:VBox>
+                                <m:VBox>
+                                    <m:Label text="Legal/Business Entry" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:layoutData>
+                                        <layout:GridData span="XL6 L6 M12 S12" linebreak="false" />
+                                    </m:layoutData>
+                                </m:VBox>
+                                <m:VBox>
+                                    <m:Label text="Nature of business" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:layoutData>
+                                        <layout:GridData span="XL6 L6 M12 S12" linebreak="true" />
+                                    </m:layoutData>
+                                </m:VBox>
+                                <m:VBox>
+                                    <m:Label text="Business Registration No" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:layoutData>
+                                        <layout:GridData span="XL6 L6 M12 S12" linebreak="false" />
+                                    </m:layoutData>
+                                </m:VBox>
+                                <m:VBox>
+                                    <m:Label text="VAT Registration No" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:layoutData>
+                                        <layout:GridData span="XL6 L6 M12 S12" linebreak="true" />
+                                    </m:layoutData>
+                                </m:VBox>
+                            </layout:Grid>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection title="Department/Product Info">
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
                             <form:SimpleForm maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="12" labelSpanM="12" emptySpanL="0" emptySpanM="0" columnsL="1" columnsM="1">
                                 <form:content>
-                                    <m:Label text="Product ID" />
+                                    <m:Label text="Department" />
                                     <m:Text text="{products>ProductId}" />
-                                    <m:Label text="Description" />
+                                    <m:Label text="Sub-department" />
                                     <m:Text text="{products>Description}" />
-                                    <m:Label text="Supplier" />
+                                    <m:Label text="Nature of products" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Category Manager/Executive" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Are you associated with Manufacturer/Main Distrubutor registered with us?" />
                                     <m:Text text="{products>SupplierName}" />
                                 </form:content>
                             </form:SimpleForm>
@@ -68,23 +94,165 @@
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
-
-            <ObjectPageSection title="Suppliers">
+            <ObjectPageSection title="Address">
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
-                            <m:Table id="suppliersTable" mode="SingleSelectMaster" itemPress="handleItemPress" items="{path : 'products>/ProductCollectionStats/Filters/1/values'}">
-                                <m:columns>
-                                    <m:Column />
-                                </m:columns>
-                                <m:items>
-                                    <m:ColumnListItem type="Navigation">
-                                        <m:cells>
-                                            <m:ObjectIdentifier text="{products>text}" />
-                                        </m:cells>
-                                    </m:ColumnListItem>
-                                </m:items>
-                            </m:Table>
+                            <form:SimpleForm maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="12" labelSpanM="12" emptySpanL="0" emptySpanM="0" columnsL="1" columnsM="1">
+                                <form:content>
+                                    <m:Label text="House No" />
+                                    <m:Text text="{products>ProductId}" />
+                                    <m:Label text="Street" />
+                                    <m:Text text="{products>Description}" />
+                                    <m:Label text="City" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Postal Code" />
+                                    <m:Text text="{products>Description}" />
+                                    <m:Label text="District" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="PO Box No" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Country" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Region" />
+                                    <m:Text text="{products>SupplierName}" />
+                                </form:content>
+                            </form:SimpleForm>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection title="Contact List">
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <form:SimpleForm maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="12" labelSpanM="12" emptySpanL="0" emptySpanM="0" columnsL="1" columnsM="1">
+                                <form:content>
+                                    <m:Label text="Contact Type" />
+                                    <m:Text text="{products>ProductId}" />
+                                    <m:Label text="Primary Contact Name" />
+                                    <m:Text text="{products>Description}" />
+                                    <m:Label text="Designation" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Email" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Phone" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Fax" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Extension" />
+                                    <m:Text text="{products>SupplierName}" />
+                                </form:content>
+                            </form:SimpleForm>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection title="Accounting Information">
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <form:SimpleForm maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="12" labelSpanM="12" emptySpanL="0" emptySpanM="0" columnsL="1" columnsM="1">
+                                <form:content>
+                                    <m:Label text="Return to Vendor" />
+                                    <m:Text text="{products>ProductId}" />
+                                    <m:Label text="No Return Margin %" />
+                                    <m:Text text="{products>Description}" />
+                                    <m:Label text="Vendor Claim %" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Credit Period" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Refundable Deposit Fee" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Shipping Conditions" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Reconcialition Accounts" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Sort Key" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Reconcialition Accounts" />
+                                    <m:Text text="{products>SupplierName}" />
+                                </form:content>
+                            </form:SimpleForm>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection title="Payment Information">
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <form:SimpleForm maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="12" labelSpanM="12" emptySpanL="0" emptySpanM="0" columnsL="1" columnsM="1">
+                                <form:content>
+                                    <core:Title text="Payment Information" />
+                                    <m:Label text="Payment Methods" />
+                                    <m:Text text="{products>ProductId}" />
+                                    <m:Label text="Key for Payment Grouping" />
+                                    <m:Text text="{products>Description}" />
+                                    <m:Label text="Grouping Key" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Cheque Delivery Method" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <core:Title text="Withholding Tax Accounting" />
+                                    <m:Label text="WHT Tax Type" />
+                                    <m:Text text="{products>ProductId}" />
+                                    <m:Label text="WHT Percentage" />
+                                    <m:Text text="{products>Description}" />
+                                    <m:Label text="WHT Tax Code" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Excemption Period - To" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <core:Title text="Other Information" />
+                                    <m:Label text="Vendor Account Group" />
+                                    <m:Text text="{products>ProductId}" />
+                                    <m:Label text="Purchase Order Frequency" />
+                                    <m:Text text="{products>Description}" />
+                                    <m:Label text="Group for Calculation Schema (Vendor)" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Timezone - EWM Related" />
+                                    <m:Text text="{products>SupplierName}" />
+                                </form:content>
+                            </form:SimpleForm>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection title="Statutory Documents">
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <form:SimpleForm maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="12" labelSpanM="12" emptySpanL="0" emptySpanM="0" columnsL="1" columnsM="1">
+                                <form:content>
+                                    <m:Label text="Document Type" />
+                                    <m:Text text="{products>ProductId}" />
+                                    <m:Label text="Document Description" />
+                                    <m:Text text="{products>Description}" />
+                                    <m:Label text="File" />
+                                    <m:Text text="{products>SupplierName}" />
+                                </form:content>
+                            </form:SimpleForm>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection title="Review Log">
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <form:SimpleForm maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="12" labelSpanM="12" emptySpanL="0" emptySpanM="0" columnsL="1" columnsM="1">
+                                <form:content>
+                                    <m:Label text="Vendor Remarks" />
+                                    <m:Text text="{products>ProductId}" />
+                                    <m:Label text="Category Manager/Executive Remarks" />
+                                    <m:Text text="{products>Description}" />
+                                    <m:Label text="Finance Manager Remarks" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="HOD Remarks" />
+                                    <m:Text text="{products>SupplierName}" />
+                                    <m:Label text="Enter your Remarks" />
+                                    <m:Text text="{products>SupplierName}" />
+                                </form:content>
+                            </form:SimpleForm>
                         </blocks>
                     </ObjectPageSubSection>
                 </subSections>
