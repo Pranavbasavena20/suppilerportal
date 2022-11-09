@@ -1,0 +1,126 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
+    <FlexBox class="sapUiMediumMarginTop" visible="{genericTileModel>/sStep4}" justifyContent="Center" alignContent="Center">
+        <form:SimpleForm width="45rem" title="Contact List" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
+            <form:content>
+                <VBox>
+                    <Label text="Contact Type" design="Bold" />
+                    <ComboBox width="100%" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="Primary Contact Name" design="Bold" />
+                    <Input width="100%" value="{genericTileModel>/Email}" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="Designation" design="Bold" />
+                    <Input width="100%" value="{genericTileModel>/Email}" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+
+                <VBox>
+                    <Label text="Email" design="Bold" />
+                    <Input width="100%" value="{genericTileModel>/Email}" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="Phone" design="Bold" />
+                    <Input width="100%" value="{genericTileModel>/Email}" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="Fax" design="Bold" />
+                    <Input width="100%" value="{genericTileModel>/Email}" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+
+                <VBox>
+                    <Label text="Extension" design="Bold" />
+                    <Input width="100%" value="{genericTileModel>/Email}" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Button text="Add Contacts" press="onfnnextpress5" width="100%" class="button1" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Button text="Proceed to Accounting Information" press="onfnnextpress5" width="100%" class="button1" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+            </form:content>
+        </form:SimpleForm>
+    </FlexBox>
+    <FlexBox visible="{genericTileModel>/sStep4}" justifyContent="Center" alignContent="Center">
+        <form:SimpleForm layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
+            <form:content>
+                <VBox>
+                    <Table width="60rem" id="idProductsTable" inset="false" mode="MultiSelect" items="{genericTileModel>/aContact}">
+                        <columns>
+                            <Column width="8em">
+                                <Text text="Contact Type" />
+                            </Column>
+                            <Column minScreenWidth="Tablet" demandPopin="true">
+                                <Text text="Primary Contact Name" />
+                            </Column>
+                            <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                                <Text text="Designation" />
+                            </Column>
+                            <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                                <Text text="Email" />
+                            </Column>
+                            <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                                <Text text="Phone" />
+                            </Column>
+                            <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                                <Text text="Fax" />
+                            </Column>
+                            <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                                <Text text="Extension" />
+                            </Column>
+                            <Column hAlign="End">
+                                <Text text="" />
+                            </Column>
+                            <Column hAlign="End">
+                                <Text text="" />
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem vAlign="Middle">
+                                <cells>
+                                    <Text text="{genericTileModel>Designation}" />
+                                    <Text text="{genericTileModel>Name}" />
+                                    <Text text="{genericTileModel>LandPhoneNo}" />
+                                    <Text text="{genericTileModel>MobileNo}" />
+                                    <Text text="{genericTileModel>Email}" />
+                                    <Button text="Edit" width="6rem" class="button1" />
+                                    <Button text="Delete" width="6rem" class="button1" />
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+            </form:content>
+        </form:SimpleForm>
+    </FlexBox>
+</core:FragmentDefinition>

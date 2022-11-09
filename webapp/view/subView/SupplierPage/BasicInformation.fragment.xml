@@ -1,0 +1,65 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
+    <FlexBox class="sapUiMediumMarginTop" visible="{genericTileModel>/sStep1}" justifyContent="Center" alignContent="Center">
+        <form:SimpleForm width="45rem" title="Basic Information" layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
+            <form:content>
+                <VBox>
+                    <Label text="Title" design="Bold" />
+                    <ComboBox width="100%" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="Company/Vendor Name 1" design="Bold" />
+                    <Input />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="Company/Vendor Name 2" design="Bold" />
+                    <Input />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="Legal/Business Entry" design="Bold" />
+                    <Input />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+
+                <VBox>
+                    <Label text="Nature of business" design="Bold" />
+                    <ComboBox width="100%" />
+
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="Business Registration No" design="Bold" />
+                    <Input />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="VAT Registration No" design="Bold" />
+                    <Input />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Button text="Proceed to Step 2" press="onfnnextpress2" width="100%" class="button1" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
+                    </layoutData>
+                </VBox>
+            </form:content>
+        </form:SimpleForm>
+    </FlexBox>
+</core:FragmentDefinition>

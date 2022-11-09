@@ -1,0 +1,45 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
+    <FlexBox class="sapUiMediumMarginTop" visible="{genericTileModel>/sStep6}" justifyContent="Center" alignContent="Center">
+        <form:SimpleForm width="45rem" title="Payment Information" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
+            <form:content>
+                <VBox>
+                    <Label text="Payment Methods" design="Bold" />
+                    <ComboBox width="100%" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+
+                <VBox>
+                    <Label text="Key for Payment Grouping" design="Bold" />
+                    <ComboBox width="100%" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="Grouping Key" design="Bold" />
+                    <ComboBox width="100%" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+
+                <VBox>
+                    <Label text="Cheque Delivery Method" design="Bold" />
+                    <ComboBox width="100%" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+
+                <VBox>
+                    <Button text="Proceed to Withholding Tax Accounting" press="onfnnextpress7" width="100%" class="button1" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
+                    </layoutData>
+                </VBox>
+            </form:content>
+        </form:SimpleForm>
+    </FlexBox>
+</core:FragmentDefinition>

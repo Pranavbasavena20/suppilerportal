@@ -54,7 +54,6 @@ sap.ui.define([
 
             },
             onImageClick: function (oEvent) {
-                debugger;
                 var sText = oEvent.getSource().getParent().getItems()[2].getText();
                 switch (sText) {
                     case "Sales Order":
