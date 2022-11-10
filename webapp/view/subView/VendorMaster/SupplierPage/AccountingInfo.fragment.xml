@@ -1,24 +1,68 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
-    <form:SimpleForm maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="12" labelSpanM="12" emptySpanL="0" emptySpanM="0" columnsL="1" columnsM="1">
-        <form:content>
-            <Label text="Return to Vendor" />
-            <Text text="{products>ProductId}" />
-            <Label text="No Return Margin %" />
-            <Text text="{products>Description}" />
-            <Label text="Vendor Claim %" />
-            <Text text="{products>SupplierName}" />
-            <Label text="Credit Period" />
-            <Text text="{products>SupplierName}" />
-            <Label text="Refundable Deposit Fee" />
-            <Text text="{products>SupplierName}" />
-            <Label text="Shipping Conditions" />
-            <Text text="{products>SupplierName}" />
-            <Label text="Reconcialition Accounts" />
-            <Text text="{products>SupplierName}" />
-            <Label text="Sort Key" />
-            <Text text="{products>SupplierName}" />
-            <Label text="Reconcialition Accounts" />
-            <Text text="{products>SupplierName}" />
-        </form:content>
-    </form:SimpleForm>
+    <layout:Grid hSpacing="1" defaultSpan="XL12 L12 M12 S12">
+        <VBox>
+            <Label text="Return to Vendor" wrapping="true" design="Bold" />
+            <Text text="{products>ProductId}" visible="{oVendorMaster>/bDisplay}" />
+            <ComboBox width="100%" visible="{oVendorMaster>/bEdit}" />
+            <layoutData>
+                <layout:GridData span="XL6 L6 M8 S12" linebreak="true" />
+            </layoutData>
+        </VBox>
+        <VBox>
+            <Label text="No Return Margin %" wrapping="true" design="Bold" />
+            <Text text="{products>Description}" visible="{oVendorMaster>/bDisplay}" />
+            <Input visible="{oVendorMaster>/bEdit}" />
+            <layoutData>
+                <layout:GridData span="XL6 L6 M8 S12" linebreak="false" />
+            </layoutData>
+        </VBox>
+        <VBox>
+            <Label text="Vendor Claim %" wrapping="true" design="Bold" />
+            <Text text="{products>SupplierName}" visible="{oVendorMaster>/bDisplay}" />
+            <Input visible="{oVendorMaster>/bEdit}" />
+            <layoutData>
+                <layout:GridData span="XL6 L6 M8 S12" linebreak="true" />
+            </layoutData>
+        </VBox>
+        <VBox>
+            <Label text="Credit Period" wrapping="true" design="Bold" />
+            <Text text="{products>SupplierName}" visible="{oVendorMaster>/bDisplay}" />
+            <ComboBox width="100%" visible="{oVendorMaster>/bEdit}" />
+            <layoutData>
+                <layout:GridData span="XL6 L6 M8 S12" linebreak="false" />
+            </layoutData>
+        </VBox>
+        <VBox>
+            <Label text="Refundable Deposit Fee" wrapping="true" design="Bold" />
+            <Text text="{products>SupplierName}" visible="{oVendorMaster>/bDisplay}" />
+            <Input visible="{oVendorMaster>/bEdit}" />
+            <layoutData>
+                <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+            </layoutData>
+        </VBox>
+        <VBox>
+            <Label text="Shipping Conditions" wrapping="true" design="Bold" />
+            <Text text="{products>SupplierName}" visible="{oVendorMaster>/bDisplay}" />
+            <ComboBox width="100%" visible="{oVendorMaster>/bEdit}" />
+            <layoutData>
+                <layout:GridData span="XL6 L6 M8 S12" linebreak="false" />
+            </layoutData>
+        </VBox>
+        <VBox>
+            <Label text="Reconcialition Accounts" wrapping="true" design="Bold" />
+            <Text text="{products>SupplierName}" visible="{oVendorMaster>/bDisplay}" />
+            <ComboBox width="100%" visible="{oVendorMaster>/bEdit}" />
+            <layoutData>
+                <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+            </layoutData>
+        </VBox>
+        <VBox>
+            <Label text="Sort Key" wrapping="true" design="Bold" />
+            <Text text="{products>SupplierName}" visible="{oVendorMaster>/bDisplay}" />
+            <ComboBox width="100%" visible="{oVendorMaster>/bEdit}" />
+            <layoutData>
+                <layout:GridData span="XL6 L6 M8 S12" linebreak="false" />
+            </layoutData>
+        </VBox>
+    </layout:Grid>
 </core:FragmentDefinition>

@@ -1,14 +1,36 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
-    <form:SimpleForm maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="12" labelSpanM="12" emptySpanL="0" emptySpanM="0" columnsL="1" columnsM="1">
-        <form:content>
-            <Label text="Vendor Account Group" />
-            <Text text="{products>ProductId}" />
-            <Label text="Purchase Order Frequency" />
-            <Text text="{products>Description}" />
-            <Label text="Group for Calculation Schema (Vendor)" />
-            <Text text="{products>SupplierName}" />
-            <Label text="Timezone - EWM Related" />
-            <Text text="{products>SupplierName}" />
-        </form:content>
-    </form:SimpleForm>
+    <layout:Grid hSpacing="1" defaultSpan="XL12 L12 M12 S12">
+        <VBox>
+            <Label text="Vendor Account Group" wrapping="true" design="Bold" />
+            <Text text="{products>ProductId}" visible="{oVendorMaster>/bDisplay}" />
+            <ComboBox width="100%" visible="{oVendorMaster>/bEdit}" />
+            <layoutData>
+                <layout:GridData span="XL6 L6 M8 S12" linebreak="true" />
+            </layoutData>
+        </VBox>
+        <VBox>
+            <Label text="Purchase Order Frequency" wrapping="true" design="Bold" />
+            <Text text="{products>Description}" visible="{oVendorMaster>/bDisplay}" />
+            <ComboBox width="100%" visible="{oVendorMaster>/bEdit}" />
+            <layoutData>
+                <layout:GridData span="XL6 L6 M8 S12" linebreak="false" />
+            </layoutData>
+        </VBox>
+        <VBox>
+            <Label text="Group for Calculation Schema (Vendor)" wrapping="true" design="Bold" />
+            <Text text="{products>SupplierName}" visible="{oVendorMaster>/bDisplay}" />
+            <ComboBox width="100%" visible="{oVendorMaster>/bEdit}" />
+            <layoutData>
+                <layout:GridData span="XL6 L6 M8 S12" linebreak="true" />
+            </layoutData>
+        </VBox>
+        <VBox>
+            <Label text="Timezone - EWM Related" wrapping="true" design="Bold" />
+            <Text text="{products>SupplierName}" visible="{oVendorMaster>/bDisplay}" />
+            <ComboBox width="100%" visible="{oVendorMaster>/bEdit}" />
+            <layoutData>
+                <layout:GridData span="XL6 L6 M8 S12" linebreak="false" />
+            </layoutData>
+        </VBox>
+    </layout:Grid>
 </core:FragmentDefinition>

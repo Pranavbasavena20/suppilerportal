@@ -6,13 +6,12 @@
                     <m:Title text="{products>Name}" wrapping="true" class="sapUiSmallMarginEnd" />
                 </expandedHeading>
                 <navigationActions>
-                    <m:OverflowToolbarButton type="Transparent" icon="sap-icon://full-screen" press="handleFullScreen" id="enterFullScreenBtn" tooltip="Enter Full Screen Mode" visible="{= ${/actionButtonsInfo/midColumn/fullScreen} !== null }" />
-                    <m:OverflowToolbarButton type="Transparent" icon="sap-icon://exit-full-screen" press="handleExitFullScreen" id="exitFullScreenBtn" tooltip="Exit Full Screen Mode" visible="{= ${/actionButtonsInfo/midColumn/exitFullScreen} !== null }" />
-                    <m:OverflowToolbarButton type="Transparent" icon="sap-icon://decline" press="handleClose" tooltip="Close middle column" visible="{= ${/actionButtonsInfo/midColumn/closeColumn} !== null }" />
+                    <m:OverflowToolbarButton type="Transparent" icon="sap-icon://full-screen" press="handleFullScreen" id="enterFullScreenBtn" tooltip="Enter Full Screen Mode" />
+                    <m:OverflowToolbarButton type="Transparent" icon="sap-icon://decline" press="handleClose" tooltip="Close middle column" />
                 </navigationActions>
                 <actions>
-                    <m:Button text="Edit" type="Emphasized" press="onEditScreen" />
-                    <m:Button text="Display" type="Emphasized" press="onDisplayScreen" />
+                    <m:Button visible="{oVendorMaster>/bEdit}" text="Edit" type="Emphasized" press="onEditScreen" />
+                    <m:Button visible="{oVendorMaster>/bDisplay}" text="Display" type="Emphasized" press="onDisplayScreen" />
                 </actions>
             </ObjectPageDynamicHeaderTitle>
         </headerTitle>

@@ -19,7 +19,9 @@ sap.ui.define([
                     previousLayout: "",
                     actionButtonsInfo: {
                         midColumn: {
-                            fullScreen: false
+                            fullScreen: false,
+                            exitFullScreen: true,
+                            closeColumn: false
                         }
                     }
                 });
