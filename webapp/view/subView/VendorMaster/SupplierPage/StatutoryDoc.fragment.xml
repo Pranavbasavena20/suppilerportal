@@ -5,7 +5,7 @@
             <Text text="{products>ProductId}" visible="{oVendorMaster>/bDisplay}" />
             <ComboBox width="100%" visible="{oVendorMaster>/bEdit}" />
             <layoutData>
-                <layout:GridData span="XL6 L6 M8 S12" linebreak="true" />
+                <layout:GridData span="{oFiexibleLayout>/Span}" linebreak="true" />
             </layoutData>
         </VBox>
         <VBox>
@@ -13,7 +13,7 @@
             <Text text="{products>Description}" visible="{oVendorMaster>/bDisplay}" />
             <Input width="100%" visible="{oVendorMaster>/bEdit}" />
             <layoutData>
-                <layout:GridData span="XL6 L6 M8 S12" linebreak="false" />
+                <layout:GridData span="{oFiexibleLayout>/Span}" linebreak="false" />
             </layoutData>
         </VBox>
         <VBox>

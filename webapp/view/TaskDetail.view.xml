@@ -101,7 +101,7 @@
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierPage.StatutoryDoc" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierPage.Reviewlog" type="XML" />
                         </blocks>
                     </ObjectPageSubSection>
                 </subSections>

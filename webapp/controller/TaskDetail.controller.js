@@ -4,11 +4,12 @@ sap.ui.define([
     "com/spm/suppilerportal/utils/dataUtil",
     "sap/ui/core/UIComponent",
     "sap/ui/core/Fragment",
+    "../model/formatter"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, JSONModel, dataUtil, UIComponent, Fragment) {
+    function (Controller, JSONModel, dataUtil, UIComponent, Fragment, formatter) {
         "use strict";
 
         return Controller.extend("com.spm.suppilerportal.controller.TaskDetail", {
@@ -23,6 +24,7 @@ sap.ui.define([
 
             },
             handleFullScreen: function (oEvent) {
+                this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/Span", "XL6 L6 M8 S12");
                 var bFullScreen = this.getModel("oFiexibleLayout").getProperty("/actionButtonsInfo/midColumn/fullScreen");
                 this.getModel("oFiexibleLayout").setProperty("/actionButtonsInfo/midColumn/fullScreen", !bFullScreen);
                 if (!bFullScreen) {
