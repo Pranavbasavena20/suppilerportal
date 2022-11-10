@@ -1,0 +1,12 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
+    <form:SimpleForm maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="12" labelSpanM="12" emptySpanL="0" emptySpanM="0" columnsL="1" columnsM="1">
+        <form:content>
+            <Label text="Document Type" />
+            <Text text="{products>ProductId}" />
+            <Label text="Document Description" />
+            <Text text="{products>Description}" />
+            <Label text="File" />
+            <Text text="{products>SupplierName}" />
+        </form:content>
+    </form:SimpleForm>
+</core:FragmentDefinition>

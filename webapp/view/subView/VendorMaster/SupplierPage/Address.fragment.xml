@@ -1,0 +1,22 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
+    <form:SimpleForm maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="12" labelSpanM="12" emptySpanL="0" emptySpanM="0" columnsL="1" columnsM="1">
+        <form:content>
+            <Label text="House No" />
+            <Text text="{products>ProductId}" />
+            <Label text="Street" />
+            <Text text="{products>Description}" />
+            <Label text="City" />
+            <Text text="{products>SupplierName}" />
+            <Label text="Postal Code" />
+            <Text text="{products>Description}" />
+            <Label text="District" />
+            <Text text="{products>SupplierName}" />
+            <Label text="PO Box No" />
+            <Text text="{products>SupplierName}" />
+            <Label text="Country" />
+            <Text text="{products>SupplierName}" />
+            <Label text="Region" />
+            <Text text="{products>SupplierName}" />
+        </form:content>
+    </form:SimpleForm>
+</core:FragmentDefinition>
