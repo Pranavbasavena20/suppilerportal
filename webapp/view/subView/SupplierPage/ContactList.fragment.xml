@@ -69,10 +69,10 @@
         </form:SimpleForm>
     </FlexBox>
     <FlexBox visible="{genericTileModel>/sStep4}" justifyContent="Center" alignContent="Center">
-        <form:SimpleForm layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
+        <form:SimpleForm layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12" columnsXL="1" columnsL="1" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
             <form:content>
                 <VBox>
-                    <Table width="60rem" id="idProductsTable" inset="false" mode="MultiSelect" items="{genericTileModel>/aContact}">
+                    <Table id="idProductsTable" inset="false" mode="MultiSelect" items="{genericTileModel>/aContact}">
                         <columns>
                             <Column width="8em">
                                 <Text text="Contact Type" />

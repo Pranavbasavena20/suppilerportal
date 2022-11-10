@@ -113,7 +113,7 @@
 .sapMInputBaseInner {
     background: white !important;
     border: 1px solid gray !important;
-    border-radius: 5px !important;
+    /* border-radius: 5px !important; */
     border: none;
     font-style: normal;
     -webkit-appearance: none;
@@ -251,7 +251,7 @@
     border-radius: 50%;
     border: 2px solid #841dbd !important;
     color: #841dbd !important;
-    background-color: #fdfaff !important;
+    background-color: #841dbd !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -279,22 +279,23 @@
 
 .sapMInputBase:not(.sapMInputBaseReadonly) .sapMInputBaseIconContainer .sapMInputBaseIcon {
     width: 2.25rem;
-    height: 2.31rem;
-    border-radius: 0.25rem;
+    height: 2.38rem;
+    border-radius: 0rem;
 }
 
 .sapMInputBaseIcon {
     width: 2.25rem;
-    min-width: 2rem;
+    min-width: 2.5rem;
     height: 100%;
-    line-height: 2.25rem;
+    line-height: 2.5rem;
     cursor: pointer;
     background: white;
-    border: 1px solid gray;
-    border-radius: 0.25rem;
+    border-top: 1px solid gray;
+    border-radius: 0rem;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+    border-right: 1px solid gray;
 }
 
 .sapUiSizeCompact .sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMSB.sapMSBTransparent .sapMBtnContent,
