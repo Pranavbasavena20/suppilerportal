@@ -17,15 +17,15 @@
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="File" design="Bold" />
-                    <upload:UploadSet />
+                    <Label text="Attachment" design="Bold" />
+                    <upload:UploadSet class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
 
                 <VBox>
-                    <Button text="Proceed to Comments" press="onfnnextpress10" width="100%" class="button1" />
+                    <Button text="Proceed to Comments" press="onfnnextpress10" width="100%" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
                     </layoutData>
@@ -33,46 +33,36 @@
             </form:content>
         </form:SimpleForm>
     </FlexBox>
-    <FlexBox visible="{genericTileModel>/sStep9}" justifyContent="Center" alignContent="Center">
-        <form:SimpleForm layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
-            <form:content>
-                <VBox>
-                    <Table width="45rem" id="idDcoument" inset="false" mode="MultiSelect" items="{genericTileModel>/aContact}">
-                        <columns>
-                            <Column width="8em">
-                                <Text text="Document Type" />
-                            </Column>
-                            <Column minScreenWidth="Tablet" demandPopin="true">
-                                <Text text="Document Description" />
-                            </Column>
-                            <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
-                                <Text text="File" />
-                            </Column>
-
-                            <Column hAlign="End">
-                                <Text text="" />
-                            </Column>
-                            <Column hAlign="End">
-                                <Text text="" />
-                            </Column>
-                        </columns>
-                        <items>
-                            <ColumnListItem vAlign="Middle">
-                                <cells>
-                                    <Text text="{genericTileModel>Designation}" />
-                                    <Text text="{genericTileModel>Name}" />
-                                    <Text text="{genericTileModel>Email}" />
-                                    <Button text="Edit" width="6rem" class="button1" />
-                                    <Button text="Delete" width="6rem" class="button1" />
-                                </cells>
-                            </ColumnListItem>
-                        </items>
-                    </Table>
-                    <layoutData>
-                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
-                    </layoutData>
-                </VBox>
-            </form:content>
-        </form:SimpleForm>
+    <FlexBox>
+        <Table visible="{genericTileModel>/sStep9}" width="74rem" class="sapUiLargeMarginBegin" id="idDcoument" inset="false" mode="MultiSelect" items="{genericTileModel>/aContact}">
+            <columns>
+                <Column>
+                    <Text text="Document Type" />
+                </Column>
+                <Column minScreenWidth="Tablet" demandPopin="true">
+                    <Text text="Document Description" />
+                </Column>
+                <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                    <Text text="File" />
+                </Column>
+                <Column hAlign="End">
+                    <Text text="" />
+                </Column>
+                <Column hAlign="End">
+                    <Text text="" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem vAlign="Middle">
+                    <cells>
+                        <Text text="{genericTileModel>Designation}" />
+                        <Text text="{genericTileModel>Name}" />
+                        <Text text="{genericTileModel>Email}" />
+                        <Button text="Edit" width="6rem" class="button1" />
+                        <Button text="Delete" width="6rem" class="button1" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
     </FlexBox>
 </core:FragmentDefinition>

@@ -53,14 +53,15 @@
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
-                <VBox>
-                    <Button text="Add Contacts" press="onfnnextpress5" width="100%" class="button1" />
+
+                <VBox justifyContent="End" alignItems="End" alignContent="End">
+                    <Button text="Add Contacts" press="onfnnextpress5" width="21rem" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Button text="Proceed to Accounting Information" press="onfnnextpress5" width="100%" class="button1" />
+                    <Button text="Proceed to Accounting Information" press="onfnnextpress5" width="100%" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
@@ -74,10 +75,10 @@
                 <VBox>
                     <Table id="idProductsTable" inset="false" mode="MultiSelect" items="{genericTileModel>/aContact}">
                         <columns>
-                            <Column width="8em">
+                            <Column width="12em">
                                 <Text text="Contact Type" />
                             </Column>
-                            <Column minScreenWidth="Tablet" demandPopin="true">
+                            <Column width="15em" minScreenWidth="Tablet" demandPopin="true">
                                 <Text text="Primary Contact Name" />
                             </Column>
                             <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">

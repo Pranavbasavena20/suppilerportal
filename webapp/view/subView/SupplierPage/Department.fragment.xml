@@ -35,13 +35,10 @@
                 </VBox>
                 <VBox>
                     <Label text="Are you associated with Manufacturer/Main Distrubutor registered with us?" design="Bold" />
-                    <SegmentedButton selectedKey="undefined">
-                        <items>
-                            <SegmentedButtonItem text="undefined" visible="false" key="undefined" />
-                            <SegmentedButtonItem text="Yes" width="6rem" />
-                            <SegmentedButtonItem text="No" width="6rem" />
-                        </items>
-                    </SegmentedButton>
+                    <RadioButtonGroup columns="2" width="100%" visible="{oVendorMaster>/bDisplay}">
+                        <RadioButton text="Yes" />
+                        <RadioButton text="No" />
+                    </RadioButtonGroup>
 
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
@@ -49,7 +46,7 @@
                 </VBox>
 
                 <VBox>
-                    <Button text="Proceed to add Address" press="onfnnextpress3" width="100%" class="button1" />
+                    <Button text="Proceed to add Address" press="onfnnextpress3" width="100%" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
                     </layoutData>

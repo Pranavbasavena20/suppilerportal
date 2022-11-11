@@ -26,7 +26,7 @@
                 </VBox>
 
                 <VBox>
-                    <Button text="Submit Registration" press="onfnnextpress4" width="100%" class="button1" />
+                    <Button text="Submit Registration" press="onfnnextpress4" width="100%" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
                     </layoutData>

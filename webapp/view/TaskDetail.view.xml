@@ -10,8 +10,8 @@
                     <m:OverflowToolbarButton type="Transparent" icon="sap-icon://decline" press="handleClose" tooltip="Close middle column" />
                 </navigationActions>
                 <actions>
-                    <m:Button visible="{oVendorMaster>/bEdit}" text="Edit" type="Emphasized" press="onEditScreen" />
-                    <m:Button visible="{oVendorMaster>/bDisplay}" text="Display" type="Emphasized" press="onDisplayScreen" />
+                    <m:Button visible="{oVendorMaster>/bEdit}" text="Edit" class="button1 header2" press="onEditScreen" />
+                    <m:Button visible="{oVendorMaster>/bDisplay}" text="Display" class="button1 header2" press="onDisplayScreen" />
                 </actions>
             </ObjectPageDynamicHeaderTitle>
         </headerTitle>

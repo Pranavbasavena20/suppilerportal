@@ -2,31 +2,67 @@
 /* Enter your custom styles here */
 .marginClass {
     border-radius: 44px;
-
-
 }
 
 .sapMITBSelected.sapMITBFilterPositive .sapMITBContentArrow::after {
     background: mediumpurple;
 }
 
+.headerClass .sapMBtnContent {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top;
+    line-height: 2.375rem;
+    color: white !important;
+}
+
+.headerClassBtn .sapMBtnContent {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top;
+    line-height: 2.375rem;
+    color: white !important;
+    background-color: purple !important;
+}
+
 .sapMITBSelected.sapMITBFilterPositive .sapMITBContentArrow::before {
     background: mediumpurple;
+}
+
+.sapMComboBoxBase.sapMInputBaseHasEndIcons .sapMInputBaseInner {
+    flex: 1;
+    border-right: 0px !important;
+}
+
+.sapUiTableHeaderDataCell .sapMText,
+.sapMColumnHeader .sapMText {
+    font-weight: bold !important;
+    font-size: 0.975rem !important;
+    color: white;
+}
+
+.sapSuiteUiCommonsMicroProcessFlowItemSeparator {
+    height: 1px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    flex-grow: 1;
 }
 
 .classPurpledot1 .sapSuiteUiCommonsMicroProcessFlowItemSeparator {
     height: 2px !important;
     background-color: #841dbd !important;
-    margin-left: 3px;
-    margin-right: 3px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
     flex-grow: 1;
 }
 
 .classPurpledot2 .sapSuiteUiCommonsMicroProcessFlowItemSeparator {
     height: 2px !important;
     background-color: #841dbd !important;
-    margin-left: 3px;
-    margin-right: 3px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
     flex-grow: 1;
 }
 
@@ -268,7 +304,7 @@
     line-height: 0;
 }
 
-.sapMBtnContent {
+.header2 .sapMBtnContent {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -298,6 +334,12 @@
     border-right: 1px solid gray;
 }
 
+.sapUxAPAnchorBar.sapMTB {
+    border: none;
+    background: #841dbd !important;
+    box-shadow: none;
+}
+
 .sapUiSizeCompact .sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMSB.sapMSBTransparent .sapMBtnContent,
 .sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMSB.sapMSBTransparent .sapMBtnContent,
 .sapUiSizeCompact .sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnInner .sapMBtnContent,
@@ -306,11 +348,24 @@
 .sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMSB.sapMSBTransparent .sapMBtnIcon,
 .sapUiSizeCompact .sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnInner .sapMBtnIcon,
 .sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnInner .sapMBtnIcon {
-    color: #556b82 !important;
+    color: #ebedef !important;
     font-family: "72", "72full", Arial, Helvetica, sans-serif;
     font-size: 0.875rem;
     height: 2.5rem;
     line-height: 2.75rem;
 }
+
+
+.sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight,
+html[dir=rtl] .sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrowLeft {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #841dbd36 25%, #841dbd 100%) !important;
+}
+
+.sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrowLeft,
+html[dir=rtl] .sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #841dbd36 25%, #841dbd 100%)
+}
+
+
 
 /* Enter your custom styles here */
