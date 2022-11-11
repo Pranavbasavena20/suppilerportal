@@ -3,7 +3,7 @@
         <headerTitle>
             <ObjectPageDynamicHeaderTitle>
                 <expandedHeading>
-                    <m:Title text="{products>Name}" wrapping="true" class="sapUiSmallMarginEnd" />
+                    <m:Title text="{oFiexibleLayout>/Name}" wrapping="true" class="sapUiSmallMarginEnd" />
                 </expandedHeading>
                 <navigationActions>
                     <m:OverflowToolbarButton type="Transparent" icon="sap-icon://full-screen" press="handleFullScreen" id="enterFullScreenBtn" tooltip="Enter Full Screen Mode" />
@@ -15,6 +15,23 @@
                 </actions>
             </ObjectPageDynamicHeaderTitle>
         </headerTitle>
+        <headerContent>
+            <m:FlexBox wrap="Wrap" fitContainer="true" alignItems="Stretch">
+                <m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
+                    <m:Label text="Primary Contact" />
+                    <m:Text text="{oFiexibleLayout>/PrimaryContact}" />
+                </m:VBox>
+                <m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
+                    <m:Label text="Email" />
+                    <m:Text text="{oFiexibleLayout>/Email}" />
+                </m:VBox>
+                <m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
+                    <m:Label text="Phone" />
+                    <m:Text text="{oFiexibleLayout>/Phone}" />
+                </m:VBox>
+            </m:FlexBox>
+        </headerContent>
+
         <sections>
             <ObjectPageSection title="Basic Information">
                 <subSections>

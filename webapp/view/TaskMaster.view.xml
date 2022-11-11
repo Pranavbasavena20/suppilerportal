@@ -6,6 +6,7 @@
                     <OverflowToolbar>
                         <Title wrapping="true" text="Vendors" level="H3" titleStyle="H3" />
                         <ToolbarSpacer />
+                        <SearchField search="onSearch" width="17.5rem" />
                         <Button tooltip="View Sort Settings" icon="sap-icon://sort" press="onPressOverviewTableSort" />
                     </OverflowToolbar>
                 </headerToolbar>

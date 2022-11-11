@@ -39,7 +39,7 @@ sap.ui.define([
                     case "TwoColumnsBeginExpanded":
                         this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/Span", "X8 L8 M12 S12");
                     default:
-                        this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/Span", "X6 L6 M8 S12");
+                    // this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/Span", "X6 L6 M8 S12");
 
                 }
 
