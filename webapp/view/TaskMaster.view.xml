@@ -1,7 +1,14 @@
 <mvc:View controllerName="com.spm.suppilerportal.controller.TaskMaster" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form">
     <Page id="page" backgroundDesign="List" showHeader="false" title="{i18n>title}">
         <content>
-            <Table id="idMaster" inset="false">
+            <Table id="idMastertable" inset="false" items="{oMasterList>/MasterList}">
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Title wrapping="true" text="Vendors" level="H3" titleStyle="H3" />
+                        <ToolbarSpacer />
+                        <Button tooltip="View Sort Settings" icon="sap-icon://sort" press="onPressOverviewTableSort" />
+                    </OverflowToolbar>
+                </headerToolbar>
                 <columns>
                     <Column width="12em">
                         <Text text="Code" />
@@ -25,12 +32,12 @@
                 <items>
                     <ColumnListItem vAlign="Middle" press="onPress" type="Active">
                         <cells>
-                            <Text text="0001" />
-                            <Text text="Unilever" />
-                            <Text text="Household" />
-                            <Text text="John" />
-                            <Text text="John@gmail.com" />
-                            <Text text="123456" />
+                            <Text text="{oMasterList>Code}" />
+                            <Text text="{oMasterList>Name}" />
+                            <Text text="{oMasterList>Department}" />
+                            <Text text="{oMasterList>PrimaryContact}" />
+                            <Text text="{oMasterList>Email}" />
+                            <Text text="{oMasterList>Phone}" />
                         </cells>
                     </ColumnListItem>
                 </items>
