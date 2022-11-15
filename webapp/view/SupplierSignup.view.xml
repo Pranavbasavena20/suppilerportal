@@ -2,35 +2,44 @@
     <Shell id="shell">
         <App id="app">
             <pages>
-                <Page showHeader="false" id="page" class="BackgroundColor" title="{i18n>title}" backgroundDesign="List">
+                <Page showHeader="false" id="page" title="{i18n>title}" enableScrolling="false"  backgroundDesign="List">
                     <content>
-                        <FlexBox class="sapUiLargeMarginTop" justifyContent="Center">
-                            <micro:MicroProcessFlow id="idMP">
-                                <micro:content>
-                                    <micro:MicroProcessFlowItem class="suplierCss classPurpledot1" />
-                                    <micro:MicroProcessFlowItem class="suplierCss classPurpledot" press="onfnnextpress1" />
-                                    <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress2" />
-                                    <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress3" />
-                                    <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress4" />
-                                    <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress5" />
-                                    <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress6" />
-                                    <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress7" />
-                                    <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress8" />
-                                    <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress9" />
-                                    <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress10" />
-                                </micro:content>
-                            </micro:MicroProcessFlow>
-                        </FlexBox>
-                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.BasicInformation" type="XML" />
-                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.Department" type="XML" />
-                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.Address" type="XML" />
-                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.ContactList" type="XML" />
-                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.AccountInfo" type="XML" />
-                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.PaymentInfo" type="XML" />
-                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.WithholdingTax" type="XML" />
-                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.OtherInfo" type="XML" />
-                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.StatutoryDocuments" type="XML" />
-                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.ReviewLog" type="XML" />
+                        <ScrollContainer vertical="true" enableScrolling="true" height="100%" class="BackgroundColor">
+                            <HBox backgroundDesign="Transparent" justifyContent="End" width="100%">
+                                <Image src="/css/image/toplogo.PNG" />
+                            </HBox>
+                            <FlexBox justifyContent="Center">
+                                <micro:MicroProcessFlow id="idMP">
+                                    <micro:content>
+                                        <micro:MicroProcessFlowItem class="suplierCss classPurpledot1" />
+                                        <micro:MicroProcessFlowItem class="suplierCss classPurpledot" press="onfnnextpress1" />
+                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress2" />
+                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress3" />
+                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress4" />
+                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress5" />
+                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress6" />
+                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress7" />
+                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress8" />
+                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress9" />
+                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress10" />
+                                    </micro:content>
+                                </micro:MicroProcessFlow>
+                            </FlexBox>
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.BasicInformation" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.Department" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.Address" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.ContactList" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.AccountInfo" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.PaymentInfo" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.WithholdingTax" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.OtherInfo" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.StatutoryDocuments" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.ReviewLog" type="XML" />
+                        </ScrollContainer>
+                        <HBox backgroundDesign="Transparent" class="bottombackground sapUiSmallPaddingBegin" justifyContent="SpaceBetween" width="100%">
+                                <Image src="/css/image/bottomlogo.PNG" />
+                                <Text text="@FourOrigin" class="whiteText"/>
+                            </HBox>
                     </content>
                 </Page>
             </pages>

@@ -101,6 +101,9 @@
     background: mediumpurple;
     color: #fff;
 }
+.whiteText{
+    color: #fff !important;   
+}
 
 .sapMITBText {
 
@@ -181,6 +184,7 @@
 
 .backgroundshadow {
     background: white;
+    
 }
 
 .blackTheme {
@@ -232,9 +236,18 @@
     padding: 4px;
 
 }
+.bottombackground {
+    background-color: #152333;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
 
 .BackgroundColor {
     background-color: white !important;
+    border-left: 29px solid #152333;
+    border-top: 29px solid #152333;
+    border-right: 29px solid #152333;
+    height: 87% !important;
 }
 
 /*.myButtonStyle:hover {*/
