@@ -2,8 +2,12 @@
     <Shell id="shell">
         <App id="app">
             <pages>
-                <Page showHeader="false" id="page" class="BackgroundColor" title="{i18n>title}" backgroundDesign="List">
+                <Page enableScrolling="false" showHeader="false" id="page" title="{i18n>title}" backgroundDesign="List">
                     <content>
+                     <ScrollContainer vertical="true" height="100%" class="BackgroundColor">
+                            <HBox backgroundDesign="Transparent" justifyContent="End" width="100%">
+                                <Image src="/css/image/toplogo.PNG" />
+                            </HBox>
                         <FlexBox class="sapUiLargeMarginTop" justifyContent="Center">
                             <micro:MicroProcessFlow id="idMP">
                                 <micro:content>
@@ -17,6 +21,11 @@
                         <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorSignup.BasicInformation" type="XML" />
                         <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorSignup.Address" type="XML" />
                         <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorSignup.ContactInformation" type="XML" />
+                   </ScrollContainer>
+                        <HBox backgroundDesign="Transparent" class="bottombackground sapUiSmallPaddingBegin" justifyContent="SpaceBetween" width="100%">
+                                <Image src="/css/image/bottomlogo.PNG" />
+                                <Text text="@FourOrigin" class="whiteText"/>
+                            </HBox>
                     </content>
                 </Page>
             </pages>
