@@ -1,6 +1,10 @@
 <mvc:View controllerName="com.spm.suppilerportal.controller.LandingView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form">
-    <Page id="page" backgroundDesign="List" showHeader="false" title="{i18n>title}">
+    <Page id="page" backgroundDesign="List" enableScrolling="false" showHeader="false" title="{i18n>title}">
         <content>
+        <ScrollContainer vertical="true" height="100%" class="BackgroundColor">
+                            <HBox backgroundDesign="Transparent" justifyContent="End" width="100%">
+                                <Image src="/css/image/toplogo.PNG" />
+                            </HBox>
             <FlexBox justifyContent="SpaceAround">
                 <layout:FixFlex class="fixFlexHorizontal" vertical="false">
                     <layout:fixContent>
@@ -57,6 +61,11 @@
                     </VBox>
                 </VBox>
             </FlexBox>
+             </ScrollContainer>
+                        <HBox backgroundDesign="Transparent" class="bottombackground sapUiSmallPaddingBegin" justifyContent="SpaceBetween" width="100%">
+                                <Image src="/css/image/bottomlogo.PNG" />
+                                <Text text="@FourOrigin" class="whiteText"/>
+                            </HBox>
         </content>
     </Page>
 </mvc:View>

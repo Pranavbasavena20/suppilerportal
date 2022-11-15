@@ -4,7 +4,7 @@
             <pages>
                 <Page showHeader="false" id="page" title="{i18n>title}" enableScrolling="false"  backgroundDesign="List">
                     <content>
-                        <ScrollContainer vertical="true" enableScrolling="true" height="100%" class="BackgroundColor">
+                        <ScrollContainer vertical="true" height="100%" class="BackgroundColor">
                             <HBox backgroundDesign="Transparent" justifyContent="End" width="100%">
                                 <Image src="/css/image/toplogo.PNG" />
                             </HBox>
