@@ -60,7 +60,7 @@
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Button text="Proceed to add Contacts" press="onfnnextpress4" width="100%" class="button1 header2" />
+                    <Button text="Proceed to add contacts" press="onfnnextpress4" width="100%" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
                     </layoutData>

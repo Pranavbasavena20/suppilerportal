@@ -14,14 +14,10 @@ sap.ui.define([
                 var oModel = dataUtil.createJsonModel()
                 oModel.setData({
                     "oTileData": [
-                        {
-                            "imageUrl": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/excel.png"),
-                            "titleText": "Excel",
-                            "count": "0"
-                        },
+
                         {
                             "imageUrl": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/salesorder.png"),
-                            "titleText": "Sales Order",
+                            "titleText": "Supplier Registartion",
                             "count": "5"
                         },
                         {
@@ -47,7 +43,14 @@ sap.ui.define([
                             "imageUrl": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/delivery.jpg"),
                             "titleText": "Delivery Status",
                             "count": "0"
-                        }]
+                        },
+                        {
+                            "imageUrl": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/excel.png"),
+                            "titleText": "Excel",
+                            "count": "0"
+                        }
+
+                    ]
 
                 });
                 this.getView().setModel(oModel, "genericTileModel");
@@ -56,7 +59,7 @@ sap.ui.define([
             onImageClick: function (oEvent) {
                 var sText = oEvent.getSource().getParent().getItems()[2].getText();
                 switch (sText) {
-                    case "Sales Order":
+                    case "Supplier Registartion":
                         this.getRouter().navTo("SupplierSignup");
                         break;
                     case "Vendor Master":

@@ -12,14 +12,14 @@ sap.ui.define([
          * @returns {string} sValue with 2 digits rounded
          */
 
-        onLayoytChange: function (sVal) {
+        onColumnVisible: function (sVal) {
+
             switch (sVal) {
                 case "TwoColumnsMidExpanded":
-                    return "XL6 L6 M8 S12";
-                case "TwoColumnsBeginExpanded":
-                    return "X8 L8 M12 S12";
+                case "MidColumnFullScreen":
+                    return false;
                 default:
-                    return "X12 L12 M12 S12";
+                    return true;
             }
         }
     };

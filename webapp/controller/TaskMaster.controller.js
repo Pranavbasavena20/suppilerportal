@@ -7,11 +7,12 @@ sap.ui.define([
     "sap/ui/model/Sorter",
     "sap/ui/model/Filter",
     "sap/ui/model/FilterOperator",
+    "../model/formatter"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, JSONModel, dataUtil, UIComponent, Fragment, Sorter, Filter, FilterOperator) {
+    function (Controller, JSONModel, dataUtil, UIComponent, Fragment, Sorter, Filter, FilterOperator, formatter) {
         "use strict";
 
         return Controller.extend("com.spm.suppilerportal.controller.TaskMaster", {
@@ -67,6 +68,7 @@ sap.ui.define([
                 oModel.setProperty("/Email", oSelectedObject.Email);
                 oModel.setProperty("/PrimaryContact", oSelectedObject.PrimaryContact);
                 oModel.setProperty("/Phone", oSelectedObject.Phone);
+                this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/bColumnVisible", false);
                 this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/layout", "TwoColumnsMidExpanded");
                 this.getOwnerComponent().getRouter().navTo("TaskDetail", { TaskType: "1" });
             },

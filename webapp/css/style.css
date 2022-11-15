@@ -101,8 +101,9 @@
     background: mediumpurple;
     color: #fff;
 }
-.whiteText{
-    color: #fff !important;   
+
+.whiteText {
+    color: #fff !important;
 }
 
 .sapMITBText {
@@ -145,6 +146,11 @@
     margin-left: 73px;
 }
 
+.BlackText {
+    color: black !important;
+    margin-left: 73px;
+}
+
 .pageBgColorWhite {
     background-color: white !important;
 }
@@ -184,7 +190,7 @@
 
 .backgroundshadow {
     background: white;
-    
+
 }
 
 .blackTheme {
@@ -236,6 +242,7 @@
     padding: 4px;
 
 }
+
 .bottombackground {
     background-color: #152333;
     padding-left: 2rem;
@@ -377,6 +384,28 @@ html[dir=rtl] .sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrowLeft {
 .sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrowLeft,
 html[dir=rtl] .sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight {
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #841dbd36 25%, #841dbd 100%)
+}
+
+.sapUiSizeCompact .sapUxAPAnchorBar .sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected .sapMBtnDefault .sapMBtnContent::after,
+.sapUxAPAnchorBar .sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected .sapMBtnDefault .sapMBtnContent::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 2.5rem;
+    left: -0.188rem;
+    padding: 0.094rem 0.188rem;
+    border-top-left-radius: 0.125rem;
+    border-top-right-radius: 0.125rem;
+    background-color: white !important;
+}
+
+.subButton1,
+.subButton1.sapMBtnInner,
+.subButton1.sapMBtnBase,
+.subButton1 .sapMBtnHoverable {
+    background: #303c54 !important;
+    border: #303c54 !important;
+    border-radius: 11px;
 }
 
 

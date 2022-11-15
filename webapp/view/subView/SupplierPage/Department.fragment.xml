@@ -46,7 +46,7 @@
                 </VBox>
 
                 <VBox>
-                    <Button text="Proceed to add Address" press="onfnnextpress3" width="100%" class="button1 header2" />
+                    <Button text="Proceed to add address" press="onfnnextpress3" width="100%" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
                     </layoutData>

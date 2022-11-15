@@ -17,6 +17,8 @@ sap.ui.define([
                 oModel.setData({
                     layout: "OneColumn",
                     previousLayout: "",
+                    bColumnVisible: true,
+                    Span: "",
                     actionButtonsInfo: {
                         midColumn: {
                             fullScreen: false,
@@ -31,15 +33,21 @@ sap.ui.define([
             },
             onStateChange: function (oEvent) {
                 var sLayout = oEvent.getParameter("layout");
+                this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/Span", "");
                 this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/layout", sLayout);
                 switch (sLayout) {
                     case "TwoColumnsMidExpanded":
                     case "MidColumnFullScreen":
+                        this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/bColumnVisible", false);
                         this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/Span", "XL6 L6 M8 S12");
+                        break;
                     case "TwoColumnsBeginExpanded":
+                        this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/bColumnVisible", true);
                         this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/Span", "X8 L8 M12 S12");
+                        break;
                     default:
-                    // this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/Span", "X6 L6 M8 S12");
+                        this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/Span", "");
+                        break;
 
                 }
 

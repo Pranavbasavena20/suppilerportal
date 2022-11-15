@@ -1,7 +1,7 @@
 <mvc:View controllerName="com.spm.suppilerportal.controller.TaskMaster" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form">
     <Page id="page" backgroundDesign="List" showHeader="false" title="{i18n>title}">
         <content>
-            <Table id="idMastertable" inset="false" items="{oMasterList>/MasterList}">
+            <Table class="TableSelected" id="idMastertable" inset="false" items="{oMasterList>/MasterList}">
                 <headerToolbar>
                     <OverflowToolbar>
                         <Title wrapping="true" text="Vendors" level="H3" titleStyle="H3" />
@@ -14,19 +14,19 @@
                     <Column width="12em">
                         <Text text="Code" />
                     </Column>
-                    <Column minScreenWidth="Tablet" demandPopin="true">
+                    <Column>
                         <Text text="Name" />
                     </Column>
                     <Column minScreenWidth="Tablet" demandPopin="true">
                         <Text text="Department" />
                     </Column>
-                    <Column minScreenWidth="Tablet" demandPopin="true">
+                    <Column visible="{oFiexibleLayout>/bColumnVisible}">
                         <Text text="Primary Contact" />
                     </Column>
-                    <Column minScreenWidth="Tablet" demandPopin="true">
+                    <Column visible="{oFiexibleLayout>/bColumnVisible}">
                         <Text text="Email" />
                     </Column>
-                    <Column minScreenWidth="Tablet" demandPopin="true">
+                    <Column visible="{oFiexibleLayout>/bColumnVisible}">
                         <Text text="Phone" />
                     </Column>
                 </columns>

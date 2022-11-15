@@ -54,8 +54,8 @@
                     </layoutData>
                 </VBox>
 
-                <VBox justifyContent="End" alignItems="End" alignContent="End">
-                    <Button text="Add Contacts" press="onfnnextpress5" width="21rem" class="button1 header2" />
+                <VBox>
+                    <Button text="Add Contacts" press="onfnnextpress5" width="100%" class="subButton1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
