@@ -60,7 +60,7 @@
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Button text="Proceed to Step 3" press="onfnnextpress3" width="100%" class="button1 header2" />
+                    <Button text="Proceed to contacts" press="onfnnextpress3" width="100%" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
                     </layoutData>

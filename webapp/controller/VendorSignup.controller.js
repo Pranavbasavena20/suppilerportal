@@ -4,11 +4,12 @@ sap.ui.define([
     "com/spm/suppilerportal/utils/dataUtil",
     "sap/ui/core/UIComponent",
     "sap/ui/core/Fragment",
+    "../model/mandatoryfields"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, JSONModel, dataUtil, UIComponent, Fragment) {
+    function (Controller, JSONModel, dataUtil, UIComponent, Fragment, mandatoryfields) {
         "use strict";
 
         return Controller.extend("com.spm.suppilerportal.controller.VendorSignup", {
@@ -48,6 +49,11 @@ sap.ui.define([
 
             },
             onfnnextpress2: function () {
+                var that = this;
+                mandatoryfields.clearStates(that);
+                if (mandatoryfields.ManditoryFields(that)) {
+                    return;
+                }
                 var oModel = this.getView().getModel("genericTileModel");
                 oModel.setProperty("/sStep1", false);
                 oModel.setProperty("/sStep3", false);
