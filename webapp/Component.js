@@ -29,6 +29,7 @@ sap.ui.define([
                 this._oErrorHandler = new ErrorHandler(this);
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
+                this.setModel(models.fnPayload(), "oMainModel");
             },
             destroy: function () {
                 this._oErrorHandler.destroy();
