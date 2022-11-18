@@ -1,66 +1,65 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
     <FlexBox class="sapUiMediumMarginTop" visible="{genericTileModel>/sStep3}" justifyContent="Center" alignContent="Center">
-        <form:SimpleForm width="45rem" title="Address" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
+        <form:SimpleForm width="45rem" title="{i18n>Address}" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
             <form:content>
-                <!-- <Title text="Address" level="H4" titleStyle="H4" visible="false" /> -->
                 <VBox>
-                    <Label text="House No" design="Bold" />
+                    <Label text="{i18n>HouseNo}" design="Bold" />
                     <Input value="{genericTileModel>/Designation}" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="Street" design="Bold" />
+                    <Label text="{i18n>Street}" design="Bold" />
                     <Input value="{genericTileModel>/Name}" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="City" design="Bold" />
+                    <Label text="{i18n>City}" design="Bold" />
                     <Input type="Number" value="{genericTileModel>/LandPhoneNo}" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="Postal Code" design="Bold" />
+                    <Label text="{i18n>PostalCode}" design="Bold" />
                     <Input type="Number" value="{genericTileModel>/MobileNo}" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="District" design="Bold" />
+                    <Label text="{i18n>District}" design="Bold" />
                     <Input type="Email" value="{genericTileModel>/Email}" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="PO Box No" design="Bold" />
+                    <Label text="{i18n>POBoxNo}" design="Bold" />
                     <Input type="Email" value="{genericTileModel>/Email}" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="Country" design="Bold" />
+                    <Label text="{i18n>Country}" design="Bold" />
                     <ComboBox width="100%" value="{genericTileModel>/Email}" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="Region" design="Bold" />
+                    <Label text="{i18n>Region}" design="Bold" />
                     <ComboBox width="100%" value="{genericTileModel>/Email}" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Button text="Proceed to add contacts" press="onfnnextpress4" width="100%" class="button1 header2" />
+                    <Button text="{i18n>btnProceedtoaddcontacts}" press="onfnnextpress4" width="100%" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
                     </layoutData>

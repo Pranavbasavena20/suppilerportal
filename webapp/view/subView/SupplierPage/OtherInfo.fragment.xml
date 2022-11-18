@@ -1,9 +1,23 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
     <FlexBox class="sapUiMediumMarginTop" visible="{genericTileModel>/sStep8}" justifyContent="Center" alignContent="Center">
-        <form:SimpleForm width="45rem" title="Other Information" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
+        <form:SimpleForm width="45rem" title="{i18n>OtherInformation}" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
             <form:content>
                 <VBox>
-                    <Label text="Vendor Account Group" design="Bold" />
+                    <Label text="{i18n>VendorAccountGroup}" design="Bold" />
+                    <ComboBox width="100%" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="{i18n>PurchaseOrderFrequency}" design="Bold" />
+                    <ComboBox width="100%" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="{i18n>GroupforCalculationSchema}" design="Bold" />
                     <ComboBox width="100%" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
@@ -11,30 +25,14 @@
                 </VBox>
 
                 <VBox>
-                    <Label text="Purchase Order Frequency" design="Bold" />
+                    <Label text="{i18n>TimeZone}" design="Bold" />
                     <ComboBox width="100%" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="Group for Calculation Schema (Vendor)" design="Bold" />
-                    <ComboBox width="100%" />
-                    <layoutData>
-                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
-                    </layoutData>
-                </VBox>
-
-                <VBox>
-                    <Label text="Timezone - EWM Related" design="Bold" />
-                    <ComboBox width="100%" />
-                    <layoutData>
-                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
-                    </layoutData>
-                </VBox>
-
-                <VBox>
-                    <Button text="Proceed to Statutory Documents" press="onfnnextpress9" width="100%" class="button1 header2" />
+                    <Button text="{i18n>btnProceedtoStatutoryDocuments}" press="onfnnextpress9" width="100%" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
                     </layoutData>

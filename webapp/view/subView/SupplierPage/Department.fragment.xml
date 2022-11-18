@@ -1,25 +1,23 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
     <FlexBox class="sapUiMediumMarginTop" visible="{genericTileModel>/sStep2}" justifyContent="Center" alignContent="Center">
-        <form:SimpleForm width="45rem" title="Department/Product Info" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
+        <form:SimpleForm width="45rem" title="{i18n>DepartmentProductInfo}" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
             <form:content>
                 <VBox>
-                    <Label text="Department" design="Bold" />
+                    <Label text="{i18n>Department}" design="Bold" />
                     <ComboBox width="100%" />
-
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="Sub-department" design="Bold" />
+                    <Label text="{i18n>Subdepartment}" design="Bold" />
                     <ComboBox width="100%" />
-
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="Nature of products" design="Bold" />
+                    <Label text="{i18n>Natureofproducts}" design="Bold" />
                     <Input />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
@@ -27,26 +25,25 @@
                 </VBox>
 
                 <VBox>
-                    <Label text="Category Manager/Executive" design="Bold" />
+                    <Label text="{i18n>CategoryManagerExecutive}" design="Bold" />
                     <Input />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="Are you associated with Manufacturer/Main Distrubutor registered with us?" design="Bold" />
+                    <Label text="{i18n>AreyouassociatedwithManufacturer}" design="Bold" />
                     <RadioButtonGroup columns="2" width="100%" visible="{oVendorMaster>/bDisplay}">
-                        <RadioButton text="Yes" />
-                        <RadioButton text="No" />
+                        <RadioButton text="{i18n>Yes}" />
+                        <RadioButton text="{i18n>No}" />
                     </RadioButtonGroup>
 
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
-
                 <VBox>
-                    <Button text="Proceed to add address" press="onfnnextpress3" width="100%" class="button1 header2" />
+                    <Button text="{i18n>btnProceedtoaddaddress}" press="onfnnextpress3" width="100%" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
                     </layoutData>

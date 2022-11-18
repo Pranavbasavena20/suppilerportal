@@ -1,23 +1,23 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:upload="sap.m.upload" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
     <FlexBox class="sapUiMediumMarginTop" visible="{genericTileModel>/sStep9}" justifyContent="Center" alignContent="Center">
-        <form:SimpleForm width="45rem" title="Statutory Documents" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
+        <form:SimpleForm width="45rem" title="{i18n>StatutoryDocuments}" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
             <form:content>
                 <VBox>
-                    <Label text="Document Type" design="Bold" />
+                    <Label text="{i18n>DocumentType}" design="Bold" />
                     <Input width="100%" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="Document Description" design="Bold" />
+                    <Label text="{i18n>DocumentDescription}" design="Bold" />
                     <Input width="100%" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="Attachment" design="Bold" />
+                    <Label text="{i18n>Attachment}" design="Bold" />
                     <upload:UploadSet class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
@@ -25,7 +25,7 @@
                 </VBox>
 
                 <VBox>
-                    <Button text="Proceed to Comments" press="onfnnextpress10" width="100%" class="button1 header2" />
+                    <Button text="{i18n>btnProceedtoComments}" press="onfnnextpress10" width="100%" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
                     </layoutData>
@@ -37,13 +37,13 @@
         <Table visible="{genericTileModel>/sStep9}" width="74rem" class="sapUiLargeMarginBegin" id="idDcoument" inset="false" mode="MultiSelect" items="{genericTileModel>/aContact}">
             <columns>
                 <Column>
-                    <Text text="Document Type" />
+                    <Text text="{i18n>DocumentType}" />
                 </Column>
                 <Column minScreenWidth="Tablet" demandPopin="true">
-                    <Text text="Document Description" />
+                    <Text text="{i18n>DocumentDescription}" />
                 </Column>
                 <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
-                    <Text text="File" />
+                    <Text text="{i18n>Attachment}" />
                 </Column>
                 <Column hAlign="End">
                     <Text text="" />
@@ -58,8 +58,8 @@
                         <Text text="{genericTileModel>Designation}" />
                         <Text text="{genericTileModel>Name}" />
                         <Text text="{genericTileModel>Email}" />
-                        <Button text="Edit" width="6rem" class="button1" />
-                        <Button text="Delete" width="6rem" class="button1" />
+                        <Button text="{i18n>Edit}" width="6rem" class="button1" />
+                        <Button text="{i18n>Delete}" width="6rem" class="button1" />
                     </cells>
                 </ColumnListItem>
             </items>
