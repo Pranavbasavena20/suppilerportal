@@ -27,7 +27,7 @@ sap.ui.define([
                         },
                         {
                             "imageUrl": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/email.png"),
-                            "titleText": "Email",
+                            "titleText": "Supplier Request Approval",
                             "count": "12"
                         },
                         {
@@ -62,8 +62,12 @@ sap.ui.define([
                     case "Supplier Registartion":
                         this.getRouter().navTo("SupplierSignup");
                         break;
+
+                    case "Supplier Request Approval":
+                        this.getRouter().navTo("FlexibleColumnLayout", { Type: "1" });
+                        break;
                     case "Vendor Master":
-                        this.getRouter().navTo("FlexibleColumnLayout");
+                        this.getRouter().navTo("FlexibleColumnLayout", { Type: "2" });
                         break;
                     default:
                         break;
