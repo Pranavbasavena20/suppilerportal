@@ -1,32 +1,62 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
-    <FlexBox class="sapUiMediumMarginTop" visible="{genericTileModel>/sStep3}" justifyContent="Center" alignContent="Center">
-        <form:SimpleForm width="45rem" title="Contact Information" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
+    <FlexBox class="sapUiMediumMarginTop" visible="{genericTileModel>/sStep2}" justifyContent="Center" alignContent="Center">
+        <form:SimpleForm width="45rem" title="{i18n>ContactInformation}" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
             <form:content>
-                <!-- <Title text="Contact" level="H4" titleStyle="H4" /> -->
                 <VBox>
-                    <Label text="Primary Contact Name" design="Bold" />
-                    <Input width="100%" value="{genericTileModel>/Email}" />
+                    <Label text="{i18n>PhoneCountryCode}" design="Bold" labelFor="cbPhoneCountryCode" />
+                    <ComboBox items="{oMainModel>/subdepartment}" width="100%" id="cbPhoneCountryCode" fieldGroupIds="ComboboxField" required="true" editable="true">
+                        <core:Item key="{oMainModel>SUB_DEPT_CODE}" text="{oMainModel>SUB_DEPT_DESC}" />
+                    </ComboBox>
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="Email" design="Bold" />
-                    <Input width="100%" value="{genericTileModel>/Email}" />
+                    <Label text="{i18n>PhoneNo}" design="Bold" labelFor="ipPhoneNo" />
+                    <Input id="ipPhoneNo" fieldGroupIds="InputField" required="true" editable="true" width="100%" value="{genericTileModel>/Email}" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="Phone" design="Bold" />
-                    <Input width="100%" value="{genericTileModel>/Email}" />
+                    <Label text="{i18n>AltPhoneCountryCode}" design="Bold" labelFor="cbAltCountryNo" />
+                    <ComboBox items="{oMainModel>/subdepartment}" width="100%" id="cbAltCountryNo" fieldGroupIds="ComboboxField" required="true" editable="true">
+                        <core:Item key="{oMainModel>SUB_DEPT_CODE}" text="{oMainModel>SUB_DEPT_DESC}" />
+                    </ComboBox>
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
-
                 <VBox>
-                    <Button text="Submit Registration" press="onfnnextpress4" width="100%" class="button1 header2" />
+                    <Label text="{i18n>AltPhoneNo}" design="Bold" labelFor="ipAltPhoneNo" />
+                    <Input id="ipAltPhoneNo" fieldGroupIds="InputField" required="true" editable="true" width="100%" value="{genericTileModel>/Email}" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="{i18n>PrimaryContactName}" design="Bold" labelFor="ipPrimayContact" />
+                    <Input id="ipPrimayContact" fieldGroupIds="InputField" required="true" editable="true" width="100%" value="{genericTileModel>/Email}" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="{i18n>Remarks}" design="Bold" labelFor="taRemarks" />
+                    <TextArea id="taRemarks" fieldGroupIds="InputField" required="true" editable="true" width="100%" value="{genericTileModel>/Email}" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="{i18n>AdditionalInfo}" design="Bold" labelFor="taAdditionalInfo" />
+                    <TextArea id="taAdditionalInfo" fieldGroupIds="InputField" required="true" editable="true" width="100%" value="{genericTileModel>/Email}" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Button text="{i18n>btnProceedtoAddressDetails}" press="onfnnextpress3" width="100%" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
                     </layoutData>

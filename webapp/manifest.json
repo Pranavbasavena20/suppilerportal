@@ -111,10 +111,10 @@
           ]
         },
         {
-          "name": "VendorSignup",
-          "pattern": "VendorSignup",
+          "name": "SupplierRegistration",
+          "pattern": "SupplierRegistration",
           "target": [
-            "VendorSignup"
+            "SupplierRegistration"
           ]
         },
         {
@@ -166,13 +166,13 @@
           "viewId": "GenericTilesView",
           "viewName": "GenericTilesView"
         },
-        "VendorSignup": {
+        "SupplierRegistration": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "VendorSignup",
-          "viewName": "VendorSignup",
-          "title": "New Vendor Registration Form"
+          "viewId": "SupplierRegistration",
+          "viewName": "SupplierRegistration",
+          "title": "Supplier Registration"
         },
         "SupplierSignup": {
           "viewType": "XML",

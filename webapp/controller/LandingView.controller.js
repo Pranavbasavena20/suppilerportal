@@ -41,23 +41,7 @@ sap.ui.define([
                 //this.getRouter().navTo("SupplierSignup");
             },
             onSignUp: function (oEvent) {
-                // var that = this;
-                // if (!that._oSignUp) {
-                //     that._SignUpDialog = Fragment.load({
-                //         id: that.createId("fSignUpDialog"),
-                //         name: "com.spm.suppilerportal.fragments.VendorSignup",
-                //         controller: that
-                //     }).then(function (oDialog) {
-                //         that._oSignUp = oDialog;
-                //         that.getView().addDependent(that._oSignUp);
-                //         that.getView().getModel("oLanding").setProperty("/sSubmit", false);
-                //     });
-                // }
-                // that._SignUpDialog.then(function (oDialog) {
-                //     that._oSignUp.open();
-
-                // }.bind(that));
-                this.getRouter().navTo("VendorSignup");
+                this.getRouter().navTo("SupplierRegistration");
             },
             onfnpresssubmit: function () {
                 var oModel = this.getView().getModel("oLanding"),
@@ -65,7 +49,6 @@ sap.ui.define([
                     sPassword = oModel.getProperty("/sPassword");
                 if (sName !== undefined && sName !== null && sPassword !== undefined && sPassword !== null) {
                     this.getRouter().navTo("GenericTilesView");
-                    // this.getOwnerComponent().getRouter().navTo("GenericTilesView");
 
                 } else {
                     sap.m.MessageBox.error("Please enter a valid user name/password");

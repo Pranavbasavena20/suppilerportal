@@ -1,4 +1,4 @@
-<mvc:View controllerName="com.spm.suppilerportal.controller.VendorSignup" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
+<mvc:View controllerName="com.spm.suppilerportal.controller.SupplierRegistration" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
     <Shell id="shell">
         <App id="app">
             <pages>
@@ -18,9 +18,9 @@
                                     </micro:content>
                                 </micro:MicroProcessFlow>
                             </FlexBox>
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorSignup.BasicInformation" type="XML" />
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorSignup.Address" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorSignup.CompanyInformation" type="XML" />
                             <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorSignup.ContactInformation" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorSignup.Address" type="XML" />
                         </ScrollContainer>
                         <HBox backgroundDesign="Transparent" class="bottombackground sapUiSmallPaddingBegin" justifyContent="SpaceBetween" width="100%">
                             <Image src="/css/image/bottomlogo.PNG" />

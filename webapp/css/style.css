@@ -360,7 +360,34 @@ html[dir=rtl] .sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrowLeft {
 
 .sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrowLeft,
 html[dir=rtl] .sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #841dbd36 25%, #841dbd 100%)
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #841dbd36 25%, #841dbd 100%) !important;
+}
+
+html.sap-desktop .sapUxAPHierarchicalSelect.sapMSltHoverable:not(.sapMSltPressed):hover>.sapMSltIcon {
+    background-color: #841dbd;
+    border-color: #841dbd;
+}
+
+html.sap-desktop .sapUxAPHierarchicalSelect.sapMSltPressed>.sapMSltIcon {
+    background: #841dbd;
+    color: #ffffff;
+}
+
+:not(.sapMBtnDisabled) .sapMBtnBack>.sapMBtnIcon,
+:not(.sapMBtnDisabled) .sapMBtnTransparent>.sapMBtnIcon {
+    color: #ffffff;
+}
+
+.sapMSlt.sapMSltIconOnly.sapMSltHoverable:hover:not(.sapMSltState) {
+    background: #841dbd;
+    border: none;
+}
+
+.sapMBtn:hover>.sapMBtnTransparent.sapMBtnHoverable:not(.sapMBtnActive):not(.sapMToggleBtnPressed),
+.sapMIBar-CTX .sapMBtn:hover>.sapMBtnTransparent.sapMBtnHoverable:not(.sapMBtnActive):not(.sapMToggleBtnPressed) {
+    background-color: #841dbd;
+    border-color: #841dbd;
+    color: #ffffff !important;
 }
 
 .sapUiSizeCompact .sapUxAPAnchorBar .sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected .sapMBtnDefault .sapMBtnContent::after,
@@ -380,6 +407,12 @@ html[dir=rtl] .sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight
     border-bottom: 0.0625rem solid #831dbcba;
 
     background: #831dbcba !important;
+}
+
+.sapMLIBFocusable:focus {
+    outline: 0.125rem solid #841dbd73;
+    outline-offset: calc(-0.125rem - 0.0625rem);
+    background-color: #841dbd73 !important;
 }
 
 /* Enter your Stanard styles here */

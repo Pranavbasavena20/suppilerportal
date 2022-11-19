@@ -1,61 +1,58 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
     <FlexBox class="sapUiMediumMarginTop" visible="{genericTileModel>/sStep1}" justifyContent="Center" alignContent="Center">
-        <form:SimpleForm width="45rem" title="Basic Information" layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
+        <form:SimpleForm width="45rem" title="{i18n>CompanyInformation}" layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
             <form:content>
                 <VBox>
-                    <Label text="Title" design="Bold" labelFor="cbTitle" />
-                    <ComboBox items="{oMainModel>/title}" width="100%" id="cbTitle" fieldGroupIds="ComboboxField" required="true" editable="true">
-                        <core:Item key="{oMainModel>TITLE_CODE}" text="{oMainModel>LABEL_CODE}" />
-                    </ComboBox>
+                    <Label text="{i18n>EmailID}" design="Bold" labelFor="ipEmailid" />
+                    <Input id="ipEmailid" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
-                        <layout:GridData span="XL12 L12 M12 S12" />
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="Company/Vendor Name" design="Bold" labelFor="ipCompany" />
+                    <Label text="{i18n>Company}" design="Bold" labelFor="ipCompany" />
                     <Input id="ipCompany" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="Nature of business" design="Bold" labelFor="cbNatureofBusiness" />
-                    <ComboBox width="100%" id="cbNatureofBusiness" fieldGroupIds="ComboboxField" required="true" editable="true" />
-
+                    <Label text="{i18n>Natureofbusiness}" design="Bold" labelFor="cbNatureofbusiness" />
+                    <ComboBox items="{oMainModel>/department}" width="100%" id="cbNatureofbusiness" fieldGroupIds="ComboboxField" required="true" editable="true">
+                        <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
+                    </ComboBox>
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="Nature of products" design="Bold" labelFor="ipNatureofProducts" />
-                    <Input id="ipNatureofProducts" fieldGroupIds="InputField" required="true" editable="true" />
-                    <layoutData>
-                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
-                    </layoutData>
-                </VBox>
-                <VBox>
-                    <Label text="Department" design="Bold" labelFor="cbDepartment" />
+                    <Label text="{i18n>Department}" design="Bold" labelFor="cbDepartment" />
                     <ComboBox items="{oMainModel>/department}" width="100%" id="cbDepartment" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                     </ComboBox>
-
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="Sub-department" design="Bold" labelFor="cbSubDepartment" />
+                    <Label text="{i18n>Subdepartment}" design="Bold" labelFor="cbSubDepartment" />
                     <ComboBox items="{oMainModel>/subdepartment}" width="100%" id="cbSubDepartment" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>SUB_DEPT_CODE}" text="{oMainModel>SUB_DEPT_DESC}" />
                     </ComboBox>
-
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="{i18n>WEBSITE}" design="Bold" labelFor="ipWebsite" />
+                    <Input id="ipWebsite" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
 
                 <VBox>
-                    <Button text="Proceed to address" press="onfnnextpress2" width="100%" class="button1 header2" />
+                    <Button text="{i18n>btnProceedtoContactInformation}" press="onfnnextpress2" width="100%" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
                     </layoutData>
