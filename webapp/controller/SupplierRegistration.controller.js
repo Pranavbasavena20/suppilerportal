@@ -68,28 +68,6 @@ sap.ui.define([
 
 
             },
-            onPressAddContact: function (oEvent) {
-                var oData = this.getView().getModel("genericTileModel"),
-                    aContact = oData.getProperty("/aContact");
-                if (aContact === undefined || aContact === null) {
-                    aContact = [];
-                }
-                var oObject = {
-                    "Designation": oData.getProperty("/Designation"),
-                    "Name": oData.getProperty("/Name"),
-                    "LandPhoneNo": oData.getProperty("/LandPhoneNo"),
-                    "MobileNo": oData.getProperty("/MobileNo"),
-                    "Email": oData.getProperty("/Designation")
-                };
-                aContact.push(oObject);
-                oData.setProperty("/Designation", "");
-                oData.setProperty("/Name", "");
-                oData.setProperty("/LandPhoneNo", "");
-                oData.setProperty("/MobileNo", "");
-                oData.setProperty("/Designation", "");
-                this.getView().getModel("genericTileModel").setProperty("/aContact", aContact);
-
-            },
             getResourceBundle: function () {
                 return this.getOwnerComponent().getModel("i18n").getResourceBundle();
             },
@@ -106,21 +84,9 @@ sap.ui.define([
             getRouter: function () {
                 return sap.ui.core.UIComponent.getRouterFor(this);
             },
-            onSignUp: function (oEvent) {
-                this.getRouter().navTo("VendorSignup");
+            onfnpresssubmit: function (oEvent) {
+                debugger;
+                sap.m.MessageBox.show("Request Submittted");
             },
-            onfnpresssubmit: function () {
-                var oModel = this.getView().getModel("oLanding"),
-                    sName = oModel.getProperty("/sUserName"),
-                    sPassword = oModel.getProperty("/sPassword");
-                if (sName !== undefined && sName !== null && sPassword !== undefined && sPassword !== null) {
-                    this.getRouter().navTo("GenericTilesView");
-                } else {
-                    sap.m.MessageBox.error("Please enter a valid user name/password");
-                }
-            },
-            onCancelForm: function () {
-                this._oSignUp.close();
-            }
         });
     });
