@@ -4,8 +4,8 @@
             <form:content>
                 <VBox>
                     <Label text="{i18n>PhoneCountryCode}" design="Bold" labelFor="cbPhoneCountryCode" />
-                    <ComboBox items="{oMainModel>/subdepartment}" width="100%" id="cbPhoneCountryCode" fieldGroupIds="ComboboxField" required="true" editable="true">
-                        <core:Item key="{oMainModel>SUB_DEPT_CODE}" text="{oMainModel>SUB_DEPT_DESC}" />
+                    <ComboBox selectedKey="{oSRModel>/PH_COUNTRY_CODE}" items="{oMainModel>/countryCode}" width="100%" id="cbPhoneCountryCode" fieldGroupIds="ComboboxField" required="true" editable="true">
+                        <core:Item key="{oMainModel>COUNTRY_CODE}" text="{oMainModel>COUNTRY_NAME}" />
                     </ComboBox>
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
@@ -13,15 +13,15 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>PhoneNo}" design="Bold" labelFor="ipPhoneNo" />
-                    <Input id="ipPhoneNo" fieldGroupIds="InputField" required="true" editable="true" width="100%" value="{genericTileModel>/Email}" />
+                    <Input value="{oSRModel>/PHONE_NUMBER}" id="ipPhoneNo" fieldGroupIds="InputField" required="true" editable="true" width="100%" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
                     <Label text="{i18n>AltPhoneCountryCode}" design="Bold" labelFor="cbAltCountryNo" />
-                    <ComboBox items="{oMainModel>/subdepartment}" width="100%" id="cbAltCountryNo" fieldGroupIds="ComboboxField" required="true" editable="true">
-                        <core:Item key="{oMainModel>SUB_DEPT_CODE}" text="{oMainModel>SUB_DEPT_DESC}" />
+                    <ComboBox selectedKey="{oSRModel>/ALT_PH_COUNTRY_CODE}" items="{oMainModel>/countryCode}" width="100%" id="cbAltCountryNo" fieldGroupIds="ComboboxField" required="true" editable="true">
+                        <core:Item key="{oMainModel>COUNTRY_CODE}" text="{oMainModel>COUNTRY_NAME}" />
                     </ComboBox>
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
@@ -29,28 +29,28 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>AltPhoneNo}" design="Bold" labelFor="ipAltPhoneNo" />
-                    <Input id="ipAltPhoneNo" fieldGroupIds="InputField" required="true" editable="true" width="100%" value="{genericTileModel>/Email}" />
+                    <Input value="{oSRModel>/ALTERNATE_PHN_NUMBER}" id="ipAltPhoneNo" fieldGroupIds="InputField" required="true" editable="true" width="100%" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
                     <Label text="{i18n>PrimaryContactName}" design="Bold" labelFor="ipPrimayContact" />
-                    <Input id="ipPrimayContact" fieldGroupIds="InputField" required="true" editable="true" width="100%" value="{genericTileModel>/Email}" />
+                    <Input value="{oSRModel>/PRIMARY_CONTACT_NAME}" id="ipPrimayContact" fieldGroupIds="InputField" required="true" editable="true" width="100%" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
                     <Label text="{i18n>Remarks}" design="Bold" labelFor="taRemarks" />
-                    <TextArea id="taRemarks" fieldGroupIds="InputField" required="true" editable="true" width="100%" value="{genericTileModel>/Email}" />
+                    <TextArea value="{oSRModel>/REMARKS}" id="taRemarks" fieldGroupIds="InputField" required="true" editable="true" width="100%" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
                     <Label text="{i18n>AdditionalInfo}" design="Bold" labelFor="taAdditionalInfo" />
-                    <TextArea id="taAdditionalInfo" fieldGroupIds="InputField" required="true" editable="true" width="100%" value="{genericTileModel>/Email}" />
+                    <TextArea value="{oSRModel>/ADDITIONAL_INFO}" id="taAdditionalInfo" fieldGroupIds="InputField" required="true" editable="true" width="100%" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>

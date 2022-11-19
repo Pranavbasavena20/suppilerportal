@@ -12,6 +12,44 @@ sap.ui.define([
             return oModel;
         },
 
+        fnSupplierRegistration: function () {
+            var oSupplierRegistration = new JSONModel({
+                "Header": [{
+                    "RETSEQID": "2022_RET_00001",
+                    "COMPANY_NAME": "",
+                    "EMAIL_ID": "",
+                    "WEBSITE": "",
+                    "REMARKS": "",
+                    "ADDITIONAL_INFO": "",
+                    "PH_COUNTRY_CODE": "",
+                    "PHONE_NUMBER": "",
+                    "ALT_PH_COUNTRY_CODE": "",
+                    "ALTERNATE_PHN_NUMBER": "",
+                    "FAX_NUMBER": "",
+                    "STATUS": "",
+                    "NATURE_OF_BUSINESS": "",
+                    "DEPARTMENT": "",
+                    "SUBDEPARTMENT": "",
+                    "PRIMARY_CONTACT_NAME": "",
+                    "ADDSEQID": [
+                        {
+                            "ADDSEQID": "",
+                            "ADDRESS_CODE": "",
+                            "ADDRESS_LINE_1": "",
+                            "ADDRESS_LINE_2": "",
+                            "ADDRESS_LINE_3": "",
+                            "CITY": "",
+                            "STATE": "",
+                            "POSTAL_CODE": "",
+                            "COUNTRY_CODE": "",
+                            "ADDRESS_TYPE": ""
+                        }
+                    ]
+                }]
+            });
+            return oSupplierRegistration;
+        },
+
         fnPayload: function () {
             var oPayload = new JSONModel({
                 "Header": [{
@@ -50,23 +88,6 @@ sap.ui.define([
                     PRIMARY_CONTACT_NAME: "",
                     ADDRESS: []
                 }],
-                "title": [
-                    {
-                        "TITLESEQID": "TIT_00001",
-                        "RETSEQID": "2022_RET_00001",
-                        "TITLE_CODE": "MR",
-                        "LABEL_CODE": "Mr.",
-                        "CODE_DESC": "Mister"
-                    },
-                    {
-                        "TITLESEQID": "TIT_00002",
-                        "RETSEQID": "2022_RET_00001",
-                        "TITLE_CODE": "MRS",
-                        "LABEL_CODE": "Mrs.",
-                        "CODE_DESC": "Mistress"
-                    }
-                ],
-
                 "businessCode": [
                     {
                         "BUSSEQID": "BUS_00001",
@@ -271,6 +292,96 @@ sap.ui.define([
                         "DEPSEQID": "DEPT_00003",
                         "DEPT_CODE": "30",
                         "DEPT_DESC": "Personal Care"
+                    }
+                ],
+                "addressType": [
+                    {
+                        "RETSEQID": "2022_RET_00001",
+                        "OBJECT_ID": "2022_OBM_00010",
+                        "OBJECT_TYPE": "ADRTYPE",
+                        "OBJECT_CODE": "10",
+                        "LABEL_CODE": "Registered Office Address",
+                        "CODE_DESC": "",
+                        "VALID_FROM": "2022-11-17T07:56:42.000Z",
+                        "VALID_TO": "2037-12-31T15:52:00.000Z",
+                        "PH_TYPE": "ALL"
+                    },
+                    {
+                        "RETSEQID": "2022_RET_00001",
+                        "OBJECT_ID": "2022_OBM_00011",
+                        "OBJECT_TYPE": "ADRTYPE",
+                        "OBJECT_CODE": "20",
+                        "LABEL_CODE": "Regional Office Address",
+                        "CODE_DESC": "",
+                        "VALID_FROM": "2022-11-17T07:56:42.000Z",
+                        "VALID_TO": "2037-12-31T15:52:00.000Z",
+                        "PH_TYPE": "ALL"
+                    },
+                    {
+                        "RETSEQID": "2022_RET_00001",
+                        "OBJECT_ID": "2022_OBM_00012",
+                        "OBJECT_TYPE": "ADRTYPE",
+                        "OBJECT_CODE": "30",
+                        "LABEL_CODE": "Correspondence Address",
+                        "CODE_DESC": "",
+                        "VALID_FROM": "2022-11-17T07:56:42.000Z",
+                        "VALID_TO": "2037-12-31T15:52:00.000Z",
+                        "PH_TYPE": "ALL"
+                    },
+                    {
+                        "RETSEQID": "2022_RET_00001",
+                        "OBJECT_ID": "2022_OBM_00013",
+                        "OBJECT_TYPE": "ADRTYPE",
+                        "OBJECT_CODE": "40",
+                        "LABEL_CODE": "Payment Address",
+                        "CODE_DESC": "",
+                        "VALID_FROM": "2022-11-17T07:56:42.000Z",
+                        "VALID_TO": "2037-12-31T15:52:00.000Z",
+                        "PH_TYPE": "SUPPLIER"
+                    },
+                    {
+                        "RETSEQID": "2022_RET_00001",
+                        "OBJECT_ID": "2022_OBM_00014",
+                        "OBJECT_TYPE": "ADRTYPE",
+                        "OBJECT_CODE": "50",
+                        "LABEL_CODE": "Warehouse Address",
+                        "CODE_DESC": "",
+                        "VALID_FROM": "2022-11-17T07:56:42.000Z",
+                        "VALID_TO": "2037-12-31T15:52:00.000Z",
+                        "PH_TYPE": "ALL"
+                    },
+                    {
+                        "RETSEQID": "2022_RET_00001",
+                        "OBJECT_ID": "2022_OBM_00015",
+                        "OBJECT_TYPE": "ADRTYPE",
+                        "OBJECT_CODE": "60",
+                        "LABEL_CODE": "Distribution Centre",
+                        "CODE_DESC": "",
+                        "VALID_FROM": "2022-11-17T07:56:42.000Z",
+                        "VALID_TO": "2037-12-31T15:52:00.000Z",
+                        "PH_TYPE": "ALL"
+                    },
+                    {
+                        "RETSEQID": "2022_RET_00001",
+                        "OBJECT_ID": "2022_OBM_00016",
+                        "OBJECT_TYPE": "ADRTYPE",
+                        "OBJECT_CODE": "70",
+                        "LABEL_CODE": "Store Address",
+                        "CODE_DESC": "",
+                        "VALID_FROM": "2022-11-17T07:56:42.000Z",
+                        "VALID_TO": "2037-12-31T15:52:00.000Z",
+                        "PH_TYPE": "RETAILER"
+                    },
+                    {
+                        "RETSEQID": "2022_RET_00001",
+                        "OBJECT_ID": "2022_OBM_00017",
+                        "OBJECT_TYPE": "ADRTYPE",
+                        "OBJECT_CODE": "80",
+                        "LABEL_CODE": "Other Address",
+                        "CODE_DESC": "",
+                        "VALID_FROM": "2022-11-17T07:56:42.000Z",
+                        "VALID_TO": "2037-12-31T15:52:00.000Z",
+                        "PH_TYPE": "ALL"
                     }
                 ],
                 "countryCode": [

@@ -18,9 +18,9 @@
                                     </micro:content>
                                 </micro:MicroProcessFlow>
                             </FlexBox>
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorSignup.CompanyInformation" type="XML" />
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorSignup.ContactInformation" type="XML" />
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorSignup.Address" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierRegistration.CompanyInformation" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierRegistration.ContactInformation" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierRegistration.Address" type="XML" />
                         </ScrollContainer>
                         <HBox backgroundDesign="Transparent" class="bottombackground sapUiSmallPaddingBegin" justifyContent="SpaceBetween" width="100%">
                             <Image src="/css/image/bottomlogo.PNG" />
