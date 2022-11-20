@@ -48,38 +48,48 @@ sap.ui.define([
                 this.oModel.setProperty("/bDisplay", false);
             },
             onFooterButtonPress: function (oEvent, sAction) {
-                if (!this.oRejectDialog) {
-                    this.oRejectDialog = new sap.m.Dialog({
-                        title: sAction,
-                        type: sap.m.DialogType.Message,
-                        content: [
-                            new sap.m.Label({
-                                text: sAction === "Approve" ? "Do you want to Approve this?" : "Do you want to Reject this?",
-                                labelFor: "rejectionNote"
-                            }),
-                            new sap.m.TextArea("rejectionNote", {
-                                width: "100%",
-                                placeholder: "Add note (optional)"
-                            })
-                        ],
-                        beginButton: new sap.m.Button({
-                            type: sap.m.ButtonType.Emphasized,
-                            text: sAction,
-                            press: function () {
-                                var sText = Core.byId("rejectionNote").getValue();
-                                sap.m.MessageToast.show("Note is: " + sText);
-                                this.oRejectDialog.close();
-                            }.bind(this)
+                this.oRejectDialog = new sap.m.Dialog({
+                    title: sAction,
+                    type: sap.m.DialogType.Message,
+                    content: [
+                        new sap.m.Label({
+                            required: sAction === "Reject" ? true : false,
+                            text: sAction === "Approve" ? "Do you want to Approve this?" : "Do you want to Reject this?",
+                            labelFor: "rejectionNote"
                         }),
-                        endButton: new sap.m.Button({
-                            text: "Cancel",
-                            press: function () {
-                                this.oRejectDialog.close();
-                            }.bind(this)
+                        new sap.m.TextArea("rejectionNote", {
+                            width: "100%",
+                            placeholder: "Add note (optional)"
                         })
-                    });
-                }
-
+                    ],
+                    beginButton: new sap.m.Button({
+                        type: sap.m.ButtonType.Emphasized,
+                        text: sAction,
+                        press: function () {
+                            var sText = sap.ui.getCore().byId("rejectionNote").getValue();
+                            if (sText === "" && sAction === "Reject") {
+                                sap.ui.getCore().byId("rejectionNote").setValueState("Error");
+                                sap.ui.getCore().byId("rejectionNote").setValueStateText("Please enter remarks");
+                                sap.m.MessageToast.show("Please enter remarks");
+                                return;
+                            } else {
+                                sap.ui.getCore().byId("rejectionNote").setValueState("None");
+                            }
+                            sap.m.MessageToast.show("Note is: " + sText);
+                            this.oRejectDialog.close();
+                            this.oRejectDialog.destroy();
+                            this.oRejectDialog = undefined;
+                        }.bind(this)
+                    }),
+                    endButton: new sap.m.Button({
+                        text: "Cancel",
+                        press: function () {
+                            this.oRejectDialog.close();
+                            this.oRejectDialog.destroy();
+                            this.oRejectDialog = undefined;
+                        }.bind(this)
+                    })
+                });
                 this.oRejectDialog.open();
             },
 
