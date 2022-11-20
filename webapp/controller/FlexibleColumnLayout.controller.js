@@ -17,6 +17,7 @@ sap.ui.define([
                 oModel.setData({
                     layout: "OneColumn",
                     previousLayout: "",
+                    Type: "",
                     bColumnVisible: true,
                     Span: "",
                     actionButtonsInfo: {
@@ -29,7 +30,14 @@ sap.ui.define([
                 });
 
                 this.getOwnerComponent().setModel(oModel, "oFiexibleLayout");
+                this.getRouter().getRoute("FlexibleColumnLayout").attachPatternMatched(this._onObjectMatched, this);
 
+            },
+
+            _onObjectMatched: function (oEvent) {
+                debugger;
+                var sType = oEvent.getParameter("arguments").Type;
+                this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/Type", sType);
             },
             onStateChange: function (oEvent) {
                 var sLayout = oEvent.getParameter("layout");

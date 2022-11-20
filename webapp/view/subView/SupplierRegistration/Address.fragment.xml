@@ -4,7 +4,7 @@
             <form:content>
                 <VBox>
                     <Label text="{i18n>AddressType}" design="Bold" labelFor="cbAddressType" />
-                    <ComboBox selectedKey="{oSRModel>/ADDSEQID/ADDRESS_TYPE}" items="{oMainModel>/addressType}" width="100%" id="cbAddressType" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSRModel>/Header/0/ADDRESS/ADDRESS_TYPE}" items="{oMainModel>/addressType}" width="100%" id="cbAddressType" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>OBJECT_CODE}" text="{oMainModel>LABEL_CODE}" />
                     </ComboBox>
                     <layoutData>
@@ -13,28 +13,28 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>AddressLine1}" design="Bold" labelFor="taAddressLine1" />
-                    <TextArea value="{oSRModel>/ADDSEQID/ADDRESS_LINE_1}" width="100%" id="taAddressLine1" fieldGroupIds="InputField" required="true" editable="true" />
+                    <TextArea value="{oSRModel>/Header/0/ADDRESS/ADDRESS_LINE_1}" width="100%" id="taAddressLine1" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
                     <Label text="{i18n>AddressLine2}" design="Bold" labelFor="taAddressLine2" />
-                    <TextArea value="{oSRModel>/ADDSEQID/ADDRESS_LINE_2}" width="100%" id="taAddressLine2" fieldGroupIds="InputField" required="true" editable="true" />
+                    <TextArea value="{oSRModel>/Header/0/ADDRESS/ADDRESS_LINE_2}" width="100%" id="taAddressLine2" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
                     <Label text="{i18n>AddressLine3}" design="Bold" labelFor="taAddressLine3" />
-                    <TextArea value="{oSRModel>/ADDSEQID/ADDRESS_LINE_3}" width="100%" id="taAddressLine3" fieldGroupIds="InputField" required="true" editable="true" />
+                    <TextArea value="{oSRModel>/Header/0/ADDRESS/ADDRESS_LINE_3}" width="100%" id="taAddressLine3" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
                     <Label text="{i18n>CountryCode}" design="Bold" labelFor="cbCountryCode" />
-                    <ComboBox selectedKey="{oSRModel>/ADDSEQID/COUNTRY_CODE}" items="{oMainModel>/countryCode}" width="100%" id="cbCountryCode" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSRModel>/Header/0/ADDRESS/COUNTRY_CODE}" items="{oMainModel>/countryCode}" width="100%" id="cbCountryCode" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>COUNTRY_CODE}" text="{oMainModel>COUNTRY_NAME}" />
                     </ComboBox>
                     <layoutData>
@@ -43,7 +43,7 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>State}" design="Bold" labelFor="cbState" />
-                    <ComboBox selectedKey="{oSRModel>/ADDSEQID/STATE}" items="{oMainModel>/subdepartment}" width="100%" id="cbState" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSRModel>/Header/0/ADDRESS/STATE}" items="{oMainModel>/subdepartment}" width="100%" id="cbState" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>SUB_DEPT_CODE}" text="{oMainModel>SUB_DEPT_DESC}" />
                     </ComboBox>
                     <layoutData>
@@ -52,14 +52,14 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>City}" design="Bold" labelFor="ipCity" />
-                    <Input value="{oSRModel>/ADDSEQID/CITY}" width="100%" fieldGroupIds="InputField" required="true" editable="true" id="ipCity" />
+                    <Input value="{oSRModel>/Header/0/ADDRESS/CITY}" width="100%" fieldGroupIds="InputField" required="true" editable="true" id="ipCity" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
                     <Label text="{i18n>PostalCode}" design="Bold" labelFor="ipPostalCode" />
-                    <Input value="{oSRModel>/ADDSEQID/POSTAL_CODE}" id="ipPostalCode" type="Number" width="100%" fieldGroupIds="InputField" required="true" editable="true" />
+                    <Input value="{oSRModel>/Header/0/ADDRESS/POSTAL_CODE}" id="ipPostalCode" type="Number" width="100%" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>

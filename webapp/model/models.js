@@ -14,23 +14,25 @@ sap.ui.define([
 
         fnSupplierRegistration: function () {
             var oSupplierRegistration = new JSONModel({
-                "RETSEQID": "2022_RET_00001",
-                "COMPANY_NAME": "",
-                "EMAIL_ID": "",
-                "WEBSITE": "",
-                "REMARKS": "",
-                "ADDITIONAL_INFO": "",
-                "PH_COUNTRY_CODE": "",
-                "PHONE_NUMBER": "",
-                "ALT_PH_COUNTRY_CODE": "",
-                "ALTERNATE_PHN_NUMBER": "",
-                "FAX_NUMBER": "",
-                "STATUS": "",
-                "NATURE_OF_BUSINESS": "",
-                "DEPARTMENT": "",
-                "SUBDEPARTMENT": "",
-                "PRIMARY_CONTACT_NAME": "",
-                "ADDSEQID": [
+                Header: [{
+                    "date": new Date(),
+                    "RETSEQID": "2022_RET_00001",
+                    "COMPANY_NAME": "",
+                    "EMAIL_ID": "",
+                    "WEBSITE": "",
+                    "REMARKS": "",
+                    "ADDITIONAL_INFO": "",
+                    "PH_COUNTRY_CODE": "",
+                    "PHONE_NUMBER": "",
+                    "ALT_PH_COUNTRY_CODE": "",
+                    "ALTERNATE_PHN_NUMBER": "",
+                    "FAX_NUMBER": "",
+                    "STATUS": "",
+                    "NATURE_OF_BUSINESS": "",
+                    "DEPARTMENT": "",
+                    "SUBDEPARTMENT": "",
+                    "PRIMARY_CONTACT_NAME": "",
+                    "ADDRESS":
                     {
                         "ADDSEQID": "",
                         "ADDRESS_CODE": "",
@@ -43,7 +45,11 @@ sap.ui.define([
                         "COUNTRY_CODE": "",
                         "ADDRESS_TYPE": ""
                     }
-                ]
+
+
+                }]
+
+
             });
             return oSupplierRegistration;
         },
