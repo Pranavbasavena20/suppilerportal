@@ -46,6 +46,42 @@ sap.ui.define([
             onDisplayScreen: function (oEvent) {
                 this.oModel.setProperty("/bEdit", true);
                 this.oModel.setProperty("/bDisplay", false);
-            }
+            },
+            onFooterButtonPress: function (oEvent, sAction) {
+                if (!this.oRejectDialog) {
+                    this.oRejectDialog = new sap.m.Dialog({
+                        title: sAction,
+                        type: sap.m.DialogType.Message,
+                        content: [
+                            new sap.m.Label({
+                                text: sAction === "Approve" ? "Do you want to Approve this?" : "Do you want to Reject this?",
+                                labelFor: "rejectionNote"
+                            }),
+                            new sap.m.TextArea("rejectionNote", {
+                                width: "100%",
+                                placeholder: "Add note (optional)"
+                            })
+                        ],
+                        beginButton: new sap.m.Button({
+                            type: sap.m.ButtonType.Emphasized,
+                            text: sAction,
+                            press: function () {
+                                var sText = Core.byId("rejectionNote").getValue();
+                                sap.m.MessageToast.show("Note is: " + sText);
+                                this.oRejectDialog.close();
+                            }.bind(this)
+                        }),
+                        endButton: new sap.m.Button({
+                            text: "Cancel",
+                            press: function () {
+                                this.oRejectDialog.close();
+                            }.bind(this)
+                        })
+                    });
+                }
+
+                this.oRejectDialog.open();
+            },
+
         });
     });

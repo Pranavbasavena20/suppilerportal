@@ -1,17 +1,19 @@
 <mvc:View controllerName="com.spm.suppilerportal.controller.TaskDetail" xmlns:layout="sap.ui.layout" xmlns="sap.uxap" xmlns:mvc="sap.ui.core.mvc" xmlns:m="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.f" xmlns:form="sap.ui.layout.form">
-    <ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="true" alwaysShowContentHeader="false" preserveHeaderStateOnScroll="false" headerContentPinnable="true" isChildPage="true" upperCaseAnchorBar="false">
+    <ObjectPageLayout showFooter="true" id="ObjectPageLayout" showTitleInHeaderContent="true" alwaysShowContentHeader="false" preserveHeaderStateOnScroll="false" headerContentPinnable="true" isChildPage="true" upperCaseAnchorBar="false">
         <headerTitle>
             <ObjectPageDynamicHeaderTitle>
                 <expandedHeading>
-                    <m:Title text="{oFiexibleLayout>/Name}" wrapping="true" class="sapUiSmallMarginEnd" />
+                    <m:Title text="{oSRModel>/Header/0/COMPANY_NAME}" wrapping="true" class="sapUiSmallMarginEnd" />
                 </expandedHeading>
                 <navigationActions>
                     <m:OverflowToolbarButton type="Transparent" icon="sap-icon://full-screen" press="handleFullScreen" id="enterFullScreenBtn" tooltip="Enter Full Screen Mode" />
                     <m:OverflowToolbarButton type="Transparent" icon="sap-icon://decline" press="handleClose" tooltip="Close middle column" />
                 </navigationActions>
                 <actions>
-                    <m:Button visible="{oVendorMaster>/bEdit}" text="Edit" class="button1 header2" press="onEditScreen" />
-                    <m:Button visible="{oVendorMaster>/bDisplay}" text="Display" class="button1 header2" press="onDisplayScreen" />
+                    <m:VBox visible="{=${oFiexibleLayout>/Type} === '2' ? true : false}">
+                        <m:Button visible="{oVendorMaster>/bEdit}" text="Edit" class="button1 header2" press="onEditScreen" />
+                        <m:Button visible="{oVendorMaster>/bDisplay}" text="Display" class="button1 header2" press="onDisplayScreen" />
+                    </m:VBox>
                 </actions>
             </ObjectPageDynamicHeaderTitle>
         </headerTitle>
@@ -19,21 +21,48 @@
             <m:FlexBox wrap="Wrap" fitContainer="true" alignItems="Stretch">
                 <m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
                     <m:Label text="Primary Contact" />
-                    <m:Text text="{oFiexibleLayout>/PrimaryContact}" />
+                    <m:Text text="{oSRModel>/Header/0/PRIMARY_CONTACT_NAME}" />
                 </m:VBox>
                 <m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
                     <m:Label text="Email" />
-                    <m:Text text="{oFiexibleLayout>/Email}" />
+                    <m:Text text="{oSRModel>/Header/0/EMAIL_ID}" />
                 </m:VBox>
                 <m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
                     <m:Label text="Phone" />
-                    <m:Text text="{oFiexibleLayout>/Phone}" />
+                    <m:Text text="{oSRModel>/Header/0/PHONE_NUMBER}" />
                 </m:VBox>
             </m:FlexBox>
         </headerContent>
 
         <sections>
-            <ObjectPageSection title="Basic Information">
+            <ObjectPageSection title="{i18n>CompanyInformation}" visible="{=${oFiexibleLayout>/Type} === '1' ? true : false}">
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierRegistration.CompanyInformation" type="XML" />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection title="{i18n>ContactInformation}" visible="{=${oFiexibleLayout>/Type} === '1' ? true : false}">
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierRegistration.ContactInformation" type="XML" />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection title="{i18n>Address}" visible="{=${oFiexibleLayout>/Type} === '1' ? true : false}">
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierRegistration.Address" type="XML" />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection title="Basic Information" visible="{=${oFiexibleLayout>/Type} === '2' ? true : false}">
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
@@ -42,7 +71,7 @@
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
-            <ObjectPageSection title="Department/Product Info">
+            <ObjectPageSection title="Department/Product Info" visible="{=${oFiexibleLayout>/Type} === '2' ? true : false}">
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
@@ -51,7 +80,7 @@
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
-            <ObjectPageSection title="Address">
+            <ObjectPageSection title="Address" visible="{=${oFiexibleLayout>/Type} === '2' ? true : false}">
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
@@ -60,7 +89,7 @@
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
-            <ObjectPageSection title="Contact List">
+            <ObjectPageSection title="Contact List" visible="{=${oFiexibleLayout>/Type} === '2' ? true : false}">
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
@@ -69,7 +98,7 @@
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
-            <ObjectPageSection title="Accounting Information">
+            <ObjectPageSection title="Accounting Information" visible="{=${oFiexibleLayout>/Type} === '2' ? true : false}">
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
@@ -78,7 +107,7 @@
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
-            <ObjectPageSection title="Payment Information">
+            <ObjectPageSection title="Payment Information" visible="{=${oFiexibleLayout>/Type} === '2' ? true : false}">
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
@@ -87,7 +116,7 @@
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
-            <ObjectPageSection title="Withholding Tax Accounting">
+            <ObjectPageSection title="Withholding Tax Accounting" visible="{=${oFiexibleLayout>/Type} === '2' ? true : false}">
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
@@ -96,7 +125,7 @@
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
-            <ObjectPageSection title="Other Information">
+            <ObjectPageSection title="Other Information" visible="{=${oFiexibleLayout>/Type} === '2' ? true : false}">
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
@@ -105,7 +134,7 @@
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
-            <ObjectPageSection title="Statutory Documents">
+            <ObjectPageSection title="Statutory Documents" visible="{=${oFiexibleLayout>/Type} === '2' ? true : false}">
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
@@ -114,7 +143,7 @@
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
-            <ObjectPageSection title="Review Log">
+            <ObjectPageSection title="Review Log" visible="{=${oFiexibleLayout>/Type} === '2' ? true : false}">
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
@@ -124,5 +153,13 @@
                 </subSections>
             </ObjectPageSection>
         </sections>
+        <footer>
+            <m:OverflowToolbar>
+                <m:ToolbarSpacer />
+
+                <m:Button type="Accept" text="{i18n>btnApprove}" press="onFooterButtonPress($event,'Approve')" />
+                <m:Button type="Reject" text="{i18n>btnReject}" press="onFooterButtonPress($event,'Reject')" />
+            </m:OverflowToolbar>
+        </footer>
     </ObjectPageLayout>
 </mvc:View>
