@@ -25,16 +25,16 @@
                                     </micro:content>
                                 </micro:MicroProcessFlow>
                             </FlexBox>
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.BasicInformation" type="XML" />
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.Department" type="XML" />
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.Address" type="XML" />
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.ContactList" type="XML" />
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.AccountInfo" type="XML" />
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.PaymentInfo" type="XML" />
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.WithholdingTax" type="XML" />
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.OtherInfo" type="XML" />
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.StatutoryDocuments" type="XML" />
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierPage.ReviewLog" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierOnboarding.BasicInformation" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierOnboarding.Department" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierOnboarding.Address" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierOnboarding.ContactList" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierOnboarding.AccountInfo" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierOnboarding.PaymentInfo" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierOnboarding.WithholdingTax" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierOnboarding.OtherInfo" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierOnboarding.StatutoryDocuments" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.SupplierOnboarding.ReviewLog" type="XML" />
                         </ScrollContainer>
                         <HBox backgroundDesign="Transparent" class="bottombackground sapUiSmallPaddingBegin" justifyContent="SpaceBetween" width="100%">
                             <Image src="/css/image/bottomlogo.PNG" />
