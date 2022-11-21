@@ -4,7 +4,7 @@
             <form:content>
                 <VBox>
                     <Label text="{i18n>ContactType}" design="Bold" labelFor="cbSoContactType" />
-                    <ComboBox selectedKey="{oSOModel>/NATURE_OF_BUSINESS}" items="{oMainModel>/businessCode}" width="100%" id="cbSoContactType" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/CONTSEQID/OBJECT_TYPE}" items="{oMainModel>/businessCode}" width="100%" id="cbSoContactType" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
                     <layoutData>

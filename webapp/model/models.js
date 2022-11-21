@@ -16,14 +16,18 @@ sap.ui.define([
                 "VENDMSTRSEQID": "",
                 "RETSEQID": "",
                 "VENDOR_CLAIM": "",
+                "BUSINESS_REGISTRATION": "",
                 "VENDOR_ACCOUNT_GROUP": "",
                 "PURCHASE_ORDER_CURRENCY": "",
                 "GCS": "",
+                "CATERGORY_EXECUTIVE_REMARKS": "",
                 "TZ_EWM_RELATED": "",
                 "KEY_FOR_PAYMENT_GROUPING": "",
                 "GROUPING_KEY": "",
                 "EXISTING_ASSOC_MF": "",
                 "NO_RETURN_MARGIN": "",
+                "FINANCE_REMARKS": "",
+                "HOD_REMARKS": "",
                 "NATURE_OF_BUSINESS": "",
                 "COMPANY_NAME": "",
                 "BUSINESS_ENTITY": "",
@@ -104,9 +108,9 @@ sap.ui.define([
                 "ATTACHMENTS": {
                     "VENDMSTRSEQID": "",
                     "RETSEQID": "",
-                    "DocumentType": "",
-                    "DocumentDescription": "",
-                    "DocumentExpiry": "",
+                    "DOCUMENT_TYPE": "",
+                    "DOC_DESCRIPTION": "",
+                    "DOC_EXPIRY": "",
                     "File": ""
                 }
 

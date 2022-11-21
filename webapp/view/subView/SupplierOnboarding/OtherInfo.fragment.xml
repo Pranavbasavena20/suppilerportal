@@ -4,7 +4,7 @@
             <form:content>
                 <VBox>
                     <Label text="{i18n>VendorAccountGroup}" design="Bold" labelFor="cbSOVendorAcc" />
-                    <ComboBox selectedKey="{oSRModel/0/Header>/NATURE_OF_BUSINESS}" items="{oMainModel>/businessCode}" width="100%" id="cbSOVendorAcc" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/VENDOR_ACCOUNT_GROUP}" items="{oMainModel>/businessCode}" width="100%" id="cbSOVendorAcc" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
                     <layoutData>
@@ -13,7 +13,7 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>PurchaseOrderFrequency}" design="Bold" labelFor="cbSOPurchaseOrderCurr" />
-                    <ComboBox selectedKey="{oSRModel/0/Header>/NATURE_OF_BUSINESS}" items="{oMainModel>/businessCode}" width="100%" id="cbSOPurchaseOrderCurr" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/PURCHASE_ORDER_CURRENCY}" items="{oMainModel>/businessCode}" width="100%" id="cbSOPurchaseOrderCurr" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
                     <layoutData>
@@ -22,7 +22,7 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>GroupforCalculationSchema}" design="Bold" labelFor="cbSOGroupofCalSchema" />
-                    <ComboBox selectedKey="{oSRModel/0/Header>/NATURE_OF_BUSINESS}" items="{oMainModel>/businessCode}" width="100%" id="cbSOGroupofCalSchema" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/GCS}" items="{oMainModel>/businessCode}" width="100%" id="cbSOGroupofCalSchema" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
                     <layoutData>
@@ -32,7 +32,7 @@
 
                 <VBox>
                     <Label text="{i18n>TimeZone}" design="Bold" labelFor="cbSOTimeZone" />
-                    <ComboBox selectedKey="{oSRModel/0/Header>/NATURE_OF_BUSINESS}" items="{oMainModel>/businessCode}" width="100%" id="cbSOTimeZone" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/TZ_EWM_RELATED}" items="{oMainModel>/businessCode}" width="100%" id="cbSOTimeZone" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
                     <layoutData>

@@ -20,14 +20,14 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>NoReturnMargin}" design="Bold" labelFor="ipSONoreturnMarigin" />
-                    <Input value="{oSOModel>/EMAIL_ID}" id="ipSONoreturnMarigin" fieldGroupIds="InputField" required="true" editable="true" />
+                    <Input value="{oSOModel>/NO_RETURN_MARGIN}" id="ipSONoreturnMarigin" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
                     <Label text="{i18n>VendorClaim}" design="Bold" labelFor="ipSOVendorClaim" />
-                    <Input value="{oSOModel>/EMAIL_ID}" id="ipSOVendorClaim" fieldGroupIds="InputField" required="true" editable="true" />
+                    <Input value="{oSOModel>/VENDOR_CLAIM}" id="ipSOVendorClaim" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>

@@ -4,7 +4,7 @@
             <form:content>
                 <VBox>
                     <Label text="{i18n>PaymentMethods}" design="Bold" labelFor="cbSOPaymentMethods" />
-                    <ComboBox selectedKey="{oSRModel/0/Header>/NATURE_OF_BUSINESS}" items="{oMainModel>/businessCode}" width="100%" id="cbSOPaymentMethods" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/PAYMENT_TYPE}" items="{oMainModel>/businessCode}" width="100%" id="cbSOPaymentMethods" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
                     <layoutData>
@@ -13,7 +13,7 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>KeyPaymentGrouping}" design="Bold" labelFor="cbSOKeyPaymentgrp" />
-                    <ComboBox selectedKey="{oSRModel/0/Header>/NATURE_OF_BUSINESS}" items="{oMainModel>/businessCode}" width="100%" id="cbSOKeyPaymentgrp" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/KEY_FOR_PAYMENT_GROUPING}" items="{oMainModel>/businessCode}" width="100%" id="cbSOKeyPaymentgrp" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
                     <layoutData>
@@ -22,7 +22,7 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>GroupingKey}" design="Bold" labelFor="cbSOGroupKey" />
-                    <ComboBox selectedKey="{oSRModel/0/Header>/NATURE_OF_BUSINESS}" items="{oMainModel>/businessCode}" width="100%" id="cbSOGroupKey" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/GROUPING_KEY}" items="{oMainModel>/businessCode}" width="100%" id="cbSOGroupKey" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
                     <layoutData>
@@ -32,7 +32,7 @@
 
                 <VBox>
                     <Label text="{i18n>ChequeDeliveryMethod}" design="Bold" labelFor="cbSOChequeDelivery" />
-                    <ComboBox selectedKey="{oSRModel/0/Header>/NATURE_OF_BUSINESS}" items="{oMainModel>/businessCode}" width="100%" id="cbSOChequeDelivery" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/BANKSEQID/CHEQUE_DELIVERY_METHOD}" items="{oMainModel>/businessCode}" width="100%" id="cbSOChequeDelivery" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
                     <layoutData>
