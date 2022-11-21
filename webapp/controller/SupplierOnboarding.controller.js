@@ -221,21 +221,21 @@ sap.ui.define([
 
             },
             onfnnextpress11: function () {
-
+                debugger;
                 var that = this;
-                if (!that._oSignUp) {
-                    that._SignUpDialog = Fragment.load({
+                if (!that.oPreviewDialog) {
+                    that.PreviewDialog = Fragment.load({
                         id: that.createId("fSignUpDialog"),
                         name: "com.spm.suppilerportal.fragments.Preview",
                         controller: that
                     }).then(function (oDialog) {
-                        that._oSignUp = oDialog;
-                        that.getView().addDependent(that._oSignUp);
+                        that.oPreviewDialog = oDialog;
+                        that.getView().addDependent(that.oPreviewDialog);
                         that.getView().getModel("oLanding").setProperty("/sSubmit", false);
                     });
                 }
-                that._SignUpDialog.then(function (oDialog) {
-                    that._oSignUp.open();
+                that.PreviewDialog.then(function (oDialog) {
+                    that.oPreviewDialog.open();
 
                 }.bind(that));
             },
@@ -278,39 +278,20 @@ sap.ui.define([
             getRouter: function () {
                 return sap.ui.core.UIComponent.getRouterFor(this);
             },
-            onSignUp: function (oEvent) {
-                // var that = this;
-                // if (!that._oSignUp) {
-                //     that._SignUpDialog = Fragment.load({
-                //         id: that.createId("fSignUpDialog"),
-                //         name: "com.spm.suppilerportal.fragments.VendorSignup",
-                //         controller: that
-                //     }).then(function (oDialog) {
-                //         that._oSignUp = oDialog;
-                //         that.getView().addDependent(that._oSignUp);
-                //         that.getView().getModel("oLanding").setProperty("/sSubmit", false);
-                //     });
-                // }
-                // that._SignUpDialog.then(function (oDialog) {
-                //     that._oSignUp.open();
 
-                // }.bind(that));
-                this.getRouter().navTo("VendorSignup");
-            },
             onfnpresssubmit: function () {
                 var oModel = this.getView().getModel("oLanding"),
                     sName = oModel.getProperty("/sUserName"),
                     sPassword = oModel.getProperty("/sPassword");
                 if (sName !== undefined && sName !== null && sPassword !== undefined && sPassword !== null) {
                     this.getRouter().navTo("GenericTilesView");
-                    // this.getOwnerComponent().getRouter().navTo("GenericTilesView");
 
                 } else {
                     sap.m.MessageBox.error("Please enter a valid user name/password");
                 }
             },
             onCancelForm: function () {
-                this._oSignUp.close();
+                this.oPreviewDialog.close();
             }
         });
     });

@@ -31,6 +31,7 @@ sap.ui.define([
                 this.setModel(models.createDeviceModel(), "device");
                 this.setModel(models.fnSupplierRegistration(), "oSRModel");
                 this.setModel(models.fnSupplierOnBoarding(), "oSOModel");
+                this.setModel(models.fnFlexiable(), "oFiexibleLayout");
                 this.setModel(models.fnPayload(), "oMainModel");
             },
             destroy: function () {

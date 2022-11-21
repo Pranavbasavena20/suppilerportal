@@ -60,6 +60,7 @@ sap.ui.define([
 
             },
             onPress: function (oEvent) {
+
                 var oFlexiModel = this.getView().getModel("oFiexibleLayout");
                 if (oFlexiModel.getProperty("/Type") === "2") {
                     var oSelectedObject = oEvent.getSource().getBindingContext("oMasterList").getObject();
@@ -70,6 +71,8 @@ sap.ui.define([
                     oModel.setProperty("/Email", oSelectedObject.Email);
                     oModel.setProperty("/PrimaryContact", oSelectedObject.PrimaryContact);
                     oModel.setProperty("/Phone", oSelectedObject.Phone);
+                } else {
+                    oFlexiModel.setProperty("/oSelectedValues", oEvent.getSource().getBindingContext("oFiexibleLayout").getObject());
                 }
                 oFlexiModel.setProperty("/bColumnVisible", false);
                 oFlexiModel.setProperty("/layout", "TwoColumnsMidExpanded");

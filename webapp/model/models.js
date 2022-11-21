@@ -24,7 +24,7 @@ sap.ui.define([
                 "TZ_EWM_RELATED": "",
                 "KEY_FOR_PAYMENT_GROUPING": "",
                 "GROUPING_KEY": "",
-                "EXISTING_ASSOC_MF": "",
+                "EXISTING_ASSOC_MF": -1,
                 "NO_RETURN_MARGIN": "",
                 "FINANCE_REMARKS": "",
                 "HOD_REMARKS": "",
@@ -120,44 +120,58 @@ sap.ui.define([
             return oSupplierOnBoarding;
 
         },
+        fnFlexiable: function () {
+            var oFlexable = new JSONModel({
+                layout: "OneColumn",
+                previousLayout: "",
+                Type: "",
+                bColumnVisible: true,
+                Span: "",
+                SupRegis: [],
+                SuppOnBoarding: [],
+                oSelectedValues: "",
+                actionButtonsInfo: {
+                    midColumn: {
+                        fullScreen: false,
+                        exitFullScreen: true,
+                        closeColumn: false
+                    }
+                }
+            });
+            return oFlexable;
+        },
         fnSupplierRegistration: function () {
             var oSupplierRegistration = new JSONModel({
-                Header: [{
-                    "date": new Date(),
-                    "RETSEQID": "2022_RET_00001",
-                    "COMPANY_NAME": "",
-                    "EMAIL_ID": "",
-                    "WEBSITE": "",
-                    "REMARKS": "",
-                    "ADDITIONAL_INFO": "",
-                    "PH_COUNTRY_CODE": "",
-                    "PHONE_NUMBER": "",
-                    "ALT_PH_COUNTRY_CODE": "",
-                    "ALTERNATE_PHN_NUMBER": "",
-                    "FAX_NUMBER": "",
-                    "STATUS": "",
-                    "NATURE_OF_BUSINESS": "",
-                    "DEPARTMENT": "",
-                    "SUBDEPARTMENT": "",
-                    "PRIMARY_CONTACT_NAME": "",
-                    "ADDRESS":
-                    {
-                        "ADDSEQID": "",
-                        "ADDRESS_CODE": "",
-                        "ADDRESS_LINE_1": "",
-                        "ADDRESS_LINE_2": "",
-                        "ADDRESS_LINE_3": "",
-                        "CITY": "",
-                        "STATE": "",
-                        "POSTAL_CODE": "",
-                        "COUNTRY_CODE": "",
-                        "ADDRESS_TYPE": ""
-                    }
-
-
-                }]
-
-
+                "date": new Date(),
+                "RETSEQID": "2022_RET_00001",
+                "COMPANY_NAME": "",
+                "EMAIL_ID": "",
+                "WEBSITE": "",
+                "REMARKS": "",
+                "ADDITIONAL_INFO": "",
+                "PH_COUNTRY_CODE": "",
+                "PHONE_NUMBER": "",
+                "ALT_PH_COUNTRY_CODE": "",
+                "ALTERNATE_PHN_NUMBER": "",
+                "FAX_NUMBER": "",
+                "STATUS": "",
+                "NATURE_OF_BUSINESS": "",
+                "DEPARTMENT": "",
+                "SUBDEPARTMENT": "",
+                "PRIMARY_CONTACT_NAME": "",
+                "ADDRESS":
+                {
+                    "ADDSEQID": "",
+                    "ADDRESS_CODE": "",
+                    "ADDRESS_LINE_1": "",
+                    "ADDRESS_LINE_2": "",
+                    "ADDRESS_LINE_3": "",
+                    "CITY": "",
+                    "STATE": "",
+                    "POSTAL_CODE": "",
+                    "COUNTRY_CODE": "",
+                    "ADDRESS_TYPE": ""
+                }
             });
             return oSupplierRegistration;
         },

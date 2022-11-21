@@ -13,23 +13,6 @@ sap.ui.define([
 
         return Controller.extend("com.spm.suppilerportal.controller.FlexibleColumnLayout", {
             onInit: function () {
-                var oModel = dataUtil.createJsonModel();
-                oModel.setData({
-                    layout: "OneColumn",
-                    previousLayout: "",
-                    Type: "",
-                    bColumnVisible: true,
-                    Span: "",
-                    actionButtonsInfo: {
-                        midColumn: {
-                            fullScreen: false,
-                            exitFullScreen: true,
-                            closeColumn: false
-                        }
-                    }
-                });
-
-                this.getOwnerComponent().setModel(oModel, "oFiexibleLayout");
                 this.getRouter().getRoute("FlexibleColumnLayout").attachPatternMatched(this._onObjectMatched, this);
 
             },

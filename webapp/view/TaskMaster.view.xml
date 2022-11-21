@@ -46,7 +46,7 @@
                 </Table>
             </VBox>
             <VBox visible="{=${oFiexibleLayout>/Type} === '1' ? true : false}">
-                <Table class="TableSelected" id="idSupplierRegistartion" inset="false" items="{oSRModel>/Header}">
+                <Table class="TableSelected" id="idSupplierRegistartion" inset="false" items="{oFiexibleLayout>/SupRegis}">
                     <headerToolbar>
                         <OverflowToolbar>
                             <Title wrapping="true" text="Supplier Registartion" level="H3" titleStyle="H3" />
@@ -78,12 +78,12 @@
                     <items>
                         <ColumnListItem vAlign="Middle" press="onPress" type="Active">
                             <cells>
-                                <Text text="{oSRModel>RETSEQID}" />
-                                <Text text="{oSRModel>COMPANY_NAME}" />
-                                <Text text="{oSRModel>PHONE_NUMBER}" />
-                                <Text text="{oSRModel>EMAIL_ID}" />
-                                <Text text="{oSRModel>PRIMARY_CONTACT_NAME}" />
-                                <Text text="{oSRModel>date}" />
+                                <Text text="{oFiexibleLayout>RETSEQID}" />
+                                <Text text="{oFiexibleLayout>COMPANY_NAME}" />
+                                <Text text="{oFiexibleLayout>PHONE_NUMBER}" />
+                                <Text text="{oFiexibleLayout>EMAIL_ID}" />
+                                <Text text="{oFiexibleLayout>PRIMARY_CONTACT_NAME}" />
+                                <Text text="{oFiexibleLayout>date}" />
                             </cells>
                         </ColumnListItem>
                     </items>
