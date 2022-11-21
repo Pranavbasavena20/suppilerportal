@@ -3,38 +3,59 @@
         <form:SimpleForm width="45rem" title="{i18n>basicInformation}" layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
             <form:content>
                 <VBox>
-                    <Label text="{i18n>CompanySupplierName}" design="Bold" />
-                    <Input />
+                    <Label text="{i18n>CompanySupplierName}" design="Bold" labelFor="ipCompanySupp" />
+                    <Input value="{oSRModel>/Header/0/EMAIL_ID}" id="ipCompanySupp" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>LegalBusinessEntry}" design="Bold" />
-                    <Input />
-                    <layoutData>
-                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
-                    </layoutData>
-                </VBox>
-
-                <VBox>
-                    <Label text="{i18n>Natureofbusiness}" design="Bold" />
-                    <ComboBox width="100%" />
-
+                    <Label text="{i18n>LegalBusinessEntry}" design="Bold" labelFor="ipLegalBusiness" />
+                    <Input value="{oSRModel>/Header/0/EMAIL_ID}" id="ipLegalBusiness" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>BusinessRegistrationNo}" design="Bold" />
-                    <Input />
+                    <Label text="{i18n>Natureofbusiness}" design="Bold" labelFor="cbSONatureofbusiness" />
+                    <ComboBox selectedKey="{oSRModel/0/Header>/NATURE_OF_BUSINESS}" items="{oMainModel>/businessCode}" width="100%" id="cbSONatureofbusiness" fieldGroupIds="ComboboxField" required="true" editable="true">
+                        <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
+                    </ComboBox>
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>VATRegistrationNo}" design="Bold" />
-                    <Input />
+                    <Label text="{i18n>PrimaryEmailID}" design="Bold" labelFor="ipPrimaryEmailid" />
+                    <Input value="{oSRModel>/Header/0/EMAIL_ID}" id="ipPrimaryEmailid" fieldGroupIds="Email" required="true" editable="true" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="{i18n>BusinessRegistrationNo}" design="Bold" labelFor="ipBusinessRegNo" />
+                    <Input value="{oSRModel>/Header/0/EMAIL_ID}" id="ipBusinessRegNo" fieldGroupIds="InputField" required="true" editable="true" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="{i18n>WEBSITE}" design="Bold" labelFor="ipSOWebsite" />
+                    <Input value="{oSRModel>/Header/0/EMAIL_ID}" id="ipSOWebsite" fieldGroupIds="InputField" required="true" editable="true" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="{i18n>DeliveryLeadDays}" design="Bold" labelFor="ipSoDeliveryLeadDay" />
+                    <Input value="{oSRModel>/Header/0/EMAIL_ID}" id="ipSoDeliveryLeadDay" fieldGroupIds="InputField" required="true" editable="true" />
+                    <layoutData>
+                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="{i18n>VATRegistrationNo}" design="Bold" labelFor="ipSoVATRegNo" />
+                    <Input value="{oSRModel>/Header/0/EMAIL_ID}" id="ipSoVATRegNo" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
