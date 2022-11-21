@@ -11,7 +11,7 @@ sap.ui.define([
     function (Controller, JSONModel, dataUtil, UIComponent, Fragment) {
         "use strict";
 
-        return Controller.extend("com.spm.suppilerportal.controller.SupplierSignup", {
+        return Controller.extend("com.spm.suppilerportal.controller.SupplierOnboarding", {
             onInit: function () {
                 // this.getModel("i18n").getProperty('/')
                 var oModel = dataUtil.createJsonModel();

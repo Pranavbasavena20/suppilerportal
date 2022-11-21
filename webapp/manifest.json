@@ -118,10 +118,10 @@
           ]
         },
         {
-          "name": "SupplierSignup",
-          "pattern": "SupplierSignup",
+          "name": "SupplierOnboarding",
+          "pattern": "SupplierOnboarding",
           "target": [
-            "SupplierSignup"
+            "SupplierOnboarding"
           ]
         },
         {
@@ -174,13 +174,13 @@
           "viewName": "SupplierRegistration",
           "title": "Supplier Registration"
         },
-        "SupplierSignup": {
+        "SupplierOnboarding": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "SupplierSignup",
-          "viewName": "SupplierSignup",
-          "title": "New Vendor Registration Form"
+          "viewId": "SupplierOnboarding",
+          "viewName": "SupplierOnboarding",
+          "title": "New Supplier On Boarding Form"
         },
         "FlexibleColumnLayout": {
           "viewType": "XML",

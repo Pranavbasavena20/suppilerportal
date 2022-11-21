@@ -17,7 +17,7 @@ sap.ui.define([
 
                         {
                             "imageUrl": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/salesorder.png"),
-                            "titleText": "Supplier Registartion",
+                            "titleText": "Supplier Onboarding forms",
                             "count": "5"
                         },
                         {
@@ -59,8 +59,8 @@ sap.ui.define([
             onImageClick: function (oEvent) {
                 var sText = oEvent.getSource().getParent().getItems()[2].getText();
                 switch (sText) {
-                    case "Supplier Registartion":
-                        this.getRouter().navTo("SupplierSignup");
+                    case "Supplier Onboarding forms":
+                        this.getRouter().navTo("SupplierOnboarding");
                         break;
 
                     case "Supplier Request Approval":
