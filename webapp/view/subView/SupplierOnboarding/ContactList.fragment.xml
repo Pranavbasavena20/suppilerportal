@@ -4,7 +4,7 @@
             <form:content>
                 <VBox>
                     <Label text="{i18n>ContactType}" design="Bold" labelFor="cbSoContactType" />
-                    <ComboBox selectedKey="{oSRModel/0/Header>/NATURE_OF_BUSINESS}" items="{oMainModel>/businessCode}" width="100%" id="cbSoContactType" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/NATURE_OF_BUSINESS}" items="{oMainModel>/businessCode}" width="100%" id="cbSoContactType" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
                     <layoutData>
@@ -13,14 +13,14 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>PrimaryContactName}" design="Bold" labelFor="ipSoPrimaryContactName" />
-                    <Input value="{oSRModel>/Header/0/EMAIL_ID}" id="ipSoPrimaryContactName" fieldGroupIds="InputField" required="true" editable="true" />
+                    <Input value="{oSOModel>/CONTSEQID/FIRST_NAME}" id="ipSoPrimaryContactName" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
                     <Label text="{i18n>Designation}" design="Bold" labelFor="ipSoDesignation" />
-                    <Input value="{oSRModel>/Header/0/EMAIL_ID}" id="ipSoDesignation" fieldGroupIds="InputField" required="true" editable="true" />
+                    <Input value="{oSOModel/CONTSEQID/POSITION}" id="ipSoDesignation" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
@@ -28,21 +28,21 @@
 
                 <VBox>
                     <Label text="{i18n>Email}" design="Bold" labelFor="ipSoEmail" />
-                    <Input value="{oSRModel>/Header/0/EMAIL_ID}" id="ipSoEmail" fieldGroupIds="Email" required="true" editable="true" />
+                    <Input value="{oSOModel/CONTSEQID/EMAIL_ADDRESS}" id="ipSoEmail" fieldGroupIds="Email" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
                     <Label text="{i18n>Phone}" design="Bold" labelFor="ipSoPhone" />
-                    <Input value="{oSRModel>/Header/0/EMAIL_ID}" id="ipSoPhone" fieldGroupIds="Number" required="true" editable="true" />
+                    <Input value="{oSOModel/CONTSEQID/PHONE_NUMBER}" id="ipSoPhone" fieldGroupIds="Number" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
                     <Label text="{i18n>Fax}" design="Bold" labelFor="ipSoFax" />
-                    <Input value="{oSRModel>/Header/0/EMAIL_ID}" id="ipSoFax" fieldGroupIds="InputField" required="true" editable="true" />
+                    <Input value="{oSOModel/CONTSEQID/FAX_NUMBER}" id="ipSoFax" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
@@ -50,7 +50,7 @@
 
                 <VBox>
                     <Label text="{i18n>Extension}" design="Bold" labelFor="ipSoExtension" />
-                    <Input value="{oSRModel>/Header/0/EMAIL_ID}" id="ipSoExtension" fieldGroupIds="InputField" required="true" editable="true" />
+                    <Input value="{oSOModel/CONTSEQID/EXT_NUMBER}" id="ipSoExtension" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>

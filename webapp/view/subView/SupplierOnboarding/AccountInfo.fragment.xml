@@ -4,7 +4,7 @@
             <form:content>
                 <VBox>
                     <Label text="{i18n>ReturntoVendor}" design="Bold" labelFor="cbSOReturntoVendor" />
-                    <ComboBox selectedKey="{oSRModel>/Header/0/DEPARTMENT}" items="{oMainModel>/department}" width="100%" id="cbSOReturntoVendor" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/RTV_ALLOWED}" items="{oMainModel>/department}" width="100%" id="cbSOReturntoVendor" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                     </ComboBox>
                     <layoutData>
@@ -13,28 +13,28 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>ReturntoVendorRemarks}" design="Bold" labelFor="taSOVendorRemarks" />
-                    <TextArea value="{oSRModel>/Header/0/REMARKS}" id="taSOVendorRemarks" fieldGroupIds="InputField" required="true" editable="true" width="100%" />
+                    <TextArea value="{oSOModel>/REMARKS}" id="taSOVendorRemarks" fieldGroupIds="InputField" required="true" editable="true" width="100%" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
                     <Label text="{i18n>NoReturnMargin}" design="Bold" labelFor="ipSONoreturnMarigin" />
-                    <Input value="{oSRModel>/Header/0/EMAIL_ID}" id="ipSONoreturnMarigin" fieldGroupIds="InputField" required="true" editable="true" />
+                    <Input value="{oSOModel>/EMAIL_ID}" id="ipSONoreturnMarigin" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
                     <Label text="{i18n>VendorClaim}" design="Bold" labelFor="ipSOVendorClaim" />
-                    <Input value="{oSRModel>/Header/0/EMAIL_ID}" id="ipSOVendorClaim" fieldGroupIds="InputField" required="true" editable="true" />
+                    <Input value="{oSOModel>/EMAIL_ID}" id="ipSOVendorClaim" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
                     <Label text="{i18n>CreditPeriod}" design="Bold" labelFor="cbSOCreditPeriod" />
-                    <ComboBox selectedKey="{oSRModel>/Header/0/DEPARTMENT}" items="{oMainModel>/department}" width="100%" id="cbSOCreditPeriod" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/CREDIT_PERIOD}" items="{oMainModel>/department}" width="100%" id="cbSOCreditPeriod" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                     </ComboBox>
 
@@ -44,14 +44,14 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>RefundableDepositFee}" design="Bold" labelFor="ipSORefundableFee" />
-                    <Input value="{oSRModel>/Header/0/EMAIL_ID}" id="ipSORefundableFee" fieldGroupIds="InputField" required="true" editable="true" />
+                    <Input value="{oSOModel>/REF_DEPOSIT_FEE}" id="ipSORefundableFee" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
                     <Label text="{i18n>ShippingConditions}" design="Bold" labelFor="cbSOShippingCond" />
-                    <ComboBox selectedKey="{oSRModel>/Header/0/DEPARTMENT}" items="{oMainModel>/department}" width="100%" id="cbSOShippingCond" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/SHIP_CONDITION}" items="{oMainModel>/department}" width="100%" id="cbSOShippingCond" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                     </ComboBox>
 
@@ -61,7 +61,7 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>ReconcialitionAccounts}" design="Bold" labelFor="cbSOReconcilaAcc" />
-                    <ComboBox selectedKey="{oSRModel>/Header/0/DEPARTMENT}" items="{oMainModel>/department}" width="100%" id="cbSOReconcilaAcc" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/RECON_ACCOUNT}" items="{oMainModel>/department}" width="100%" id="cbSOReconcilaAcc" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                     </ComboBox>
                     <layoutData>
@@ -70,7 +70,7 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>CashManagementGroup}" design="Bold" labelFor="cbSOCashmanagmentgrp" />
-                    <ComboBox selectedKey="{oSRModel>/Header/0/DEPARTMENT}" items="{oMainModel>/department}" width="100%" id="cbSOCashmanagmentgrp" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/CASH_MGMT_GRP}" items="{oMainModel>/department}" width="100%" id="cbSOCashmanagmentgrp" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                     </ComboBox>
                     <layoutData>
@@ -79,7 +79,7 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>SortKey}" design="Bold" labelFor="cbSOSortKey" />
-                    <ComboBox selectedKey="{oSRModel>/Header/0/DEPARTMENT}" items="{oMainModel>/department}" width="100%" id="cbSOSortKey" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/SORT_KEY}" items="{oMainModel>/department}" width="100%" id="cbSOSortKey" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                     </ComboBox>
                     <layoutData>

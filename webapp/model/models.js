@@ -11,7 +11,100 @@ sap.ui.define([
             oModel.setDefaultBindingMode("OneWay");
             return oModel;
         },
+        fnSupplierOnBoarding: function () {
+            var oSupplierOnBoarding = new JSONModel({
+                "VENDMSTRSEQID": "",
+                "RETSEQID": "",
+                "NATURE_OF_BUSINESS": "",
+                "COMPANY_NAME": "",
+                "BUSINESS_ENTITY": "",
+                "BUSINESS_CODE": "",
+                "DEPARTMENT": "",
+                "SUB_DEPARTMENT": "",
+                "CAT_MANAGER": "",
+                "REGISTERED_EXIST_MF": "",
+                "RTV_ALLOWED": "",
+                "CREDIT_PERIOD": "",
+                "SHIP_CONDITION": "",
+                "CASH_MGMT_GRP": "",
+                "SORT_KEY": "",
+                "EMAIL_ID": "",
+                "WEBSITE": "",
+                "REMARKS": "",
+                "ADDITIONAL_INFO": "",
+                "CATEGORY_CODE": "",
+                "DELIVER_LEAD_DAYS": "",
+                "EXST_VENDOR_CODE": "",
+                "RTV_REMARKS": "",
+                "ADDSEQID": {
+                    "ADDSEQID": "",
+                    "ADDRESS_CODE": "",
+                    "ADDRESS_LINE_1": "",
+                    "ADDRESS_LINE_2": "",
+                    "ADDRESS_LINE_3": "",
+                    "CITY": "",
+                    "STATE": "",
+                    "POSTAL_CODE": "",
+                    "COUNTRY_CODE": "",
+                    "ADDRESS_TYPE": ""
+                },
+                "CONTSEQID": {
+                    "RETSEQID": "",
+                    "OBJECT_ID": "",
+                    "OBJECT_TYPE": "",
+                    "FIRST_NAME": "",
+                    "MIDDLE_NAME": "",
+                    "LAST_NAME": "",
+                    "POSITION": "",
+                    "DEPARTMENT": "",
+                    "PHONE_NUMBER": "",
+                    "EMAIL_ADDRESS": "",
+                    "FAX_NUMBER": "",
+                    "EXT_NUMBER": "",
+                },
+                "BANKSEQID": {
+                    "BANKSEQID": "",
+                    "RETSEQID": "",
+                    "OBJECT_ID": "",
+                    "OBJECT_TYPE": "",
+                    "PAYMENT_TYPE": "",
+                    "TAX_TYPE": "",
+                    "WHT_PERCENT": "",
+                    "TAX_NUMBER": "",
+                    "VAT": "",
+                    "GST_NUMBER": "",
+                    "HOLD_PAYMENT": "",
+                    "TERMS_ACCEPTED": "",
+                    "CHEQUE_PAYEE_NAME": "",
+                    "CHEQUE_COLL_LOC": "",
+                    "CHEQUE_DEL_METHOD": "",
+                    "CURRENCY": "",
+                    "BANK_NAME": "",
+                    "ACCOUNT_NUMBER": "",
+                    "IFSC_CODE": "",
+                    "ACCOUNT_HOLDER_NAME": "",
+                    "VALID_FROM": "",
+                    "VALID_TO": "",
+                    "Terms of Trade": "",
+                    "REF_DEPOSIT_FEE": "",
+                    "RECON_ACCOUNT": "",
+                    "EXEMPTION_PERIOD": "",
+                },
+                "ATTACHMENTS": {
+                    "VENDMSTRSEQID": "",
+                    "RETSEQID": "",
+                    "DocumentType": "",
+                    "DocumentDescription": "",
+                    "DocumentExpiry": "",
+                    "File": ""
+                }
 
+            },
+
+            );
+            return oSupplierOnBoarding;
+
+        },
         fnSupplierRegistration: function () {
             var oSupplierRegistration = new JSONModel({
                 Header: [{
