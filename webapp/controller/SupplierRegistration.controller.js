@@ -88,7 +88,7 @@ sap.ui.define([
                 debugger;
                 var oData = this.getView().getModel("oFiexibleLayout").getProperty("/SupRegis");
                 oData.push(this.getView().getModel("oSRModel").getData());
-                sap.m.MessageBox.show("Request Submittted");
+                sap.m.MessageToast.show("Request Submittted");
             },
         });
     });

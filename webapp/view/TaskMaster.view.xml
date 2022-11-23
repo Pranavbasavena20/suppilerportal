@@ -83,7 +83,7 @@
                                 <Text text="{oFiexibleLayout>PHONE_NUMBER}" />
                                 <Text text="{oFiexibleLayout>EMAIL_ID}" />
                                 <Text text="{oFiexibleLayout>PRIMARY_CONTACT_NAME}" />
-                                <Text text="{oFiexibleLayout>date}" />
+                                <Text text="{path:'oFiexibleLayout>date',type: 'sap.ui.model.odata.type.DateTime',formatOptions: { pattern:'yyyy.MM.dd HH.MM', UTC:true}}" />
                             </cells>
                         </ColumnListItem>
                     </items>
