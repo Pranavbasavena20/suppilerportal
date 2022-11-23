@@ -2,7 +2,7 @@
     <Page id="page" backgroundDesign="List" showHeader="false" title="{i18n>title}">
         <content>
             <VBox visible="{=${oFiexibleLayout>/Type} === '2' ? true : false}">
-                <Table class="TableSelected" id="idMastertable" inset="false" items="{oMasterList>/MasterList}">
+                <Table class="TableSelected" id="idMastertable" inset="false" items="{oFiexibleLayout>/SuppOnBoarding}">
                     <headerToolbar>
                         <OverflowToolbar>
                             <Title wrapping="true" text="Vendors" level="H3" titleStyle="H3" />
@@ -13,33 +13,33 @@
                     </headerToolbar>
                     <columns>
                         <Column width="12em">
-                            <Text text="Code" />
+                            <Text text="{i18n>Code}" />
                         </Column>
                         <Column>
-                            <Text text="Name" />
+                            <Text text="{i18n>CompanyName}" />
                         </Column>
                         <Column minScreenWidth="Tablet" demandPopin="true">
-                            <Text text="Department" />
+                            <Text text="{i18n>Department}" />
                         </Column>
                         <Column visible="{oFiexibleLayout>/bColumnVisible}">
-                            <Text text="Primary Contact" />
+                            <Text text="{i18n>PrimaryContactName}" />
                         </Column>
                         <Column visible="{oFiexibleLayout>/bColumnVisible}">
-                            <Text text="Email" />
+                            <Text text="{i18n>EmailID}" />
                         </Column>
                         <Column visible="{oFiexibleLayout>/bColumnVisible}">
-                            <Text text="Phone" />
+                            <Text text="{i18n>Phone}" />
                         </Column>
                     </columns>
                     <items>
                         <ColumnListItem vAlign="Middle" press="onPress" type="Active">
                             <cells>
-                                <Text text="{oMasterList>Code}" />
-                                <Text text="{oMasterList>Name}" />
-                                <Text text="{oMasterList>Department}" />
-                                <Text text="{oMasterList>PrimaryContact}" />
-                                <Text text="{oMasterList>Email}" />
-                                <Text text="{oMasterList>Phone}" />
+                                <Text text="{oFiexibleLayout>RETSEQID}" />
+                                <Text text="{oFiexibleLayout>COMPANY_NAME}" />
+                                <Text text="{oFiexibleLayout>DEPARTMENT}" />
+                                <Text text="{oFiexibleLayout>CONTSEQID/FIRST_NAME}" />
+                                <Text text="{oFiexibleLayout>EMAIL_ID}" />
+                                <Text text="{oFiexibleLayout>CONTSEQID/PHONE_NUMBER}" />
                             </cells>
                         </ColumnListItem>
                     </items>

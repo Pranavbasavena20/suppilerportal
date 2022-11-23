@@ -66,7 +66,7 @@
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierPage.BasicInformation" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierOnBoarding.BasicInformation" type="XML" />
                         </blocks>
                     </ObjectPageSubSection>
                 </subSections>
@@ -75,7 +75,7 @@
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierPage.Department" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierOnBoarding.Department" type="XML" />
                         </blocks>
                     </ObjectPageSubSection>
                 </subSections>
@@ -84,7 +84,7 @@
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierPage.Address" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierOnBoarding.Address" type="XML" />
                         </blocks>
                     </ObjectPageSubSection>
                 </subSections>
@@ -93,7 +93,7 @@
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierPage.ContactList" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierOnBoarding.ContactList" type="XML" />
                         </blocks>
                     </ObjectPageSubSection>
                 </subSections>
@@ -102,7 +102,7 @@
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierPage.AccountingInfo" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierOnBoarding.AccountingInfo" type="XML" />
                         </blocks>
                     </ObjectPageSubSection>
                 </subSections>
@@ -111,7 +111,7 @@
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierPage.PaymentInfo" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierOnBoarding.PaymentInfo" type="XML" />
                         </blocks>
                     </ObjectPageSubSection>
                 </subSections>
@@ -120,7 +120,7 @@
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierPage.WithholdingTax" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierOnBoarding.WithholdingTax" type="XML" />
                         </blocks>
                     </ObjectPageSubSection>
                 </subSections>
@@ -129,7 +129,7 @@
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierPage.OtherInfo" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierOnBoarding.OtherInfo" type="XML" />
                         </blocks>
                     </ObjectPageSubSection>
                 </subSections>
@@ -138,7 +138,7 @@
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierPage.StatutoryDoc" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierOnBoarding.StatutoryDoc" type="XML" />
                         </blocks>
                     </ObjectPageSubSection>
                 </subSections>
@@ -147,7 +147,7 @@
                 <subSections>
                     <ObjectPageSubSection>
                         <blocks>
-                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierPage.Reviewlog" type="XML" />
+                            <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierOnBoarding.Reviewlog" type="XML" />
                         </blocks>
                     </ObjectPageSubSection>
                 </subSections>

@@ -284,15 +284,17 @@ sap.ui.define([
             },
 
             onfnpresssubmit: function () {
-                var oModel = this.getView().getModel("oLanding"),
-                    sName = oModel.getProperty("/sUserName"),
-                    sPassword = oModel.getProperty("/sPassword");
-                if (sName !== undefined && sName !== null && sPassword !== undefined && sPassword !== null) {
-                    this.getRouter().navTo("GenericTilesView");
-
-                } else {
-                    sap.m.MessageBox.error("Please enter a valid user name/password");
-                }
+                jQuery.sap.require("sap.m.MessageBox");
+                var that = this;
+                var oData = this.getView().getModel("oFiexibleLayout").getProperty("/SuppOnBoarding");
+                oData.push(this.getView().getModel("oSOModel").getData());
+                sap.m.MessageBox.success("Request Submittted", {
+                    actions: [sap.m.MessageBox.Action.OK],
+                    emphasizedAction: sap.m.MessageBox.Action.OK,
+                    onClose: function (sAction) {
+                        that.getOwnerComponent().getRouter().navTo("GenericTilesView");
+                    }
+                });
             },
             onCancelForm: function () {
                 this.oPreviewDialog.close();

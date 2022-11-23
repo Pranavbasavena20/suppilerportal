@@ -13,8 +13,9 @@ sap.ui.define([
         },
         fnSupplierOnBoarding: function () {
             var oSupplierOnBoarding = new JSONModel({
+                "DATE": new Date(),
                 "VENDMSTRSEQID": "",
-                "RETSEQID": "",
+                "RETSEQID": "2022_RET_00001",
                 "COMPANY_NAME": "",
                 "BUSINESS_ENTITY": "",
                 "BUSINESS_CODE": "",
