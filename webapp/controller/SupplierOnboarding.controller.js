@@ -39,6 +39,20 @@ sap.ui.define([
                     "sStep10": false
                 });
                 this.getView().setModel(oModel, "genericTileModel");
+                this.setModel(new JSONModel(models.fnSupplierOnBoarding().getData()), "oSOModel");
+                this.getRouter().getRoute("SupplierOnboarding").attachPatternMatched(this._onObjectMatched, this);
+            },
+            _onObjectMatched: function (oEvent) {
+                this.onfnnextpress1();
+                var oItems = this.getView().byId("idMP").getContent();
+                for (var key in oItems) {
+                    if (key > parseInt(1)) {
+                        this.getView().byId("idMP").getContent()[key].removeStyleClass("classPurpledot2");
+                        this.getView().byId("idMP").getContent()[key].removeStyleClass("classPurpledot");
+
+                    }
+                }
+
             },
             onfnnextpress1: function () {
                 var oModel = this.getView().getModel("genericTileModel");
@@ -81,7 +95,6 @@ sap.ui.define([
                 oModel.setProperty("/sStep8", false);
                 oModel.setProperty("/sStep9", false);
                 oModel.setProperty("/sStep10", false);
-                // this.onPressAddContact();
                 this.getView().byId("idMP").getContent()[2].addStyleClass("classPurpledot2");
                 this.getView().byId("idMP").getContent()[3].addStyleClass("classPurpledot");
 
@@ -98,7 +111,6 @@ sap.ui.define([
                 oModel.setProperty("/sStep6", true);
                 oModel.setProperty("/sStep7", false);
                 oModel.setProperty("/sStep8", false);
-                // this.onPressAddContact();
                 oModel.setProperty("/sStep9", false);
                 oModel.setProperty("/sStep10", false);
                 this.getView().byId("idMP").getContent()[5].addStyleClass("classPurpledot2");
@@ -118,7 +130,6 @@ sap.ui.define([
                 oModel.setProperty("/sStep8", false);
                 oModel.setProperty("/sStep9", false);
                 oModel.setProperty("/sStep10", false);
-                // this.onPressAddContact();
                 this.getView().byId("idMP").getContent()[4].addStyleClass("classPurpledot2");
                 this.getView().byId("idMP").getContent()[5].addStyleClass("classPurpledot");
 
@@ -136,7 +147,7 @@ sap.ui.define([
                 oModel.setProperty("/sStep8", false);
                 oModel.setProperty("/sStep9", false);
                 oModel.setProperty("/sStep10", false);
-                // this.onPressAddContact();
+
                 this.getView().byId("idMP").getContent()[3].addStyleClass("classPurpledot2");
                 this.getView().byId("idMP").getContent()[4].addStyleClass("classPurpledot");
 
@@ -154,7 +165,7 @@ sap.ui.define([
                 oModel.setProperty("/sStep8", false);
                 oModel.setProperty("/sStep9", false);
                 oModel.setProperty("/sStep10", false);
-                // this.onPressAddContact();
+
                 this.getView().byId("idMP").getContent()[6].addStyleClass("classPurpledot2");
                 this.getView().byId("idMP").getContent()[7].addStyleClass("classPurpledot");
 
@@ -172,7 +183,7 @@ sap.ui.define([
                 oModel.setProperty("/sStep8", true);
                 oModel.setProperty("/sStep9", false);
                 oModel.setProperty("/sStep10", false);
-                // this.onPressAddContact();
+
                 this.getView().byId("idMP").getContent()[7].addStyleClass("classPurpledot2");
                 this.getView().byId("idMP").getContent()[8].addStyleClass("classPurpledot");
 
@@ -190,7 +201,7 @@ sap.ui.define([
                 oModel.setProperty("/sStep8", false);
                 oModel.setProperty("/sStep9", true);
                 oModel.setProperty("/sStep10", false);
-                // this.onPressAddContact();
+
                 this.getView().byId("idMP").getContent()[8].addStyleClass("classPurpledot2");
                 this.getView().byId("idMP").getContent()[9].addStyleClass("classPurpledot");
 
@@ -208,7 +219,7 @@ sap.ui.define([
                 oModel.setProperty("/sStep8", false);
                 oModel.setProperty("/sStep9", false);
                 oModel.setProperty("/sStep10", true);
-                // this.onPressAddContact();
+
                 this.getView().byId("idMP").getContent()[9].addStyleClass("classPurpledot2");
                 this.getView().byId("idMP").getContent()[10].addStyleClass("classPurpledot");
 

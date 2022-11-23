@@ -13,15 +13,15 @@
                                     <micro:content>
                                         <micro:MicroProcessFlowItem class="suplierCss classPurpledot1" />
                                         <micro:MicroProcessFlowItem class="suplierCss classPurpledot" press="onfnnextpress1" />
-                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress2" />
-                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress3" />
-                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress4" />
-                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress5" />
-                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress6" />
-                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress7" />
-                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress8" />
-                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress9" />
-                                        <micro:MicroProcessFlowItem class="suplierCss " press="onfnnextpress10" />
+                                        <micro:MicroProcessFlowItem class="suplierCss" press="onfnnextpress2" />
+                                        <micro:MicroProcessFlowItem class="suplierCss" press="onfnnextpress3" />
+                                        <micro:MicroProcessFlowItem class="suplierCss" press="onfnnextpress4" />
+                                        <micro:MicroProcessFlowItem class="suplierCss" press="onfnnextpress5" />
+                                        <micro:MicroProcessFlowItem class="suplierCss" press="onfnnextpress6" />
+                                        <micro:MicroProcessFlowItem class="suplierCss" press="onfnnextpress7" />
+                                        <micro:MicroProcessFlowItem class="suplierCss" press="onfnnextpress8" />
+                                        <micro:MicroProcessFlowItem class="suplierCss" press="onfnnextpress9" />
+                                        <micro:MicroProcessFlowItem class="suplierCss" press="onfnnextpress10" />
                                     </micro:content>
                                 </micro:MicroProcessFlow>
                             </FlexBox>

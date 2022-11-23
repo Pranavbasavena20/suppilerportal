@@ -34,7 +34,7 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>BusinessRegistrationNo}" design="Bold" labelFor="ipBusinessRegNo" />
-                    <Input value="{oSOModel>/BUSINESS_REGISTRATION}" id="ipBusinessRegNo" fieldGroupIds="InputField" required="true" editable="true" />
+                    <Input value="{oSOModel>/BANKSEQID/GST_NUMBER}" id="ipBusinessRegNo" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>

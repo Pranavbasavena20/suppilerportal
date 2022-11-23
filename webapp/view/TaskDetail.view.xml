@@ -21,15 +21,15 @@
             <m:FlexBox wrap="Wrap" fitContainer="true" alignItems="Stretch">
                 <m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
                     <m:Label text="Primary Contact" />
-                    <m:Text text="{oFiexibleLayout>/PRIMARY_CONTACT_NAME}" />
+                    <m:Text text="{oFiexibleLayout>/oSelectedValues/PRIMARY_CONTACT_NAME}" />
                 </m:VBox>
                 <m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
                     <m:Label text="Email" />
-                    <m:Text text="{oFiexibleLayout>/EMAIL_ID}" />
+                    <m:Text text="{oFiexibleLayout>/oSelectedValues/EMAIL_ID}" />
                 </m:VBox>
                 <m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
                     <m:Label text="Phone" />
-                    <m:Text text="{oFiexibleLayout>/PHONE_NUMBER}" />
+                    <m:Text text="{oFiexibleLayout>/oSelectedValues/PHONE_NUMBER}" />
                 </m:VBox>
             </m:FlexBox>
         </headerContent>

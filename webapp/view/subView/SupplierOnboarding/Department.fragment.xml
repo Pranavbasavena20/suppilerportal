@@ -21,20 +21,6 @@
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>Natureofproducts}" design="Bold" labelFor="ipSoNatureofProducts" />
-                    <Input value="{oSOModel>/BUSINESS_CODE}" id="ipSoNatureofProducts" fieldGroupIds="InputField" required="true" editable="true" />
-                    <layoutData>
-                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
-                    </layoutData>
-                </VBox>
-                <VBox>
-                    <Label text="{i18n>CategoryManagerExecutive}" design="Bold" labelFor="ipSoCategoryManager" />
-                    <Input value="{oSOModel>/CATEGORY_CODE}" id="ipSoCategoryManager" fieldGroupIds="InputField" required="true" editable="true" />
-                    <layoutData>
-                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
-                    </layoutData>
-                </VBox>
-                <VBox>
                     <Label text="{i18n>AreyouassociatedwithManufacturer}" design="Bold" labelFor="rbSoAssociated" />
                     <RadioButtonGroup selectedIndex="{oSOModel>/EXISTING_ASSOC_MF}" columns="2" width="100%" id="rbSoAssociated" fieldGroupIds="RadioButtonGroup" editable="true">
                         <RadioButton text="{i18n>Yes}" />

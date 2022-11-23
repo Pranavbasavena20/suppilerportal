@@ -75,7 +75,7 @@
         <form:SimpleForm layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12" columnsXL="1" columnsL="1" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
             <form:content>
                 <VBox>
-                    <Table id="idProductsTable" inset="false" mode="MultiSelect" items="{genericTileModel>/aContact}">
+                    <Table id="idProductsTable" inset="false" mode="MultiSelect" items="{oSOModel>/CONTSEQLIST}">
                         <columns>
                             <Column width="12em">
                                 <Text text="{i18n>ContactType}" />
@@ -108,11 +108,13 @@
                         <items>
                             <ColumnListItem vAlign="Middle">
                                 <cells>
-                                    <Text text="{genericTileModel>Designation}" />
-                                    <Text text="{genericTileModel>Name}" />
-                                    <Text text="{genericTileModel>LandPhoneNo}" />
-                                    <Text text="{genericTileModel>MobileNo}" />
-                                    <Text text="{genericTileModel>Email}" />
+                                    <Text text="{oSOModel>OBJECT_TYPE}" />
+                                    <Text text="{oSOModel>FIRST_NAME}" />
+                                    <Text text="{oSOModel>POSITION}" />
+                                    <Text text="{oSOModel>EMAIL_ADDRESS}" />
+                                    <Text text="{oSOModel>PHONE_NUMBER}" />
+                                    <Text text="{oSOModel>FAX_NUMBER}" />
+                                    <Text text="{oSOModel>EXT_NUMBER}" />
                                     <Button text="{i18n>btnEdit}" width="6rem" class="button1" />
                                     <Button text="{i18n>btnDelete}" width="6rem" class="button1" />
                                 </cells>
