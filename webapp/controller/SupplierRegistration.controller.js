@@ -85,10 +85,17 @@ sap.ui.define([
                 return sap.ui.core.UIComponent.getRouterFor(this);
             },
             onfnpresssubmit: function (oEvent) {
-                debugger;
                 var oData = this.getView().getModel("oFiexibleLayout").getProperty("/SupRegis");
                 oData.push(this.getView().getModel("oSRModel").getData());
-                sap.m.MessageToast.show("Request Submittted");
+                new sap.m.MessageBox.success("Request Submittted", {
+                    actions: [sap.m.MessageBox.Action.OK],
+                    emphasizedAction: sap.m.MessageBox.Action.OK,
+                    onClose: function (sAction) {
+                        this.getOwnerComponent().getRouter().navTo("RouteLandingView");
+                    }
+                });
+
+
             },
         });
     });
