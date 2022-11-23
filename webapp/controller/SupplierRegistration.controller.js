@@ -38,7 +38,14 @@ sap.ui.define([
 
             },
             _onObjectMatched: function (oEvent) {
-                this.setModel(new JSONModel(models.fnSupplierRegistration()), "oSRModel");
+                debugger;
+                var oModel = this.getView().getModel("genericTileModel");
+                oModel.setProperty("/sStep1", true);
+                oModel.setProperty("/sStep3", false);
+                oModel.setProperty("/sStep2", false);
+                this.getView().byId("idMP").getContent()[2].removeStyleClass("classPurpledot");
+                this.getView().byId("idMP").getContent()[1].removeStyleClass("classPurpledot2");
+                this.setModel(new JSONModel(models.fnSupplierRegistration().getData()), "oSRModel");
             },
             onfnnextpress1: function () {
                 var oModel = this.getView().getModel("genericTileModel");
