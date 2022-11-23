@@ -60,20 +60,8 @@ sap.ui.define([
 
             },
             onPress: function (oEvent) {
-
                 var oFlexiModel = this.getView().getModel("oFiexibleLayout");
-                if (oFlexiModel.getProperty("/Type") === "2") {
-                    var oSelectedObject = oEvent.getSource().getBindingContext("oMasterList").getObject();
-                    var oModel = this.getOwnerComponent().getModel("oFiexibleLayout");
-                    oModel.setProperty("/Code", oSelectedObject.Code);
-                    oModel.setProperty("/Name", oSelectedObject.Name);
-                    oModel.setProperty("/Department", oSelectedObject.Department);
-                    oModel.setProperty("/Email", oSelectedObject.Email);
-                    oModel.setProperty("/PrimaryContact", oSelectedObject.PrimaryContact);
-                    oModel.setProperty("/Phone", oSelectedObject.Phone);
-                } else {
-                    oFlexiModel.setProperty("/oSelectedValues", oEvent.getSource().getBindingContext("oFiexibleLayout").getObject());
-                }
+                oFlexiModel.setProperty("/oSelectedValues", oEvent.getSource().getBindingContext("oFiexibleLayout").getObject());
                 oFlexiModel.setProperty("/bColumnVisible", false);
                 oFlexiModel.setProperty("/layout", "TwoColumnsMidExpanded");
                 this.getOwnerComponent().getRouter().navTo("TaskDetail", { TaskType: "1" });

@@ -4,11 +4,12 @@ sap.ui.define([
     "com/spm/suppilerportal/utils/dataUtil",
     "sap/ui/core/UIComponent",
     "sap/ui/core/Fragment",
+    "com/spm/suppilerportal/model/models",
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, JSONModel, dataUtil, UIComponent, Fragment) {
+    function (Controller, JSONModel, dataUtil, UIComponent, Fragment, models) {
         "use strict";
 
         return Controller.extend("com.spm.suppilerportal.controller.SupplierOnboarding", {

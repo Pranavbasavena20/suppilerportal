@@ -4,7 +4,7 @@
             <form:content>
                 <VBox>
                     <Label text="{i18n>Department}" design="Bold" labelFor="cbSoDepartMent" />
-                    <ComboBox selectedKey="{oSOModel/DEPARTMENT}" items="{oMainModel>/businessCode}" width="100%" id="cbSoDepartMent" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/DEPARTMENT}" items="{oMainModel>/businessCode}" width="100%" id="cbSoDepartMent" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
                     <layoutData>
@@ -13,7 +13,7 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>Subdepartment}" design="Bold" labelFor="cbSoSubDepartMent" />
-                    <ComboBox selectedKey="{oSOModel/SUB_DEPARTMENT}" items="{oMainModel>/businessCode}" width="100%" id="cbSoSubDepartMent" fieldGroupIds="ComboboxField" required="true" editable="true">
+                    <ComboBox selectedKey="{oSOModel>/SUB_DEPARTMENT}" items="{oMainModel>/businessCode}" width="100%" id="cbSoSubDepartMent" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
                     <layoutData>

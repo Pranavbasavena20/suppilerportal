@@ -248,7 +248,7 @@
 
 .sapMInputBaseInner {
     background: white !important;
-    border: 1px solid gray !important;
+    border: 2px solid #758ca496 !important;
     /* border-radius: 5px !important; */
     border: none;
     font-style: normal;
@@ -288,9 +288,61 @@
     padding: 4px;
 }
 
+.sapMInputBase:not(.sapMInputBaseReadonly) .sapMInputBaseIconContainer .sapMInputBaseIcon {
+    width: 2.25rem;
+    height: 2rem;
+    border-radius: 0rem;
+}
 
+.sapMInputBaseIcon {
+    width: 2.25rem;
+    min-width: 2rem;
+    height: 100%;
+    line-height: 2rem;
+    cursor: pointer;
+    background: #ffffff;
+    -webkit-user-select: none;
+    border-right: 2px solid #758ca496 !important;
+    border-top: 2px solid #758ca496 !important;
+    border-bottom: 2px solid #758ca496 !important;
+    -moz-user-select: none;
+    user-select: none;
+}
 
-.sapMInputBase {
+.sapMIBar .sapMBtn .sapMBtnInner.sapMBtnDefault,
+.sapMIBar .sapMBtn .sapMBtnInner.sapMBtnDefault .sapUiIcon {
+    color: #6a1797;
+    background-color: transparent;
+}
+
+.sapMFocus.sapMInputBase .sapMInputBaseContentWrapper:not(.sapMInputBaseDisabledWrapper)::before {
+    border: 0.125rem solid #841dbd;
+    border-radius: 0.25rem;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.sapMInputBaseInner::selection,
+.sapMInputBaseInner::-moz-selection {
+    border-color: #841dbd !important;
+    color: #ffffff;
+}
+
+span.sapMBtnInner.sapMBtnEmphasized {
+    background-image: none;
+    background-color: #6a1797;
+    border-color: #6a1797;
+    color: #ffffff;
+    text-shadow: 0 0 0.125rem transparent;
+}
+
+/* .sapMInputBase {
     height: 2.5rem;
     background: transparent;
     position: relative;
@@ -299,7 +351,7 @@
     outline: none;
     box-sizing: border-box;
     line-height: 0;
-}
+} */
 
 .header2 .sapMBtnContent {
     overflow: hidden;
@@ -310,13 +362,13 @@
     color: white !important;
 }
 
-.sapMInputBase:not(.sapMInputBaseReadonly) .sapMInputBaseIconContainer .sapMInputBaseIcon {
+/* .sapMInputBase:not(.sapMInputBaseReadonly) .sapMInputBaseIconContainer .sapMInputBaseIcon {
     width: 2.25rem;
     height: 2.35rem;
     border-radius: 0rem;
-}
+} */
 
-.sapMInputBaseIcon {
+/* .sapMInputBaseIcon {
     width: 2.25rem;
     min-width: 2.5rem;
     height: 100%;
@@ -329,7 +381,7 @@
     -moz-user-select: none;
     user-select: none;
     border-right: 1px solid gray;
-}
+} */
 
 .sapUxAPAnchorBar.sapMTB {
     border: none;
