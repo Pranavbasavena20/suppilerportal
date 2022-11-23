@@ -290,7 +290,7 @@
 
 .sapMInputBase:not(.sapMInputBaseReadonly) .sapMInputBaseIconContainer .sapMInputBaseIcon {
     width: 2.25rem;
-    height: 2rem;
+    height: 2.1rem;
     border-radius: 0rem;
 }
 
