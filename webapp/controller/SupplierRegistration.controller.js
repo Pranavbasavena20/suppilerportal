@@ -4,12 +4,13 @@ sap.ui.define([
     "com/spm/suppilerportal/utils/dataUtil",
     "sap/ui/core/UIComponent",
     "sap/ui/core/Fragment",
-    "../model/mandatoryfields"
+    "../model/mandatoryfields",
+    "com/spm/suppilerportal/model/models",
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, JSONModel, dataUtil, UIComponent, Fragment, mandatoryfields) {
+    function (Controller, JSONModel, dataUtil, UIComponent, Fragment, mandatoryfields, models) {
         "use strict";
 
         return Controller.extend("com.spm.suppilerportal.controller.SupplierRegistration", {
@@ -20,7 +21,6 @@ sap.ui.define([
                     "sSubmit": false,
                     "sLogoImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/logo.jpeg")
                 });
-
                 this.getView().setModel(oModel, "oLanding");
                 var oModel = new sap.ui.model.json.JSONModel({
                     "Designation": "",
@@ -34,7 +34,11 @@ sap.ui.define([
                     "sStep3": false
                 });
                 this.getView().setModel(oModel, "genericTileModel");
+                this.getRouter().getRoute("SupplierRegistration").attachPatternMatched(this._onObjectMatched, this);
 
+            },
+            _onObjectMatched: function (oEvent) {
+                this.setModel(new JSONModel(models.fnSupplierRegistration()), "oSRModel");
             },
             onfnnextpress1: function () {
                 var oModel = this.getView().getModel("genericTileModel");
@@ -85,13 +89,15 @@ sap.ui.define([
                 return sap.ui.core.UIComponent.getRouterFor(this);
             },
             onfnpresssubmit: function (oEvent) {
+                jQuery.sap.require("sap.m.MessageBox");
+                var that = this;
                 var oData = this.getView().getModel("oFiexibleLayout").getProperty("/SupRegis");
                 oData.push(this.getView().getModel("oSRModel").getData());
-                new sap.m.MessageBox.success("Request Submittted", {
+                sap.m.MessageBox.success("Request Submittted", {
                     actions: [sap.m.MessageBox.Action.OK],
                     emphasizedAction: sap.m.MessageBox.Action.OK,
                     onClose: function (sAction) {
-                        this.getOwnerComponent().getRouter().navTo("RouteLandingView");
+                        that.getOwnerComponent().getRouter().navTo("RouteLandingView");
                     }
                 });
 

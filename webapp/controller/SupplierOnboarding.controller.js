@@ -13,15 +13,12 @@ sap.ui.define([
 
         return Controller.extend("com.spm.suppilerportal.controller.SupplierOnboarding", {
             onInit: function () {
-                // this.getModel("i18n").getProperty('/')
                 var oModel = dataUtil.createJsonModel();
-
                 oModel.setData({
                     "sNext": true,
                     "sSubmit": false,
                     "sLogoImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/logo.jpeg")
                 });
-
                 this.getView().setModel(oModel, "oLanding");
                 var oModel = new sap.ui.model.json.JSONModel({
                     "Designation": "",
@@ -42,9 +39,6 @@ sap.ui.define([
                     "sStep10": false
                 });
                 this.getView().setModel(oModel, "genericTileModel");
-                // var item = new sap.suite.ui.commons.MicroProcessFlowItem();
-                // this.getView().byId("idMP").addContent(item);
-
             },
             onfnnextpress1: function () {
                 var oModel = this.getView().getModel("genericTileModel");
@@ -221,7 +215,6 @@ sap.ui.define([
 
             },
             onfnnextpress11: function () {
-                debugger;
                 var that = this;
                 if (!that.oPreviewDialog) {
                     that.PreviewDialog = Fragment.load({
