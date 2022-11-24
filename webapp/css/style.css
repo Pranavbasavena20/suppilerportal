@@ -468,3 +468,77 @@ html.sap-desktop .sapUxAPHierarchicalSelect.sapMSltPressed>.sapMSltIcon {
 }
 
 /* Enter your Stanard styles here */
+
+/* Enter tiles styles here */
+/* Enter your custom styles here */
+.bodyPage {
+    /* background-color: lightblue!important; */
+    background-image: url("../css/image/black_grad_1.jpeg") !important;
+}
+
+.BgImage {
+    background-image: url("../css/image/Dark-background-1440x900.jpg") !important;
+}
+
+.TilePage .sapUiBodyBackground,
+.sapUiBody {
+    background-color: #f5f6f7;
+    background-image: url("../css/image/Dark-background-1440x900.jpg") !important;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.sapMTileSmallPhone.sapMGT.OneByOne,
+.sapMTResponsiveIconMode.sapMGT.OneByOne {
+    width: 4.25rem !important;
+    height: 4.25rem !important;
+}
+
+.sapMTextLineClamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    color: darkorchid;
+    font-size: 1.5rem;
+}
+
+.tileBottomTextColor {
+    color: white !important;
+    ;
+}
+
+.sapMCrsl {
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    min-width: 15.5rem;
+}
+
+.sapMBar {
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 3rem;
+    line-height: 3rem;
+    color: #1d2d3e;
+    background-color: transparent;
+    text-shadow: none;
+    box-shadow: none !important;
+
+}
+
+.sapMSFF {
+    display: flex;
+    box-sizing: border-box;
+    height: 2.25rem;
+    border: none;
+    background-color: #b8babd !important;
+    vertical-align: top;
+    width: 100%;
+    position: relative;
+    padding-left: 0.625rem;
+    overflow: hidden;
+}
+
+/* End of  tiles styles here */
