@@ -1,5 +1,12 @@
 <mvc:View xmlns:l="sap.ui.layout" controllerName="com.spm.suppilerportal.controller.GenericTilesView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-    <Page id="page" class="BgImage" enableScrolling="false" showHeader="false" title="{i18n>title}">
+    <Page id="page" class="BgImage" enableScrolling="false" showHeader="true" title="{i18n>title}">
+        <customHeader>
+            <Bar>
+                <contentLeft>
+                    <Button icon="sap-icon://home" press="onPressHomePage" />
+                </contentLeft>
+            </Bar>
+        </customHeader>
         <content>
             <Bar class="sapUiSmallMarginTop sapUiContentPadding">
                 <contentLeft />

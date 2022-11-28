@@ -178,6 +178,7 @@ sap.ui.define([
                 this.getView().setModel(oModel, "ApplicationModel");
 
             },
+
             onImageClick: function (oEvent) {
                 var sText = oEvent.getSource().getBindingContext("ApplicationModel").getObject().AppName;
                 switch (sText) {

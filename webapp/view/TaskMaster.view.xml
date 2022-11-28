@@ -1,5 +1,12 @@
 <mvc:View controllerName="com.spm.suppilerportal.controller.TaskMaster" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form">
-    <Page id="page" backgroundDesign="List" showHeader="false" title="{i18n>title}">
+    <Page id="page" backgroundDesign="List" showHeader="true" title="{i18n>title}">
+        <customHeader>
+            <Bar>
+                <contentLeft>
+                    <Button icon="sap-icon://home" press="onPressHomePage" />
+                </contentLeft>
+            </Bar>
+        </customHeader>
         <content>
             <VBox visible="{=${oFiexibleLayout>/Type} === '2' ? true : false}">
                 <Table class="TableSelected" id="idMastertable" inset="false" items="{oFiexibleLayout>/SuppOnBoarding}">

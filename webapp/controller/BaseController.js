@@ -19,6 +19,10 @@ sap.ui.define([
             },
             setModel: function (oModel, sName) {
                 return this.getView().setModel(oModel, sName);
-            }
+            },
+            onPressHomePage: function (oEvent) {
+                this.getRouter().navTo("RouteLandingView");
+            },
         });
+
     });

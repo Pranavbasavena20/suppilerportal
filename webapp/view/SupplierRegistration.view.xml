@@ -2,7 +2,14 @@
     <Shell id="shell">
         <App id="app">
             <pages>
-                <Page enableScrolling="false" showHeader="false" id="page" title="{i18n>title}" backgroundDesign="List">
+                <Page enableScrolling="false" showHeader="true" id="page" title="{i18n>title}" backgroundDesign="List">
+                    <customHeader>
+                        <Bar>
+                            <contentLeft>
+                                <Button icon="sap-icon://home" press="onPressHomePage" />
+                            </contentLeft>
+                        </Bar>
+                    </customHeader>
                     <content>
                         <ScrollContainer vertical="true" height="100%">
                             <HBox backgroundDesign="Transparent" justifyContent="End" width="100%">
