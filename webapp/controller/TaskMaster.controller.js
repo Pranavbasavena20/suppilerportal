@@ -61,7 +61,15 @@ sap.ui.define([
             },
             onPress: function (oEvent) {
                 var oFlexiModel = this.getView().getModel("oFiexibleLayout");
+                var sVal ;
                 oFlexiModel.setProperty("/oSelectedValues", oEvent.getSource().getBindingContext("oFiexibleLayout").getObject());
+                if(oEvent.getSource().getBindingContext("oFiexibleLayout").getObject().oSelectedValues === ""){
+                    sVal = -1;
+                }else{
+                    sVal = oEvent.getSource().getBindingContext("oFiexibleLayout").getObject().oSelectedValues.EXISTING_ASSOC_MF;
+                }
+
+                oFlexiModel.setProperty("/oSelectedValues/EXISTING_ASSOC_MF", sVal);
                 oFlexiModel.setProperty("/bColumnVisible", false);
                 oFlexiModel.setProperty("/layout", "TwoColumnsMidExpanded");
                 this.getOwnerComponent().getRouter().navTo("TaskDetail", { TaskType: "1" });
