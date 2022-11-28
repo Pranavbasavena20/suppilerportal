@@ -176,6 +176,16 @@
     width: 20rem !important;
 }
 
+.vendorCssTablet .sapSuiteUiCommonsMicroProcessFlowItemSeparatorWrapper {
+    position: relative;
+    width: 10rem !important;
+}
+
+.vendorCssMobile .sapSuiteUiCommonsMicroProcessFlowItemSeparatorWrapper {
+    position: relative;
+    width: 5rem !important;
+}
+
 .suplierCss .sapSuiteUiCommonsMicroProcessFlowItemSeparatorWrapper {
     position: relative;
     width: 5rem !important;

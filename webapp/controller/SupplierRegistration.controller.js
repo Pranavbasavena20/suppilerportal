@@ -38,13 +38,25 @@ sap.ui.define([
 
             },
             _onObjectMatched: function (oEvent) {
-                debugger;
                 var oModel = this.getView().getModel("genericTileModel");
                 oModel.setProperty("/sStep1", true);
                 oModel.setProperty("/sStep3", false);
                 oModel.setProperty("/sStep2", false);
                 this.getView().byId("idMP").getContent()[2].removeStyleClass("classPurpledot");
                 this.getView().byId("idMP").getContent()[1].removeStyleClass("classPurpledot2");
+                if (sap.ui.Device.system.phone) {
+                    for (var key in this.getView().byId("idMP").getContent()) {
+                        this.getView().byId("idMP").getContent()[key].removeStyleClass("vendorCss");
+                        this.getView().byId("idMP").getContent()[key].addStyleClass("vendorCssMobile");
+                    }
+                }
+                if (sap.ui.Device.system.tablet) {
+                    for (var key in this.getView().byId("idMP").getContent()) {
+                        this.getView().byId("idMP").getContent()[key].removeStyleClass("vendorCss");
+                        this.getView().byId("idMP").getContent()[key].addStyleClass("vendorCssTablet");
+                    }
+                }
+
                 this.setModel(new JSONModel(models.fnSupplierRegistration().getData()), "oSRModel");
             },
             onfnnextpress1: function () {
