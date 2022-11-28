@@ -20,7 +20,7 @@
                 <layout:GridData span="{oFiexibleLayout>/Span}" linebreak="false" />
             </layoutData>
         </VBox>
-        <!-- <VBox visible="{=${oFiexibleLayout>/Type} === '2' ? true : false}">
+        <VBox visible="{=${oFiexibleLayout>/Type} === '2' ? true : false}">
             <Label text="{i18n>AreyouassociatedwithManufacturer}" design="Bold" labelFor="rbVSoAssociated" />
             <RadioButtonGroup
                 visible="{=${oFiexibleLayout>/Type} === '2' ? true : false}"
@@ -37,6 +37,6 @@
             <layoutData>
                 <layout:GridData span="{oFiexibleLayout>/Span}" linebreak="false" />
             </layoutData>
-        </VBox> -->
+        </VBox>
     </layout:Grid>
 </core:FragmentDefinition>

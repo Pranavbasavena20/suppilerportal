@@ -121,7 +121,6 @@ sap.ui.define([
                 Span: "",
                 SupRegis: [],
                 SuppOnBoarding: [],
-                oSelectedValues: "",
                 actionButtonsInfo: {
                     midColumn: {
                         fullScreen: false,
