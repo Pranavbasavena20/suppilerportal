@@ -20,7 +20,7 @@
                 <layout:GridData span="{oFiexibleLayout>/Span}" linebreak="false" />
             </layoutData>
         </VBox>
-        <VBox>
+        <!-- <VBox>
             <Label text="{i18n>AreyouassociatedwithManufacturer}" design="Bold" labelFor="rbVSoAssociated" />
             <RadioButtonGroup selectedIndex="{oFiexibleLayout>/oSelectedValues/EXISTING_ASSOC_MF}" columns="2" width="100%" id="rbVSoAssociated" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'RadioButtonGroup' : ' '}" editable="{oVendorMaster>/bEdit}">
                 <RadioButton text="{i18n>Yes}" />
@@ -29,6 +29,6 @@
             <layoutData>
                 <layout:GridData span="{oFiexibleLayout>/Span}" linebreak="false" />
             </layoutData>
-        </VBox>
+        </VBox> -->
     </layout:Grid>
 </core:FragmentDefinition>

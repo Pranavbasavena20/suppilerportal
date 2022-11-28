@@ -106,6 +106,20 @@
     border-radius: 11px;
 }
 
+.button1 .sapMBtnInner {
+    font-size: 0.875rem;
+    height: 2.25rem;
+    min-width: 2.25rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    border-radius: 0.5rem;
+    text-shadow: none;
+    background-color: #841dbd;
+    border: 0px !important;
+}
+
 .classPurpledot .sapSuiteUiCommonsMicroProcessFlowItem {
     width: 18px;
     height: 18px;
@@ -301,7 +315,19 @@
     color: white;
 }
 
-
+.sapMBtnInner {
+    font-size: 0.875rem;
+    height: 2.25rem;
+    min-width: 2.25rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    border-radius: 0.5rem;
+    text-shadow: none;
+    background-color: #841dbd;
+    border: 0px !important;
+}
 
 .sapMVBox {
     flex-direction: column;

@@ -18,7 +18,6 @@ sap.ui.define([
         return Controller.extend("com.spm.suppilerportal.controller.TaskMaster", {
             onInit: function () {
                 var oModel = dataUtil.createJsonModel();
-
                 oModel.setData({
                     "MasterList": [
                         {
@@ -57,17 +56,29 @@ sap.ui.define([
                 });
 
                 this.getView().setModel(oModel, "oMasterList");
+                this.getRouter().getRoute("TaskMaster").attachPatternMatched(this._onObjectMatched, this);
+
+            },
+            _onObjectMatched: function (oEvent) {
+                debugger;
+                var oFlexiModel = this.getView().getModel("oFiexibleLayout");
+                if (sap.ui.Device.system.phone) {
+                    oFlexiModel.setProperty("/bColumnVisible", false);
+                }
 
             },
             onPress: function (oEvent) {
                 var oFlexiModel = this.getView().getModel("oFiexibleLayout");
-                var sVal ;
+                var sVal;
                 oFlexiModel.setProperty("/oSelectedValues", oEvent.getSource().getBindingContext("oFiexibleLayout").getObject());
-                if(oEvent.getSource().getBindingContext("oFiexibleLayout").getObject().oSelectedValues === ""){
-                    sVal = -1;
-                }else{
-                    sVal = oEvent.getSource().getBindingContext("oFiexibleLayout").getObject().oSelectedValues.EXISTING_ASSOC_MF;
+                if (oFlexiModel.getData().Type !== "1") {
+                    if (oFlexiModel.getObject().EXISTING_ASSOC_MF === "") {
+                        sVal = -1;
+                    } else {
+                        sVal = oEvent.getSource().getBindingContext("oFiexibleLayout").getObject().oSelectedValues.EXISTING_ASSOC_MF;
+                    }
                 }
+
 
                 oFlexiModel.setProperty("/oSelectedValues/EXISTING_ASSOC_MF", sVal);
                 oFlexiModel.setProperty("/bColumnVisible", false);

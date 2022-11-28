@@ -18,8 +18,11 @@ sap.ui.define([
             },
 
             _onObjectMatched: function (oEvent) {
-                debugger;
                 var sType = oEvent.getParameter("arguments").Type;
+                var oFlexiModel = this.getOwnerComponent().getModel("oFiexibleLayout");
+                if (sap.ui.Device.system.phone) {
+                    oFlexiModel.setProperty("/bColumnVisible", false);
+                }
                 this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/Type", sType);
             },
             onStateChange: function (oEvent) {

@@ -21,7 +21,11 @@ sap.ui.define([
                 });
                 this.getView().setModel(oModel, "oVendorMaster");
                 this.oModel = this.getView().getModel("oVendorMaster");
+                this.getRouter().getRoute("TaskDetail").attachPatternMatched(this._onObjectMatched, this);
 
+            },
+            _onObjectMatched: function (oEvent) {
+                debugger;
             },
             handleFullScreen: function (oEvent) {
                 this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/Span", "XL6 L6 M8 S12");
