@@ -11,8 +11,8 @@
                 </navigationActions>
                 <actions>
                     <m:VBox visible="{=${oFiexibleLayout>/Type} === '2' ? true : false}">
-                        <m:Button visible="{oVendorMaster>/bEdit}" text="Edit" class="button1 header2" press="onEditScreen" />
-                        <m:Button visible="{oVendorMaster>/bDisplay}" text="Display" class="button1 header2" press="onDisplayScreen" />
+                        <m:Button visible="{oVendorMaster>/bDisplay}" text="Edit" class="button1 header2" press="onEditScreen" />
+                        <m:Button visible="{oVendorMaster>/bEdit}" text="Display" class="button1 header2" press="onDisplayScreen" />
                     </m:VBox>
                 </actions>
             </ObjectPageDynamicHeaderTitle>

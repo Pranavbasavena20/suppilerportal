@@ -77,8 +77,8 @@
                         <Text text="{genericTileModel>Name}" />
                         <Text text="{genericTileModel>Email}" />
                         <Text text="{genericTileModel>Email}" />
-                        <Button visible="{= ${device>/system/phone} ? true : false}" icon="sap-icon://edit" />
-                        <Button visible="{= ${device>/system/phone} ? true : false}" icon="sap-icon://delete" />
+                        <Button icon="sap-icon://edit" />
+                        <Button icon="sap-icon://delete" />
                     </cells>
                 </ColumnListItem>
             </items>

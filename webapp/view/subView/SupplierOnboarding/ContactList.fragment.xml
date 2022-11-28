@@ -115,8 +115,8 @@
                                     <Text text="{oSOModel>PHONE_NUMBER}" />
                                     <Text text="{oSOModel>FAX_NUMBER}" />
                                     <Text text="{oSOModel>EXT_NUMBER}" />
-                                    <Button visible="{= ${device>/system/phone} ? true : false}" icon="sap-icon://edit" />
-                                    <Button visible="{= ${device>/system/phone} ? true : false}" icon="sap-icon://delete" />
+                                    <Button icon="sap-icon://edit" />
+                                    <Button icon="sap-icon://delete" />
                                 </cells>
                             </ColumnListItem>
                         </items>

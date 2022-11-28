@@ -21,7 +21,7 @@ sap.ui.define([
                 return this.getView().setModel(oModel, sName);
             },
             onPressHomePage: function (oEvent) {
-                this.getRouter().navTo("RouteLandingView");
+                this.getRouter().navTo("GenericTilesView");
 
             },
         });

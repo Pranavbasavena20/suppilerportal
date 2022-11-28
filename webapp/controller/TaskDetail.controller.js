@@ -83,6 +83,7 @@ sap.ui.define([
                             this.oRejectDialog.close();
                             this.oRejectDialog.destroy();
                             this.oRejectDialog = undefined;
+                            this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/layout", "OneColumn");
                         }.bind(this)
                     }),
                     endButton: new sap.m.Button({
