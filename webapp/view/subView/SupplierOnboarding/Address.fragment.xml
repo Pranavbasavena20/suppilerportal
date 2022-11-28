@@ -3,7 +3,7 @@
         <form:SimpleForm width="{oFiexibleLayout>/Width}" title="{i18n>Address}" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
             <form:content>
                 <VBox>
-                    <Label text="{i18n>AddressType}" design="Bold" labelFor="bSoAddressType" />
+                    <Label text="{i18n>AddressType}" wrapping="true" design="Bold" labelFor="bSoAddressType" />
                     <ComboBox selectedKey="{oSOModel>/ADDSEQID/ADDRESS_TYPE}" items="{oMainModel>/businessCode}" width="100%" id="cbSoAddressType" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
@@ -12,28 +12,28 @@
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>AddressLine1}" design="Bold" labelFor="taSoAddressLine1" />
+                    <Label text="{i18n>AddressLine1}" design="Bold" wrapping="true" labelFor="taSoAddressLine1" />
                     <TextArea value="{oSOModel>/ADDSEQID/ADDRESS_LINE_1}" width="100%" id="taSoAddressLine1" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>AddressLine2}" design="Bold" labelFor="taSoAddressLine2" />
+                    <Label text="{i18n>AddressLine2}" design="Bold" wrapping="true" labelFor="taSoAddressLine2" />
                     <TextArea value="{oSOModel>/ADDSEQID/ADDRESS_LINE_2}" width="100%" id="taSoAddressLine2" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>AddressLine3}" design="Bold" labelFor="taSoAddressLine3" />
+                    <Label text="{i18n>AddressLine3}" design="Bold" wrapping="true" labelFor="taSoAddressLine3" />
                     <TextArea value="{oSOModel>/ADDSEQID/ADDRESS_LINE_3}" width="100%" id="taSoAddressLine3" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>CountryCode}" design="Bold" labelFor="cbSoCountryCode" />
+                    <Label text="{i18n>CountryCode}" design="Bold" wrapping="true" labelFor="cbSoCountryCode" />
                     <ComboBox selectedKey="{oSOModel>/ADDSEQID/COUNTRY_CODE}" items="{oMainModel>/countryCode}" width="100%" id="cbSoCountryCode" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>COUNTRY_CODE}" text="{oMainModel>COUNTRY_NAME}" />
                     </ComboBox>
@@ -42,7 +42,7 @@
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>State}" design="Bold" labelFor="cbSoState" />
+                    <Label text="{i18n>State}" design="Bold" labelFor="cbSoState" wrapping="true" />
                     <ComboBox selectedKey="{oSOModel>/ADDSEQID/STATE}" items="{oMainModel>/subdepartment}" width="100%" id="cbSoState" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>SUB_DEPT_CODE}" text="{oMainModel>SUB_DEPT_DESC}" />
                     </ComboBox>
@@ -51,14 +51,14 @@
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>City}" design="Bold" labelFor="ipSoCity" />
+                    <Label text="{i18n>City}" design="Bold" labelFor="ipSoCity" wrapping="true" />
                     <Input value="{oSOModel>/ADDSEQID/CITY}" width="100%" fieldGroupIds="InputField" required="true" editable="true" id="ipSoCity" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>PostalCode}" design="Bold" labelFor="ipSoPostalCode" />
+                    <Label text="{i18n>PostalCode}" design="Bold" labelFor="ipSoPostalCode" wrapping="true" />
                     <Input value="{oSOModel>/ADDSEQID/POSTAL_CODE}" id="ipSoPostalCode" type="Number" width="100%" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />

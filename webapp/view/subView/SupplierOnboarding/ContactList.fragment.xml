@@ -3,7 +3,7 @@
         <form:SimpleForm width="{oFiexibleLayout>/Width}" title="{i18n>ContactList}" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
             <form:content>
                 <VBox>
-                    <Label text="{i18n>ContactType}" design="Bold" labelFor="cbSoContactType" />
+                    <Label text="{i18n>ContactType}" design="Bold" labelFor="cbSoContactType" wrapping="true" />
                     <ComboBox selectedKey="{oSOModel>/CONTSEQID/OBJECT_TYPE}" items="{oMainModel>/businessCode}" width="100%" id="cbSoContactType" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
@@ -12,14 +12,14 @@
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>PrimaryContactName}" design="Bold" labelFor="ipSoPrimaryContactName" />
+                    <Label text="{i18n>PrimaryContactName}" design="Bold" labelFor="ipSoPrimaryContactName" wrapping="true" />
                     <Input value="{oSOModel>/CONTSEQID/FIRST_NAME}" id="ipSoPrimaryContactName" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>Designation}" design="Bold" labelFor="ipSoDesignation" />
+                    <Label text="{i18n>Designation}" design="Bold" labelFor="ipSoDesignation" wrapping="true" />
                     <Input value="{oSOModel>/CONTSEQID/POSITION}" id="ipSoDesignation" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
@@ -27,21 +27,21 @@
                 </VBox>
 
                 <VBox>
-                    <Label text="{i18n>Email}" design="Bold" labelFor="ipSoEmail" />
+                    <Label text="{i18n>Email}" design="Bold" labelFor="ipSoEmail" wrapping="true" />
                     <Input value="{oSOModel>/CONTSEQID/EMAIL_ADDRESS}" id="ipSoEmail" fieldGroupIds="Email" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>Phone}" design="Bold" labelFor="ipSoPhone" />
+                    <Label text="{i18n>Phone}" design="Bold" labelFor="ipSoPhone" wrapping="true" />
                     <Input value="{oSOModel>/CONTSEQID/PHONE_NUMBER}" id="ipSoPhone" fieldGroupIds="Number" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>Fax}" design="Bold" labelFor="ipSoFax" />
+                    <Label text="{i18n>Fax}" design="Bold" labelFor="ipSoFax" wrapping="true" />
                     <Input value="{oSOModel/CONTSEQID/FAX_NUMBER}" id="ipSoFax" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
@@ -49,7 +49,7 @@
                 </VBox>
 
                 <VBox>
-                    <Label text="{i18n>Extension}" design="Bold" labelFor="ipSoExtension" />
+                    <Label text="{i18n>Extension}" design="Bold" labelFor="ipSoExtension" wrapping="true" />
                     <Input value="{oSOModel>/CONTSEQID/EXT_NUMBER}" id="ipSoExtension" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
@@ -57,7 +57,7 @@
                 </VBox>
 
                 <VBox>
-                    <Button text="{i18n>btnAddContacts}" press="onfnnextpress5" width="100%" class="subButton1 header2" />
+                    <Button text="{i18n>btnAddContacts}" press="onfnnextpress5" width="100%" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
@@ -77,25 +77,25 @@
                 <VBox>
                     <Table id="idProductsTable" inset="false" mode="MultiSelect" items="{oSOModel>/CONTSEQLIST}">
                         <columns>
-                            <Column width="12em">
+                            <Column width="{= ${device>/system/phone} ? '' : '12em'}">
                                 <Text text="{i18n>ContactType}" />
                             </Column>
-                            <Column width="15em" minScreenWidth="Tablet" demandPopin="true">
+                            <Column width="{= ${device>/system/phone} ? '' : '15em'}" minScreenWidth="Tablet" demandPopin="true">
                                 <Text text="{i18n>PrimaryContactName}" />
                             </Column>
-                            <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                            <Column minScreenWidth="Tablet" demandPopin="true" hAlign="{= ${device>/system/phone} ? 'Begin' : 'Center'}">
                                 <Text text="{i18n>Designation}" />
                             </Column>
-                            <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                            <Column minScreenWidth="Tablet" demandPopin="true" hAlign="{= ${device>/system/phone} ? 'Begin' : 'Center'}">
                                 <Text text="{i18n>Email}" />
                             </Column>
-                            <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                            <Column minScreenWidth="Tablet" demandPopin="true" hAlign="{= ${device>/system/phone} ? 'Begin' : 'Center'}">
                                 <Text text="{i18n>Phone}" />
                             </Column>
-                            <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                            <Column minScreenWidth="Tablet" demandPopin="true" hAlign="{= ${device>/system/phone} ? 'Begin' : 'Center'}">
                                 <Text text="{i18n>Fax}" />
                             </Column>
-                            <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                            <Column minScreenWidth="Tablet" demandPopin="true" hAlign="{= ${device>/system/phone} ? 'Begin' : 'Center'}">
                                 <Text text="{i18n>Extension}" />
                             </Column>
                             <Column hAlign="End">
@@ -115,8 +115,14 @@
                                     <Text text="{oSOModel>PHONE_NUMBER}" />
                                     <Text text="{oSOModel>FAX_NUMBER}" />
                                     <Text text="{oSOModel>EXT_NUMBER}" />
-                                    <Button text="{i18n>btnEdit}" width="6rem" class="button1" />
-                                    <Button text="{i18n>btnDelete}" width="6rem" class="button1" />
+                                    <VBox>
+                                        <Button visible="{= ${device>/system/phone} ? false : true}" text="{i18n>btnEdit}" width="6rem" class="button1 buttonIcon" />
+                                        <Button visible="{= ${device>/system/phone} ? true : false}" icon="sap-icon://edit" />
+                                    </VBox>
+                                    <VBox>
+                                        <Button visible="{= ${device>/system/phone} ? false : true}" text="{i18n>btnDelete}" width="6rem" class="button1 buttonIcon" />
+                                        <Button visible="{= ${device>/system/phone} ? true : false}" />
+                                    </VBox>
                                 </cells>
                             </ColumnListItem>
                         </items>

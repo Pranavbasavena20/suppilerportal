@@ -3,7 +3,7 @@
         <form:SimpleForm width="{oFiexibleLayout>/Width}" title="{i18n>PaymentInformation}" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
             <form:content>
                 <VBox>
-                    <Label text="{i18n>PaymentMethods}" design="Bold" labelFor="cbSOPaymentMethods" />
+                    <Label text="{i18n>PaymentMethods}" design="Bold" labelFor="cbSOPaymentMethods" wrapping="true" />
                     <ComboBox selectedKey="{oSOModel>/BANKSEQID/PAYMENT_TYPE}" items="{oMainModel>/businessCode}" width="100%" id="cbSOPaymentMethods" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
@@ -12,7 +12,7 @@
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>KeyPaymentGrouping}" design="Bold" labelFor="cbSOKeyPaymentgrp" />
+                    <Label text="{i18n>KeyPaymentGrouping}" design="Bold" labelFor="cbSOKeyPaymentgrp" wrapping="true" />
                     <ComboBox selectedKey="{oSOModel>/BANKSEQID/KEY_FOR_PAYMENT_GROUPING}" items="{oMainModel>/businessCode}" width="100%" id="cbSOKeyPaymentgrp" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
@@ -21,7 +21,7 @@
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>ChequeDeliveryMethod}" design="Bold" labelFor="cbSOChequeDelivery" />
+                    <Label text="{i18n>ChequeDeliveryMethod}" design="Bold" labelFor="cbSOChequeDelivery" wrapping="true" />
                     <ComboBox selectedKey="{oSOModel>/BANKSEQID/CHEQUE_DELIVERY_METHOD}" items="{oMainModel>/businessCode}" width="100%" id="cbSOChequeDelivery" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>

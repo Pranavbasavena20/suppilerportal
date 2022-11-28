@@ -3,7 +3,7 @@
         <form:SimpleForm width="{oFiexibleLayout>/Width}" title="{i18n>StatutoryDocuments}" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
             <form:content>
                 <VBox>
-                    <Label text="{i18n>DocumentType}" design="Bold" labelFor="cbSODocType" />
+                    <Label text="{i18n>DocumentType}" design="Bold" labelFor="cbSODocType" wrapping="true" />
                     <ComboBox selectedKey="{oSOModel>/ATTACHMENTS/DOCUMENT_TYPE}" items="{oMainModel>/businessCode}" width="100%" id="cbSODocType" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
@@ -12,21 +12,21 @@
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>DocumentDescription}" design="Bold" labelFor="taDocDescripion" />
+                    <Label text="{i18n>DocumentDescription}" design="Bold" labelFor="taDocDescripion" wrapping="true" />
                     <TextArea value="{oSOModel>/ATTACHMENTS/DOC_DESCRIPTION}" id="taDocDescripion" fieldGroupIds="InputField" required="true" editable="true" width="100%" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>DocumentExpiry}" design="Bold" labelFor="dpDocuExpiry" />
+                    <Label text="{i18n>DocumentExpiry}" design="Bold" labelFor="dpDocuExpiry" wrapping="true" />
                     <DatePicker value="{oSOModel>/ATTACHMENTS/DOC_EXPIRY}" id="dpDocuExpiry" fieldGroupIds="DateField" required="true" editable="true" width="100%" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>Attachment}" design="Bold" />
+                    <Label text="{i18n>Attachment}" design="Bold" wrapping="true" />
                     <upload:UploadSet class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />

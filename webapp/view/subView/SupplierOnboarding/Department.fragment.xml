@@ -3,7 +3,7 @@
         <form:SimpleForm width="{oFiexibleLayout>/Width}" title="{i18n>DepartmentProductInfo}" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
             <form:content>
                 <VBox>
-                    <Label text="{i18n>Department}" design="Bold" labelFor="cbSoDepartMent" />
+                    <Label text="{i18n>Department}" design="Bold" labelFor="cbSoDepartMent" wrapping="true" />
                     <ComboBox selectedKey="{oSOModel>/DEPARTMENT}" items="{oMainModel>/businessCode}" width="100%" id="cbSoDepartMent" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
@@ -12,7 +12,7 @@
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>Subdepartment}" design="Bold" labelFor="cbSoSubDepartMent" />
+                    <Label text="{i18n>Subdepartment}" design="Bold" labelFor="cbSoSubDepartMent" wrapping="true" />
                     <ComboBox selectedKey="{oSOModel>/SUB_DEPARTMENT}" items="{oMainModel>/businessCode}" width="100%" id="cbSoSubDepartMent" fieldGroupIds="ComboboxField" required="true" editable="true">
                         <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
                     </ComboBox>
