@@ -21,7 +21,7 @@
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Label text="{i18n>AreyouassociatedwithManufacturer}" design="Bold" labelFor="rbSoAssociated" />
+                    <Label text="{i18n>AreyouassociatedwithManufacturer}" design="Bold" labelFor="rbSoAssociated" wrapping="true" />
                     <RadioButtonGroup selectedIndex="{oSOModel>/EXISTING_ASSOC_MF}" columns="2" width="100%" id="rbSoAssociated" fieldGroupIds="RadioButtonGroup" editable="true">
                         <RadioButton text="{i18n>Yes}" />
                         <RadioButton text="{i18n>No}" />
