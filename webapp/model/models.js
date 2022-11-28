@@ -26,7 +26,7 @@ sap.ui.define([
                 "GCS": "",
                 "TZ_EWM_RELATED": "",
                 "NATURE_OF_BUSINESS": "",
-                "WEBSITE": "WEBSITE",
+                "WEBSITE": "",
                 "DELIVER_LEAD_DAYS": "",
                 "DEPARTMENT": "",
                 "SUB_DEPARTMENT": "",

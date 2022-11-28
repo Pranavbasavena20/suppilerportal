@@ -5,7 +5,7 @@
                 <VBox>
                     <layout:VerticalLayout class="sapUiContentPadding" width="100%">
                         <layout:HorizontalLayout class="sapUiContentPadding">
-                            <Image class="sapUiSmallMargin" src="/webapp/css/image/fo.png" />
+                            <Image class="sapUiSmallMargin" src="/css/image/fo.png" />
                         </layout:HorizontalLayout>
                         <layout:HorizontalLayout class="sapUiNoContentPadding">
                             <Title level="H1" text="An exciting place for Suppliers." />
@@ -20,7 +20,7 @@
                 </VBox>
                 <VBox>
                     <FlexBox direction="RowReverse" alignItems="Start">
-                        <Image src="/webapp/css/image/toplogo.PNG">
+                        <Image src="/css/image/toplogo.PNG">
                             <layoutData>
                                 <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
                             </layoutData>
@@ -67,14 +67,14 @@
                             <FlexBox alignItems="Start" justifyContent="Start">
                                 <Text class="sapUiNoContentPadding" text="Not a member?">
                                     <layoutData>
-                                        <!-- <FlexItemData growFactor="1" /> -->
-                                        <layout:GridData span="XL3 L3 M4 S12" linebreak="true" />
+                                        <FlexItemData growFactor="1" />
+                                        <!-- <layout:GridData span="XL3 L3 M4 S12" linebreak="true" /> -->
                                     </layoutData>
                                 </Text>
                                 <Link class="sapUiTinyMarginBegin" press="onSignUp" text="Sign up now">
                                     <layoutData>
-                                        <!-- <FlexItemData growFactor="2" /> -->
-                                        <layout:GridData span="XL2 L2 M2 S4" linebreak="true" />
+                                        <FlexItemData growFactor="2" />
+                                        <!-- <layout:GridData span="XL2 L2 M2 S4" linebreak="true" /> -->
                                     </layoutData>
                                 </Link>
                                 <layoutData>

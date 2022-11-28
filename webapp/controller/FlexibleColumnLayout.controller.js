@@ -4,11 +4,13 @@ sap.ui.define([
     "com/spm/suppilerportal/utils/dataUtil",
     "sap/ui/core/UIComponent",
     "sap/ui/core/Fragment",
+    "../model/formatter"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, JSONModel, dataUtil, UIComponent, Fragment) {
+    function (Controller, JSONModel, dataUtil, UIComponent, Fragment, formatter) {
+        formatter
         "use strict";
 
         return Controller.extend("com.spm.suppilerportal.controller.FlexibleColumnLayout", {

@@ -11,7 +11,13 @@ sap.ui.define([
          * @param {string} sValue the number string to be rounded
          * @returns {string} sValue with 2 digits rounded
          */
-
+        onRadioButton: function (sVal) {
+            if (sVal === "" || sVal === undefined) {
+                return sVal = -1;
+            } else {
+                return sVal;
+            }
+        },
         onColumnVisible: function (sVal) {
 
             switch (sVal) {

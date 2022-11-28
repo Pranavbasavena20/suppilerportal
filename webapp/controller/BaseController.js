@@ -22,6 +22,7 @@ sap.ui.define([
             },
             onPressHomePage: function (oEvent) {
                 this.getRouter().navTo("RouteLandingView");
+
             },
         });
 

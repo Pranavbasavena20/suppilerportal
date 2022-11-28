@@ -44,6 +44,7 @@ sap.ui.define([
                 this.getRouter().navTo("SupplierRegistration");
             },
             onfnpresssubmit: function () {
+                jQuery.sap.require("sap.m.MessageBox");
                 var oModel = this.getView().getModel("oLanding"),
                     sName = oModel.getProperty("/sUserName"),
                     sPassword = oModel.getProperty("/sPassword");
