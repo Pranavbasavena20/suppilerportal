@@ -53,6 +53,18 @@ sap.ui.define([
 
                     }
                 }
+                if (sap.ui.Device.system.phone) {
+                    for (var key1 in this.getView().byId("idMP").getContent()) {
+                        this.getView().byId("idMP").getContent()[key1].removeStyleClass("suplierCss");
+                        this.getView().byId("idMP").getContent()[key1].addStyleClass("suplierCssMobile");
+                    }
+                }
+                if (sap.ui.Device.system.tablet) {
+                    for (var key1 in this.getView().byId("idMP").getContent()) {
+                        this.getView().byId("idMP").getContent()[key1].removeStyleClass("suplierCss");
+                        this.getView().byId("idMP").getContent()[key1].addStyleClass("suplierCssTablet");
+                    }
+                }
 
             },
             onfnnextpress1: function () {

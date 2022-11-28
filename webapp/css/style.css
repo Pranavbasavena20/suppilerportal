@@ -191,6 +191,16 @@
     width: 5rem !important;
 }
 
+.suplierCssTablet .sapSuiteUiCommonsMicroProcessFlowItemSeparatorWrapper {
+    position: relative;
+    width: 3rem !important;
+}
+
+.suplierCssMobile .sapSuiteUiCommonsMicroProcessFlowItemSeparatorWrapper {
+    position: relative;
+    width: 1rem !important;
+}
+
 /* End Titles styles here */
 /* Enter your Standard styles here */
 
