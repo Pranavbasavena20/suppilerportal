@@ -115,14 +115,8 @@
                                     <Text text="{oSOModel>PHONE_NUMBER}" />
                                     <Text text="{oSOModel>FAX_NUMBER}" />
                                     <Text text="{oSOModel>EXT_NUMBER}" />
-                                    <VBox>
-                                        <Button visible="{= ${device>/system/phone} ? false : true}" text="{i18n>btnEdit}" width="6rem" class="button1 buttonIcon" />
-                                        <Button visible="{= ${device>/system/phone} ? true : false}" icon="sap-icon://edit" />
-                                    </VBox>
-                                    <VBox>
-                                        <Button visible="{= ${device>/system/phone} ? false : true}" text="{i18n>btnDelete}" width="6rem" class="button1 buttonIcon" />
-                                        <Button visible="{= ${device>/system/phone} ? true : false}" />
-                                    </VBox>
+                                    <Button visible="{= ${device>/system/phone} ? true : false}" icon="sap-icon://edit" />
+                                    <Button visible="{= ${device>/system/phone} ? true : false}" icon="sap-icon://delete" />
                                 </cells>
                             </ColumnListItem>
                         </items>

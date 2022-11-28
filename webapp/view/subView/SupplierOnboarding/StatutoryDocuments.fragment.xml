@@ -60,7 +60,6 @@
                 <Column minScreenWidth="Tablet" demandPopin="true">
                     <Text text="{i18n>DocumentDescription}" />
                 </Column>
-
                 <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
                     <Text text="{i18n>Attachment}" />
                 </Column>
@@ -78,8 +77,8 @@
                         <Text text="{genericTileModel>Name}" />
                         <Text text="{genericTileModel>Email}" />
                         <Text text="{genericTileModel>Email}" />
-                        <Button text="{i18n>Edit}" width="6rem" class="button1" />
-                        <Button text="{i18n>Delete}" width="6rem" class="button1" />
+                        <Button visible="{= ${device>/system/phone} ? true : false}" icon="sap-icon://edit" />
+                        <Button visible="{= ${device>/system/phone} ? true : false}" icon="sap-icon://delete" />
                     </cells>
                 </ColumnListItem>
             </items>
