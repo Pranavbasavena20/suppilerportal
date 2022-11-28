@@ -1,31 +1,6 @@
 <mvc:View xmlns:l="sap.ui.layout" controllerName="com.spm.suppilerportal.controller.GenericTilesView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
     <Page id="page" class="BgImage" enableScrolling="false" showHeader="false" title="{i18n>title}">
         <content>
-            <!-- <ScrollContainer vertical="true" height="100%" class="BackgroundColor">
-                            <HBox backgroundDesign="Transparent" justifyContent="End" width="100%">
-                                <Image src="/css/image/toplogo.PNG" />
-                            </HBox>
-            <VBox class="blackTheme">
-                <FlexBox width="100%" justifyContent="Center">
-                    <SearchField class="sapUiSmallMargin searchField" width="20rem" />
-                </FlexBox>
-                <HBox alignItems="Center">
-                    <HBox class="overflow" items="{genericTileModel>/oTileData}">
-                        <items>
-                            <VBox class="sapUiSmallMargin">
-                                <Label visible="{=${genericTileModel>count} !== '0'}" text="{genericTileModel>count}" class="labelRed1" />
-                                <Image class="labelRed" src="{genericTileModel>imageUrl}" press="onImageClick" />
-                                <Text textAlign="Center" width="80px" wrapping="true" text="{genericTileModel>titleText}" class="sapUiSmallMarginTop BlackText" />
-                            </VBox>
-                        </items>
-                    </HBox>
-                </HBox>
-            </VBox>
-            </ScrollContainer>
-                        <HBox backgroundDesign="Transparent" class="bottombackground sapUiSmallPaddingBegin" justifyContent="SpaceBetween" width="100%">
-                                <Image src="/css/image/bottomlogo.PNG" />
-                                <Text text="@FourOrigin" class="whiteText"/>
-                            </HBox> -->
             <Bar class="sapUiSmallMarginTop sapUiContentPadding">
                 <contentLeft />
                 <contentMiddle>
