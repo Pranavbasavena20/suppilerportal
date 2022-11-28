@@ -57,7 +57,7 @@
                 </VBox>
 
                 <VBox>
-                    <Button text="{i18n>btnAddContacts}" press="onfnnextpress5" width="100%" class="button1 header2" />
+                    <Button text="{i18n>btnAddContacts}" press="onPressAddContact" width="100%" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
@@ -75,7 +75,7 @@
         <form:SimpleForm layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12" columnsXL="1" columnsL="1" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
             <form:content>
                 <VBox>
-                    <Table id="idProductsTable" inset="false" mode="MultiSelect" items="{oSOModel>/CONTSEQLIST}">
+                    <Table id="idContactsTable" inset="false" mode="MultiSelect" items="{oSOModel>/CONTSEQLIST}">
                         <columns>
                             <Column width="{= ${device>/system/phone} ? '' : '12em'}">
                                 <Text text="{i18n>ContactType}" />

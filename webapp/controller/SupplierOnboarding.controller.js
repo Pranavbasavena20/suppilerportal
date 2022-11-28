@@ -257,25 +257,28 @@ sap.ui.define([
                 }.bind(that));
             },
             onPressAddContact: function (oEvent) {
-                var oData = this.getView().getModel("genericTileModel"),
-                    aContact = oData.getProperty("/aContact");
+                var oData = this.getView().getModel("oSOModel"),
+                    aContact = oData.getProperty("/CONTSEQLIST");
                 if (aContact === undefined || aContact === null) {
                     aContact = [];
                 }
                 var oObject = {
-                    "Designation": oData.getProperty("/Designation"),
-                    "Name": oData.getProperty("/Name"),
-                    "LandPhoneNo": oData.getProperty("/LandPhoneNo"),
-                    "MobileNo": oData.getProperty("/MobileNo"),
-                    "Email": oData.getProperty("/Designation")
+                    "OBJECT_TYPE": oData.getProperty("/CONTSEQID/OBJECT_TYPE"),
+                    "FIRST_NAME": oData.getProperty("/CONTSEQID/FIRST_NAME"),
+                    "POSITION": oData.getProperty("/CONTSEQID/POSITION"),
+                    "EMAIL_ADDRESS": oData.getProperty("/CONTSEQID/EMAIL_ADDRESS"),
+                    "PHONE_NUMBER": oData.getProperty("/CONTSEQID/PHONE_NUMBER"),
+                    "FAX_NUMBER": oData.getProperty("/CONTSEQID/FAX_NUMBER"),
+                    "EXT_NUMBER": oData.getProperty("/CONTSEQID/EXT_NUMBER")
                 };
                 aContact.push(oObject);
-                oData.setProperty("/Designation", "");
-                oData.setProperty("/Name", "");
-                oData.setProperty("/LandPhoneNo", "");
-                oData.setProperty("/MobileNo", "");
-                oData.setProperty("/Designation", "");
-
+                oData.setProperty("/CONTSEQID/OBJECT_TYPE", "");
+                oData.setProperty("/CONTSEQID/FIRST_NAME", "");
+                oData.setProperty("/CONTSEQID/POSITION", "");
+                oData.setProperty("/CONTSEQID/EMAIL_ADDRESS", "");
+                oData.setProperty("/CONTSEQID/PHONE_NUMBER", "");
+                oData.setProperty("/CONTSEQID/FAX_NUMBER", "");
+                oData.setProperty("/CONTSEQID/EXT_NUMBER", "");
                 this.getView().getModel("genericTileModel").setProperty("/aContact", aContact);
 
             },

@@ -57,9 +57,9 @@ sap.ui.define([
                     "FAX_NUMBER": "",
                     "EXT_NUMBER": "",
                 },
-                "CONTSEQLIST": [{
+                "CONTSEQLIST": [
 
-                }],
+                ],
                 "RTV_ALLOWED": "",
                 "RTV_REMARKS": "",
                 "CREDIT_PERIOD": "",
