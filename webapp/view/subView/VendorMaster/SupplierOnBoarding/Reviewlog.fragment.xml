@@ -1,7 +1,7 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
     <layout:Grid hSpacing="1" defaultSpan="XL12 L12 M12 S12">
         <VBox>
-            <Label text="{i18n>VendorRemarks}" design="Bold" labelFor="taVSOVendorRemarks" />
+            <Label wrapping="true" text="{i18n>VendorRemarks}" design="Bold" labelFor="taVSOVendorRemarks" />
             <Text text="{oFiexibleLayout>/oSelectedValues/REMARKS}" visible="{oVendorMaster>/bDisplay}" />
             <TextArea visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/REMARKS}" id="taVSOVendorRemarks" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'InputField' : ' '}" required="true" editable="true" width="100%" />
             <layoutData>
@@ -9,7 +9,7 @@
             </layoutData>
         </VBox>
         <VBox>
-            <Label text="{i18n>CategoryExecutiveRemarks}" design="Bold" labelFor="taVSOCategoryRemarks" />
+            <Label wrapping="true" text="{i18n>CategoryExecutiveRemarks}" design="Bold" labelFor="taVSOCategoryRemarks" />
             <Text text="{oFiexibleLayout>/oSelectedValues/CATERGORY_EXECUTIVE_REMARKS}" visible="{oVendorMaster>/bDisplay}" />
             <TextArea visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/CATERGORY_EXECUTIVE_REMARKS}" id="taVSOCategoryRemarks" required="false" editable="false" width="100%" />
             <layoutData>
@@ -17,7 +17,7 @@
             </layoutData>
         </VBox>
         <VBox>
-            <Label text="{i18n>FinanceManagerRemarks}" design="Bold" labelFor="taVSOFinanceRemarks" />
+            <Label wrapping="true" text="{i18n>FinanceManagerRemarks}" design="Bold" labelFor="taVSOFinanceRemarks" />
             <Text text="{products>SupplierName}" visible="{oVendorMaster>/bDisplay}" />
             <TextArea visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/FINANCE_REMARKS}" id="taVSOFinanceRemarks" required="false" editable="false" width="100%" />
             <layoutData>
@@ -25,7 +25,7 @@
             </layoutData>
         </VBox>
         <VBox>
-            <Label text="{i18n>HODRemarks}" design="Bold" labelFor="taVSOHODRemarks" />
+            <Label wrapping="true" text="{i18n>HODRemarks}" design="Bold" labelFor="taVSOHODRemarks" />
             <Text text="{oFiexibleLayout>/oSelectedValues/HOD_REMARKS}" visible="{oVendorMaster>/bDisplay}" />
             <TextArea visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/HOD_REMARKS}" id="taSOHODRemarks" required="false" editable="false" width="100%" />
             <layoutData>
@@ -33,7 +33,7 @@
             </layoutData>
         </VBox>
         <VBox>
-            <Label text="{i18n>AdditionalInfo}" design="Bold" labelFor="taVSORemarks" />
+            <Label wrapping="true" text="{i18n>AdditionalInfo}" design="Bold" labelFor="taVSORemarks" />
             <Text text="{products>SupplierName}" visible="{oVendorMaster>/bDisplay}" />
             <TextArea visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/ADDITIONAL_INFO}" id="taVSORemarks" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'InputField' : ' '}" required="true" editable="true" width="100%" />
             <layoutData>

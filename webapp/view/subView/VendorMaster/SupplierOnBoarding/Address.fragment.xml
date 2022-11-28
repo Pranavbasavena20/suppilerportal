@@ -1,7 +1,7 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
     <layout:Grid hSpacing="1" defaultSpan="XL12 L12 M12 S12">
         <VBox>
-            <Label text="{i18n>AddressType}" design="Bold" labelFor="bVSoAddressType" />
+            <Label text="{i18n>AddressType}" wrapping="true" design="Bold" labelFor="bVSoAddressType" />
             <Text text="{oFiexibleLayout>/oSelectedValues/ADDSEQID/ADDRESS_TYPE}" visible="{oVendorMaster>/bDisplay}" />
             <ComboBox selectedKey="{oFiexibleLayout>/oSelectedValues/ADDSEQID/ADDRESS_TYPE}" visible="{oVendorMaster>/bEdit}" items="{oMainModel>/businessCode}" width="100%" id="bVSoAddressType" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'ComboboxField' : ' '}" required="true" editable="true">
                 <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
@@ -11,7 +11,7 @@
             </layoutData>
         </VBox>
         <VBox>
-            <Label text="{i18n>AddressLine1}" design="Bold" labelFor="taVSoAddressLine1" />
+            <Label text="{i18n>AddressLine1}" wrapping="true" design="Bold" labelFor="taVSoAddressLine1" />
             <Text text="{oFiexibleLayout>/oSelectedValues/ADDSEQID/ADDRESS_LINE_1}" visible="{oVendorMaster>/bDisplay}" />
             <TextArea visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/ADDSEQID/ADDRESS_LINE_1}" width="100%" id="taVSoAddressLine1" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'InputField' : ' '}" required="true" editable="true" />
             <layoutData>
@@ -19,7 +19,7 @@
             </layoutData>
         </VBox>
         <VBox>
-            <Label text="{i18n>AddressLine2}" design="Bold" labelFor="taVSoAddressLine2" />
+            <Label text="{i18n>AddressLine2}" wrapping="true" design="Bold" labelFor="taVSoAddressLine2" />
             <Text text="{oFiexibleLayout>/oSelectedValues/ADDSEQID/ADDRESS_LINE_2}" visible="{oVendorMaster>/bDisplay}" />
             <TextArea visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/ADDSEQID/ADDRESS_LINE_2}" width="100%" id="taVSoAddressLine2" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'InputField' : ' '}" required="true" editable="true" />
             <layoutData>
@@ -27,7 +27,7 @@
             </layoutData>
         </VBox>
         <VBox>
-            <Label text="{i18n>AddressLine3}" design="Bold" labelFor="taVSoAddressLine3" />
+            <Label text="{i18n>AddressLine3}" wrapping="true" design="Bold" labelFor="taVSoAddressLine3" />
             <Text text="{oFiexibleLayout>/oSelectedValues/ADDSEQID/ADDRESS_LINE_3}" visible="{oVendorMaster>/bDisplay}" />
             <TextArea visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/ADDSEQID/ADDRESS_LINE_3}" width="100%" id="taVSoAddressLine3" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'InputField' : ' '}" required="true" editable="true" />
             <layoutData>
@@ -35,7 +35,7 @@
             </layoutData>
         </VBox>
         <VBox>
-            <Label text="{i18n>CountryCode}" design="Bold" labelFor="cbVSoCountryCode" />
+            <Label text="{i18n>CountryCode}" wrapping="true" design="Bold" labelFor="cbVSoCountryCode" />
             <Text text="{oFiexibleLayout>/oSelectedValues/ADDSEQID/COUNTRY_CODE}" visible="{oVendorMaster>/bDisplay}" />
             <ComboBox visible="{oVendorMaster>/bEdit}" selectedKey="{oFiexibleLayout>/oSelectedValues/ADDSEQID/COUNTRY_CODE}" items="{oMainModel>/countryCode}" width="100%" id="cbSoCountryCode" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'ComboboxField' : ' '}" required="true" editable="true">
                 <core:Item key="{oMainModel>COUNTRY_CODE}" text="{oMainModel>COUNTRY_NAME}" />
@@ -45,7 +45,7 @@
             </layoutData>
         </VBox>
         <VBox>
-            <Label text="{i18n>State}" design="Bold" labelFor="cbSoState" />
+            <Label text="{i18n>State}" wrapping="true" design="Bold" labelFor="cbSoState" />
             <Text text="{oFiexibleLayout>/oSelectedValues/ADDSEQID/STATE}" visible="{oVendorMaster>/bDisplay}" />
             <ComboBox visible="{oVendorMaster>/bEdit}" selectedKey="{oFiexibleLayout>/oSelectedValues/ADDSEQID/STATE}" items="{oMainModel>/subdepartment}" width="100%" id="cbSoState" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'ComboboxField' : ' '}" required="true" editable="true">
                 <core:Item key="{oMainModel>SUB_DEPT_CODE}" text="{oMainModel>SUB_DEPT_DESC}" />
@@ -55,7 +55,7 @@
             </layoutData>
         </VBox>
         <VBox>
-            <Label text="{i18n>City}" design="Bold" labelFor="ipVSoCity" />
+            <Label text="{i18n>City}" wrapping="true" design="Bold" labelFor="ipVSoCity" />
             <Text text="{oFiexibleLayout>/oSelectedValues/ADDSEQID/CITY}" visible="{oVendorMaster>/bDisplay}" />
             <Input visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/ADDSEQID/CITY}" width="100%" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'InputField' : ' '}" required="true" editable="true" id="ipSoCity" />
             <layoutData>
@@ -63,7 +63,7 @@
             </layoutData>
         </VBox>
         <VBox>
-            <Label text="{i18n>PostalCode}" design="Bold" labelFor="ipSoPostalCode" />
+            <Label text="{i18n>PostalCode}" wrapping="true" design="Bold" labelFor="ipSoPostalCode" />
             <Text text="{oFiexibleLayout>/oSelectedValues/ADDSEQID/POSTAL_CODE}" visible="{oVendorMaster>/bDisplay}" />
             <Input visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/ADDSEQID/POSTAL_CODE}" id="ipSoPostalCode" type="Number" width="100%" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'InputField' : ' '}" required="true" editable="true" />
             <layoutData>

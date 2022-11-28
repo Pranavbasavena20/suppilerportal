@@ -1,7 +1,7 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
     <layout:Grid hSpacing="1" defaultSpan="XL12 L12 M12 S12">
         <VBox>
-            <Label text="{i18n>ContactType}" design="Bold" labelFor="cbVSoContactType" />
+            <Label text="{i18n>ContactType}" wrapping="true" design="Bold" labelFor="cbVSoContactType" />
             <Text text="{oFiexibleLayout>/oSelectedValues/CONTSEQID/OBJECT_TYPE}" visible="{oVendorMaster>/bDisplay}" />
             <ComboBox visible="{oVendorMaster>/bEdit}" selectedKey="{oFiexibleLayout>/oSelectedValues/CONTSEQID/OBJECT_TYPE}" items="{oMainModel>/businessCode}" width="100%" id="cbVSoContactType" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'ComboboxField' : ' '}" required="true" editable="true">
                 <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
@@ -11,7 +11,7 @@
             </layoutData>
         </VBox>
         <VBox>
-            <Label text="{i18n>PrimaryContactName}" design="Bold" labelFor="ipvSoPrimaryContactName" />
+            <Label text="{i18n>PrimaryContactName}" wrapping="true" design="Bold" labelFor="ipvSoPrimaryContactName" />
             <Text text="{oFiexibleLayout>/oSelectedValues/CONTSEQID/FIRST_NAME}" visible="{oVendorMaster>/bDisplay}" />
             <Input visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/CONTSEQID/FIRST_NAME}" id="ipvSoPrimaryContactName" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'InputField' : ' '}" required="true" editable="true" />
             <layoutData>
@@ -19,7 +19,7 @@
             </layoutData>
         </VBox>
         <VBox>
-            <Label text="{i18n>Designation}" design="Bold" labelFor="ipvSoDesignation" />
+            <Label text="{i18n>Designation}" design="Bold" wrapping="true" labelFor="ipvSoDesignation" />
             <Text text="{oFiexibleLayout>/oSelectedValues/CONTSEQID/POSITION}" visible="{oVendorMaster>/bDisplay}" />
             <Input visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/CONTSEQID/POSITION}" id="ipvSoDesignation" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'InputField' : ' '}" required="true" editable="true" />
             <layoutData>
@@ -27,7 +27,7 @@
             </layoutData>
         </VBox>
         <VBox>
-            <Label text="{i18n>Email}" design="Bold" labelFor="ipVSoEmail" />
+            <Label text="{i18n>Email}" design="Bold" wrapping="true" labelFor="ipVSoEmail" />
             <Text text="{oFiexibleLayout>/oSelectedValues/CONTSEQID/EMAIL_ADDRESS}" visible="{oVendorMaster>/bDisplay}" />
             <Input visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/CONTSEQID/EMAIL_ADDRESS}" id="ipVSoEmail" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'Email' : ' '}" required="true" editable="true" />
             <layoutData>
@@ -43,7 +43,7 @@
             </layoutData>
         </VBox>
         <VBox>
-            <Label text="{i18n>Fax}" design="Bold" labelFor="ipVSoFax" />
+            <Label text="{i18n>Fax}" design="Bold" wrapping="true" labelFor="ipVSoFax" />
             <Text text="{oFiexibleLayout>/oSelectedValues/CONTSEQID/FAX_NUMBER}" visible="{oVendorMaster>/bDisplay}" />
             <Input visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/CONTSEQID/FAX_NUMBER}" id="ipVSoFax" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'InputField' : ' '}" required="true" editable="true" />
             <layoutData>
@@ -51,7 +51,7 @@
             </layoutData>
         </VBox>
         <VBox>
-            <Label text="{i18n>Extension}" design="Bold" labelFor="ipVSoExtension" />
+            <Label text="{i18n>Extension}" design="Bold" wrapping="true" labelFor="ipVSoExtension" />
             <Text text="{oFiexibleLayout>/oSelectedValues/CONTSEQID/EXT_NUMBER}" visible="{oVendorMaster>/bDisplay}" />
             <Input visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/CONTSEQID/EXT_NUMBER}" id="ipVSoExtension" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'InputField' : ' '}" required="true" editable="true" />
             <layoutData>
