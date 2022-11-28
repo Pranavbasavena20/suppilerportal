@@ -400,16 +400,23 @@ span.sapMBtnInner.sapMBtnEmphasized {
     text-shadow: 0 0 0.125rem transparent;
 }
 
-/* .sapMInputBase {
-    height: 2.5rem;
-    background: transparent;
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
-    outline: none;
-    box-sizing: border-box;
-    line-height: 0;
-} */
+.sapMSlt>.sapMSltLabel {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: none;
+    text-indent: 0;
+    text-align: start;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    line-height: 2.375rem;
+    color: white !important;
+    font-style: normal;
+    font-size: .875rem;
+}
 
 .header2 .sapMBtnContent {
     overflow: hidden;

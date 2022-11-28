@@ -71,7 +71,7 @@ sap.ui.define([
                 var sVal;
                 oFlexiModel.setProperty("/oSelectedValues", oEvent.getSource().getBindingContext("oFiexibleLayout").getObject());
                 if (oFlexiModel.getData().Type !== "1") {
-                    if (oFlexiModel.getObject().EXISTING_ASSOC_MF === "") {
+                    if (oEvent.getSource().getBindingContext("oFiexibleLayout").getObject().EXISTING_ASSOC_MF === "") {
                         sVal = -1;
                     } else {
                         sVal = oEvent.getSource().getBindingContext("oFiexibleLayout").getObject().oSelectedValues.EXISTING_ASSOC_MF;
