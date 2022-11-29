@@ -514,7 +514,7 @@
             </Panel>
         </content>
         <buttons>
-            <Button class="button1" text="Submit" press="onClickSubmit" />
+            <Button class="button1" text="Submit" press="onfnpresssubmit" />
             <Button text="Cancel" press="onCancelForm" />
         </buttons>
     </Dialog>
