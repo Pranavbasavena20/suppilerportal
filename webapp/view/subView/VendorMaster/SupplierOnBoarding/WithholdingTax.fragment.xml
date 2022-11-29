@@ -3,7 +3,16 @@
         <VBox>
             <Label wrapping="true" text="{i18n>WHTTaxType}" design="Bold" labelFor="cbVSOWHTTax" />
             <Text text="{oFiexibleLayout>/oSelectedValues/BANKSEQID/TAX_TYPE}" visible="{oVendorMaster>/bDisplay}" />
-            <ComboBox visible="{oVendorMaster>/bEdit}" selectedKey="{oFiexibleLayout>/oSelectedValues/BANKSEQID/TAX_TYPE}" items="{oMainModel>/businessCode}" width="100%" id="cbVSOWHTTax" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'ComboboxField' : ' '}" required="true" editable="true">
+            <ComboBox
+                visible="{oVendorMaster>/bEdit}"
+                selectedKey="{oFiexibleLayout>/oSelectedValues/BANKSEQID/TAX_TYPE}"
+                items="{oMainModel>/businessCode}"
+                width="100%"
+                id="cbVSOWHTTax"
+                fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'ComboboxField' : ' '}"
+                required="{oVendorMaster>/bEdit}"
+                editable="true"
+            >
                 <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
             </ComboBox>
             <layoutData>
@@ -13,7 +22,16 @@
         <VBox>
             <Label wrapping="true" text="{i18n>WHTPercentage}" design="Bold" labelFor="cbVSOWHTPercentage" />
             <Text text="{oFiexibleLayout>/oSelectedValues/BANKSEQID/WHT_PERCENT}" visible="{oVendorMaster>/bDisplay}" />
-            <ComboBox visible="{oVendorMaster>/bEdit}" selectedKey="{oFiexibleLayout>/oSelectedValues/BANKSEQID/WHT_PERCENT}" items="{oMainModel>/businessCode}" width="100%" id="cbVSOWHTPercentage" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'ComboboxField' : ' '}" required="true" editable="true">
+            <ComboBox
+                visible="{oVendorMaster>/bEdit}"
+                selectedKey="{oFiexibleLayout>/oSelectedValues/BANKSEQID/WHT_PERCENT}"
+                items="{oMainModel>/businessCode}"
+                width="100%"
+                id="cbVSOWHTPercentage"
+                fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'ComboboxField' : ' '}"
+                required="{oVendorMaster>/bEdit}"
+                editable="true"
+            >
                 <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
             </ComboBox>
             <layoutData>
@@ -23,7 +41,16 @@
         <VBox>
             <Label wrapping="true" text="{i18n>WHTTaxCode}" design="Bold" labelFor="cbVSOWHTTAXCode" />
             <Text text="{oFiexibleLayout>/oSelectedValues/BANKSEQID/TAX_NUMBER}" visible="{oVendorMaster>/bDisplay}" />
-            <ComboBox visible="{oVendorMaster>/bEdit}" selectedKey="{oFiexibleLayout>/oSelectedValues/BANKSEQID/TAX_NUMBER}" items="{oMainModel>/businessCode}" width="100%" id="cbVSOWHTTAXCode" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'ComboboxField' : ' '}" required="true" editable="true">
+            <ComboBox
+                visible="{oVendorMaster>/bEdit}"
+                selectedKey="{oFiexibleLayout>/oSelectedValues/BANKSEQID/TAX_NUMBER}"
+                items="{oMainModel>/businessCode}"
+                width="100%"
+                id="cbVSOWHTTAXCode"
+                fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'ComboboxField' : ' '}"
+                required="{oVendorMaster>/bEdit}"
+                editable="true"
+            >
                 <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
             </ComboBox>
             <layoutData>
@@ -33,7 +60,7 @@
         <VBox>
             <Label wrapping="true" text="{i18n>ExcemptionPeriodTo}" design="Bold" labelFor="dpVSOExcemption" />
             <Text text="{oFiexibleLayout>/oSelectedValues/BANKSEQID/EXEMPTION_PERIOD}" visible="{oVendorMaster>/bDisplay}" />
-            <DatePicker visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/BANKSEQID/EXEMPTION_PERIOD}" width="100%" id="dpVSOExcemption" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'DateField' : ' '}" required="true" editable="true" />
+            <DatePicker visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/BANKSEQID/EXEMPTION_PERIOD}" width="100%" id="dpVSOExcemption" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'DateField' : ' '}" required="{oVendorMaster>/bEdit}" editable="true" />
             <layoutData>
                 <layout:GridData span="{oFiexibleLayout>/Span}" linebreak="false" />
             </layoutData>

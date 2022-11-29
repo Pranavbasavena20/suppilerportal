@@ -3,7 +3,16 @@
         <VBox>
             <Label wrapping="true" text="{i18n>DocumentType}" design="Bold" labelFor="cbVSODocType" />
             <Text text="{oFiexibleLayout>/oSelectedValues/ATTACHMENTS/DOCUMENT_TYPE}" visible="{oVendorMaster>/bDisplay}" />
-            <ComboBox visible="{oVendorMaster>/bEdit}" selectedKey="{oFiexibleLayout>/oSelectedValues/ATTACHMENTS/DOCUMENT_TYPE}" items="{oMainModel>/businessCode}" width="100%" id="cbVSODocType" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'ComboboxField' : ' '}" required="true" editable="true">
+            <ComboBox
+                visible="{oVendorMaster>/bEdit}"
+                selectedKey="{oFiexibleLayout>/oSelectedValues/ATTACHMENTS/DOCUMENT_TYPE}"
+                items="{oMainModel>/businessCode}"
+                width="100%"
+                id="cbVSODocType"
+                fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'ComboboxField' : ' '}"
+                required="{oVendorMaster>/bEdit}"
+                editable="true"
+            >
                 <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
             </ComboBox>
             <layoutData>
@@ -13,7 +22,7 @@
         <VBox>
             <Label wrapping="true" text="{i18n>DocumentDescription}" design="Bold" labelFor="taVDocDescripion" />
             <Text text="{oFiexibleLayout>/oSelectedValues/ATTACHMENTS/DOC_DESCRIPTION}" visible="{oVendorMaster>/bDisplay}" />
-            <TextArea visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/ATTACHMENTS/DOC_DESCRIPTION}" id="taVDocDescripion" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'InputField' : ' '}" required="true" editable="true" width="100%" />
+            <TextArea visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/ATTACHMENTS/DOC_DESCRIPTION}" id="taVDocDescripion" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'InputField' : ' '}" required="{oVendorMaster>/bEdit}" editable="true" width="100%" />
             <layoutData>
                 <layout:GridData span="{oFiexibleLayout>/Span}" linebreak="false" />
             </layoutData>
@@ -21,7 +30,7 @@
         <VBox>
             <Label wrapping="true" text="{i18n>DocumentExpiry}" design="Bold" labelFor="dpVSODocuExpiry" />
             <Text text="{oFiexibleLayout>/oSelectedValues/ATTACHMENTS/DOC_EXPIRY}" visible="{oVendorMaster>/bDisplay}" />
-            <DatePicker visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/ATTACHMENTS/DOC_EXPIRY}" id="dpVSODocuExpiry" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'DateField' : ' '}" required="true" editable="true" width="100%" />
+            <DatePicker visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/ATTACHMENTS/DOC_EXPIRY}" id="dpVSODocuExpiry" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'DateField' : ' '}" required="{oVendorMaster>/bEdit}" editable="true" width="100%" />
             <layoutData>
                 <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
             </layoutData>

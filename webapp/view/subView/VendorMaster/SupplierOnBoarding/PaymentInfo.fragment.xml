@@ -3,7 +3,16 @@
         <VBox>
             <Label wrapping="true" text="{i18n>PaymentMethods}" design="Bold" labelFor="cbVSOPaymentMethods" />
             <Text text="{oFiexibleLayout>/oSelectedValues/BANKSEQID/PAYMENT_TYPE}" visible="{oVendorMaster>/bDisplay}" />
-            <ComboBox visible="{oVendorMaster>/bEdit}" selectedKey="{oFiexibleLayout>/oSelectedValues/BANKSEQID/PAYMENT_TYPE}" items="{oMainModel>/businessCode}" width="100%" id="cbVSOPaymentMethods" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'ComboboxField' : ' '}" required="true" editable="true">
+            <ComboBox
+                visible="{oVendorMaster>/bEdit}"
+                selectedKey="{oFiexibleLayout>/oSelectedValues/BANKSEQID/PAYMENT_TYPE}"
+                items="{oMainModel>/businessCode}"
+                width="100%"
+                id="cbVSOPaymentMethods"
+                fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'ComboboxField' : ' '}"
+                required="{oVendorMaster>/bEdit}"
+                editable="true"
+            >
                 <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
             </ComboBox>
             <layoutData>
@@ -20,7 +29,7 @@
                 width="100%"
                 id="cbVSOKeyPaymentgrp"
                 fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'ComboboxField' : ' '}"
-                required="true"
+                required="{oVendorMaster>/bEdit}"
                 editable="true"
             >
                 <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
@@ -39,7 +48,7 @@
                 width="100%"
                 id="cbSOChequeDelivery"
                 fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'ComboboxField' : ' '}"
-                required="true"
+                required="{oVendorMaster>/bEdit}"
                 editable="true"
             >
                 <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
