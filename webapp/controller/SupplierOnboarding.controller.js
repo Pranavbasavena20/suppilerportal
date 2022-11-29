@@ -299,7 +299,7 @@ sap.ui.define([
                 return sap.ui.core.UIComponent.getRouterFor(this);
             },
 
-            onfnpresssubmit: function () {
+            onfnpresssubmit: function (oEvent) {
                 jQuery.sap.require("sap.m.MessageBox");
                 var that = this;
                 var oData = this.getView().getModel("oFiexibleLayout").getProperty("/SuppOnBoarding");
@@ -308,12 +308,16 @@ sap.ui.define([
                     actions: [sap.m.MessageBox.Action.OK],
                     emphasizedAction: sap.m.MessageBox.Action.OK,
                     onClose: function (sAction) {
+                        that.onCancelForm();
                         that.getOwnerComponent().getRouter().navTo("GenericTilesView");
+
                     }
                 });
             },
             onCancelForm: function () {
                 this.oPreviewDialog.close();
+                this.oPreviewDialog.destroy();
+                this.oPreviewDialog = undefined;
             }
         });
     });

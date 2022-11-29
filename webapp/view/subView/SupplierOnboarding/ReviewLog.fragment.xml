@@ -38,7 +38,7 @@
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Button text="{i18n>btnPreview}" press="onfnpresssubmit" width="100%" class="button1 header2" />
+                    <Button text="{i18n>btnPreview}" press="onfnnextpress11" width="100%" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
                     </layoutData>
