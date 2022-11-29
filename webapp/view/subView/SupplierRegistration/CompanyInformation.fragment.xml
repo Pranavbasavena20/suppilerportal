@@ -11,7 +11,7 @@
                 </VBox>
                 <VBox>
                     <Label text="{i18n>Company}" wrapping="true" design="Bold" labelFor="ipCompany" />
-                    <Input value="{oSRModel>/COMPANY_NAME}" id="ipCompany" fieldGroupIds="Email" required="true" editable="true" />
+                    <Input value="{oSRModel>/COMPANY_NAME}" id="ipCompany" fieldGroupIds="InputField" required="true" editable="true" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                     </layoutData>
