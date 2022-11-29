@@ -69,10 +69,10 @@ sap.ui.define([
             },
             onfnnextpress2: function () {
                 var that = this;
-                mandatoryfields.clearStates(that);
-                if (mandatoryfields.ManditoryFields(that)) {
-                    return;
-                }
+                // mandatoryfields.clearStates(that);
+                // if (mandatoryfields.ManditoryFields(that,"")) {
+                //     return;
+                // }
                 var oModel = this.getView().getModel("genericTileModel");
                 oModel.setProperty("/sStep1", false);
                 oModel.setProperty("/sStep3", false);

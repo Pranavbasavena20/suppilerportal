@@ -105,7 +105,10 @@ sap.ui.define([
                     "DOC_DESCRIPTION": "",
                     "DOC_EXPIRY": "",
                     "File": ""
-                }
+                },
+                "ATTACHMENTSSET": []
+
+
 
             },
             );

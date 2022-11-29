@@ -49,7 +49,7 @@
         </form:SimpleForm>
     </FlexBox>
     <FlexBox>
-        <Table visible="{genericTileModel>/sStep9}" width="74rem" class="sapUiLargeMarginBegin" id="idDcoument" inset="false" mode="MultiSelect" items="{genericTileModel>/aContact}">
+        <Table visible="{genericTileModel>/sStep9}" width="{= ${device>/system/phone} ? '' : '74em'}" class="sapUiLargeMarginBegin" id="idDcoument" inset="false" mode="MultiSelect" items="{genericTileModel>/aContact}">
             <columns>
                 <Column>
                     <Text text="{i18n>DocumentType}" />
@@ -73,10 +73,10 @@
             <items>
                 <ColumnListItem vAlign="Middle">
                     <cells>
-                        <Text text="{genericTileModel>Designation}" />
-                        <Text text="{genericTileModel>Name}" />
-                        <Text text="{genericTileModel>Email}" />
-                        <Text text="{genericTileModel>Email}" />
+                        <Text text="{oSOModel>DOCUMENT_TYPE}" />
+                        <Text text="{oSOModel>DOC_DESCRIPTION}" />
+                        <Text text="{oSOModel>DOC_EXPIRY}" />
+                        <Text text="" />
                         <Button icon="sap-icon://edit" />
                         <Button icon="sap-icon://delete" />
                     </cells>

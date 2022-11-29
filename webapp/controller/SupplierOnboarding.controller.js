@@ -279,7 +279,7 @@ sap.ui.define([
                 oData.setProperty("/CONTSEQID/PHONE_NUMBER", "");
                 oData.setProperty("/CONTSEQID/FAX_NUMBER", "");
                 oData.setProperty("/CONTSEQID/EXT_NUMBER", "");
-                this.getView().getModel("genericTileModel").setProperty("/aContact", aContact);
+                this.getView().getModel("oSOModel").setProperty("/CONTSEQLIST", aContact);
 
             },
             getResourceBundle: function () {
@@ -318,6 +318,29 @@ sap.ui.define([
                 this.oPreviewDialog.close();
                 this.oPreviewDialog.destroy();
                 this.oPreviewDialog = undefined;
+            },
+            AddAttachments: function (oEvent) {
+                var oData = this.getView().getModel("oSOModel"),
+                    aAttachments = oData.getProperty("/ATTACHMENTSSET");
+                if (aAttachments === undefined || aAttachments === null) {
+                    aAttachments = [];
+                }
+                var oObject = {
+                    "VENDMSTRSEQID": oData.getProperty("/ATTACHMENTS/VENDMSTRSEQID"),
+                    "RETSEQID": oData.getProperty("/ATTACHMENTS/RETSEQID"),
+                    "DOCUMENT_TYPE": oData.getProperty("/ATTACHMENTS/DOCUMENT_TYPE"),
+                    "DOC_DESCRIPTION": oData.getProperty("/ATTACHMENTS/DOC_DESCRIPTION"),
+                    "DOC_EXPIRY": oData.getProperty("/ATTACHMENTS/DOC_EXPIRY"),
+                    "File": oData.getProperty("/ATTACHMENTS/File")
+                };
+                aAttachments.push(oObject);
+                oData.setProperty("/ATTACHMENTS/VENDMSTRSEQID", "");
+                oData.setProperty("/ATTACHMENTS/RETSEQID", "");
+                oData.setProperty("/ATTACHMENTS/DOCUMENT_TYPE", "");
+                oData.setProperty("/ATTACHMENTS/DOC_DESCRIPTION", "");
+                oData.setProperty("/ATTACHMENTS/DOC_EXPIRY", "");
+                oData.setProperty("/ATTACHMENTS/File", "");
+                this.getView().getModel("oSOModel").setProperty("/ATTACHMENTSSET", aAttachments);
             }
         });
     });
