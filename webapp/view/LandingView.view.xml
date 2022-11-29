@@ -8,10 +8,10 @@
                             <Image class="sapUiSmallMargin" src="/css/image/fo.png" />
                         </layout:HorizontalLayout>
                         <layout:HorizontalLayout class="sapUiNoContentPadding">
-                            <Title level="H1" text="An exciting place for Suppliers." />
+                            <Title level="H1" text="An exciting place for Suppliers." wrapping="true" wrappingType="Hyphenated" />
                         </layout:HorizontalLayout>
                         <layout:HorizontalLayout class="sapUiNoContentPadding">
-                            <Title level="H3" text="Join us and be a part of us in the journey." />
+                            <Title level="H3" text="Join us and be a part of us in the journey." wrapping="true" wrappingType="Hyphenated" />
                         </layout:HorizontalLayout>
                     </layout:VerticalLayout>
                     <layoutData>
@@ -22,46 +22,30 @@
                     <FlexBox direction="RowReverse" alignItems="Start">
                         <Image src="/css/image/toplogo.PNG">
                             <layoutData>
-                                <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                                <layout:GridData span="XL4 L4 M6 S12" linebreak="true" />
                             </layoutData>
                         </Image>
                     </FlexBox>
                     <form:SimpleForm layout="ResponsiveGridLayout" editable="true" adjustLabelSpan="false" singleContainerFullSize="false">
                         <form:content>
                             <VBox>
-                                <Label text="User Name">
-                                    <layoutData>
-                                        <layout:GridData span="XL8 L8 M6 S12" linebreak="true" />
-                                    </layoutData>
-                                </Label>
-                                <Input value="{oLanding>/sUserName}">
-                                    <layoutData>
-                                        <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
-                                    </layoutData>
-                                </Input>
+                                <Label text="User Name" />
+                                <Input value="{oLanding>/sUserName}" />
                                 <layoutData>
-                                    <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                                    <layout:GridData span="XL8 L4 M6 S12" linebreak="true" />
                                 </layoutData>
                             </VBox>
                             <VBox>
-                                <Label text="Password">
-                                    <layoutData>
-                                        <layout:GridData span="XL8 L8 M6 S12" linebreak="true" />
-                                    </layoutData>
-                                </Label>
-                                <Input type="Password" value="{oLanding>/sPassword}">
-                                    <layoutData>
-                                        <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
-                                    </layoutData>
-                                </Input>
+                                <Label text="Password" />
+                                <Input type="Password" value="{oLanding>/sPassword}" />
                                 <layoutData>
-                                    <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                                    <layout:GridData span="XL8 L4 M6 S12" linebreak="true" />
                                 </layoutData>
                             </VBox>
                             <VBox>
                                 <Button class="btnclass" type="Emphasized" text="Submit" press="onfnpresssubmit" width="100%" />
                                 <layoutData>
-                                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
+                                    <layout:GridData span="XL8 L4 M6 S12" linebreak="true" />
                                 </layoutData>
                             </VBox>
                             <FlexBox alignItems="Start" justifyContent="Start">
@@ -94,7 +78,6 @@
                     </layoutData>
                 </VBox>
             </layout:Grid>
-
             <!-- <ScrollContainer vertical="true" height="100%" class="BackgroundColor">
                 <HBox backgroundDesign="Transparent" justifyContent="End" width="100%">
                     <Image src="/css/image/toplogo.PNG" />
