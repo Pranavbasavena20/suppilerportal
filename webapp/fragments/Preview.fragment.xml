@@ -515,7 +515,7 @@
         </content>
         <buttons>
             <Button class="button1" text="Submit" press="onClickSubmit" />
-            <Button text="Cancel" class="button1" press="onCancelForm" />
+            <Button text="Cancel" press="onCancelForm" />
         </buttons>
     </Dialog>
 </core:FragmentDefinition>
