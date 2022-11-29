@@ -65,7 +65,7 @@ sap.ui.define([
                         this.getView().byId("idMP").getContent()[key1].addStyleClass("suplierCssTablet");
                     }
                 }
-
+                this.setModel(new JSONModel(models.fnSupplierOnBoarding().getData()), "oSOModel");
             },
             onfnnextpress1: function () {
                 var oModel = this.getView().getModel("genericTileModel");
