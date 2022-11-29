@@ -502,6 +502,26 @@ sap.ui.define([
                         "PH_TYPE": "ALL"
                     }
                 ],
+                "payment-method": [
+                    {
+                        "PAYMENT_ID": "PT001",
+                        "PAYMENT_CODE": "10",
+                        "LABEL_CODE": "Cash",
+                        "CODE_DESC": "Cash"
+                    },
+                    {
+                        "PAYMENT_ID": "PT002",
+                        "PAYMENT_CODE": "20",
+                        "LABEL_CODE": "Cheque",
+                        "CODE_DESC": "Cheque"
+                    },
+                    {
+                        "PAYMENT_ID": "PT003",
+                        "PAYMENT_CODE": "30",
+                        "LABEL_CODE": "Internet Banking",
+                        "CODE_DESC": "Internet Banking"
+                    }
+                ],
                 "countryCode": [
                     {
                         "COUNTRY_CODE": "+1",

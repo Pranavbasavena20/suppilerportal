@@ -30,7 +30,6 @@
             <Label text="{i18n>PrimaryEmailID}" wrapping="true" design="Bold" labelFor="ipVSOPrimaryEmailid" />
             <Text text="{oFiexibleLayout>/oSelectedValues/EMAIL_ID}" visible="{oVendorMaster>/bDisplay}" />
             <Input visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/EMAIL_ID}" id="ipVSOPrimaryEmailid" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'Email' : ' '}" required="true" editable="true" />
-            <Input />
             <layoutData>
                 <layout:GridData span="{oFiexibleLayout>/Span}" linebreak="false" />
             </layoutData>
@@ -54,7 +53,7 @@
         <VBox>
             <Label text="{i18n>DeliveryLeadDays}" design="Bold" wrapping="true" labelFor="ipVSODeliveryLeadDay" />
             <Text text="{oFiexibleLayout>/DELIVER_LEAD_DAYS}" visible="{oVendorMaster>/bDisplay}" />
-            <Input visible="{oVendorMaster>/oSelectedValues/bEdit}" value="{oFiexibleLayout>/oSelectedValues/DELIVER_LEAD_DAYS}" id="ipVSODeliveryLeadDay" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'InputField' : ' '}" required="true" editable="true" />
+            <Input visible="{oVendorMaster>/bEdit}" value="{oFiexibleLayout>/oSelectedValues/DELIVER_LEAD_DAYS}" id="ipVSODeliveryLeadDay" fieldGroupIds="{=${oVendorMaster>/bEdit} ? 'InputField' : ' '}" required="true" editable="true" />
             <layoutData>
                 <layout:GridData span="{oFiexibleLayout>/Span}" linebreak="true" />
             </layoutData>

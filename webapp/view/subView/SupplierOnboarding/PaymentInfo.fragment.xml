@@ -4,8 +4,8 @@
             <form:content>
                 <VBox>
                     <Label text="{i18n>PaymentMethods}" design="Bold" labelFor="cbSOPaymentMethods" wrapping="true" />
-                    <ComboBox selectedKey="{oSOModel>/BANKSEQID/PAYMENT_TYPE}" items="{oMainModel>/businessCode}" width="100%" id="cbSOPaymentMethods" fieldGroupIds="ComboboxField" required="true" editable="true">
-                        <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
+                    <ComboBox selectedKey="{oSOModel>/BANKSEQID/PAYMENT_TYPE}" items="{oMainModel>/payment-method}" width="100%" id="cbSOPaymentMethods" fieldGroupIds="ComboboxField" required="true" editable="true">
+                        <core:Item key="{oMainModel>PAYMENT_ID}" text="{oMainModel>LABEL_CODE}" />
                     </ComboBox>
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />

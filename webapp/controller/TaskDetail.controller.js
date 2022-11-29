@@ -25,7 +25,7 @@ sap.ui.define([
 
             },
             _onObjectMatched: function (oEvent) {
-                debugger;
+
             },
             handleFullScreen: function (oEvent) {
                 this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/Span", "XL6 L6 M8 S12");
@@ -44,12 +44,12 @@ sap.ui.define([
                 this.getOwnerComponent().getModel("oFiexibleLayout").setProperty("/layout", "OneColumn");
             },
             onEditScreen: function (oEvent) {
-                this.oModel.setProperty("/bEdit", false);
-                this.oModel.setProperty("/bDisplay", true);
-            },
-            onDisplayScreen: function (oEvent) {
                 this.oModel.setProperty("/bEdit", true);
                 this.oModel.setProperty("/bDisplay", false);
+            },
+            onDisplayScreen: function (oEvent) {
+                this.oModel.setProperty("/bEdit", false);
+                this.oModel.setProperty("/bDisplay", true);
             },
             onFooterButtonPress: function (oEvent, sAction) {
                 this.oRejectDialog = new sap.m.Dialog({

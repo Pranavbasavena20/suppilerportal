@@ -44,9 +44,9 @@
                                 <Text text="{oFiexibleLayout>RETSEQID}" />
                                 <Text text="{oFiexibleLayout>COMPANY_NAME}" />
                                 <Text text="{oFiexibleLayout>DEPARTMENT}" />
-                                <Text text="{oFiexibleLayout>CONTSEQID/FIRST_NAME}" />
+                                <Text text="{oFiexibleLayout>CONTSEQLIST/0/FIRST_NAME}" />
                                 <Text text="{oFiexibleLayout>EMAIL_ID}" />
-                                <Text text="{oFiexibleLayout>CONTSEQID/PHONE_NUMBER}" />
+                                <Text text="{oFiexibleLayout>CONTSEQLIST/0/PHONE_NUMBER}" />
                             </cells>
                         </ColumnListItem>
                     </items>
