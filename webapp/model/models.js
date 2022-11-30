@@ -107,10 +107,7 @@ sap.ui.define([
                     "File": ""
                 },
                 "ATTACHMENTSSET": []
-
-
-
-            },
+            }
             );
             return oSupplierOnBoarding;
 
