@@ -19,7 +19,7 @@ sap.ui.define([
                             "HeaderCount": "6"
                         }, {
                             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/22668101.jpg"),
-                            "AppName": "Supplier Request Approval",
+                            "AppName": "Retailer Request Approval",
                             "HeaderCount": "6"
                         }, {
                             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/22668101.jpg"),
@@ -142,7 +142,7 @@ sap.ui.define([
                         this.getRouter().navTo("SupplierOnboarding");
                         break;
 
-                    case "Supplier Request Approval":
+                    case "Retailer Request Approval":
                         this.getRouter().navTo("FlexibleColumnLayout", { Type: "1" });
                         break;
                     case "Vendor Master":
