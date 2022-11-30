@@ -42,5 +42,41 @@
                 <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
             </layoutData>
         </VBox>
+        <VBox>
+            <Table class="sapUiLargeMarginBegin" inset="false" items="{oFiexibleLayout>/oSelectedValues/ATTACHMENTSSET}">
+                <columns>
+                    <Column>
+                        <Text text="{i18n>DocumentType}" />
+                    </Column>
+                    <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Text text="{i18n>DocumentExpiry}" />
+                    </Column>
+                    <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Text text="{i18n>DocumentDescription}" />
+                    </Column>
+                    <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                        <Text text="{i18n>Attachment}" />
+                    </Column>
+                    <Column hAlign="End">
+                        <Text text="" />
+                    </Column>
+                    <Column hAlign="End">
+                        <Text text="" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem vAlign="Middle">
+                        <cells>
+                            <Text text="{oFiexibleLayout>DOCUMENT_TYPE}" />
+                            <Text text="{oFiexibleLayout>DOC_DESCRIPTION}" />
+                            <Text text="{oFiexibleLayout>DOC_EXPIRY}" />
+                            <Text text="" />
+                            <Button icon="sap-icon://edit" />
+                            <Button icon="sap-icon://delete" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </VBox>
     </layout:Grid>
 </core:FragmentDefinition>

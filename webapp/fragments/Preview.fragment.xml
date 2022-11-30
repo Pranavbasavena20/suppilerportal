@@ -235,6 +235,57 @@
                                 <layout:GridData span="XL6 L6 M8 S12" linebreak="true" />
                             </layoutData>
                         </VBox>
+                        <VBox>
+                            <Table inset="false" items="{oSOModel>/CONTSEQLIST}">
+                                <columns>
+                                    <Column width="{= ${device>/system/phone} ? '' : '12em'}">
+                                        <Text text="{i18n>ContactType}" />
+                                    </Column>
+                                    <Column width="{= ${device>/system/phone} ? '' : '15em'}" minScreenWidth="Tablet" demandPopin="true">
+                                        <Text text="{i18n>PrimaryContactName}" />
+                                    </Column>
+                                    <Column minScreenWidth="Tablet" demandPopin="true" hAlign="{= ${device>/system/phone} ? 'Begin' : 'Center'}">
+                                        <Text text="{i18n>Designation}" />
+                                    </Column>
+                                    <Column minScreenWidth="Tablet" demandPopin="true" hAlign="{= ${device>/system/phone} ? 'Begin' : 'Center'}">
+                                        <Text text="{i18n>Email}" />
+                                    </Column>
+                                    <Column minScreenWidth="Tablet" demandPopin="true" hAlign="{= ${device>/system/phone} ? 'Begin' : 'Center'}">
+                                        <Text text="{i18n>Phone}" />
+                                    </Column>
+                                    <Column minScreenWidth="Tablet" demandPopin="true" hAlign="{= ${device>/system/phone} ? 'Begin' : 'Center'}">
+                                        <Text text="{i18n>Fax}" />
+                                    </Column>
+                                    <Column minScreenWidth="Tablet" demandPopin="true" hAlign="{= ${device>/system/phone} ? 'Begin' : 'Center'}">
+                                        <Text text="{i18n>Extension}" />
+                                    </Column>
+                                    <Column hAlign="End">
+                                        <Text text="" />
+                                    </Column>
+                                    <Column hAlign="End">
+                                        <Text text="" />
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem vAlign="Middle">
+                                        <cells>
+                                            <Text text="{oSOModel>OBJECT_TYPE}" />
+                                            <Text text="{oSOModel>FIRST_NAME}" />
+                                            <Text text="{oSOModel>POSITION}" />
+                                            <Text text="{oSOModel>EMAIL_ADDRESS}" />
+                                            <Text text="{oSOModel>PHONE_NUMBER}" />
+                                            <Text text="{oSOModel>FAX_NUMBER}" />
+                                            <Text text="{oSOModel>EXT_NUMBER}" />
+                                            <Button icon="sap-icon://edit" />
+                                            <Button icon="sap-icon://delete" />
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                            <layoutData>
+                                <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                            </layoutData>
+                        </VBox>
                     </layout:Grid>
                 </content>
             </Panel>
@@ -457,6 +508,45 @@
                         <VBox>
                             <Label text="Attachments" wrapping="true" design="Bold" />
                             <upload:UploadSet />
+                            <layoutData>
+                                <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
+                            </layoutData>
+                        </VBox>
+                        <VBox>
+                            <Table class="sapUiLargeMarginBegin" inset="false" items="{oSOModel>/ATTACHMENTSSET}">
+                                <columns>
+                                    <Column>
+                                        <Text text="{i18n>DocumentType}" />
+                                    </Column>
+                                    <Column minScreenWidth="Tablet" demandPopin="true">
+                                        <Text text="{i18n>DocumentExpiry}" />
+                                    </Column>
+                                    <Column minScreenWidth="Tablet" demandPopin="true">
+                                        <Text text="{i18n>DocumentDescription}" />
+                                    </Column>
+                                    <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                                        <Text text="{i18n>Attachment}" />
+                                    </Column>
+                                    <Column hAlign="End">
+                                        <Text text="" />
+                                    </Column>
+                                    <Column hAlign="End">
+                                        <Text text="" />
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem vAlign="Middle">
+                                        <cells>
+                                            <Text text="{oSOModel>DOCUMENT_TYPE}" />
+                                            <Text text="{oSOModel>DOC_DESCRIPTION}" />
+                                            <Text text="{oSOModel>DOC_EXPIRY}" />
+                                            <Text text="" />
+                                            <Button icon="sap-icon://edit" />
+                                            <Button icon="sap-icon://delete" />
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
                             <layoutData>
                                 <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                             </layoutData>

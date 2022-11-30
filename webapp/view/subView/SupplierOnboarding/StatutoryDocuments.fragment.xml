@@ -49,7 +49,7 @@
         </form:SimpleForm>
     </FlexBox>
     <FlexBox>
-        <Table visible="{genericTileModel>/sStep9}" width="{= ${device>/system/phone} ? '' : '74em'}" class="sapUiLargeMarginBegin" id="idDcoument" inset="false" mode="MultiSelect" items="{genericTileModel>/aContact}">
+        <Table visible="{genericTileModel>/sStep9}" width="{= ${device>/system/phone} ? '' : '74em'}" class="sapUiLargeMarginBegin" id="idDcoument" inset="false" mode="MultiSelect" items="{oSOModel>/ATTACHMENTSSET}">
             <columns>
                 <Column>
                     <Text text="{i18n>DocumentType}" />
