@@ -73,12 +73,26 @@
             <items>
                 <ColumnListItem vAlign="Middle">
                     <cells>
-                        <Text text="{oSOModel>DOCUMENT_TYPE}" />
-                        <Text text="{oSOModel>DOC_DESCRIPTION}" />
-                        <Text text="{oSOModel>DOC_EXPIRY}" />
+                        <VBox>
+                            <ComboBox visible="{oSOModel>INPUT}" selectedKey="{oSOModel>DOCUMENT_TYPE}" items="{oMainModel>/businessCode}" width="100%" fieldGroupIds="ComboboxField" required="true" editable="true">
+                                <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
+                            </ComboBox>
+                            <Text text="{oSOModel>DOCUMENT_TYPE}" visible="{oSOModel>TEXT}" />
+                        </VBox>
+                        <VBox>
+                            <TextArea visible="{oSOModel>INPUT}" value="{oSOModel>DOC_DESCRIPTION}" fieldGroupIds="InputField" required="true" editable="true" width="100%" />
+                            <Text text="{oSOModel>DOC_DESCRIPTION}" />
+                        </VBox>
+                        <VBox>
+                            <DatePicker value="{oSOModel>DOC_EXPIRY}" visible="{oSOModel>INPUT}" fieldGroupIds="DateField" required="true" editable="true" width="100%" />
+                            <Text text="{oSOModel>DOC_EXPIRY}" visible="{oSOModel>TEXT}" />
+                        </VBox>
                         <Text text="" />
-                        <Button icon="sap-icon://edit" />
-                        <Button icon="sap-icon://delete" />
+                        <VBox>
+                            <Button icon="sap-icon://edit" press="onEditAttachmentTable" visible="{oSOModel>TEXT}" />
+                            <Button icon="sap-icon://save" press="onSaveAttachmentTable" visible="{oSOModel>INPUT}" />
+                        </VBox>
+                        <Button icon="sap-icon://delete" press="onDeleteAttachmentTable" />
                     </cells>
                 </ColumnListItem>
             </items>

@@ -299,6 +299,21 @@ sap.ui.define([
                 this.getView().getModel("oSOModel").setProperty("/CONTSEQLIST", aContact);
 
             },
+            onEditAttachmentTable: function (oEvent) {
+                var sPath = oEvent.getSource().getBindingContext("oSOModel").getPath();
+                this.getView().getModel("oSOModel").setProperty(sPath + "/INPUT", true);
+                this.getView().getModel("oSOModel").setProperty(sPath + "/TEXT", false);
+            },
+            onSaveAttachmentTable: function (oEvent) {
+                var sPath = oEvent.getSource().getBindingContext("oSOModel").getPath();
+                this.getView().getModel("oSOModel").setProperty(sPath + "/INPUT", false);
+                this.getView().getModel("oSOModel").setProperty(sPath + "/TEXT", true);
+            },
+            onDeleteAttachmentTable: function (oEvent) {
+                var sPath = oEvent.getSource().getBindingContext("oSOModel").getPath();
+                var sIndex = oEvent.getSource().getBindingContext("oSOModel").getPath().split("/")[2];
+                this.getView().getModel("oSOModel").getData().CONTSEQLIST.splice(parseInt(sIndex), 1);
+            },
             onEditContactTable: function (oEvent) {
                 var sPath = oEvent.getSource().getBindingContext("oSOModel").getPath();
                 this.getView().getModel("oSOModel").setProperty(sPath + "/INPUT", true);
@@ -312,7 +327,7 @@ sap.ui.define([
             onDeleteContactTable: function (oEvent) {
                 var sPath = oEvent.getSource().getBindingContext("oSOModel").getPath();
                 var sIndex = oEvent.getSource().getBindingContext("oSOModel").getPath().split("/")[2];
-                this.getView().getModel("oSOModel").getData().CONTSEQLIST.splice(parseInt(sIndex), 1);
+                this.getView().getModel("oSOModel").getData().ATTACHMENTSSET.splice(parseInt(sIndex), 1);
             },
             getResourceBundle: function () {
                 return this.getOwnerComponent().getModel("i18n").getResourceBundle();
@@ -363,7 +378,9 @@ sap.ui.define([
                     "DOCUMENT_TYPE": oData.getProperty("/ATTACHMENTS/DOCUMENT_TYPE"),
                     "DOC_DESCRIPTION": oData.getProperty("/ATTACHMENTS/DOC_DESCRIPTION"),
                     "DOC_EXPIRY": oData.getProperty("/ATTACHMENTS/DOC_EXPIRY"),
-                    "File": oData.getProperty("/ATTACHMENTS/File")
+                    "File": oData.getProperty("/ATTACHMENTS/File"),
+                    "INPUT": false,
+                    "TEXT": true
                 };
                 aAttachments.push(oObject);
                 oData.setProperty("/ATTACHMENTS/VENDMSTRSEQID", "");
