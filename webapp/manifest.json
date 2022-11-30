@@ -119,6 +119,13 @@
           ]
         },
         {
+          "name": "NewProductIntroduction",
+          "pattern": "NewProductIntroduction",
+          "target": [
+            "NewProductIntroduction"
+          ]
+        },
+        {
           "name": "SupplierOnboarding",
           "pattern": "SupplierOnboarding",
           "target": [
@@ -166,6 +173,14 @@
           "clearControlAggregation": false,
           "viewId": "GenericTilesView",
           "viewName": "GenericTilesView"
+        },
+        "NewProductIntroduction": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "NewProductIntroduction",
+          "viewName": "NewProductIntroduction",
+          "title": "New Product Introduction"
         },
         "SupplierRegistration": {
           "viewType": "XML",
