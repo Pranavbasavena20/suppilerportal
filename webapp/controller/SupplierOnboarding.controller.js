@@ -67,6 +67,10 @@ sap.ui.define([
                 }
                 this.setModel(new JSONModel(models.fnSupplierOnBoarding().getData()), "oSOModel");
             },
+            onEditPreview: function (oEvent, sProperty) {
+                var oModel = this.getView().getModel("genericTileModel");
+                oModel.setProperty(sProperty, true);
+            },
             onfnnextpress1: function () {
                 var oModel = this.getView().getModel("genericTileModel");
                 oModel.setProperty("/sStep1", true);
@@ -249,6 +253,17 @@ sap.ui.define([
                         that.oPreviewDialog = oDialog;
                         that.getView().addDependent(that.oPreviewDialog);
                         that.getView().getModel("oLanding").setProperty("/sSubmit", false);
+                        var oModel = that.getView().getModel("genericTileModel");
+                        oModel.setProperty("/sStep1", false);
+                        oModel.setProperty("/sStep3", false);
+                        oModel.setProperty("/sStep2", false);
+                        oModel.setProperty("/sStep4", false);
+                        oModel.setProperty("/sStep5", false);
+                        oModel.setProperty("/sStep6", false);
+                        oModel.setProperty("/sStep7", false);
+                        oModel.setProperty("/sStep8", false);
+                        oModel.setProperty("/sStep9", false);
+                        oModel.setProperty("/sStep10", false);
                     });
                 }
                 that.PreviewDialog.then(function (oDialog) {

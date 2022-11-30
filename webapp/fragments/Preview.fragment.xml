@@ -6,7 +6,7 @@
                     <OverflowToolbar style="Clear">
                         <Title text="{i18n>basicInformation}" wrapping="true" />
                         <ToolbarSpacer />
-                        <Button icon="sap-icon://edit" />
+                        <Button icon="sap-icon://edit" press="onEditPreview($event,'/sStep1')" />
                     </OverflowToolbar>
                 </headerToolbar>
                 <content>
@@ -75,7 +75,7 @@
                     <OverflowToolbar style="Clear">
                         <Title text="{i18n>DepartmentProductInfo}" wrapping="true" />
                         <ToolbarSpacer />
-                        <Button icon="sap-icon://edit" />
+                        <Button icon="sap-icon://edit" press="onEditPreview($event,'/sStep2')" />
                     </OverflowToolbar>
                 </headerToolbar>
                 <content>
@@ -112,7 +112,7 @@
                     <OverflowToolbar style="Clear">
                         <Title text="{i18n>AddressDetails}" wrapping="true" />
                         <ToolbarSpacer />
-                        <Button icon="sap-icon://edit" />
+                        <Button icon="sap-icon://edit" press="onEditPreview($event,'/sStep3')" />
                     </OverflowToolbar>
                 </headerToolbar>
                 <content>
@@ -181,7 +181,7 @@
                     <OverflowToolbar style="Clear">
                         <Title text="{i18n>ContactList}" wrapping="true" />
                         <ToolbarSpacer />
-                        <Button icon="sap-icon://edit" />
+                        <Button icon="sap-icon://edit" press="onEditPreview($event,'/sStep4')" />
                     </OverflowToolbar>
                 </headerToolbar>
                 <content>
@@ -294,7 +294,7 @@
                     <OverflowToolbar style="Clear">
                         <Title text="{i18n>AccountingInformation}" wrapping="true" />
                         <ToolbarSpacer />
-                        <Button icon="sap-icon://edit" />
+                        <Button icon="sap-icon://edit" press="onEditPreview($event,'/sStep5')" />
                     </OverflowToolbar>
                 </headerToolbar>
                 <content>
@@ -363,7 +363,7 @@
                     <OverflowToolbar style="Clear">
                         <Title text="{i18n>PaymentInformation}" wrapping="true" />
                         <ToolbarSpacer />
-                        <Button icon="sap-icon://edit" />
+                        <Button icon="sap-icon://edit" press="onEditPreview($event,'/sStep6')" />
                     </OverflowToolbar>
                 </headerToolbar>
                 <content>
@@ -397,7 +397,7 @@
                     <OverflowToolbar style="Clear">
                         <Title text="{i18n>WithholdingTaxAccounting}" wrapping="true" />
                         <ToolbarSpacer />
-                        <Button icon="sap-icon://edit" />
+                        <Button icon="sap-icon://edit" press="onEditPreview($event,'/sStep7')" />
                     </OverflowToolbar>
                 </headerToolbar>
                 <content>
@@ -438,7 +438,7 @@
                     <OverflowToolbar style="Clear">
                         <Title text="{i18n>OtherInformation}" wrapping="true" />
                         <ToolbarSpacer />
-                        <Button icon="sap-icon://edit" />
+                        <Button icon="sap-icon://edit" press="onEditPreview($event,'/sStep8')" />
                     </OverflowToolbar>
                 </headerToolbar>
                 <content>
@@ -479,7 +479,7 @@
                     <OverflowToolbar style="Clear">
                         <Title text="{i18n>StatutoryDocuments}" wrapping="true" />
                         <ToolbarSpacer />
-                        <Button icon="sap-icon://edit" />
+                        <Button icon="sap-icon://edit" press="onEditPreview($event,'/sStep9')" />
                     </OverflowToolbar>
                 </headerToolbar>
                 <content>
@@ -559,7 +559,7 @@
                     <OverflowToolbar style="Clear">
                         <Title text="{i18n>ReviewLog}" wrapping="true" />
                         <ToolbarSpacer />
-                        <Button icon="sap-icon://edit" />
+                        <Button icon="sap-icon://edit" press="onEditPreview($event,'/sStep10')" />
                     </OverflowToolbar>
                 </headerToolbar>
                 <content>
