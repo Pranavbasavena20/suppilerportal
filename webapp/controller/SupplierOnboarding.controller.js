@@ -284,7 +284,9 @@ sap.ui.define([
                     "EMAIL_ADDRESS": oData.getProperty("/CONTSEQID/EMAIL_ADDRESS"),
                     "PHONE_NUMBER": oData.getProperty("/CONTSEQID/PHONE_NUMBER"),
                     "FAX_NUMBER": oData.getProperty("/CONTSEQID/FAX_NUMBER"),
-                    "EXT_NUMBER": oData.getProperty("/CONTSEQID/EXT_NUMBER")
+                    "EXT_NUMBER": oData.getProperty("/CONTSEQID/EXT_NUMBER"),
+                    "INPUT": false,
+                    "TEXT": true
                 };
                 aContact.push(oObject);
                 oData.setProperty("/CONTSEQID/OBJECT_TYPE", "");
@@ -296,6 +298,21 @@ sap.ui.define([
                 oData.setProperty("/CONTSEQID/EXT_NUMBER", "");
                 this.getView().getModel("oSOModel").setProperty("/CONTSEQLIST", aContact);
 
+            },
+            onEditContactTable: function (oEvent) {
+                var sPath = oEvent.getSource().getBindingContext("oSOModel").getPath();
+                this.getView().getModel("oSOModel").setProperty(sPath + "/INPUT", true);
+                this.getView().getModel("oSOModel").setProperty(sPath + "/TEXT", false);
+            },
+            onSaveContactTable: function (oEvent) {
+                var sPath = oEvent.getSource().getBindingContext("oSOModel").getPath();
+                this.getView().getModel("oSOModel").setProperty(sPath + "/INPUT", false);
+                this.getView().getModel("oSOModel").setProperty(sPath + "/TEXT", true);
+            },
+            onDeleteContactTable: function (oEvent) {
+                var sPath = oEvent.getSource().getBindingContext("oSOModel").getPath();
+                var sIndex = oEvent.getSource().getBindingContext("oSOModel").getPath().split("/")[2];
+                this.getView().getModel("oSOModel").getData().CONTSEQLIST.splice(parseInt(sIndex), 1);
             },
             getResourceBundle: function () {
                 return this.getOwnerComponent().getModel("i18n").getResourceBundle();

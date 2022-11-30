@@ -108,15 +108,41 @@
                         <items>
                             <ColumnListItem vAlign="Middle">
                                 <cells>
-                                    <Text text="{oSOModel>OBJECT_TYPE}" />
-                                    <Text text="{oSOModel>FIRST_NAME}" />
-                                    <Text text="{oSOModel>POSITION}" />
-                                    <Text text="{oSOModel>EMAIL_ADDRESS}" />
-                                    <Text text="{oSOModel>PHONE_NUMBER}" />
-                                    <Text text="{oSOModel>FAX_NUMBER}" />
-                                    <Text text="{oSOModel>EXT_NUMBER}" />
-                                    <Button icon="sap-icon://edit" />
-                                    <Button icon="sap-icon://delete" />
+                                    <VBox>
+                                        <ComboBox selectedKey="{oSOModel>OBJECT_TYPE}" items="{oMainModel>/businessCode}" width="100%" fieldGroupIds="ComboboxField" required="true" visible="{oSOModel>INPUT}" editable="true">
+                                            <core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}" />
+                                        </ComboBox>
+                                        <Text text="{oSOModel>OBJECT_TYPE}" visible="{oSOModel>TEXT}" />
+                                    </VBox>
+                                    <VBox>
+                                        <Input visible="{oSOModel>INPUT}" value="{oSOModel>FIRST_NAME}" fieldGroupIds="InputField" required="true" editable="true" />
+                                        <Text text="{oSOModel>FIRST_NAME}" visible="{oSOModel>TEXT}" />
+                                    </VBox>
+                                    <VBox>
+                                        <Input visible="{oSOModel>INPUT}" value="{oSOModel>POSITION}" fieldGroupIds="InputField" required="true" editable="true" />
+                                        <Text text="{oSOModel>POSITION}" visible="{oSOModel>TEXT}" />
+                                    </VBox>
+                                    <VBox>
+                                        <Input visible="{oSOModel>INPUT}" value="{oSOModel>EMAIL_ADDRESS}" type="Email" fieldGroupIds="Email" required="true" editable="true" />
+                                        <Text text="{oSOModel>EMAIL_ADDRESS}" visible="{oSOModel>TEXT}" />
+                                    </VBox>
+                                    <VBox>
+                                        <Input visible="{oSOModel>INPUT}" value="{oSOModel>PHONE_NUMBER}" fieldGroupIds="Number" required="true" editable="true" />
+                                        <Text text="{oSOModel>PHONE_NUMBER}" visible="{oSOModel>TEXT}" />
+                                    </VBox>
+                                    <VBox>
+                                        <Text text="{oSOModel>FAX_NUMBER}" visible="{oSOModel>TEXT}" />
+                                        <Input visible="{oSOModel>INPUT}" value="{oSOModel>FAX_NUMBER}" fieldGroupIds="InputField" required="true" editable="true" />
+                                    </VBox>
+                                    <VBox>
+                                        <Text text="{oSOModel>EXT_NUMBER}" visible="{oSOModel>TEXT}" />
+                                        <Input visible="{oSOModel>INPUT}" value="{oSOModel>EXT_NUMBER}" fieldGroupIds="InputField" required="true" editable="true" />
+                                    </VBox>
+                                    <VBox>
+                                        <Button icon="sap-icon://edit" press="onEditContactTable" visible="{oSOModel>TEXT}" />
+                                        <Button icon="sap-icon://save" press="onSaveContactTable" visible="{oSOModel>INPUT}" />
+                                    </VBox>
+                                    <Button icon="sap-icon://delete" press="onDeleteContactTable" />
                                 </cells>
                             </ColumnListItem>
                         </items>
