@@ -1,0 +1,252 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<form:SimpleForm width="{oFiexibleLayout>/Width}" title="{i18n>ProductData}" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8"
+		labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
+		<form:content>
+			<core:Title text="{i18n>BasicData}"/>
+			<VBox>
+				<Label text="{i18n>ProductCategory}" wrapping="true" design="Bold" labelFor="cbSOReturntoVendor"/>
+				<ComboBox selectedKey="{oSOModel>/RTV_ALLOWED}" items="{oMainModel>/department}" width="100%" id="cbProductCategory"
+					fieldGroupIds="ComboboxField" required="true" editable="true">
+					<core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}"/>
+				</ComboBox>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="true"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>ProductListingType}" wrapping="true" design="Bold" labelFor="cbProductListingType"/>
+				<ComboBox selectedKey="{oSOModel>/RTV_ALLOWED}" items="{oMainModel>/department}" width="100%" id="cbProductListingType"
+					fieldGroupIds="ComboboxField" required="true" editable="true">
+					<core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}"/>
+				</ComboBox>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="false"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>CountryOrigin}" wrapping="true" design="Bold" labelFor="cbCountryOrigin"/>
+				<ComboBox selectedKey="{oSOModel>/RTV_ALLOWED}" items="{oMainModel>/countryCode}" width="100%" id="cbCountryOrigin"
+					fieldGroupIds="ComboboxField" required="true" editable="true">
+					<core:Item key="{oMainModel>COUNTRY_CODE}" text="{oMainModel>COUNTRY_NAME}"/>
+				</ComboBox>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="true"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>PackSize}" design="Bold" wrapping="true" labelFor="ipPackSize"/>
+				<Input value="{oSOModel>/BANKSEQID/REF_DEPOSIT_FEE}" id="ipPackSize" fieldGroupIds="InputField" required="true" editable="true"/>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="false"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>PackSizeUnit}" design="Bold" wrapping="true" labelFor="ipPackSizeUnit"/>
+				<Input value="{oSOModel>/BANKSEQID/REF_DEPOSIT_FEE}" showValueHelp="true" id="ipPackSizeUnit" fieldGroupIds="InputField" required="true"
+					editable="true"/>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="true"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>ProductShortDesc}" design="Bold" wrapping="true" labelFor="ipProductShortDesc"/>
+				<Input value="{oSOModel>/BANKSEQID/REF_DEPOSIT_FEE}" id="ipProductShortDesc" fieldGroupIds="InputField" required="true" editable="true"/>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="false"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>ProductFullDesc}" design="Bold" wrapping="true" labelFor="ipProductFullDesc"/>
+				<Input value="{oSOModel>/BANKSEQID/REF_DEPOSIT_FEE}" id="ipProductFullDesc" fieldGroupIds="InputField" required="true" editable="true"/>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="true"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>BrandGroup}" wrapping="true" design="Bold" labelFor="cbBrandGroup"/>
+				<ComboBox selectedKey="{oSOModel>/RTV_ALLOWED}" items="{oMainModel>/department}" width="100%" id="cbBrandGroup"
+					fieldGroupIds="ComboboxField" required="true" editable="true">
+					<core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}"/>
+				</ComboBox>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="false"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>BrandCode}" design="Bold" wrapping="true" labelFor="ipBrandCode"/>
+				<Input value="{oSOModel>/BANKSEQID/REF_DEPOSIT_FEE}" showValueHelp="true" id="ipBrandCode" fieldGroupIds="InputField" required="true"
+					editable="true"/>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="true"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>SeasonYear}" wrapping="true" design="Bold" labelFor="cbSeasonYear"/>
+				<ComboBox selectedKey="{oSOModel>/RTV_ALLOWED}" items="{oMainModel>/department}" width="100%" id="cbSeasonYear"
+					fieldGroupIds="ComboboxField" required="true" editable="true">
+					<core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}"/>
+				</ComboBox>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="false"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>SeasonCode}" wrapping="true" design="Bold" labelFor="cbSeasonCode"/>
+				<ComboBox selectedKey="{oSOModel>/RTV_ALLOWED}" items="{oMainModel>/department}" width="100%" id="cbSeasonCode"
+					fieldGroupIds="ComboboxField" required="true" editable="true">
+					<core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}"/>
+				</ComboBox>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="true"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>PhaseCode}" wrapping="true" design="Bold" labelFor="cbPhaseCode"/>
+				<ComboBox selectedKey="{oSOModel>/RTV_ALLOWED}" items="{oMainModel>/department}" width="100%" id="cbPhaseCode" fieldGroupIds="ComboboxField"
+					required="true" editable="true">
+					<core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}"/>
+				</ComboBox>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="false"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>ManufacturerCode}" design="Bold" wrapping="true" labelFor="ipManufacturerCode"/>
+				<Input value="{oSOModel>/BANKSEQID/REF_DEPOSIT_FEE}" id="ipManufacturerCode" fieldGroupIds="InputField" required="true" editable="true"/>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="true"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>ManufacturerName}" design="Bold" wrapping="true" labelFor="ipManufacturerName"/>
+				<Input value="{oSOModel>/BANKSEQID/REF_DEPOSIT_FEE}" id="ipManufacturerName" fieldGroupIds="InputField" required="true" editable="true"/>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="false"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>PrivateProduct}" design="Bold" labelFor="rbPrivateProduct" wrapping="true"/>
+				<RadioButtonGroup columns="2" width="100%" id="rbPrivateProduct" fieldGroupIds="RadioButtonGroup" editable="true">
+					<RadioButton text="{i18n>Yes}"/>
+					<RadioButton text="{i18n>No}"/>
+				</RadioButtonGroup>
+				<layoutData>
+					<layout:GridData span="XL12 L12 M12 S12" linebreak="true"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>MerchandiseProduct}" design="Bold" labelFor="rbMerchandiseProduct" wrapping="true"/>
+				<RadioButtonGroup columns="2" width="100%" id="rbMerchandiseProduct" fieldGroupIds="RadioButtonGroup" editable="true">
+					<RadioButton text="{i18n>Yes}"/>
+					<RadioButton text="{i18n>No}"/>
+				</RadioButtonGroup>
+				<layoutData>
+					<layout:GridData span="XL12 L12 M12 S12" linebreak="false"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>ProductListingNotice}" design="Bold" wrapping="true" labelFor="ipProductListingNotice"/>
+				<Input value="{oSOModel>/BANKSEQID/REF_DEPOSIT_FEE}" id="ipProductListingNotice" fieldGroupIds="InputField" required="true" editable="true"/>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="true"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>ShelfLife}" design="Bold" wrapping="true" labelFor="ipShelfLife"/>
+				<Input value="{oSOModel>/BANKSEQID/REF_DEPOSIT_FEE}" id="ipShelfLife" fieldGroupIds="InputField" required="true" editable="true"/>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="false"/>
+				</layoutData>
+			</VBox>
+			<core:Title text="{i18n>ProductCategory}"/>
+			<VBox>
+				<Label text="{i18n>DepartmentCode}" design="Bold" wrapping="true" labelFor="ipDepartmentCode"/>
+				<Input value="{oSOModel>/BANKSEQID/REF_DEPOSIT_FEE}" showValueHelp="true" id="ipDepartmentCode" fieldGroupIds="InputField" required="true"
+					editable="true"/>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="true"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>ClassCode}" design="Bold" wrapping="true" labelFor="ipClassCode"/>
+				<Input value="{oSOModel>/BANKSEQID/REF_DEPOSIT_FEE}" showValueHelp="true" id="ipClassCode" fieldGroupIds="InputField" required="true"
+					editable="true"/>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="false"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>SubClassCode}" wrapping="true" design="Bold" labelFor="cbSubClassCode"/>
+				<ComboBox selectedKey="{oSOModel>/RTV_ALLOWED}" items="{oMainModel>/department}" width="100%" id="cbSubClassCode"
+					fieldGroupIds="ComboboxField" required="true" editable="true">
+					<core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}"/>
+				</ComboBox>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="true"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>ProductType}" wrapping="true" design="Bold" labelFor="cbProductType"/>
+				<ComboBox selectedKey="{oSOModel>/RTV_ALLOWED}" items="{oMainModel>/department}" width="100%" id="cbProductType"
+					fieldGroupIds="ComboboxField" required="true" editable="true">
+					<core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}"/>
+				</ComboBox>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="false"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>ProductStyle}" wrapping="true" design="Bold" labelFor="cbProductStyle"/>
+				<ComboBox selectedKey="{oSOModel>/RTV_ALLOWED}" items="{oMainModel>/department}" width="100%" id="cbProductStyle"
+					fieldGroupIds="ComboboxField" required="true" editable="true">
+					<core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}"/>
+				</ComboBox>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="true"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>ProductSize}" wrapping="true" design="Bold" labelFor="cbProductSize"/>
+				<ComboBox selectedKey="{oSOModel>/RTV_ALLOWED}" items="{oMainModel>/department}" width="100%" id="cbProductSize"
+					fieldGroupIds="ComboboxField" required="true" editable="true">
+					<core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}"/>
+				</ComboBox>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="false"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>ProductFormat}" design="Bold" wrapping="true" labelFor="ipProductFormat"/>
+				<Input value="{oSOModel>/BANKSEQID/REF_DEPOSIT_FEE}" showValueHelp="true" id="ipProductFormat" fieldGroupIds="InputField" required="true"
+					editable="true"/>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="true"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>ClassCode}" design="Bold" wrapping="true" labelFor="ipBuyerLevel1Code"/>
+				<Input value="{oSOModel>/BANKSEQID/REF_DEPOSIT_FEE}" showValueHelp="true" id="ipBuyerLevel1Code" fieldGroupIds="InputField" required="true"
+					editable="true"/>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="false"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>BuyerLevel2Code}" design="Bold" wrapping="true" labelFor="ipBuyerLevel2Code"/>
+				<Input value="{oSOModel>/BANKSEQID/REF_DEPOSIT_FEE}" showValueHelp="true" id="ipBuyerLevel2Code" fieldGroupIds="InputField" required="true"
+					editable="true"/>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="true"/>
+				</layoutData>
+			</VBox>
+			<VBox>
+				<Label text="{i18n>BuyerLevel3Code}" design="Bold" wrapping="true" labelFor="ipBuyerLevel3Code"/>
+				<Input value="{oSOModel>/BANKSEQID/REF_DEPOSIT_FEE}" showValueHelp="true" id="ipBuyerLevel3Code" fieldGroupIds="InputField" required="true"
+					editable="true"/>
+				<layoutData>
+					<layout:GridData span="XL6 L6 M8 S12" linebreak="false"/>
+				</layoutData>
+			</VBox>
+		</form:content>
+	</form:SimpleForm>
+</core:FragmentDefinition>

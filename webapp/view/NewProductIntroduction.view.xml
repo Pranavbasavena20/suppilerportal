@@ -1,87 +1,116 @@
-<mvc:View 
-	controllerName="com.spm.suppilerportal.controller.NewProductIntroduction" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-	xmlns:uxap="sap.uxap" xmlns:f="sap.f" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form">
-	<Page showHeader="false" showNavButton="false">
-		<Page id="sideContentContainer" showHeader="false" showNavButton="false">
-			<layout:DynamicSideContent id="DynamicSideContent" class="sapUiDSCExplored sapUiContentPadding" sideContentFallDown="BelowM"
-				sideContentPosition="End" containerQuery="true" breakpointChanged="handleBreakpointChanged">
-				<uxap:ObjectPageLayout useTwoColumnsForLargeScreen="true" id="ObjectPageLayout" upperCaseAnchorBar="true" showHeaderContent="false">
-					<uxap:sections>
-						<uxap:ObjectPageSection title="Product(3)">
-							<uxap:subSections>
-								<uxap:ObjectPageSubSection  titleUppercase="true">
-									<uxap:blocks>
-										<core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierRegistration.CompanyInformation" type="XML"/>
-									</uxap:blocks>
-								</uxap:ObjectPageSubSection>
-							</uxap:subSections>
-						</uxap:ObjectPageSection>
-						<uxap:ObjectPageSection title="UoM(4)">
-							<uxap:subSections>
-								<uxap:ObjectPageSubSection titleUppercase="false">
-									<uxap:blocks>
-										<core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierRegistration.CompanyInformation" type="XML"/>
-									</uxap:blocks>
-								</uxap:ObjectPageSubSection>
-							</uxap:subSections>
-						</uxap:ObjectPageSection>
-						<uxap:ObjectPageSection title="Pricing(9)">
-							<uxap:subSections>
-								<uxap:ObjectPageSubSection titleUppercase="false">
-									<uxap:blocks>
-										<core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierRegistration.CompanyInformation" type="XML"/>
-									</uxap:blocks>
-								</uxap:ObjectPageSubSection>
-							</uxap:subSections>
-						</uxap:ObjectPageSection>
-						<uxap:ObjectPageSection title="Forecast(0)">
-							<uxap:subSections>
-								<uxap:ObjectPageSubSection titleUppercase="false">
-									<uxap:blocks>
-										<core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierRegistration.CompanyInformation" type="XML"/>
-									</uxap:blocks>
-								</uxap:ObjectPageSubSection>
-							</uxap:subSections>
-						</uxap:ObjectPageSection>
-						<uxap:ObjectPageSection title="Marketing(0)">
-							<uxap:subSections>
-								<uxap:ObjectPageSubSection titleUppercase="false">
-									<uxap:blocks>
-										<core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierRegistration.CompanyInformation" type="XML"/>
-									</uxap:blocks>
-								</uxap:ObjectPageSubSection>
-							</uxap:subSections>
-						</uxap:ObjectPageSection>
-						<uxap:ObjectPageSection title="Product Listing(2)">
-							<uxap:subSections>
-								<uxap:ObjectPageSubSection titleUppercase="false">
-									<uxap:blocks>
-										<core:Fragment fragmentName="com.spm.suppilerportal.view.subView.VendorMaster.SupplierRegistration.CompanyInformation" type="XML"/>
-									</uxap:blocks>
-								</uxap:ObjectPageSubSection>
-							</uxap:subSections>
-						</uxap:ObjectPageSection>
-					</uxap:sections>
-				</uxap:ObjectPageLayout>
-				<layout:sideContent>
-					<HeaderContainer scrollStep="500" id="container1" content="{oLanding>/sAvatar/content}">
-						<Image src="{oLanding>src}" width="40px"
-							height="40px" press="onPressImage" decorative="false"/>
-						
-					</HeaderContainer>
-					<HeaderContainer class="sapUiSmallMargin" scrollStep="500" id="container2" content="{oLanding>/sAvatar/content}">
-						
-						<Image src="https://m.media-amazon.com/images/I/71gm8v4uPBL._SX679_.jpg" width="100%"
-							height="100%" press="onPressImage" decorative="false"/>
-					</HeaderContainer>
-				</layout:sideContent>
-			</layout:DynamicSideContent>
-		</Page>
-		<footer>
-			<Toolbar>
-				<ToolbarSpacer/>
-				<Button text="Submit" type="Accept" press="handleToggleClick" id="toggleButton"/>
-			</Toolbar>
-		</footer>
-	</Page>
+<mvc:View controllerName="com.spm.suppilerportal.controller.NewProductIntroduction" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:uxap="sap.uxap" xmlns:f="sap.f" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form">
+    <Page showHeader="false" showNavButton="false">
+        <Page id="sideContentContainer" showHeader="false" showNavButton="false">
+            <layout:DynamicSideContent id="DynamicSideContent" class="sapUiDSCExplored sapUiContentPadding" sideContentFallDown="BelowM" sideContentPosition="End" containerQuery="true" breakpointChanged="handleBreakpointChanged">
+                <uxap:ObjectPageLayout useTwoColumnsForLargeScreen="true" id="ObjectPageLayout" upperCaseAnchorBar="true" showHeaderContent="false">
+                    <uxap:sections>
+                        <uxap:ObjectPageSection title="{i18n>ProductData}">
+                            <uxap:subSections>
+                                <uxap:ObjectPageSubSection titleUppercase="true">
+                                    <uxap:blocks>
+                                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.NPI.ProductData" type="XML" />
+                                    </uxap:blocks>
+                                </uxap:ObjectPageSubSection>
+                            </uxap:subSections>
+                        </uxap:ObjectPageSection>
+                        <uxap:ObjectPageSection title="{i18n>ProductImage}" width="{= ${device>/system/phone} ? true : false}">
+                            <uxap:subSections>
+                                <uxap:ObjectPageSubSection titleUppercase="false">
+                                    <uxap:blocks>
+                                       <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.NPI.ProductImage" type="XML" />
+                                    </uxap:blocks>
+                                </uxap:ObjectPageSubSection>
+                            </uxap:subSections>
+                        </uxap:ObjectPageSection>
+                        <uxap:ObjectPageSection title="{i18n>ProductVariant}">
+                            <uxap:subSections>
+                                <uxap:ObjectPageSubSection titleUppercase="false">
+                                    <uxap:blocks>
+                                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.NPI.ProductVariant" type="XML" />
+                                    </uxap:blocks>
+                                </uxap:ObjectPageSubSection>
+                            </uxap:subSections>
+                        </uxap:ObjectPageSection>
+                        <uxap:ObjectPageSection title="{i18n>ProductAttributes}">
+                            <uxap:subSections>
+                                <uxap:ObjectPageSubSection titleUppercase="false">
+                                    <uxap:blocks>
+                                       <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.NPI.ProductAttributes" type="XML" />
+                                    </uxap:blocks>
+                                </uxap:ObjectPageSubSection>
+                            </uxap:subSections>
+                        </uxap:ObjectPageSection>
+                        <uxap:ObjectPageSection title="{i18n>Uom}">
+                            <uxap:subSections>
+                                <uxap:ObjectPageSubSection titleUppercase="false">
+                                    <uxap:blocks>
+                                       <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.NPI.Uom" type="XML" />
+                                    </uxap:blocks>
+                                </uxap:ObjectPageSubSection>
+                            </uxap:subSections>
+                        </uxap:ObjectPageSection>
+                        <uxap:ObjectPageSection title="{i18n>Pricing}">
+                            <uxap:subSections>
+                                <uxap:ObjectPageSubSection titleUppercase="false">
+                                    <uxap:blocks>
+                                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.NPI.Pricing" type="XML" />
+                                    </uxap:blocks>
+                                </uxap:ObjectPageSubSection>
+                            </uxap:subSections>
+                        </uxap:ObjectPageSection>
+						  <uxap:ObjectPageSection title="{i18n>Marketing}">
+                            <uxap:subSections>
+                                <uxap:ObjectPageSubSection titleUppercase="false">
+                                    <uxap:blocks>
+                                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.NPI.Marketing" type="XML" />
+                                    </uxap:blocks>
+                                </uxap:ObjectPageSubSection>
+                            </uxap:subSections>
+                        </uxap:ObjectPageSection>
+						  <uxap:ObjectPageSection title="{i18n>Forecast}">
+                            <uxap:subSections>
+                                <uxap:ObjectPageSubSection titleUppercase="false">
+                                    <uxap:blocks>
+                                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.NPI.Forecast" type="XML" />
+                                    </uxap:blocks>
+                                </uxap:ObjectPageSubSection>
+                            </uxap:subSections>
+                        </uxap:ObjectPageSection>
+						  <uxap:ObjectPageSection title="{i18n>Attachment}">
+                            <uxap:subSections>
+                                <uxap:ObjectPageSubSection titleUppercase="false">
+                                    <uxap:blocks>
+                                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.NPI.Attachment" type="XML" />
+                                    </uxap:blocks>
+                                </uxap:ObjectPageSubSection>
+                            </uxap:subSections>
+                        </uxap:ObjectPageSection>
+						  <uxap:ObjectPageSection title="{i18n>Reason_Remarks}">
+                            <uxap:subSections>
+                                <uxap:ObjectPageSubSection titleUppercase="false">
+                                    <uxap:blocks>
+                                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.NPI.ReasonRemarks" type="XML" />
+                                    </uxap:blocks>
+                                </uxap:ObjectPageSubSection>
+                            </uxap:subSections>
+                        </uxap:ObjectPageSection>
+                    </uxap:sections>
+                </uxap:ObjectPageLayout>
+                <layout:sideContent>
+                    <HeaderContainer scrollStep="500" id="container1" content="{oLanding>/sAvatar/content}">
+                        <Image src="{oLanding>src}" width="40px" height="40px" press="onPressImage" decorative="false" />
+                    </HeaderContainer>
+                    <HeaderContainer class="sapUiSmallMargin" scrollStep="500" id="container2" content="{oLanding>/sAvatar/content}">
+                        <Image src="https://m.media-amazon.com/images/I/71gm8v4uPBL._SX679_.jpg" width="100%" height="100%" press="onPressImage" decorative="false" />
+                    </HeaderContainer>
+                </layout:sideContent>
+            </layout:DynamicSideContent>
+        </Page>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button text="Submit" type="Accept" press="handleToggleClick" id="toggleButton" />
+            </Toolbar>
+        </footer>
+    </Page>
 </mvc:View>
