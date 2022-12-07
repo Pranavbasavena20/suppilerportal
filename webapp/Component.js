@@ -32,6 +32,7 @@ sap.ui.define([
                 this.setModel(models.fnSupplierRegistration(), "oSRModel");
                 this.setModel(models.fnSupplierOnBoarding(), "oSOModel");
                 this.setModel(models.fnFlexiable(), "oFiexibleLayout");
+				this.setModel(models.fnNPI(), "oNPI");
                 this.setModel(models.fnPayload(), "oMainModel");
             },
             destroy: function () {

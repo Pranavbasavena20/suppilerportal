@@ -133,37 +133,137 @@ sap.ui.define([
 				this.getView().setModel(oModel, "oLanding");
 
 			},
-			onClickNext: function () {
-				this.getView().getModel("oLanding").setProperty("/sNext", false);
-				this.getView().getModel("oLanding").setProperty("/sSubmit", true);
-				this.getView().byId("idIconTabBar").setSelectedKey("Contact");
-			},
-
-		/**
-		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
-		 * (NOT before the first rendering! onInit() is used for that one!).
-		 * @memberOf com.spm.suppilerportal.view.NewProductIntroduction
-		 */
-		//	onBeforeRendering: function() {
-		//
-		//	},
-
-		/**
-		 * Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.
-		 * This hook is the same one that SAPUI5 controls get after being rendered.
-		 * @memberOf com.spm.suppilerportal.view.NewProductIntroduction
-		 */
-		//	onAfterRendering: function() {
-		//
-		//	},
-
-		/**
-		 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
-		 * @memberOf com.spm.suppilerportal.view.NewProductIntroduction
-		 */
-		//	onExit: function() {
-		//
-		//	}
+				onGetVolume: function (oEvent) {
+			var oObject = oEvent.getSource().getBindingContext("oNPI").getObject(),
+				sPath = oEvent.getSource().getBindingContext("oNPI").getPath();
+			if (oObject.DEPTH !== "" && oObject.WIDTH !== "" && oObject.HEIGHT !== "") {
+				var iFinalVal = parseInt(oObject.DEPTH) * parseInt(oObject.WIDTH) * parseInt(oObject.HEIGHT);
+				this.getView().getModel("oNPI").setProperty(sPath + "/Volume", iFinalVal);
+			}
+		},
+		onUOM: function (oEvent) {
+			var oModel = this.getView().getModel("oNPI");
+			var object = {
+				ID: oModel.getData().PRODUCT_UOM_LIST.length + 1,
+				PRODUCT_ID: "",
+				VARIANT_ID: "",
+				UOM: "",
+				UOM_NO_CONV: "",
+				UOM_UNIT: "",
+				EAN_CATEGORY: "",
+				ORDERING_UOM: "",
+				BARCODE: "",
+				WEIGHT: "",
+				WIDTH: "",
+				DEPTH: "",
+				HEIGHT: "",
+				BUN: false,
+				OUN: false,
+				DI: "",
+				SUN: "",
+				MN_GTIN: "",
+				NET_WEIGHT: "",
+				WT_UNIT: "",
+				ADD_SALES_UNIT: "",
+				VALID_FROM: "",
+				VALID_TO: "",
+				Button: false,
+				Volume: ""
+			};
+			var object2 = {
+				ID: oModel.getData().PRODUCT_UOM_LIST.length + 2,
+				PRODUCT_ID: "",
+				VARIANT_ID: "",
+				UOM: "",
+				UOM_NO_CONV: "",
+				UOM_UNIT: "",
+				EAN_CATEGORY: "",
+				ORDERING_UOM: "",
+				BARCODE: "",
+				WEIGHT: "",
+				WIDTH: "",
+				DEPTH: "",
+				HEIGHT: "",
+				BUN: false,
+				OUN: false,
+				DI: "",
+				SUN: "",
+				MN_GTIN: "",
+				NET_WEIGHT: "",
+				WT_UNIT: "",
+				ADD_SALES_UNIT: "",
+				VALID_FROM: "",
+				VALID_TO: "",
+				Button: true,
+				Volume: ""
+			};
+			oModel.getData().PRODUCT_UOM_LIST.push(object);
+			oModel.getData().PRODUCT_UOM_LIST.push(object2);
+			oModel.updateBindings(true);
+		},
+onPricing: function (oEvent) {
+			var oModel = this.getView().getModel("oNPI");
+			var object = {
+				ID: oModel.getData().PRODUCT_PRICING_LIST.length + 1,
+				PRODUCT_ID: "",
+				VENDOR_ID: "",
+				VARIANT_ID: "",
+				SALES_ORG: "",
+				SALES_ORG_DESC: "",
+				DIST_CHANNEL: "",
+				DIST_CHANNEL_DESC: "",
+				PRICE_TYPE: "",
+				UNIT_COST_PRICE: "",
+				COST_PRICE: "",
+				COST_PRICE_MISC: "",
+				MISC_UNIT_CP: "",
+				CP_CURRENCY: "",
+				FOREIGN_UNIT_CP: "",
+				FOREIGN_CP: "",
+				UNIT_SALES_PRICE: "",
+				SP_NO_GST: "",
+				SP_W_GST: "",
+				GP: "",
+				GP_PERCENT: "",
+				INTRO_PERIOD_FROM: "",
+				INTRO_PERIOD_TO: "",
+				CP_UOM: "",
+				SP_UOM: "",
+				Button: false
+			};
+			var object2 = {
+				ID: oModel.getData().PRODUCT_UOM_LIST.length + 2,
+				PRODUCT_ID: "",
+				VENDOR_ID: "",
+				VARIANT_ID: "",
+				SALES_ORG: "",
+				SALES_ORG_DESC: "",
+				DIST_CHANNEL: "",
+				DIST_CHANNEL_DESC: "",
+				PRICE_TYPE: "",
+				UNIT_COST_PRICE: "",
+				COST_PRICE: "",
+				COST_PRICE_MISC: "",
+				MISC_UNIT_CP: "",
+				CP_CURRENCY: "",
+				FOREIGN_UNIT_CP: "",
+				FOREIGN_CP: "",
+				UNIT_SALES_PRICE: "",
+				SP_NO_GST: "",
+				SP_W_GST: "",
+				GP: "",
+				GP_PERCENT: "",
+				INTRO_PERIOD_FROM: "",
+				INTRO_PERIOD_TO: "",
+				CP_UOM: "",
+				SP_UOM: "",
+				Button: true
+			};
+			oModel.getData().PRODUCT_PRICING_LIST.push(object);
+			oModel.getData().PRODUCT_PRICING_LIST.push(object2);
+			oModel.updateBindings(true);
+		},
+		
 
 	});
 

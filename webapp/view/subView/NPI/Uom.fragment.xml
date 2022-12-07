@@ -1,82 +1,77 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
-        <form:SimpleForm width="{oFiexibleLayout>/Width}" title="{i18n>Uom}" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
-            <form:content>
-                <VBox>
-                    <Label text="{i18n>ReturntoVendor}" wrapping="true" design="Bold" labelFor="cbSOReturntoVendor" />
-                    <ComboBox selectedKey="{oSOModel>/RTV_ALLOWED}" items="{oMainModel>/department}" width="100%" id="cbSOReturntoVendor" fieldGroupIds="ComboboxField" required="true" editable="true">
-                        <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
-                    </ComboBox>
-                    <layoutData>
-                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
-                    </layoutData>
-                </VBox>
-                <VBox>
-                    <Label text="{i18n>ReturntoVendorRemarks}" wrapping="true" design="Bold" labelFor="taSOReturnVendorRemarks" />
-                    <TextArea value="{oSOModel>/RTV_REMARKS}" id="taSOReturnVendorRemarks" fieldGroupIds="InputField" required="true" editable="true" width="100%" />
-                    <layoutData>
-                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
-                    </layoutData>
-                </VBox>
-                <VBox>
-                    <Label text="{i18n>CreditPeriod}" design="Bold" wrapping="true" labelFor="cbSOCreditPeriod" />
-                    <ComboBox selectedKey="{oSOModel>/CREDIT_PERIOD}" items="{oMainModel>/department}" width="100%" id="cbSOCreditPeriod" fieldGroupIds="ComboboxField" required="true" editable="true">
-                        <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
-                    </ComboBox>
-
-                    <layoutData>
-                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
-                    </layoutData>
-                </VBox>
-                <VBox>
-                    <Label text="{i18n>RefundableDepositFee}" design="Bold" wrapping="true" labelFor="ipSORefundableFee" />
-                    <Input value="{oSOModel>/BANKSEQID/REF_DEPOSIT_FEE}" id="ipSORefundableFee" fieldGroupIds="InputField" required="true" editable="true" />
-                    <layoutData>
-                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
-                    </layoutData>
-                </VBox>
-                <VBox>
-                    <Label text="{i18n>ShippingConditions}" design="Bold" wrapping="true" labelFor="cbSOShippingCond" />
-                    <ComboBox selectedKey="{oSOModel>/SHIP_CONDITION}" items="{oMainModel>/department}" width="100%" id="cbSOShippingCond" fieldGroupIds="ComboboxField" required="true" editable="true">
-                        <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
-                    </ComboBox>
-
-                    <layoutData>
-                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
-                    </layoutData>
-                </VBox>
-                <VBox>
-                    <Label text="{i18n>ReconcialitionAccounts}" design="Bold" wrapping="true" labelFor="cbSOReconcilaAcc" />
-                    <ComboBox selectedKey="{oSOModel>/BANKSEQID/RECON_ACCOUNT}" items="{oMainModel>/department}" width="100%" id="cbSOReconcilaAcc" fieldGroupIds="ComboboxField" required="true" editable="true">
-                        <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
-                    </ComboBox>
-                    <layoutData>
-                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
-                    </layoutData>
-                </VBox>
-                <VBox>
-                    <Label text="{i18n>CashManagementGroup}" design="Bold" wrapping="true" labelFor="cbSOCashmanagmentgrp" />
-                    <ComboBox selectedKey="{oSOModel>/CASH_MGMT_GRP}" items="{oMainModel>/department}" width="100%" id="cbSOCashmanagmentgrp" fieldGroupIds="ComboboxField" required="true" editable="true">
-                        <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
-                    </ComboBox>
-                    <layoutData>
-                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
-                    </layoutData>
-                </VBox>
-                <VBox>
-                    <Label text="{i18n>SortKey}" design="Bold" wrapping="true" labelFor="cbSOSortKey" />
-                    <ComboBox selectedKey="{oSOModel>/SORT_KEY}" items="{oMainModel>/department}" width="100%" id="cbSOSortKey" fieldGroupIds="ComboboxField" required="true" editable="true">
-                        <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
-                    </ComboBox>
-                    <layoutData>
-                        <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
-                    </layoutData>
-                </VBox>
-                <VBox>
-                    <Button text="{i18n>btnProceedtoPaymentinformation}" press="onfnnextpress6" width="100%" class="button1 header2" />
-                    <layoutData>
-                        <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
-                    </layoutData>
-                </VBox>
+        <Table id="tbUOM" items="{oNPI>/PRODUCT_UOM_LIST}" growing="true" growingThreshold="10" growingScrollToLoad="true"
+							noDataText="{i18n>TxtRemarkNoDataText}" updateFinished="onUpdateFinished">
+							<headerToolbar >
+								<OverflowToolbar>
+									<ToolbarSpacer/>
+									<Button icon="sap-icon://add" text="{i18n>BtnUOM}" type="Emphasized" press="onUOM"/>
+								</OverflowToolbar>
+							</headerToolbar>
+							<columns>
+								<Column width="{= ${device>/system/desktop} ? '8rem':'auto'}">
+									<Text text="{i18n>Uom}" wrapping="true"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text="{i18n>UoMQuantity}" wrapping="true"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text="{i18n>LowerUnit}" wrapping="true"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text="{i18n>BaseUnit}" wrapping="true"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text="{i18n>OrderUnit}" wrapping="true"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/desktop} ? '11rem':'auto'}">
+									<Text text="{i18n>Barcode}" wrapping="true"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text=" {i18n>GrossWeight}" wrapping="true"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text="{i18n>NetWeight}" wrapping="true"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/desktop} ? '8rem':'auto'}">
+									<Text text="{i18n>NetWeightUnit}" wrapping="true"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text="{i18n>Depth}" wrapping="true"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text="{i18n>Width}" wrapping="true"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text="{i18n>Height}" wrapping="true"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text="{i18n>Volume}" wrapping="true"/>
+								</Column>
+								<Column hAlign="End">
+									<Text text=""/>
+								</Column>
+							</columns>
+							<items >
+								<ColumnListItem type="Active">
+									<cells>
+										<Input value="{oNPI>UOM}"/>
+										<Input value="{oNPI>UOM_NO_CONV}"/>
+										<Text text="EA"></Text>
+										<CheckBox selected="{oNPI>BUN}"></CheckBox>
+										<CheckBox selected="{oNPI>OUN}"></CheckBox>
+										<Input value="{oNPI>BARCODE}"></Input>
+										<Input value="{oNPI>WEIGHT}"></Input>
+										<Input value="{oNPI>NET_WEIGHT}"></Input>
+										<Input value="{oNPI>WT_UNIT}" showValueHelp="true"></Input>
+										<Input value="{oNPI>DEPTH}" change="onGetVolume"></Input>
+										<Input value="{oNPI>WIDTH}" change="onGetVolume"></Input>
+										<Input value="{oNPI>HEIGHT}" change="onGetVolume"></Input>
+										<Text text="{oNPI>Volume}"></Text>
+										<Button icon="sap-icon://delete" visible="{oNPI>Button}"></Button>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
             </form:content>
         </form:SimpleForm>
 </core:FragmentDefinition>
