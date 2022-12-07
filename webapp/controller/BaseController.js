@@ -3,6 +3,8 @@ sap.ui.define([
     "sap/ui/model/json/JSONModel",
     "com/spm/suppilerportal/utils/dataUtil",
     "sap/ui/core/UIComponent"
+
+    
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
