@@ -2,6 +2,7 @@
     <Page showHeader="false" showNavButton="false">
         <Page id="sideContentContainer" showHeader="false" showNavButton="false">
             <layout:DynamicSideContent id="DynamicSideContent" class="sapUiDSCExplored sapUiContentPadding" sideContentFallDown="BelowM" sideContentPosition="End" containerQuery="true" breakpointChanged="handleBreakpointChanged">
+                <Button text="hi" />
                 <uxap:ObjectPageLayout useTwoColumnsForLargeScreen="true" id="ObjectPageLayout" upperCaseAnchorBar="true" showHeaderContent="false">
                     <uxap:sections>
                         <uxap:ObjectPageSection title="{i18n>ProductData}">
@@ -13,11 +14,11 @@
                                 </uxap:ObjectPageSubSection>
                             </uxap:subSections>
                         </uxap:ObjectPageSection>
-                        <uxap:ObjectPageSection title="{i18n>ProductImage}" width="{= ${device>/system/phone} ? true : false}">
+                        <uxap:ObjectPageSection title="{i18n>ProductImage}">
                             <uxap:subSections>
                                 <uxap:ObjectPageSubSection titleUppercase="false">
                                     <uxap:blocks>
-                                       <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.NPI.ProductImage" type="XML" />
+                                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.NPI.ProductImage" type="XML" />
                                     </uxap:blocks>
                                 </uxap:ObjectPageSubSection>
                             </uxap:subSections>
@@ -35,7 +36,7 @@
                             <uxap:subSections>
                                 <uxap:ObjectPageSubSection titleUppercase="false">
                                     <uxap:blocks>
-                                       <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.NPI.ProductAttributes" type="XML" />
+                                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.NPI.ProductAttributes" type="XML" />
                                     </uxap:blocks>
                                 </uxap:ObjectPageSubSection>
                             </uxap:subSections>
@@ -44,7 +45,7 @@
                             <uxap:subSections>
                                 <uxap:ObjectPageSubSection titleUppercase="false">
                                     <uxap:blocks>
-                                       <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.NPI.Uom" type="XML" />
+                                        <core:Fragment fragmentName="com.spm.suppilerportal.view.subView.NPI.Uom" type="XML" />
                                     </uxap:blocks>
                                 </uxap:ObjectPageSubSection>
                             </uxap:subSections>
@@ -58,7 +59,7 @@
                                 </uxap:ObjectPageSubSection>
                             </uxap:subSections>
                         </uxap:ObjectPageSection>
-						  <uxap:ObjectPageSection title="{i18n>Marketing}">
+                        <uxap:ObjectPageSection title="{i18n>Marketing}">
                             <uxap:subSections>
                                 <uxap:ObjectPageSubSection titleUppercase="false">
                                     <uxap:blocks>
@@ -67,7 +68,7 @@
                                 </uxap:ObjectPageSubSection>
                             </uxap:subSections>
                         </uxap:ObjectPageSection>
-						  <uxap:ObjectPageSection title="{i18n>Forecast}">
+                        <uxap:ObjectPageSection title="{i18n>Forecast}">
                             <uxap:subSections>
                                 <uxap:ObjectPageSubSection titleUppercase="false">
                                     <uxap:blocks>
@@ -76,7 +77,7 @@
                                 </uxap:ObjectPageSubSection>
                             </uxap:subSections>
                         </uxap:ObjectPageSection>
-						  <uxap:ObjectPageSection title="{i18n>Attachment}">
+                        <uxap:ObjectPageSection title="{i18n>Attachment}">
                             <uxap:subSections>
                                 <uxap:ObjectPageSubSection titleUppercase="false">
                                     <uxap:blocks>
@@ -85,7 +86,7 @@
                                 </uxap:ObjectPageSubSection>
                             </uxap:subSections>
                         </uxap:ObjectPageSection>
-						  <uxap:ObjectPageSection title="{i18n>Reason_Remarks}">
+                        <uxap:ObjectPageSection title="{i18n>Reason_Remarks}">
                             <uxap:subSections>
                                 <uxap:ObjectPageSubSection titleUppercase="false">
                                     <uxap:blocks>
