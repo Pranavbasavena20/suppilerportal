@@ -1,77 +1,78 @@
-<core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
-    <Table id="tbUOM" items="{oNPI>/PRODUCT_UOM_LIST}" growing="true" growingThreshold="10" growingScrollToLoad="true" noDataText="{i18n>TxtRemarkNoDataText}" updateFinished="onUpdateFinished">
-        <headerToolbar>
-            <OverflowToolbar>
-                <ToolbarSpacer />
-                <Button icon="sap-icon://add" text="{i18n>BtnUOM}" type="Emphasized" press="onUOM" />
-            </OverflowToolbar>
-        </headerToolbar>
-        <columns>
-            <Column>
-                <Text text="{i18n>Uom}" wrapping="true" />
-            </Column>
-            <Column minScreenWidth="Tablet" demandPopin="true">
-                <Text text="{i18n>UoMQuantity}" wrapping="true" />
-            </Column>
-            <Column minScreenWidth="Tablet" demandPopin="true">
-                <Text text="{i18n>LowerUnit}" wrapping="true" />
-            </Column>
-            <Column minScreenWidth="Tablet" demandPopin="true">
-                <Text text="{i18n>BaseUnit}" wrapping="true" />
-            </Column>
-            <Column minScreenWidth="Tablet" demandPopin="true">
-                <Text text="{i18n>OrderUnit}" wrapping="true" />
-            </Column>
-            <Column minScreenWidth="Tablet" demandPopin="true">
-                <Text text="{i18n>Barcode}" wrapping="true" />
-            </Column>
-            <Column minScreenWidth="Tablet" demandPopin="true">
-                <Text text=" {i18n>GrossWeight}" wrapping="true" />
-            </Column>
-            <Column minScreenWidth="Tablet" demandPopin="true">
-                <Text text="{i18n>NetWeight}" wrapping="true" />
-            </Column>
-            <Column minScreenWidth="Tablet" demandPopin="true">
-                <Text text="{i18n>NetWeightUnit}" wrapping="true" />
-            </Column>
-            <Column minScreenWidth="Tablet" demandPopin="true">
-                <Text text="{i18n>Depth}" wrapping="true" />
-            </Column>
-            <Column minScreenWidth="Tablet" demandPopin="true">
-                <Text text="{i18n>Width}" wrapping="true" />
-            </Column>
-            <Column minScreenWidth="Tablet" demandPopin="true">
-                <Text text="{i18n>Height}" wrapping="true" />
-            </Column>
-            <Column minScreenWidth="Tablet" demandPopin="true">
-                <Text text="{i18n>Volume}" wrapping="true" />
-            </Column>
-            <Column hAlign="End">
-                <Text text="" />
-            </Column>
-        </columns>
-        <items>
-            <ColumnListItem type="Active">
-                <cells>
-                    <Text text="{oNPI>UOM}" />
-                    <Text text="{oNPI>UOM_NO_CONV}" />
-                    <Text text="EA" />
-                    <CheckBox selected="{oNPI>BUN}" />
-                    <CheckBox selected="{oNPI>OUN}" />
-                    <Text text="{oNPI>BARCODE}" />
-                    <Text text="{oNPI>WEIGHT}" />
-                    <Text text="{oNPI>NET_WEIGHT}" />
-                    <Text text="{oNPI>WT_UNIT}" />
-                    <Text text="{oNPI>DEPTH}" />
-                    <Text text="{oNPI>WIDTH}" />
-                    <Text text="{oNPI>HEIGHT}" />
-                    <Text text="{oNPI>Volume}" />
-                    <OverflowToolbar>
-                        <core:Icon src="sap-icon://edit" />
-                        <core:Icon src="sap-icon://delete" visible="{oNPI>Button}" />
-                    </OverflowToolbar>
-                </cells>
-            </ColumnListItem>
-        </items>
-    </Table>
+<core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons"
+	xmlns:core="sap.ui.core">
+	<ScrollContainer height="100%" width="100%" vertical="true" focusable="true">
+		<Table id="tbUOM" items="{oNPI>/PRODUCT_UOM_LIST}" growing="true" growingThreshold="10" growingScrollToLoad="true"
+			noDataText="{i18n>TxtRemarkNoDataText}" updateFinished="onUpdateFinished">
+			<headerToolbar>
+				<OverflowToolbar>
+					<ToolbarSpacer/>
+					<Button icon="sap-icon://add" text="{i18n>BtnUOM}" type="Emphasized" press="onUOM"/>
+				</OverflowToolbar>
+			</headerToolbar>
+			<columns>
+				<Column >
+					<Text text="{i18n>Uom}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '5rem'}">
+					<Text text="{i18n>UoMQuantity}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '5rem'}">
+					<Text text="{i18n>LowerUnit}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '5rem'}">
+					<Text text="{i18n>BaseUnit}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '5rem'}">
+					<Text text="{i18n>OrderUnit}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '5rem'}">
+					<Text text="{i18n>Barcode}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '5rem'}">
+					<Text text=" {i18n>GrossWeight}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '5rem'}">
+					<Text text="{i18n>NetWeight}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '5rem'}">
+					<Text text="{i18n>NetWeightUnit}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '5rem'}">
+					<Text text="{i18n>Depth}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '5rem'}">
+					<Text text="{i18n>Width}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '5rem'}">
+					<Text text="{i18n>Height}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '5rem'}">
+					<Text text="{i18n>Volume}" wrapping="true"/>
+				</Column>
+				<Column hAlign="End" width="{= ${device>/system/phone} ? '' : '3rem'}">
+					<Text text=""/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem type="Active">
+					<cells>
+						<Input value="{oNPI>UOM}"/>
+						<Input value="{oNPI>UOM_NO_CONV}"/>
+						<Text text="EA"/>
+						<CheckBox selected="{oNPI>BUN}"/>
+						<CheckBox selected="{oNPI>OUN}"/>
+						<Input value="{oNPI>BARCODE}"/>
+						<Input value="{oNPI>WEIGHT}"/>
+						<Input value="{oNPI>NET_WEIGHT}"/>
+						<Input value="{oNPI>WT_UNIT}"/>
+						<Input value="{oNPI>DEPTH}"/>
+						<Input value="{oNPI>WIDTH}"/>
+						<Input value="{oNPI>HEIGHT}"/>
+						<Text text="{oNPI>Volume}"/>
+						<Button icon="sap-icon://delete" press="onDeleteUOM" visible="{oNPI>Button}"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</ScrollContainer>
 </core:FragmentDefinition>

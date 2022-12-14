@@ -26,7 +26,7 @@
 						</Column>
 					</columns>
 					<items>
-						<ColumnListItem vAlign="Middle">
+						<ColumnListItem >
 							<cells>
 								<Input value="{oNPI>FORECAST_ATTRIBUTE_NAME}" fieldGroupIds="InputField" required="true" editable="true" width="100%"/>
 								<Input value="{oNPI>FORECAST_ATTRIBUTE_VALUE}" fieldGroupIds="InputField" required="true" editable="true" width="100%"/>
@@ -62,7 +62,7 @@
 						</Column>
 					</columns>
 					<items>
-						<ColumnListItem vAlign="Middle">
+						<ColumnListItem >
 							<cells>
 								<ComboBox selectedKey="{oNPI>MONTH_NAME}" items="{oMainModel>/department}" width="100%" fieldGroupIds="ComboboxField" required="true"
 									editable="true">

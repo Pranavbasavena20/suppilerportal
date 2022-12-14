@@ -23,10 +23,18 @@ sap.ui.define([
 			},
 			onInit: function () {
 				var oViewModel = new sap.ui.model.json.JSONModel({
-					bForCastAdd: true,
-					bForcastMonthAdd: true
-				});
-				this.getOwnerComponent().setModel(oViewModel, "NPIView");
+				bForCastAdd: true,
+				bForcastMonthAdd: true,
+				bComparsion: true
+			});
+			this.getOwnerComponent().setModel(oViewModel, "NPIView");
+			var oModelSizes = new sap.ui.model.json.JSONModel({
+				pane1: "auto",
+				pane2: "auto",
+				pane3: "auto"
+			});
+
+			this.getView().setModel(oModelSizes, "sizes");
 				var oModel = dataUtil.createJsonModel();
 
 				oModel.setData({
@@ -146,128 +154,236 @@ sap.ui.define([
 					this.getView().getModel("oNPI").setProperty(sPath + "/Volume", iFinalVal);
 				}
 			},
-			onUOM: function (oEvent) {
-				var oModel = this.getView().getModel("oNPI");
-				var object = {
-					ID: oModel.getData().PRODUCT_UOM_LIST.length + 1,
-					PRODUCT_ID: "",
-					VARIANT_ID: "",
-					UOM: "",
-					UOM_NO_CONV: "",
-					UOM_UNIT: "",
-					EAN_CATEGORY: "",
-					ORDERING_UOM: "",
-					BARCODE: "",
-					WEIGHT: "",
-					WIDTH: "",
-					DEPTH: "",
-					HEIGHT: "",
-					BUN: false,
-					OUN: false,
-					DI: "",
-					SUN: "",
-					MN_GTIN: "",
-					NET_WEIGHT: "",
-					WT_UNIT: "",
-					ADD_SALES_UNIT: "",
-					VALID_FROM: "",
-					VALID_TO: "",
-					Button: false,
-					Volume: ""
-				};
-				var object2 = {
-					ID: oModel.getData().PRODUCT_UOM_LIST.length + 2,
-					PRODUCT_ID: "",
-					VARIANT_ID: "",
-					UOM: "",
-					UOM_NO_CONV: "",
-					UOM_UNIT: "",
-					EAN_CATEGORY: "",
-					ORDERING_UOM: "",
-					BARCODE: "",
-					WEIGHT: "",
-					WIDTH: "",
-					DEPTH: "",
-					HEIGHT: "",
-					BUN: false,
-					OUN: false,
-					DI: "",
-					SUN: "",
-					MN_GTIN: "",
-					NET_WEIGHT: "",
-					WT_UNIT: "",
-					ADD_SALES_UNIT: "",
-					VALID_FROM: "",
-					VALID_TO: "",
-					Button: true,
-					Volume: ""
-				};
-				oModel.getData().PRODUCT_UOM_LIST.push(object);
-				oModel.getData().PRODUCT_UOM_LIST.push(object2);
-				oModel.updateBindings(true);
-			},
-			onPricing: function (oEvent) {
-				var oModel = this.getView().getModel("oNPI");
-				var object = {
-					ID: oModel.getData().PRODUCT_PRICING_LIST.length + 1,
-					PRODUCT_ID: "",
-					VENDOR_ID: "",
-					VARIANT_ID: "",
-					SALES_ORG: "",
-					SALES_ORG_DESC: "",
-					DIST_CHANNEL: "",
-					DIST_CHANNEL_DESC: "",
-					PRICE_TYPE: "",
-					UNIT_COST_PRICE: "",
-					COST_PRICE: "",
-					COST_PRICE_MISC: "",
-					MISC_UNIT_CP: "",
-					CP_CURRENCY: "",
-					FOREIGN_UNIT_CP: "",
-					FOREIGN_CP: "",
-					UNIT_SALES_PRICE: "",
-					SP_NO_GST: "",
-					SP_W_GST: "",
-					GP: "",
-					GP_PERCENT: "",
-					INTRO_PERIOD_FROM: "",
-					INTRO_PERIOD_TO: "",
-					CP_UOM: "",
-					SP_UOM: "",
-					Button: false
-				};
-				var object2 = {
-					ID: oModel.getData().PRODUCT_UOM_LIST.length + 2,
-					PRODUCT_ID: "",
-					VENDOR_ID: "",
-					VARIANT_ID: "",
-					SALES_ORG: "",
-					SALES_ORG_DESC: "",
-					DIST_CHANNEL: "",
-					DIST_CHANNEL_DESC: "",
-					PRICE_TYPE: "",
-					UNIT_COST_PRICE: "",
-					COST_PRICE: "",
-					COST_PRICE_MISC: "",
-					MISC_UNIT_CP: "",
-					CP_CURRENCY: "",
-					FOREIGN_UNIT_CP: "",
-					FOREIGN_CP: "",
-					UNIT_SALES_PRICE: "",
-					SP_NO_GST: "",
-					SP_W_GST: "",
-					GP: "",
-					GP_PERCENT: "",
-					INTRO_PERIOD_FROM: "",
-					INTRO_PERIOD_TO: "",
-					CP_UOM: "",
-					SP_UOM: "",
-					Button: true
-				};
-				oModel.getData().PRODUCT_PRICING_LIST.push(object);
-				oModel.getData().PRODUCT_PRICING_LIST.push(object2);
-				oModel.updateBindings(true);
-			},
+				onUOM: function (oEvent) {
+			var oModel = this.getView().getModel("oNPI");
+			var object = {
+				ID: "",
+				PRODUCT_ID: "",
+				VARIANT_ID: "",
+				UOM: "",
+				UOM_NO_CONV: "",
+				UOM_UNIT: "",
+				EAN_CATEGORY: "",
+				ORDERING_UOM: "",
+				BARCODE: "",
+				WEIGHT: "",
+				WIDTH: "",
+				DEPTH: "",
+				HEIGHT: "",
+				BUN: false,
+				OUN: false,
+				DI: "",
+				SUN: "",
+				MN_GTIN: "",
+				NET_WEIGHT: "",
+				WT_UNIT: "",
+				ADD_SALES_UNIT: "",
+				VALID_FROM: "",
+				VALID_TO: "",
+				Button: true,
+				Volume: ""
+			};
+			oModel.getData().PRODUCT_UOM_LIST.push(object);
+			oModel.updateBindings(true);
+		},
+		onDeleteUOM: function (oEvent) {
+			var iIndex = parseInt(oEvent.getSource().getBindingContext("oNPI").getPath().split("/")[2]);
+			var oData = this.getView().getModel("oNPI").getData().PRODUCT_UOM_LIST;
+			oData.splice(iIndex, 1);
+			this.getView().getModel("oNPI").updateBindings(true);
+		},
+		AddComparsion: function (oEvent) {
+			var oModel = this.getView().getModel("oNPI");
+			var object = {
+				ID: "",
+				PRODUCT_ID: "",
+				BRAND_DESC: "",
+				PACKAGING: "",
+				SELLING_PRICE: ""
+
+			};
+			oModel.getData().PRODUCT_COMPARISION.push(object);
+			oModel.updateBindings(true);
+			if (oModel.getData().PRODUCT_COMPARISION.length >= 3) {
+				this.getView().getModel("NPIView").setProperty("/bComparsion", false);
+			} else {
+				this.getView().getModel("NPIView").setProperty("/bComparsion", true);
+			}
+		},
+		onDeleteComparsion: function (oEvent) {
+			var iIndex = parseInt(oEvent.getSource().getBindingContext("oNPI").getPath().split("/")[2]);
+			var oData = this.getView().getModel("oNPI").getData().PRODUCT_COMPARISION;
+			oData.splice(iIndex, 1);
+			this.getView().getModel("oNPI").updateBindings(true);
+			if (oData.length >= 3) {
+				this.getView().getModel("NPIView").setProperty("/bComparsion", false);
+			} else {
+				this.getView().getModel("NPIView").setProperty("/bComparsion", true);
+			}
+		},
+		onPricing: function (oEvent) {
+			var oModel = this.getView().getModel("oNPI");
+			var object = {
+				ID: "",
+				PRODUCT_ID: "",
+				VENDOR_ID: "",
+				VARIANT_ID: "",
+				SALES_ORG: "",
+				SALES_ORG_DESC: "",
+				DIST_CHANNEL: "",
+				DIST_CHANNEL_DESC: "",
+				PRICE_TYPE: "",
+				UNIT_COST_PRICE: "",
+				COST_PRICE: "",
+				COST_PRICE_MISC: "",
+				MISC_UNIT_CP: "",
+				CP_CURRENCY: "",
+				FOREIGN_UNIT_CP: "",
+				FOREIGN_CP: "",
+				UNIT_SALES_PRICE: "",
+				SP_NO_GST: "",
+				SP_W_GST: "",
+				GP: "",
+				GP_PERCENT: "",
+				INTRO_PERIOD_FROM: "",
+				INTRO_PERIOD_TO: "",
+				CP_UOM: "",
+				SP_UOM: "",
+				Button: true
+			};
+			oModel.getData().PRODUCT_PRICING_LIST.push(object);
+			oModel.updateBindings(true);
+		},
+		onDeletePricing: function (oEvent) {
+			var iIndex = parseInt(oEvent.getSource().getBindingContext("oNPI").getPath().split("/")[2]);
+			var oData = this.getView().getModel("oNPI").getData().PRODUCT_PRICING_LIST;
+			oData.splice(iIndex, 1);
+			this.getView().getModel("oNPI").updateBindings(true);
+		},
+		AddProductAtt: function (oEvent) {
+			var oModel = this.getView().getModel("oNPI");
+			var object = {
+				ID: "",
+				VENDOR_ID: "",
+				PRODUCT_ID: "",
+				LABEL_CODE: "",
+				LABEL_CODE_VALUE: "",
+				DELETED: "",
+				ACTIVE: "",
+				VALID_FROM: "",
+				VALID_TO: ""
+			};
+			oModel.getData().PRODUCT_ATTRIBUTE_LIST.push(object);
+			oModel.updateBindings(true);
+		},
+		onDeleteProductAttTable: function (oEvent) {
+			var iIndex = parseInt(oEvent.getSource().getBindingContext("oNPI").getPath().split("/")[2]);
+			var oData = this.getView().getModel("oNPI").getData().PRODUCT_ATTRIBUTE_LIST;
+			oData.splice(iIndex, 1);
+			this.getView().getModel("oNPI").updateBindings(true);
+		},
+		// Forcast Start 
+		AddAttribute: function (oEvent) {
+			var oModelData = this.getView().getModel("oNPI").getData().PRODUCT_FORECAST.FORECAST_ATTIBUTES;
+
+			var object = {
+				FORECAST_ATTRIBUTE_NAME: "",
+				FORECAST_ATTRIBUTE_VALUE: ""
+			};
+			oModelData.push(object);
+			this.getView().getModel("oNPI").updateBindings(true);
+			if (oModelData.length >= 5) {
+				this.getView().getModel("NPIView").setProperty("/bForCastAdd", false);
+			} else {
+				this.getView().getModel("NPIView").setProperty("/bForCastAdd", true);
+			}
+
+		},
+		AddForeCast: function (oEvent) {
+			var oModelData = this.getView().getModel("oNPI").getData().PRODUCT_FORECAST.FORECAST_MONTHS;
+			var object = {
+				MONTH_NAME: "",
+				MONTH_VALUE: ""
+			};
+			oModelData.push(object);
+			this.getView().getModel("oNPI").updateBindings(true);
+			if (oModelData.length >= 6) {
+				this.getView().getModel("NPIView").setProperty("/bForcastMonthAdd", false);
+			} else {
+				this.getView().getModel("NPIView").setProperty("/bForcastMonthAdd", true);
+			}
+		},
+		onDeleteForcastTable: function (oEvent) {
+			var iIndex = parseInt(oEvent.getSource().getBindingContext("oNPI").getPath().split("/")[3]);
+			var oData = this.getView().getModel("oNPI").getData().PRODUCT_FORECAST.FORECAST_ATTIBUTES;
+			oData.splice(iIndex, 1);
+			this.getView().getModel("oNPI").updateBindings(true);
+			if (oData.length >= 5) {
+				this.getView().getModel("NPIView").setProperty("/bForCastAdd", false);
+			} else {
+				this.getView().getModel("NPIView").setProperty("/bForCastAdd", true);
+			}
+
+		},
+		onDeleteForeCastTable: function (oEvent) {
+			var iIndex = parseInt(oEvent.getSource().getBindingContext("oNPI").getPath().split("/")[3]);
+			var oData = this.getView().getModel("oNPI").getData().PRODUCT_FORECAST.FORECAST_MONTHS;
+			oData.splice(iIndex, 1);
+			this.getView().getModel("oNPI").updateBindings(true);
+			if (oData.length >= 5) {
+				this.getView().getModel("NPIView").setProperty("/bForcastMonthAdd", false);
+			} else {
+				this.getView().getModel("NPIView").setProperty("/bForcastMonthAdd", true);
+			}
+		},
+
+		// Forcast End 
+
+		// Marketing
+		AddMarketing: function (oEvent) {
+			var oModelData = this.getView().getModel("oNPI").getData().PRODUCT_MARKETING_LIST;
+			var object = {
+				ID: "",
+				PRODUCT_ID: "",
+				VENDOR_ID: "",
+				MEDIA_TYPE: "",
+				AMOUNT: "",
+				FREQUENCY: "",
+				PERIOD_START_DATE: "",
+				PERIOD_END_DATE: "",
+				ACTIVE: "",
+				DELETED: "",
+				VALID_FROM: "",
+				VALID_TO: ""
+			};
+			oModelData.push(object);
+			this.getView().getModel("oNPI").updateBindings(true);
+		},
+		onDeleteMarketingTable: function (oEvent) {
+			var iIndex = parseInt(oEvent.getSource().getBindingContext("oNPI").getPath().split("/")[2]);
+			var oData = this.getView().getModel("oNPI").getData().PRODUCT_MARKETING_LIST;
+			oData.splice(iIndex, 1);
+			this.getView().getModel("oNPI").updateBindings(true);
+		},
+		AddProposedListing: function (oEvent) {
+			var oModelData = this.getView().getModel("oNPI").getData().PRODUCT_PROPOSED_LISTING;
+			var object = {
+				ID: "",
+				PRODUCT_ID: "",
+				RETAILER_NAME: "",
+				SELLING_PRICE: "",
+				START_DATE: null
+			};
+			oModelData.push(object);
+			this.getView().getModel("oNPI").updateBindings(true);
+		},
+		onDeleteProposedListingTable: function (oEvent) {
+			var iIndex = parseInt(oEvent.getSource().getBindingContext("oNPI").getPath().split("/")[2]);
+			var oData = this.getView().getModel("oNPI").getData().PRODUCT_PROPOSED_LISTING;
+			oData.splice(iIndex, 1);
+			this.getView().getModel("oNPI").updateBindings(true);
+		},
+		// End of Marketing
 
 
 		});

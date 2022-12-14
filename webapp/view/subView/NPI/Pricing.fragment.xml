@@ -1,64 +1,66 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons"
 	xmlns:core="sap.ui.core">
-	<Table id="tbPricing" items="{oNPI>/PRODUCT_PRICING_LIST}" growing="true" growingThreshold="10" growingScrollToLoad="true"
-		noDataText="{i18n>TxtRemarkNoDataText}" updateFinished="onUpdateFinished">
-		<headerToolbar >
-			<OverflowToolbar>
-				<ToolbarSpacer/>
-				<Button icon="sap-icon://add" text="{i18n>BtnPricing}" type="Emphasized" press="onPricing"/>
-			</OverflowToolbar>
-		</headerToolbar>
-		<columns>
-			<Column width="{= ${device>/system/desktop} ? '8rem':'auto'}">
-				<Text text="{i18n>SalesOrg}" wrapping="true"/>
-			</Column>
-			<Column minScreenWidth="Tablet" demandPopin="true">
-				<Text text="{i18n>DistributionChannel}" wrapping="true"/>
-			</Column>
-			<Column minScreenWidth="Tablet" demandPopin="true">
-				<Text text="{i18n>PriceType}" wrapping="true"/>
-			</Column>
-			<Column minScreenWidth="Tablet" demandPopin="true">
-				<Text text="{i18n>CostPrice}" wrapping="true"/>
-			</Column>
-			<Column minScreenWidth="Tablet" demandPopin="true">
-				<Text text="{i18n>CostPriceCurrency}" wrapping="true"/>
-			</Column>
-			<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/desktop} ? '11rem':'auto'}">
-				<Text text="{i18n>RSP_W_GST}" wrapping="true"/>
-			</Column>
-			<Column minScreenWidth="Tablet" demandPopin="true">
-				<Text text=" {i18n>RSP_No_GST}" wrapping="true"/>
-			</Column>
-			<Column minScreenWidth="Tablet" demandPopin="true">
-				<Text text="{i18n>GP}" wrapping="true"/>
-			</Column>
-			<Column minScreenWidth="Tablet" demandPopin="true">
-				<Text text="{i18n>GPPercentage}" wrapping="true"/>
-			</Column>
-			<Column minScreenWidth="Tablet" demandPopin="true">
-				<Text text="{i18n>BaseUnitRSP}" wrapping="true"/>
-			</Column>
-			<Column hAlign="End">
-				<Text text=""/>
-			</Column>
-		</columns>
-		<items >
-			<ColumnListItem type="Active">
-				<cells>
-					<ComboBox selectedKey="{oNPI>SALES_ORG}" value="{oNPI>SALES_ORG_DESC}"/>
-					<ComboBox selectedKey="{oNPI>DIST_CHANNEL}" value="{oNPI>DIST_CHANNEL_DESC}"/>
-					<ComboBox selectedKey="{oNPI>PRICE_TYPE}"/>
-					<Input value="{oNPI>UNIT_COST_PRICE}"></Input>
-					<Input value="{oNPI>CP_CURRENCY}" showValueHelp="true"></Input>
-					<Input value="{oNPI>SP_W_GST}"></Input>
-					<Text text="{oNPI>SP_NO_GST}"></Text>
-					<Text text="{oNPI>GP}"></Text>
-					<Text text="{oNPI>GP_PERCENT}"></Text>
-					<Text text="{oNPI>UNIT_SALES_PRICE}"></Text>
-					<Button icon="sap-icon://delete" visible="{oNPI>Button}"></Button>
-				</cells>
-			</ColumnListItem>
-		</items>
-	</Table>
+	<ScrollContainer height="100%" width="100%" vertical="true" focusable="true">
+		<Table id="tbPricing" items="{oNPI>/PRODUCT_PRICING_LIST}" growing="true" growingThreshold="10" growingScrollToLoad="true"
+			noDataText="{i18n>TxtRemarkNoDataText}" updateFinished="onUpdateFinished">
+			<headerToolbar >
+				<OverflowToolbar>
+					<ToolbarSpacer/>
+					<Button icon="sap-icon://add" text="{i18n>BtnPricing}" type="Emphasized" press="onPricing"/>
+				</OverflowToolbar>
+			</headerToolbar>
+			<columns>
+				<Column >
+					<Text text="{i18n>SalesOrg}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '6rem'}">
+					<Text text="{i18n>DistributionChannel}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '6rem'}">
+					<Text text="{i18n>PriceType}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '6rem'}">
+					<Text text="{i18n>CostPrice}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '6rem'}">
+					<Text text="{i18n>CostPriceCurrency}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '6rem'}">
+					<Text text="{i18n>RSP_W_GST}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '6rem'}">
+					<Text text=" {i18n>RSP_No_GST}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '6rem'}">
+					<Text text="{i18n>GP}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '6rem'}">
+					<Text text="{i18n>GPPercentage}" wrapping="true"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '6rem'}">
+					<Text text="{i18n>BaseUnitRSP}" wrapping="true"/>
+				</Column>
+				<Column hAlign="End" width="{= ${device>/system/phone} ? '' : '6rem'}">
+					<Text text=""/>
+				</Column>
+			</columns>
+			<items >
+				<ColumnListItem type="Active">
+					<cells>
+						<ComboBox selectedKey="{oNPI>SALES_ORG}" value="{oNPI>SALES_ORG_DESC}"/>
+						<ComboBox selectedKey="{oNPI>DIST_CHANNEL}" value="{oNPI>DIST_CHANNEL_DESC}"/>
+						<ComboBox selectedKey="{oNPI>PRICE_TYPE}"/>
+						<Input value="{oNPI>UNIT_COST_PRICE}"></Input>
+						<Input value="{oNPI>CP_CURRENCY}" showValueHelp="true"></Input>
+						<Input value="{oNPI>SP_W_GST}"></Input>
+						<Text text="{oNPI>SP_NO_GST}"></Text>
+						<Text text="{oNPI>GP}"></Text>
+						<Text text="{oNPI>GP_PERCENT}"></Text>
+						<Text text="{oNPI>UNIT_SALES_PRICE}"></Text>
+						<Button icon="sap-icon://delete" visible="{oNPI>Button}" press="onDeletePricing"></Button>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</ScrollContainer>
 </core:FragmentDefinition>

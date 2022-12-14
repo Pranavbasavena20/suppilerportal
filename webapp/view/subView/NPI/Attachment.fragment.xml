@@ -5,7 +5,7 @@
 		<form:content>
 			<VBox>
 				<Label text="{i18n>AttachmentType}" design="Bold" labelFor="ipAttType" wrapping="true"/>
-				<ComboBox selectedKey="{oSOModel>/ATTACHMENTS/DOCUMENT_TYPE}" items="{oMainModel>/businessCode}" width="100%" id="ipAttType"
+				<ComboBox selectedKey="{oNPI>/PRODUCT_ATTACHMENT_FORM/ATTACHMENT_TYPE}" items="{oMainModel>/businessCode}" width="100%" id="ipAttType"
 					fieldGroupIds="ComboboxField" required="true" editable="true">
 					<core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}"/>
 				</ComboBox>
@@ -15,16 +15,16 @@
 			</VBox>
 			<VBox>
 				<Label text="{i18n>DisplayName}" design="Bold" labelFor="ipDisplayName" wrapping="true"/>
-				<Input value="{oSOModel>/ATTACHMENTS/DOC_DESCRIPTION}" id="ipDisplayName" fieldGroupIds="InputField" required="true" editable="true"
-					width="100%"/>
+				<Input value="{oNPI>/PRODUCT_ATTACHMENT_FORM/DISPLAY_DOCUMENT_NAME}" id="ipDisplayName" fieldGroupIds="InputField" required="true"
+					editable="true" width="100%"/>
 				<layoutData>
 					<layout:GridData span="XL6 L6 M6 S12" linebreak="false"/>
 				</layoutData>
 			</VBox>
 			<VBox>
 				<Label text="{i18n>DocuementExpiryDate}" design="Bold" labelFor="dpDocumentExpiry" wrapping="true"/>
-				<DatePicker value="{oSOModel>/ATTACHMENTS/DOC_EXPIRY}" id="dpDocumentExpiry" fieldGroupIds="DateField" required="true" editable="true"
-					width="100%"/>
+				<DatePicker value="{oNPI>/PRODUCT_ATTACHMENT_FORM/DOC_EXPIRY_DATE}" id="dpDocumentExpiry" fieldGroupIds="DateField" required="true"
+					editable="true" width="100%"/>
 				<layoutData>
 					<layout:GridData span="XL6 L6 M6 S12" linebreak="true"/>
 				</layoutData>
@@ -36,19 +36,18 @@
 				</layoutData>
 			</VBox>
 			<VBox>
-				<Table id="idNPIDcoument" inset="false" mode="MultiSelect" items="{oSOModel>/ATTACHMENTSSET}">
+				<Table id="idNPIDcoument" inset="false" mode="MultiSelect" items="{oNPI>/PRODUCT_ATTACHMENT}">
 					<headerToolbar>
 						<OverflowToolbar>
 							<content>
 								<Title text="Attachments" level="H2"/>
 								<ToolbarSpacer/>
-								<Button text="{i18n>btnAttachment}" press="AddAttachments"/>
 							</content>
 						</OverflowToolbar>
 					</headerToolbar>
 					<columns>
 						<Column>
-							<Text text="{i18n>Media}"/>
+							<Text text="{i18n>AttachmentType}"/>
 						</Column>
 						<Column minScreenWidth="Tablet" demandPopin="true">
 							<Text text="{i18n>DisplayName}"/>
@@ -65,34 +64,18 @@
 						<Column hAlign="End">
 							<Text text=""/>
 						</Column>
-						<Column hAlign="End">
-							<Text text=""/>
-						</Column>
 					</columns>
 					<items>
-						<ColumnListItem vAlign="Middle">
+						<ColumnListItem>
 							<cells>
-								<VBox>
-									<ComboBox visible="{oSOModel>INPUT}" selectedKey="{oSOModel>DOCUMENT_TYPE}" items="{oMainModel>/businessCode}" width="100%"
-										fieldGroupIds="ComboboxField" required="true" editable="true">
-										<core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}"/>
-									</ComboBox>
-									<Text text="{oSOModel>DOCUMENT_TYPE}" visible="{oSOModel>TEXT}"/>
-								</VBox>
-								<VBox>
-									<TextArea visible="{oSOModel>INPUT}" value="{oSOModel>DOC_DESCRIPTION}" fieldGroupIds="InputField" required="true" editable="true"
-										width="100%"/>
-									<Text text="{oSOModel>DOC_DESCRIPTION}"/>
-								</VBox>
-								<VBox>
-									<DatePicker value="{oSOModel>DOC_EXPIRY}" visible="{oSOModel>INPUT}" fieldGroupIds="DateField" required="true" editable="true" width="100%"/>
-									<Text text="{oSOModel>DOC_EXPIRY}" visible="{oSOModel>TEXT}"/>
-								</VBox>
+								<ComboBox selectedKey="{oNPI>ATTACHMENT_TYPE}" items="{oMainModel>/businessCode}" width="100%" fieldGroupIds="ComboboxField" required="true"
+									editable="true">
+									<core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}"/>
+								</ComboBox>
+								<Input value="{oNPI>DISPLAY_DOCUMENT_NAME}" fieldGroupIds="InputField" required="true" editable="true" width="100%"/>
 								<Text text=""/>
-								<VBox>
-									<Button icon="sap-icon://edit" press="onEditAttachmentTable" visible="{oSOModel>TEXT}"/>
-									<Button icon="sap-icon://save" press="onSaveAttachmentTable" visible="{oSOModel>INPUT}"/>
-								</VBox>
+								<DatePicker value="{oNPI>DOC_EXPIRY_DATE}" fieldGroupIds="DateField" required="true" editable="true" width="100%"/>
+								<Text text=""/>
 								<Button icon="sap-icon://delete" press="onDeleteAttachmentTable"/>
 							</cells>
 						</ColumnListItem>

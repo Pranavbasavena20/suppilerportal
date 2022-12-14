@@ -4,13 +4,13 @@
 		columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
 		<form:content>
 			<VBox>
-				<Table id="idNPIProductAttr" width="100%" inset="false" mode="MultiSelect" items="{oSOModel>/ATTACHMENTSSET}">
+				<Table id="idNPIProductAttr" width="100%" inset="false" mode="MultiSelect" items="{oNPI>/PRODUCT_ATTRIBUTE_LIST}">
 					<headerToolbar>
 						<OverflowToolbar>
 							<content>
 								<Title text="{i18n>ProductAtrributes}"></Title>
 								<ToolbarSpacer/>
-								<Button text="{i18n>btnAdd}" press="AddAttachments"/>
+								<Button text="{i18n>btnAdd}" press="AddProductAtt"/>
 							</content>
 						</OverflowToolbar>
 					</headerToolbar>
@@ -24,20 +24,13 @@
 						<Column hAlign="End">
 							<Text text=""/>
 						</Column>
-						<Column hAlign="End">
-							<Text text=""/>
-						</Column>
 					</columns>
 					<items>
-						<ColumnListItem vAlign="Middle">
+						<ColumnListItem >
 							<cells>
-								<Input></Input>
-								<Input></Input>
-								<VBox>
-									<Button icon="sap-icon://edit" press="onEditAttachmentTable" visible="{oSOModel>TEXT}"/>
-									<Button icon="sap-icon://save" press="onSaveAttachmentTable" visible="{oSOModel>INPUT}"/>
-								</VBox>
-								<Button icon="sap-icon://delete" press="onDeleteAttachmentTable"/>
+								<Input value="{oNPI>LABEL_CODE}"></Input>
+								<Input value="{oNPI>LABEL_CODE_VALUE}"></Input>
+								<Button icon="sap-icon://delete" press="onDeleteProductAttTable"/>
 							</cells>
 						</ColumnListItem>
 					</items>
@@ -49,26 +42,27 @@
 			<core:Title text="{i18n>ProductQuality}"/>
 			<VBox>
 				<Label text="{i18n>ProductTrend}" design="Bold" labelFor="taProductTrend" wrapping="true"/>
-				<TextArea value="{oSOModel>/REMARKS}" id="taProductTrend" fieldGroupIds="InputField" required="true" editable="true" width="100%"/>
+				<TextArea value="{oNPI>/PRODUCT_DATA/PRODUCT_TREND}" id="taProductTrend" fieldGroupIds="InputField" required="true" editable="true"
+					width="100%"/>
 				<layoutData>
 					<layout:GridData span="XL12 L12 M12 S12" linebreak="true"/>
 				</layoutData>
 			</VBox>
 			<VBox>
 				<Label text="{i18n>ProductOriginality}" design="Bold" labelFor="taProductOriginality" wrapping="true"/>
-				<TextArea value="{oSOModel>/CATERGORY_EXECUTIVE_REMARKS}" id="taProductOriginality" required="true" editable="true" width="100%"/>
+				<TextArea value="{oNPI>/PRODUCT_DATA/PRODUCT_ORIGINALITY}" id="taProductOriginality" required="true" editable="true" width="100%"/>
 				<layoutData>
 					<layout:GridData span="XL12 L12 M12 S12" linebreak="true"/>
 				</layoutData>
 			</VBox>
 			<VBox>
-				<Table id="idNPIProductAtt3" width="100%" inset="false" mode="MultiSelect" items="{oSOModel>/ATTACHMENTSSET}">
+				<Table id="idNPIProductAtt3" width="100%" inset="false" mode="MultiSelect" items="{oNPI>/PRODUCT_COMPARISION}">
 					<headerToolbar>
 						<OverflowToolbar>
 							<content>
 								<Title text="{i18n>ProductComp}"></Title>
 								<ToolbarSpacer/>
-								<Button text="{i18n>btnAdd}" press="AddAttachments"/>
+								<Button text="{i18n>btnAdd}" press="AddComparsion" visible="{NPIView>/bComparsion}"/>
 							</content>
 						</OverflowToolbar>
 					</headerToolbar>
@@ -85,21 +79,14 @@
 						<Column hAlign="End">
 							<Text text=""/>
 						</Column>
-						<Column hAlign="End">
-							<Text text=""/>
-						</Column>
 					</columns>
 					<items>
-						<ColumnListItem vAlign="Middle">
+						<ColumnListItem >
 							<cells>
-								<ComboBox></ComboBox>
-								<Input></Input>
-								<Input></Input>
-								<VBox>
-									<Button icon="sap-icon://edit" press="onEditAttachmentTable" visible="{oSOModel>TEXT}"/>
-									<Button icon="sap-icon://save" press="onSaveAttachmentTable" visible="{oSOModel>INPUT}"/>
-								</VBox>
-								<Button icon="sap-icon://delete" press="onDeleteAttachmentTable"/>
+								<ComboBox selectedKey="{oNPI>BRAND_DESC}"></ComboBox>
+								<Input value="{oNPI>PACKAGING}"></Input>
+								<Input value="{oNPI>SELLING_PRICE}"></Input>
+								<Button icon="sap-icon://delete" press="onDeleteComparsion"/>
 							</cells>
 						</ColumnListItem>
 					</items>

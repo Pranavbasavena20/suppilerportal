@@ -5,41 +5,38 @@
 		<form:content>
 			<VBox>
 				<Label text="{i18n>TotalExpenditure}" design="Bold" labelFor="ipTotalExpen" wrapping="true"/>
-				<Input value="{oSOModel>/ATTACHMENTS/DOC_DESCRIPTION}" id="ipTotalExpen" fieldGroupIds="InputField" required="true" editable="true"
-					width="100%"/>
+				<Input value="{oNPI>/MARKET_EXP_AMOUNT}" id="ipTotalExpen" fieldGroupIds="InputField" required="true" editable="true" width="100%"/>
 				<layoutData>
 					<layout:GridData span="XL6 L6 M6 S12" linebreak="true"/>
 				</layoutData>
 			</VBox>
 			<VBox>
 				<Label text="{i18n>PeriodStartDate}" design="Bold" labelFor="dpPeriodStDate" wrapping="true"/>
-				<DatePicker value="{oSOModel>/ATTACHMENTS/DOC_EXPIRY}" id="dpPeriodStDate" fieldGroupIds="DateField" required="true" editable="true"
-					width="100%"/>
+				<DatePicker value="{oNPI>/MARKET_START_DATE}" id="dpPeriodStDate" fieldGroupIds="DateField" required="true" editable="true" width="100%"/>
 				<layoutData>
 					<layout:GridData span="XL6 L6 M6 S12" linebreak="false"/>
 				</layoutData>
 			</VBox>
 			<VBox>
 				<Label text="{i18n>PeriodEndDate}" design="Bold" labelFor="dpPeriodEtDate" wrapping="true"/>
-				<DatePicker value="{oSOModel>/ATTACHMENTS/DOC_EXPIRY}" id="dpPeriodEtDate" fieldGroupIds="DateField" required="true" editable="true"
-					width="100%"/>
+				<DatePicker value="{oNPI>/MARKET_END_DATE}" id="dpPeriodEtDate" fieldGroupIds="DateField" required="true" editable="true" width="100%"/>
 				<layoutData>
 					<layout:GridData span="XL6 L6 M6 S12" linebreak="true"/>
 				</layoutData>
 			</VBox>
 			<VBox>
-				<Table id="idNPIMarketing" inset="false" mode="MultiSelect" items="{oSOModel>/ATTACHMENTSSET}">
+				<Table id="idNPIMarketing" inset="false" mode="MultiSelect" items="{oNPI>/PRODUCT_MARKETING_LIST}">
 					<headerToolbar>
 						<OverflowToolbar>
 							<content>
 								<ToolbarSpacer/>
-								<Button text="{i18n>btnAdd}" press="AddAttachments"/>
+								<Button text="{i18n>btnAdd}" press="AddMarketing"/>
 							</content>
 						</OverflowToolbar>
 					</headerToolbar>
 					<columns>
 						<Column>
-							<Text text="{i18n>AttachmentType}"/>
+							<Text text="{i18n>Media}"/>
 						</Column>
 						<Column minScreenWidth="Tablet" demandPopin="true">
 							<Text text="{i18n>Amount}"/>
@@ -56,35 +53,19 @@
 						<Column hAlign="End">
 							<Text text=""/>
 						</Column>
-						<Column hAlign="End">
-							<Text text=""/>
-						</Column>
 					</columns>
 					<items>
-						<ColumnListItem vAlign="Middle">
+						<ColumnListItem >
 							<cells>
-								<VBox>
-									<ComboBox visible="{oSOModel>INPUT}" selectedKey="{oSOModel>DOCUMENT_TYPE}" items="{oMainModel>/businessCode}" width="100%"
-										fieldGroupIds="ComboboxField" required="true" editable="true">
-										<core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}"/>
-									</ComboBox>
-									<Text text="{oSOModel>DOCUMENT_TYPE}" visible="{oSOModel>TEXT}"/>
-								</VBox>
-								<VBox>
-									<TextArea visible="{oSOModel>INPUT}" value="{oSOModel>DOC_DESCRIPTION}" fieldGroupIds="InputField" required="true" editable="true"
-										width="100%"/>
-									<Text text="{oSOModel>DOC_DESCRIPTION}"/>
-								</VBox>
-								<VBox>
-									<DatePicker value="{oSOModel>DOC_EXPIRY}" visible="{oSOModel>INPUT}" fieldGroupIds="DateField" required="true" editable="true" width="100%"/>
-									<Text text="{oSOModel>DOC_EXPIRY}" visible="{oSOModel>TEXT}"/>
-								</VBox>
-								<Text text=""/>
-								<VBox>
-									<Button icon="sap-icon://edit" press="onEditAttachmentTable" visible="{oSOModel>TEXT}"/>
-									<Button icon="sap-icon://save" press="onSaveAttachmentTable" visible="{oSOModel>INPUT}"/>
-								</VBox>
-								<Button icon="sap-icon://delete" press="onDeleteAttachmentTable"/>
+								<ComboBox selectedKey="{oNPI>MEDIA_TYPE}" items="{oMainModel>/businessCode}" width="100%" fieldGroupIds="ComboboxField" required="true"
+									editable="true">
+									<core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}"/>
+								</ComboBox>
+								<Input value="{oNPI>AMOUNT}" fieldGroupIds="InputField" required="true" editable="true" width="100%"/>
+								<Input value="{oNPI>FREQUENCY}" fieldGroupIds="InputField" required="true" editable="true" width="100%"/>
+								<DatePicker value="{oNPI>PERIOD_START_DATE}" fieldGroupIds="DateField" required="true" editable="true" width="100%"/>
+								<DatePicker value="{oNPI>PERIOD_END_DATE}" fieldGroupIds="DateField" required="true" editable="true" width="100%"/>
+								<Button icon="sap-icon://delete" press="onDeleteMarketingTable"/>
 							</cells>
 						</ColumnListItem>
 					</items>
@@ -94,13 +75,13 @@
 				</layoutData>
 			</VBox>
 			<VBox>
-				<Table id="idNPIMarketing2" inset="false" mode="MultiSelect" items="{oSOModel>/ATTACHMENTSSET}">
+				<Table id="idNPIMarketing2" inset="false" mode="MultiSelect" items="{oNPI>/PRODUCT_PROPOSED_LISTING}">
 					<headerToolbar>
 						<OverflowToolbar>
 							<content>
 								<Title text="{i18n>ProductListingWithOtherRetailer}" level="H2"/>
 								<ToolbarSpacer/>
-								<Button text="{i18n>btnAdd}" press="AddAttachments"/>
+								<Button text="{i18n>btnAdd}" press="AddProposedListing"/>
 							</content>
 						</OverflowToolbar>
 					</headerToolbar>
@@ -117,30 +98,14 @@
 						<Column hAlign="End">
 							<Text text=""/>
 						</Column>
-						<Column hAlign="End">
-							<Text text=""/>
-						</Column>
 					</columns>
 					<items>
-						<ColumnListItem vAlign="Middle">
+						<ColumnListItem >
 							<cells>
-								<VBox>
-									<ComboBox visible="{oSOModel>INPUT}" selectedKey="{oSOModel>DOCUMENT_TYPE}" items="{oMainModel>/businessCode}" width="100%"
-										fieldGroupIds="ComboboxField" required="true" editable="true">
-										<core:Item key="{oMainModel>BUS_CODE}" text="{oMainModel>CODE_DESC}"/>
-									</ComboBox>
-									<Text text="{oSOModel>DOCUMENT_TYPE}" visible="{oSOModel>TEXT}"/>
-								</VBox>
-								<VBox>
-									<TextArea visible="{oSOModel>INPUT}" value="{oSOModel>DOC_DESCRIPTION}" fieldGroupIds="InputField" required="true" editable="true"
-										width="100%"/>
-									<Text text="{oSOModel>DOC_DESCRIPTION}"/>
-								</VBox>
-								<VBox>
-									<Button icon="sap-icon://edit" press="onEditAttachmentTable" visible="{oSOModel>TEXT}"/>
-									<Button icon="sap-icon://save" press="onSaveAttachmentTable" visible="{oSOModel>INPUT}"/>
-								</VBox>
-								<Button icon="sap-icon://delete" press="onDeleteAttachmentTable"/>
+								<Input value="{oNPI>RETAILER_NAME}" fieldGroupIds="InputField" required="true" editable="true" width="100%"/>
+								<Input value="{oNPI>SELLING_PRICE}" fieldGroupIds="InputField" required="true" editable="true" width="100%"/>
+								<DatePicker value="{oNPI>START_DATE}" fieldGroupIds="DateField" required="true" editable="true" width="100%"/>
+								<Button icon="sap-icon://delete" press="onDeleteProposedListingTable"/>
 							</cells>
 						</ColumnListItem>
 					</items>
