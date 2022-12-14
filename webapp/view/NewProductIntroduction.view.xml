@@ -2,7 +2,6 @@
     <Page showHeader="false" showNavButton="false">
         <Page id="sideContentContainer" showHeader="false" showNavButton="false">
             <layout:DynamicSideContent id="DynamicSideContent" class="sapUiDSCExplored sapUiContentPadding" sideContentFallDown="BelowM" sideContentPosition="End" containerQuery="true" breakpointChanged="handleBreakpointChanged">
-                
                 <uxap:ObjectPageLayout useTwoColumnsForLargeScreen="true" id="ObjectPageLayout" upperCaseAnchorBar="true" showHeaderContent="false">
                     <uxap:sections>
                         <uxap:ObjectPageSection title="{i18n>ProductData}">
