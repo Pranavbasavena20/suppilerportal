@@ -1,30 +1,33 @@
 <mvc:View xmlns:l="sap.ui.layout" controllerName="com.spm.suppilerportal.controller.GenericTilesView" xmlns:mvc="sap.ui.core.mvc"
 	displayBlock="true" xmlns="sap.m">
-	<Page id="page" class="BgImage" enableScrolling="false" showHeader="false" title="{i18n>title}">
+	<Page id="page" class="BgImage" enableScrolling="true" showHeader="false" title="{i18n>title}">
 		<content>
 			<Bar class="sapUiSmallMarginTop sapUiContentPadding">
 				<contentLeft/>
 				<contentMiddle>
-					<SearchField width="{= ${device>/system/phone} ? '' : '30%'}"/>
+					<SearchField width="{= ${device>/system/phone} ? '' : '50%'}"/>
 				</contentMiddle>
 			</Bar>
 			<l:VerticalLayout width="100%" class="gridWrapper">
 				<Carousel id="carouselSample" height="100%" pages="{ path: 'ApplicationModel>/Carousel' }" showPageIndicator="false"
-					class="sapUiContentPadding">
+					class="sapUiNoContentPadding">
 					<customLayout>
 						<CarouselLayout visiblePagesCount="1"/>
 					</customLayout>
-					<l:Grid position="Center" width="{= ${device>/system/phone} ? '' : '60%'}" content="{ApplicationModel>ApplicationPerLayout/}"
+					<l:Grid position="Center" width="{= ${device>/system/phone} ? '' : '100%'}" content="{ApplicationModel>ApplicationPerLayout/}"
 						class="sapUiSmallMarginTopBottom">
 						<VBox>
-							<HBox>
-								<GenericTile sizeBehavior="Small" backgroundImage="{ApplicationModel>BackgroundImage}" class="sapUiTinyMarginTop"
-									header="{ApplicationModel>HeaderCount}" press="onImageClick"/>
+							<HBox justifyContent="Center">
+								<GenericTile id="tileApplicationHomePage"  backgroundImage="{ApplicationModel>BackgroundImage}" class="sapUiTinyMarginTop"
+									tooltip="{ApplicationModel>AppNameTooltip}"  press="onImageClick"/>
 							</HBox>
-							<HBox>
-								<Text textAlign="Center" width="{= ${device>/system/phone} ? '' : '80px'}" wrapping="true" text="{ApplicationModel>AppName}"
-									class="tileBottomTextColor"/>
+							<HBox justifyContent="Center">
+								<Text id="txtBottomTile" textAlign="Center" width="{= ${device>/system/phone} ? '80px' : '128px'}" wrapping="false" text="{ApplicationModel>AppName}" tooltip="{ApplicationModel>AppNameTooltip}" 
+									/>
 							</HBox>
+							<layoutData>
+                                <l:GridData span="XL2 L2 M3 S3" linebreak="false" />
+                            </layoutData>
 						</VBox>
 					</l:Grid>
 				</Carousel>

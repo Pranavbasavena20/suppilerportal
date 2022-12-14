@@ -6,7 +6,7 @@
                     <customHeader>
                         <Bar>
                             <contentLeft>
-                                <Button icon="sap-icon://home" press="onPressHomePage" />
+                                <Button type="Emphasized" icon="sap-icon://home" press="onPressHomePage" />
                             </contentLeft>
                         </Bar>
                     </customHeader>

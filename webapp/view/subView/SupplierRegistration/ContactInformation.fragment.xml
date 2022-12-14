@@ -56,7 +56,7 @@
                     </layoutData>
                 </VBox>
                 <VBox>
-                    <Button text="{i18n>btnProceedtoAddressDetails}" press="onfnnextpress3" width="100%" class="button1 header2" />
+                    <Button type="Emphasized" text="{i18n>btnProceedtoAddressDetails}" press="onfnnextpress3" width="100%" class="button1 header2" />
                     <layoutData>
                         <layout:GridData span="XL12 L12 M12 S12" linebreak="false" />
                     </layoutData>

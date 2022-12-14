@@ -14,6 +14,24 @@ sap.ui.define([
 
         return Controller.extend("com.spm.suppilerportal.controller.SupplierOnboarding", {
             onInit: function () {
+
+/************************************Handling CSS for DEVICE Responsiveness*****************************/
+                var isMobile = this.getOwnerComponent().getModel("device").getProperty("/system/phone") ? true : false;
+                if(isMobile){
+                    this.getUIControl("flxBoxAccountInfo").addStyleClass("flexBoxHavingSimpleformInside");
+                    this.getUIControl("flxBoxBasicInformation").addStyleClass("flexBoxHavingSimpleformInside");
+                    this.getUIControl("flxBoxAddress").addStyleClass("flexBoxHavingSimpleformInside");
+                    this.getUIControl("flxBoxContactList").addStyleClass("flexBoxHavingSimpleformInside");
+                    this.getUIControl("flxBoxDepartment").addStyleClass("flexBoxHavingSimpleformInside");
+                    this.getUIControl("flxBoxOtherInfo").addStyleClass("flexBoxHavingSimpleformInside");
+                    this.getUIControl("flxBoxPaymentInfo").addStyleClass("flexBoxHavingSimpleformInside");
+                    this.getUIControl("flxBoxReviewLog").addStyleClass("flexBoxHavingSimpleformInside");
+                    this.getUIControl("flxBoxStatutoryDocuments").addStyleClass("flexBoxHavingSimpleformInside");
+                    this.getUIControl("flxBoxWithholdingTax").addStyleClass("flexBoxHavingSimpleformInside");
+
+                }
+                
+
                 var oModel = dataUtil.createJsonModel();
                 oModel.setData({
                     "sNext": true,
