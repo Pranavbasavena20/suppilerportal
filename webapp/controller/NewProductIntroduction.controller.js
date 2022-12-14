@@ -1,23 +1,23 @@
 sap.ui.define([
-		"./BaseController",
-		"sap/ui/model/json/JSONModel",
-		"com/spm/suppilerportal/utils/dataUtil",
-		"sap/ui/core/UIComponent",
-		"sap/ui/core/Fragment",
-	],
+	"./BaseController",
+	"sap/ui/model/json/JSONModel",
+	"com/spm/suppilerportal/utils/dataUtil",
+	"sap/ui/core/UIComponent",
+	"sap/ui/core/Fragment",
+],
 	/**
 	 * @param {typeof sap.ui.core.mvc.Controller} Controller
 	 */
 	function (Controller, JSONModel, dataUtil, UIComponent, Fragment) {
 		"use strict";
 
-	return Controller.extend("com.spm.suppilerportal.controller.NewProductIntroduction", {
+		return Controller.extend("com.spm.suppilerportal.controller.NewProductIntroduction", {
 
-		/**
-		 * Called when a controller is instantiated and its View controls (if available) are already created.
-		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
-		 * @memberOf com.spm.suppilerportal.view.NewProductIntroduction
-		 */
+			/**
+			 * Called when a controller is instantiated and its View controls (if available) are already created.
+			 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
+			 * @memberOf com.spm.suppilerportal.view.NewProductIntroduction
+			 */
 			onPressImage: function () {
 				sap.m.MessageToast.show("I am pressed");
 			},
@@ -66,7 +66,7 @@ sap.ui.define([
 							"phone": "+2828282828",
 							"email": "blabla@blabla"
 						}, {
-							"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1ZW4-gayliqsg3JLj4aWzIblxUizG1q9dYHX6p3P-RUkfXlBX-nXJ9QffvFUAKsqHtck&usqp=CAU",
+							"src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1ZW4-gayliqsg3JLj4aWzIblxUizG1q9dYHX6p3P-RUkfXlBX-nXJ9QffvFUAKsqHtck&usqp=CAU",
 							"tooltip": "5",
 							"name": "Jessica Parker",
 							"jobPosition": "Visual Designer",
@@ -133,138 +133,140 @@ sap.ui.define([
 				this.getView().setModel(oModel, "oLanding");
 
 			},
-				onGetVolume: function (oEvent) {
-			var oObject = oEvent.getSource().getBindingContext("oNPI").getObject(),
-				sPath = oEvent.getSource().getBindingContext("oNPI").getPath();
-			if (oObject.DEPTH !== "" && oObject.WIDTH !== "" && oObject.HEIGHT !== "") {
-				var iFinalVal = parseInt(oObject.DEPTH) * parseInt(oObject.WIDTH) * parseInt(oObject.HEIGHT);
-				this.getView().getModel("oNPI").setProperty(sPath + "/Volume", iFinalVal);
-			}
-		},
-		onUOM: function (oEvent) {
-			var oModel = this.getView().getModel("oNPI");
-			var object = {
-				ID: oModel.getData().PRODUCT_UOM_LIST.length + 1,
-				PRODUCT_ID: "",
-				VARIANT_ID: "",
-				UOM: "",
-				UOM_NO_CONV: "",
-				UOM_UNIT: "",
-				EAN_CATEGORY: "",
-				ORDERING_UOM: "",
-				BARCODE: "",
-				WEIGHT: "",
-				WIDTH: "",
-				DEPTH: "",
-				HEIGHT: "",
-				BUN: false,
-				OUN: false,
-				DI: "",
-				SUN: "",
-				MN_GTIN: "",
-				NET_WEIGHT: "",
-				WT_UNIT: "",
-				ADD_SALES_UNIT: "",
-				VALID_FROM: "",
-				VALID_TO: "",
-				Button: false,
-				Volume: ""
-			};
-			var object2 = {
-				ID: oModel.getData().PRODUCT_UOM_LIST.length + 2,
-				PRODUCT_ID: "",
-				VARIANT_ID: "",
-				UOM: "",
-				UOM_NO_CONV: "",
-				UOM_UNIT: "",
-				EAN_CATEGORY: "",
-				ORDERING_UOM: "",
-				BARCODE: "",
-				WEIGHT: "",
-				WIDTH: "",
-				DEPTH: "",
-				HEIGHT: "",
-				BUN: false,
-				OUN: false,
-				DI: "",
-				SUN: "",
-				MN_GTIN: "",
-				NET_WEIGHT: "",
-				WT_UNIT: "",
-				ADD_SALES_UNIT: "",
-				VALID_FROM: "",
-				VALID_TO: "",
-				Button: true,
-				Volume: ""
-			};
-			oModel.getData().PRODUCT_UOM_LIST.push(object);
-			oModel.getData().PRODUCT_UOM_LIST.push(object2);
-			oModel.updateBindings(true);
-		},
-onPricing: function (oEvent) {
-			var oModel = this.getView().getModel("oNPI");
-			var object = {
-				ID: oModel.getData().PRODUCT_PRICING_LIST.length + 1,
-				PRODUCT_ID: "",
-				VENDOR_ID: "",
-				VARIANT_ID: "",
-				SALES_ORG: "",
-				SALES_ORG_DESC: "",
-				DIST_CHANNEL: "",
-				DIST_CHANNEL_DESC: "",
-				PRICE_TYPE: "",
-				UNIT_COST_PRICE: "",
-				COST_PRICE: "",
-				COST_PRICE_MISC: "",
-				MISC_UNIT_CP: "",
-				CP_CURRENCY: "",
-				FOREIGN_UNIT_CP: "",
-				FOREIGN_CP: "",
-				UNIT_SALES_PRICE: "",
-				SP_NO_GST: "",
-				SP_W_GST: "",
-				GP: "",
-				GP_PERCENT: "",
-				INTRO_PERIOD_FROM: "",
-				INTRO_PERIOD_TO: "",
-				CP_UOM: "",
-				SP_UOM: "",
-				Button: false
-			};
-			var object2 = {
-				ID: oModel.getData().PRODUCT_UOM_LIST.length + 2,
-				PRODUCT_ID: "",
-				VENDOR_ID: "",
-				VARIANT_ID: "",
-				SALES_ORG: "",
-				SALES_ORG_DESC: "",
-				DIST_CHANNEL: "",
-				DIST_CHANNEL_DESC: "",
-				PRICE_TYPE: "",
-				UNIT_COST_PRICE: "",
-				COST_PRICE: "",
-				COST_PRICE_MISC: "",
-				MISC_UNIT_CP: "",
-				CP_CURRENCY: "",
-				FOREIGN_UNIT_CP: "",
-				FOREIGN_CP: "",
-				UNIT_SALES_PRICE: "",
-				SP_NO_GST: "",
-				SP_W_GST: "",
-				GP: "",
-				GP_PERCENT: "",
-				INTRO_PERIOD_FROM: "",
-				INTRO_PERIOD_TO: "",
-				CP_UOM: "",
-				SP_UOM: "",
-				Button: true
-			};
-			oModel.getData().PRODUCT_PRICING_LIST.push(object);
-			oModel.getData().PRODUCT_PRICING_LIST.push(object2);
-			oModel.updateBindings(true);
-		},
-		
+			onGetVolume: function (oEvent) {
+				var oObject = oEvent.getSource().getBindingContext("oNPI").getObject(),
+					sPath = oEvent.getSource().getBindingContext("oNPI").getPath();
+				if (oObject.DEPTH !== "" && oObject.WIDTH !== "" && oObject.HEIGHT !== "") {
+					var iFinalVal = parseInt(oObject.DEPTH) * parseInt(oObject.WIDTH) * parseInt(oObject.HEIGHT);
+					this.getView().getModel("oNPI").setProperty(sPath + "/Volume", iFinalVal);
+				}
+			},
+			onUOM: function (oEvent) {
+				var oModel = this.getView().getModel("oNPI");
+				var object = {
+					ID: oModel.getData().PRODUCT_UOM_LIST.length + 1,
+					PRODUCT_ID: "",
+					VARIANT_ID: "",
+					UOM: "",
+					UOM_NO_CONV: "",
+					UOM_UNIT: "",
+					EAN_CATEGORY: "",
+					ORDERING_UOM: "",
+					BARCODE: "",
+					WEIGHT: "",
+					WIDTH: "",
+					DEPTH: "",
+					HEIGHT: "",
+					BUN: false,
+					OUN: false,
+					DI: "",
+					SUN: "",
+					MN_GTIN: "",
+					NET_WEIGHT: "",
+					WT_UNIT: "",
+					ADD_SALES_UNIT: "",
+					VALID_FROM: "",
+					VALID_TO: "",
+					Button: false,
+					Volume: ""
+				};
+				var object2 = {
+					ID: oModel.getData().PRODUCT_UOM_LIST.length + 2,
+					PRODUCT_ID: "",
+					VARIANT_ID: "",
+					UOM: "",
+					UOM_NO_CONV: "",
+					UOM_UNIT: "",
+					EAN_CATEGORY: "",
+					ORDERING_UOM: "",
+					BARCODE: "",
+					WEIGHT: "",
+					WIDTH: "",
+					DEPTH: "",
+					HEIGHT: "",
+					BUN: false,
+					OUN: false,
+					DI: "",
+					SUN: "",
+					MN_GTIN: "",
+					NET_WEIGHT: "",
+					WT_UNIT: "",
+					ADD_SALES_UNIT: "",
+					VALID_FROM: "",
+					VALID_TO: "",
+					Button: true,
+					Volume: ""
+				};
+				oModel.getData().PRODUCT_UOM_LIST.push(object);
+				oModel.getData().PRODUCT_UOM_LIST.push(object2);
+				oModel.updateBindings(true);
+			},
+			onPricing: function (oEvent) {
+				var oModel = this.getView().getModel("oNPI");
+				var object = {
+					ID: oModel.getData().PRODUCT_PRICING_LIST.length + 1,
+					PRODUCT_ID: "",
+					VENDOR_ID: "",
+					VARIANT_ID: "",
+					SALES_ORG: "",
+					SALES_ORG_DESC: "",
+					DIST_CHANNEL: "",
+					DIST_CHANNEL_DESC: "",
+					PRICE_TYPE: "",
+					UNIT_COST_PRICE: "",
+					COST_PRICE: "",
+					COST_PRICE_MISC: "",
+					MISC_UNIT_CP: "",
+					CP_CURRENCY: "",
+					FOREIGN_UNIT_CP: "",
+					FOREIGN_CP: "",
+					UNIT_SALES_PRICE: "",
+					SP_NO_GST: "",
+					SP_W_GST: "",
+					GP: "",
+					GP_PERCENT: "",
+					INTRO_PERIOD_FROM: "",
+					INTRO_PERIOD_TO: "",
+					CP_UOM: "",
+					SP_UOM: "",
+					Button: false
+				};
+				var object2 = {
+					ID: oModel.getData().PRODUCT_UOM_LIST.length + 2,
+					PRODUCT_ID: "",
+					VENDOR_ID: "",
+					VARIANT_ID: "",
+					SALES_ORG: "",
+					SALES_ORG_DESC: "",
+					DIST_CHANNEL: "",
+					DIST_CHANNEL_DESC: "",
+					PRICE_TYPE: "",
+					UNIT_COST_PRICE: "",
+					COST_PRICE: "",
+					COST_PRICE_MISC: "",
+					MISC_UNIT_CP: "",
+					CP_CURRENCY: "",
+					FOREIGN_UNIT_CP: "",
+					FOREIGN_CP: "",
+					UNIT_SALES_PRICE: "",
+					SP_NO_GST: "",
+					SP_W_GST: "",
+					GP: "",
+					GP_PERCENT: "",
+					INTRO_PERIOD_FROM: "",
+					INTRO_PERIOD_TO: "",
+					CP_UOM: "",
+					SP_UOM: "",
+					Button: true
+				};
+				oModel.getData().PRODUCT_PRICING_LIST.push(object);
+				oModel.getData().PRODUCT_PRICING_LIST.push(object2);
+				oModel.updateBindings(true);
+			},
+
+
+		});
+
+
 
 	});
-
-});
