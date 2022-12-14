@@ -22,6 +22,11 @@ sap.ui.define([
 				sap.m.MessageToast.show("I am pressed");
 			},
 			onInit: function () {
+				var oViewModel = new sap.ui.model.json.JSONModel({
+					bForCastAdd: true,
+					bForcastMonthAdd: true
+				});
+				this.getOwnerComponent().setModel(oViewModel, "NPIView");
 				var oModel = dataUtil.createJsonModel();
 
 				oModel.setData({
@@ -266,7 +271,3 @@ sap.ui.define([
 
 
 		});
-
-
-
-	});

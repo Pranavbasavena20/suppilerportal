@@ -1,7 +1,6 @@
 /**
  * eslint-disable @sap/ui5-jsdocs/no-jsdoc
  */
-
 sap.ui.define([
     "sap/ui/core/UIComponent",
     "sap/ui/Device",
