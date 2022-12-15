@@ -1,7 +1,7 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons"
 	xmlns:core="sap.ui.core">
 	<ScrollContainer height="100%" width="100%" vertical="true" focusable="true">
-		<Table id="tbPricing" items="{oNPI>/PRODUCT_PRICING_LIST}" growing="true" growingThreshold="10" growingScrollToLoad="true"
+		<Table id="tbPricing" class = "columnTable" items="{oNPI>/PRODUCT_PRICING_LIST}" growing="true" growingThreshold="10" growingScrollToLoad="true"
 			noDataText="{i18n>TxtRemarkNoDataText}" updateFinished="onUpdateFinished">
 			<headerToolbar >
 				<OverflowToolbar>

@@ -543,4 +543,14 @@ span.sapMBtnInner.sapMBtnEmphasized.sapMBtnActive
 .homeTilesAlignment .sapMFlexBoxJustifyStart {
     justify-content: center!important;
 }
+.columnTable .sapMColumnHeader{
+    padding:0rem!important;
+}
+.sapMRb .sapMRbB .sapMRbBOut {
+    stroke: #841dbd;
+}
+
+.sapMRbSel .sapMRbBInn {
+    fill: #841dbd;
+}
 /* End of  tiles styles here */

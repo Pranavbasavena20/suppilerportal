@@ -36,7 +36,7 @@
 				</layoutData>
 			</VBox>
 			<VBox>
-				<Table id="idNPIDcoument" inset="false" mode="MultiSelect" items="{oNPI>/PRODUCT_ATTACHMENT}">
+				<Table class = "columnTable" id="idNPIDcoument" inset="false" mode="MultiSelect" items="{oNPI>/PRODUCT_ATTACHMENT}">
 					<headerToolbar>
 						<OverflowToolbar>
 							<content>
