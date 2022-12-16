@@ -1,7 +1,7 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons" xmlns:core="sap.ui.core">
     <form:SimpleForm width="100%" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="12" columnsXL="1" columnsL="2" columnsM="1" editable="true" adjustLabelSpan="true" singleContainerFullSize="false">
         <form:content>
-            <VBox>
+            <VBox width="100%">
                 <Table class="columnTable" id="idNPIForcast" width="100%" inset="false" mode="MultiSelect" items="{oNPI>/PRODUCT_FORECAST/FORECAST_ATTIBUTES}">
                     <headerToolbar>
                         <OverflowToolbar>
@@ -37,7 +37,7 @@
                     <layout:GridData span="XL12 L12 M12 S12" linebreak="true" />
                 </layoutData>
             </VBox>
-            <VBox>
+            <VBox width="100%">
                 <Table class="columnTable" id="idNPIForcast2" width="100%" inset="false" mode="MultiSelect" items="{oNPI>/PRODUCT_FORECAST/FORECAST_MONTHS}">
                     <headerToolbar>
                         <OverflowToolbar>
@@ -80,21 +80,21 @@
                 <Label text="{i18n>CompetingProductCode1}" design="Bold" labelFor="ipProductcode1" wrapping="true" />
                 <Input value="{oNPI>/PRODUCT_FORECAST/COMPETING_PRODMSTRSEQID_1}" showValueHelp="true" description="{oNPI>/PRODUCT_FORECAST/COMPETING_PRODMSTRSEQID_1_DESC}" id="ipProductcode1" fieldGroupIds="InputField" required="true" editable="true" width="100%" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>CompetingProductCode2}" design="Bold" labelFor="ipProductcode2" wrapping="true" />
                 <Input value="{oNPI>/PRODUCT_FORECAST/COMPETING_PRODMSTRQID_2}" id="ipProductcode2" showValueHelp="true" description="{oNPI>/PRODUCT_FORECAST/COMPETING_PRODMSTRQID_2_DESC}" fieldGroupIds="InputField" required="true" editable="true" width="100%" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>CompetingProductCode3}" design="Bold" labelFor="ipProductcode3" wrapping="true" />
                 <Input value="{oNPI>/PRODUCT_FORECAST/COMPETING_PRODMSTRQID_3}" showValueHelp="true" description="{oNPI>/PRODUCT_FORECAST/COMPETING_PRODMSTRQID_3_DESC}" id="ipProductcode3" fieldGroupIds="InputField" required="true" editable="true" width="100%" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
         </form:content>

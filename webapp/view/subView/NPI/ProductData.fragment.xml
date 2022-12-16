@@ -8,7 +8,7 @@
                     <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                 </ComboBox>
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
@@ -17,7 +17,7 @@
                     <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                 </ComboBox>
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <VBox>
@@ -26,35 +26,35 @@
                     <core:Item key="{oMainModel>COUNTRY_CODE}" text="{oMainModel>COUNTRY_NAME}" />
                 </ComboBox>
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>PackSize}" design="Bold" wrapping="true" labelFor="ipPackSize" />
                 <Input value="{oNPI>/PRODUCT_DATA/PACK_SIZE}" id="ipPackSize" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>PackSizeUnit}" design="Bold" wrapping="true" labelFor="ipPackSizeUnit" />
                 <Input value="{oNPI>/PRODUCT_DATA/PACK_SIZE_UNIT}" showValueHelp="true" id="ipPackSizeUnit" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>ProductShortDesc}" design="Bold" wrapping="true" labelFor="ipProductShortDesc" />
                 <Input value="{oNPI>/PRODUCT_DATA/PRODUCT_SHORT_DESC}" id="ipProductShortDesc" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>ProductFullDesc}" design="Bold" wrapping="true" labelFor="ipProductFullDesc" />
                 <Input value="{oNPI>/PRODUCT_DATA/PRODUCT_FULL_DESC}" id="ipProductFullDesc" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
@@ -63,14 +63,14 @@
                     <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                 </ComboBox>
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>BrandCode}" design="Bold" wrapping="true" labelFor="ipBrandCode" />
                 <Input value="{oNPI>/PRODUCT_DATA/BRAND_CODE}" showValueHelp="true" id="ipBrandCode" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
@@ -79,7 +79,7 @@
                     <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                 </ComboBox>
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <VBox>
@@ -88,7 +88,7 @@
                     <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                 </ComboBox>
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
@@ -97,21 +97,21 @@
                     <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                 </ComboBox>
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>ManufacturerCode}" design="Bold" wrapping="true" labelFor="ipManufacturerCode" />
                 <Input value="{oNPI>/PRODUCT_DATA/MFR_CODE}" id="ipManufacturerCode" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>ManufacturerName}" design="Bold" wrapping="true" labelFor="ipManufacturerName" />
                 <Input value="{oNPI>/PRODUCT_DATA/MFR_DESC}" id="ipManufacturerName" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <VBox>
@@ -121,7 +121,7 @@
                     <RadioButton text="{i18n>No}" />
                 </RadioButtonGroup>
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
@@ -131,21 +131,21 @@
                     <RadioButton text="{i18n>No}" />
                 </RadioButtonGroup>
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>ProductListingNotice}" design="Bold" wrapping="true" labelFor="ipProductListingNotice" />
                 <Input value="{oNPI>/PRODUCT_DATA/PRODUCT_LISTING_NOTICE}" id="ipProductListingNotice" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>ShelfLife}" design="Bold" wrapping="true" labelFor="ipShelfLife" />
                 <Input value="{oNPI>/PRODUCT_DATA/COUNTRY_OF_ORIGIN}" id="ipShelfLife" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <core:Title text="{i18n>ProductCategory}" />
@@ -153,21 +153,21 @@
                 <Label text="{i18n>MainKey}" design="Bold" wrapping="true" labelFor="ipMainKey" />
                 <Input value="{oNPI>/PRODUCT_DATA/MCH_MAIN_KEY}" showValueHelp="true" id="ipMainKey" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>DepartmentCode}" design="Bold" wrapping="true" labelFor="ipDepartmentCode" />
                 <Input value="{oNPI>/PRODUCT_DATA/DEPARTMENT_CODE}" showValueHelp="true" id="ipDepartmentCode" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>ClassCode}" design="Bold" wrapping="true" labelFor="ipClassCode" />
                 <Input value="{oNPI>/PRODUCT_DATA/CLASS_CODE}" showValueHelp="true" id="ipClassCode" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
@@ -176,7 +176,7 @@
                     <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                 </ComboBox>
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <VBox>
@@ -185,7 +185,7 @@
                     <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                 </ComboBox>
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
@@ -194,7 +194,7 @@
                     <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                 </ComboBox>
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <VBox>
@@ -203,56 +203,56 @@
                     <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                 </ComboBox>
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>ProductFormat}" design="Bold" wrapping="true" labelFor="ipProductFormat" />
                 <Input value="{oNPI>/PRODUCT_DATA/PRODUCT_FORMAT}" showValueHelp="true" id="ipProductFormat" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>BuyerLevel1Code}" design="Bold" wrapping="true" labelFor="ipBuyerLevel1Code" />
                 <Input value="{oNPI>/PRODUCT_DATA/BUYER_LEVEL1_CODE}" showValueHelp="true" id="ipBuyerLevel1Code" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>BuyerLevel2Code}" design="Bold" wrapping="true" labelFor="ipBuyerLevel2Code" />
                 <Input value="{oNPI>/PRODUCT_DATA/BUYER_LEVEL2_CODE}" showValueHelp="true" id="ipBuyerLevel2Code" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>BuyerLevel3Code}" design="Bold" wrapping="true" labelFor="ipBuyerLevel3Code" />
                 <Input value="{oNPI>/PRODUCT_DATA/BUYER_LEVEL3_CODE}" showValueHelp="true" id="ipBuyerLevel3Code" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>BuyerLevel4Code}" design="Bold" wrapping="true" labelFor="ipBuyerLevel4Code" />
                 <Input value="{oNPI>/PRODUCT_DATA/BUYER_LEVEL4_CODE}" showValueHelp="true" id="ipBuyerLevel4Code" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>BuyerLevel5Code}" design="Bold" wrapping="true" labelFor="ipBuyerLevel5Code" />
                 <Input value="{oNPI>/PRODUCT_DATA/BUYER_LEVEL5_CODE}" showValueHelp="true" id="ipBuyerLevel5Code" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>SupplierCode}" design="Bold" wrapping="true" />
                 <Text text="{oNPI>/PRODUCT_DATA/VENDOR_CODE}" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <VBox>
@@ -261,21 +261,21 @@
                     <core:Item key="{oMainModel>DEPT_CODE}" text="{oMainModel>DEPT_DESC}" />
                 </ComboBox>
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>LeadTime}" design="Bold" wrapping="true" labelFor="ipLeadTime" />
                 <Input value="{oNPI>/PRODUCT_DATA/AVG_LEAD_TIME}" showValueHelp="true" id="ipLeadTime" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="false" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="false" />
                 </layoutData>
             </VBox>
             <VBox>
                 <Label text="{i18n>TaxCode}" design="Bold" wrapping="true" labelFor="ipTaxCode" />
                 <Input value="{oNPI>/PRODUCT_DATA/TAX_CODE}" showValueHelp="true" id="ipTaxCode" fieldGroupIds="InputField" required="true" editable="true" />
                 <layoutData>
-                    <layout:GridData span="XL6 L6 M6 S12" linebreak="true" />
+                    <layout:GridData span="XL12 L12 M6 S12" linebreak="true" />
                 </layoutData>
             </VBox>
         </form:content>
