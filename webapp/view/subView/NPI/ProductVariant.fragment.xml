@@ -109,7 +109,7 @@
 					</ScrollContainer>
 				</content>
 			</Panel>
-			<Panel headerText="Variant" visible="{NPIView>/bVariantLength}" expandable="true">
+			<Panel headerText="Pricing" visible="{NPIView>/bVariantLength}" expandable="true">
 				<content>
 					<ScrollContainer height="100%" width="100%" vertical="true" focusable="true">
 						<Table id="tbVariantPricing" class="columnTable" growing="true" growingThreshold="10" growingScrollToLoad="true"

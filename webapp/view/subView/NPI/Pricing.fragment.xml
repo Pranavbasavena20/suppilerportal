@@ -1,14 +1,19 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:micro="sap.suite.ui.commons"
 	xmlns:core="sap.ui.core">
+	   <VBox>
+    <Toolbar>
+        <ToolbarSpacer />
+        <Button icon="sap-icon://add" text="{i18n>BtnPricing}" type="Emphasized" press="onPricing"/>
+    </Toolbar>
 	<ScrollContainer height="100%" width="100%" vertical="true" focusable="true">
 		<Table id="tbPricing" class="columnTable" items="{oNPI>/PRODUCT_PRICING_LIST}" growing="true" growingThreshold="10"
 			growingScrollToLoad="true" noDataText="{i18n>TxtRemarkNoDataText}" updateFinished="onUpdateFinished">
-			<headerToolbar>
+			<!-- <headerToolbar>
 				<OverflowToolbar>
 					<ToolbarSpacer/>
 					<Button icon="sap-icon://add" text="{i18n>BtnPricing}" type="Emphasized" press="onPricing"/>
 				</OverflowToolbar>
-			</headerToolbar>
+			</headerToolbar> -->
 			<columns>
 				<Column width="{= ${device>/system/phone} ? '' : '6rem'}">
 					<Text text="{i18n>SalesOrg}" wrapping="true"/>
@@ -31,16 +36,16 @@
 				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '6rem'}">
 					<Text text=" {i18n>RSP_No_GST}" wrapping="true"/>
 				</Column>
-				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '6rem'}">
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '3rem'}">
 					<Text text="{i18n>GP}" wrapping="true"/>
 				</Column>
-				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '6rem'}">
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '3rem'}">
 					<Text text="{i18n>GPPercentage}" wrapping="true"/>
 				</Column>
-				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '6rem'}">
+				<Column minScreenWidth="Tablet" demandPopin="true" width="{= ${device>/system/phone} ? '' : '5rem'}">
 					<Text text="{i18n>BaseUnitRSP}" wrapping="true"/>
 				</Column>
-				<Column hAlign="End" width="{= ${device>/system/phone} ? '' : '6rem'}">
+				<Column hAlign="End" width="{= ${device>/system/phone} ? '' : '3rem'}">
 					<Text text=""/>
 				</Column>
 			</columns>
@@ -63,4 +68,5 @@
 			</items>
 		</Table>
 	</ScrollContainer>
+	</VBox>
 </core:FragmentDefinition>

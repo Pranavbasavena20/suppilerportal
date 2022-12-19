@@ -245,6 +245,12 @@
 
 /* giving space in between radiobuttongroup */
 
+/* responsive splitter */
+.sapUiLoSplitter.sapUiLoSplitterH>.sapUiLoSplitterBar .sapUiLoSplitterBarDecorationBefore,
+.sapUiLoSplitter.sapUiLoSplitterH>.sapUiLoSplitterBar .sapUiLoSplitterBarDecorationAfter{
+    background-image: linear-gradient(to top, #841dbd,rgba(8,84,160,0));
+}
+
 .sapMRbG.sapMRbG1Row>.sapMRb {
     clear: none;
     padding-right: 0.5rem;
@@ -448,6 +454,10 @@ span.sapMBtnInner.sapMBtnEmphasized.sapMBtnActive
     color: #841dbd !important;
     background-color: #841dbd !important;
 }
+/* Removing the padding for begin and end while using subsection on object page layout */
+.sapUiRespGrid.sapUiRespGridHSpace1 {
+    padding: 0rem!important;
+}
 
 
 /* Enter your Stanard styles here */
@@ -456,11 +466,12 @@ span.sapMBtnInner.sapMBtnEmphasized.sapMBtnActive
 /* Enter your custom styles here */
 .bodyPage {
     /* background-color: lightblue!important; */
-    background-image: url("../css/image/black_grad_1.jpeg") !important;
+    /* background-image: url("../css/image/black_grad_1.jpeg") !important; */
 }
 
 .BgImage {
     background-image: url("../css/image/Dark-background-1440x900.jpg") !important;
+    /* background: linear-gradient(0deg, rgba(68,73,73,1) 18%, rgba(0,0,0,1) 100%)!important; */
 }
 
 .TilePage .sapUiBodyBackground,
@@ -577,5 +588,20 @@ span.sapMBtnInner.sapMBtnEmphasized.sapMBtnActive
 
 .homeTilesAlignment .sapMFlexBoxJustifyStart {
     justify-content: center!important;
+}
+
+/* New Product Introduction */
+.sideContentForProductImage .sapMPanelContent {
+    padding: 0rem!important;
+    overflow: hidden!important;
+}
+.sideContentForProductImagePanelHeader.sapMPanel .sapMPanelHdr {
+    background: #841dbd!important;
+    color: white!important;
+    font-family: "72","72full",Arial,Helvetica,sans-serif!important;
+    font-size: .875rem!important;
+}
+.sapUiFormResGrid>div {
+    padding: 0rem!important;
 }
 /* End of  tiles styles here */

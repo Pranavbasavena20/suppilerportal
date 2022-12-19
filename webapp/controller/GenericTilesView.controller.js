@@ -40,11 +40,11 @@ sap.ui.define(
             oGenericTile.addStyleClass("mobileMGTHdrContent");
             oGenericTileText.addStyleClass("mobileTileBottomTextColor");
           } else {
-            if (sHeight > 700) {
+            if (sHeight > 800) {
               sCount = 36;
-            } else if (sHeight > 600) {
+            } else if (sHeight > 700) {
               sCount = 30;
-            } else if (sHeight > 500) {
+            } else if (sHeight > 650) {
               sCount = 24;
             } else {
               sCount = 18;
