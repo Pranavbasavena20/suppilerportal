@@ -1,8 +1,11 @@
-<mvc:View controllerName="com.spm.suppilerportal.controller.NewProductIntroduction" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:uxap="sap.uxap" xmlns:f="sap.f" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form">
-    <Page showHeader="false" showNavButton="false">
-        <Page id="sideContentContainer" showHeader="false" showNavButton="false">
-            <layout:DynamicSideContent id="DynamicSideContent" class="sapUiDSCExplored sapUiContentPadding" sideContentFallDown="BelowM" sideContentPosition="End" containerQuery="true" breakpointChanged="handleBreakpointChanged">
-                <uxap:ObjectPageLayout useTwoColumnsForLargeScreen="true" id="ObjectPageLayout" upperCaseAnchorBar="true" showHeaderContent="false">
+<mvc:View controllerName="com.spm.suppilerportal.controller.NewProductIntroduction" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:uxap="sap.uxap" xmlns:f="sap.f" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form">
+    <l:ResponsiveSplitter defaultPane="default">
+		<l:PaneContainer resize=".onRootContainerResize">
+			<l:SplitPane requiredParentWidth="75%" id="default">
+				<l:layoutData>
+					<l:SplitterLayoutData size="75%" />
+				</l:layoutData>
+				<uxap:ObjectPageLayout useTwoColumnsForLargeScreen="true" id="ObjectPageLayout" upperCaseAnchorBar="true" showHeaderContent="false">
                     <uxap:sections>
                         <uxap:ObjectPageSection title="{i18n>ProductData}">
                             <uxap:subSections>
@@ -95,22 +98,24 @@
                             </uxap:subSections>
                         </uxap:ObjectPageSection>
                     </uxap:sections>
-                </uxap:ObjectPageLayout>
-                <layout:sideContent>
-                    <HeaderContainer scrollStep="500" id="container1" content="{oLanding>/sAvatar/content}">
-                        <Image src="{oLanding>src}" width="40px" height="40px" press="onPressImage" decorative="false" />
-                    </HeaderContainer>
+                </uxap:ObjectPageLayout>              
+			</l:SplitPane>
+			<!-- <l:PaneContainer orientation="Vertical" resize=".onInnerContainerResize"> -->
+				<l:SplitPane requiredParentWidth="25%">
+					<l:layoutData>
+						<l:SplitterLayoutData size="25%" />
+					</l:layoutData>
+                    <Panel headerText="Minimum parent width 600">
                     <HeaderContainer class="sapUiSmallMargin" scrollStep="500" id="container2" content="{oLanding>/sAvatar/content}">
                         <Image src="https://m.media-amazon.com/images/I/71gm8v4uPBL._SX679_.jpg" width="100%" height="100%" press="onPressImage" decorative="false" />
                     </HeaderContainer>
-                </layout:sideContent>
-            </layout:DynamicSideContent>
-        </Page>
-        <footer>
-            <Toolbar>
-                <ToolbarSpacer />
-                <Button text="Submit" type="Accept" press="handleToggleClick" id="toggleButton" />
-            </Toolbar>
-        </footer>
-    </Page>
+                    <HeaderContainer scrollStep="500" id="container1" content="{oLanding>/sAvatar/content}">
+                        <Image src="{oLanding>src}" width="40px" height="40px" press="onPressImage" decorative="false" />
+                    </HeaderContainer>
+                </Panel>
+				</l:SplitPane>
+				
+			<!-- </l:PaneContainer> -->
+		</l:PaneContainer>
+	</l:ResponsiveSplitter>
 </mvc:View>
