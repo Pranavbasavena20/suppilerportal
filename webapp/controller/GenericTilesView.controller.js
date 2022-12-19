@@ -23,13 +23,32 @@ sap.ui.define(
           var oGenericTile = this.getView().byId("tileApplicationHomePage");
           var oGenericTileText = this.getView().byId("txtBottomTile");
           var sCount = 18;
+          var sWidth = sap.ui.Device.resize.width;
+          var sHeight = sap.ui.Device.resize.height;
           if (isMobile) {
-            sCount = 24;
+            if (sHeight > 800) {
+              sCount = 28;
+            } else if (sHeight > 700) {
+              sCount = 24;
+            } else {
+              sCount = 20;
+            }
+
+
             oGenericTile.addStyleClass("mobileGenericTile");
             oGenericTile.addStyleClass("mobileTextLineClamp");
             oGenericTile.addStyleClass("mobileMGTHdrContent");
             oGenericTileText.addStyleClass("mobileTileBottomTextColor");
           } else {
+            if (sHeight > 700) {
+              sCount = 36;
+            } else if (sHeight > 600) {
+              sCount = 30;
+            } else if (sHeight > 500) {
+              sCount = 24;
+            } else {
+              sCount = 18;
+            }
             oGenericTile.addStyleClass("desktopGenericTile");
             oGenericTile.addStyleClass("desktopTextLineClamp");
             oGenericTile.addStyleClass("desktopMGTHdrContent");
@@ -338,7 +357,7 @@ sap.ui.define(
             },
           ];
 
-         
+
           var aCarousel = [];
           var aApplicationPerLayout = [];
           var counter = 0;
@@ -358,7 +377,7 @@ sap.ui.define(
               });
             }
           }
-          var objCar={
+          var objCar = {
             "Carousel": aCarousel
           }
           var oModel = new JSONModel();
