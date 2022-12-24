@@ -112,6 +112,13 @@
           ]
         },
         {
+          "name": "IframeApp",
+          "pattern": "IframeApp",
+          "target": [
+            "IframeApp"
+          ]
+        },
+        {
           "name": "SupplierRegistration",
           "pattern": "SupplierRegistration",
           "target": [
@@ -174,6 +181,13 @@
           "viewId": "GenericTilesView",
           "viewName": "GenericTilesView"
         },
+        "IframeApp": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "IframeApp",
+          "viewName": "IframeApp"
+        }, 
         "NewProductIntroduction": {
           "viewType": "XML",
           "transition": "slide",

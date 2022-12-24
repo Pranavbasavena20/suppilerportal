@@ -1,0 +1,9 @@
+<mvc:View xmlns:l="sap.ui.layout" controllerName="com.spm.suppilerportal.controller.IframeApp" xmlns:mvc="sap.ui.core.mvc"
+xmlns:html="http://www.w3.org/1999/xhtml"
+	displayBlock="true" xmlns="sap.m">
+	<Page id="iFrameAppPage" enableScrolling="true" showHeader="false" title="{i18n>title}">
+		<content>
+			<!-- <html:iframe id="appIframe" src="" target="_top" height="100%" width="100%"></html:iframe> -->
+		</content>
+	</Page>
+</mvc:View>

@@ -34,7 +34,6 @@ sap.ui.define(
               sCount = 20;
             }
 
-
             oGenericTile.addStyleClass("mobileGenericTile");
             oGenericTile.addStyleClass("mobileTextLineClamp");
             oGenericTile.addStyleClass("mobileMGTHdrContent");
@@ -54,123 +53,6 @@ sap.ui.define(
             oGenericTile.addStyleClass("desktopMGTHdrContent");
             oGenericTileText.addStyleClass("desktopTileBottomTextColor");
           }
-          // {device>/system/phone
-          // var aData = {
-          //     "Carousel": [{
-          //         "ApplicationPerLayout": [{
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/New Supplier Registration/New Supplier Registration128.png"),
-          //             "AppName": "Supplier Onboarding forms",
-          //             "HeaderCount": "2"
-          //         }, {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Supplier Master/Supplier Master128.png"),
-          //             "AppName": "Retailer Request Approval",
-          //             "AppNameTooltip": "Retailer Request Approval",
-          //             "HeaderCount": "3"
-          //         }, {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Vendor Master/Vendor Master128.png"),
-          //             "AppName": "Vendor Master",
-          //             "HeaderCount": "6"
-          //         }, {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/NPI/NPI128.png"),
-          //             "AppName": "New Product Introduction",
-          //             "HeaderCount": "12"
-          //         }, {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Supplier Leads/Supplier Leads128.png"),
-          //             "AppName": "Supplier Leads",
-          //             "HeaderCount": "22"
-          //         }, {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/ASN Creation/ASN Creation128.png"),
-          //             "AppName": "ASN Creation",
-          //             "HeaderCount": "34"
-          //         },
-          //         {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Create Invoice/Create Invoice128.png"),
-          //             "AppName": "Create Invoice",
-          //             "HeaderCount": "776"
-          //         },{
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Customer Support/Customer Support128.png"),
-          //             "AppName": "Customer Support",
-          //             "HeaderCount": "6"
-          //         }, {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Delivery Schedule/Delivery Schedule128.png"),
-          //             "AppName": "Delivery Schedule",
-          //             "HeaderCount": "6"
-          //         }, {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Files/Files128.png"),
-          //             "AppName": "Files",
-          //             "HeaderCount": "6"
-          //         },{
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Invoice Correction/Correct Invoice128.png"),
-          //             "AppName": "Invoice Correction",
-          //             "HeaderCount": "6"
-          //         }, {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/New PO/New PO128.png"),
-          //             "AppName": "New PO",
-          //             "HeaderCount": "6"
-          //         }, {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Notifications/Notifications128.png"),
-          //             "AppName": "Notifications",
-          //             "HeaderCount": "6"
-          //         },{
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/NPI Bulk Upload/NPI Bulk Upload128.png"),
-          //             "AppName": "NPI Bulk Upload",
-          //             "HeaderCount": "6"
-          //         }, {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Payment Dashboard/Payment Dashboard128.png"),
-          //             "AppName": "Payment Dashboard",
-          //             "HeaderCount": "6"
-          //         }, {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Payment Status/Payment Status128.png"),
-          //             "AppName": "Payment Status",
-          //             "HeaderCount": "6"
-          //         },{
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/PO Status/PO Status128.png"),
-          //             "AppName": "PO Status",
-          //             "HeaderCount": "6"
-          //         }, {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Price Master/Price Master128.png"),
-          //             "AppName": "Price Master",
-          //             "HeaderCount": "6"
-          //         }]
-          //     }, {
-          //         "ApplicationPerLayout": [{
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Product Master/Product Master128.png"),
-          //             "AppName": "Product Master",
-          //             "HeaderCount": "6"
-          //         }, {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Purchase Order/Purchase Order128.png"),
-          //             "AppName": "Purchase Order",
-          //             "HeaderCount": "6"
-          //         }, {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Review NPI/NPI128.png"),
-          //             "AppName": "Review NPI",
-          //             "HeaderCount": "6"
-          //         },{
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Sales Reports/Sales Reports128.png"),
-          //             "AppName": "Sales Reports",
-          //             "HeaderCount": "6"
-          //         }, {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Switcher/Switcher128.png"),
-          //             "AppName": "Switcher",
-          //             "HeaderCount": "6"
-          //         }, {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/Vendor Scorecard/Vendor Scorecard128.png"),
-          //             "AppName": "Vendor Scorecard",
-          //             "HeaderCount": "6"
-          //         },{
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/View ASN/View ASN128.png"),
-          //             "AppName": "View ASN",
-          //             "HeaderCount": "6"
-          //         }, {
-          //             "BackgroundImage": sap.ui.require.toUrl("com/spm/suppilerportal/css/image/View Invoice/View Invoice128.png"),
-          //             "AppName": "View Invoice",
-          //             "HeaderCount": "6"
-          //         }]
-          //     }
-          //     ]
-
-          // };
-
           var aApplicationList = [
             {
               BackgroundImage: sap.ui.require.toUrl(
@@ -178,6 +60,7 @@ sap.ui.define(
               ),
               AppName: "Supplier Onboarding forms",
               HeaderCount: "2",
+              URL : "https://supplierportal-teh7la6xqa-as.a.run.app/index.html#/SupplierOnboarding"
             },
             {
               BackgroundImage: sap.ui.require.toUrl(
@@ -186,6 +69,7 @@ sap.ui.define(
               AppName: "Retailer Request Approval",
               AppNameTooltip: "Retailer Request Approval",
               HeaderCount: "3",
+              URL : "https://supplierportal-teh7la6xqa-as.a.run.app/index.html#/FlexibleColumnLayout/1"
             },
             {
               BackgroundImage: sap.ui.require.toUrl(
@@ -193,6 +77,7 @@ sap.ui.define(
               ),
               AppName: "Vendor Master",
               HeaderCount: "6",
+              URL : "https://supplierportal-teh7la6xqa-as.a.run.app/index.html#/FlexibleColumnLayout/2"
             },
             {
               BackgroundImage: sap.ui.require.toUrl(
@@ -200,6 +85,7 @@ sap.ui.define(
               ),
               AppName: "New Product Introduction",
               HeaderCount: "12",
+              URL : "https://supplierportal-teh7la6xqa-as.a.run.app/index.html#/NewProductIntroduction"
             },
             {
               BackgroundImage: sap.ui.require.toUrl(
@@ -357,7 +243,6 @@ sap.ui.define(
             },
           ];
 
-
           var aCarousel = [];
           var aApplicationPerLayout = [];
           var counter = 0;
@@ -378,11 +263,21 @@ sap.ui.define(
             }
           }
           var objCar = {
-            "Carousel": aCarousel
-          }
+            Carousel: aCarousel,
+          };
           var oModel = new JSONModel();
           oModel.setData(objCar);
           this.getView().setModel(oModel, "ApplicationModel");
+
+          this._fnCoreApplicationModel();
+        },
+        _fnCoreApplicationModel : function(){
+            var obj = {};
+            obj.URL = "";
+            var oModel = new JSONModel();
+            oModel.setData(obj);
+            this.getOwnerComponent().setModel(oModel,"CoreRoutingModel");
+            sap.ui.getCore().setModel(oModel,"SapCoreRoutingModel");
         },
 
         onImageClick: function (oEvent) {
@@ -390,25 +285,42 @@ sap.ui.define(
             .getSource()
             .getBindingContext("ApplicationModel")
             .getObject().AppName;
-          switch (sText) {
-            case "Supplier Onboarding forms":
-              this.getRouter().navTo("SupplierOnboarding");
-              break;
+          var sUrl = oEvent
+          .getSource()
+          .getBindingContext("ApplicationModel")
+          .getObject().URL;
+          var oSelectedApp = oEvent.getSource().getBindingContext("ApplicationModel").getObject();
+          this.getOwnerComponent().getModel("CoreRoutingModel").setProperty("/selectedApplication",oSelectedApp);
+          this._fnSetCookies(oSelectedApp);
+          this.getRouter().navTo("IframeApp");
+            
+          // switch (sText) {
+          //   case "Supplier Onboarding forms":
+          //     this.getRouter().navTo("SupplierOnboarding");
+          //     break;
 
-            case "Retailer Request Approval":
-              this.getRouter().navTo("FlexibleColumnLayout", { Type: "1" });
-              break;
-            case "Vendor Master":
-              this.getRouter().navTo("FlexibleColumnLayout", { Type: "2" });
-              break;
-            case "New Product Introduction":
-              this.getRouter().navTo("NewProductIntroduction");
-              break;
+          //   case "Retailer Request Approval":
+          //     this.getRouter().navTo("FlexibleColumnLayout", { Type: "1" });
+          //     break;
+          //   case "Vendor Master":
+          //     this.getRouter().navTo("FlexibleColumnLayout", { Type: "2" });
+          //     break;
+          //   case "New Product Introduction":
+          //     this.getRouter().navTo("NewProductIntroduction");
+          //     break;
 
-            default:
-              break;
-          }
+          //   default:
+          //     break;
+          // }
         },
+        _fnSetCookies: function(oSelectedApp){
+          let date = new Date();
+          date.setTime(date.getTime() + (1 * 24 * 60 * 60 * 1000));
+          const expires = "expires=" + date.toUTCString();
+          document.cookie = "selectedApp" + "=" + JSON.stringify(oSelectedApp) +  "; " + expires + "; path=/";
+          sessionStorage.setItem("oSelectedApp", JSON.stringify(oSelectedApp));
+          window.parent.postMessage({ message: "getAppData", value: oSelectedApp }, "*");
+        }
       }
     );
   }
